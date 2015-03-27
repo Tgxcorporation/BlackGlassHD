@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<description>Audio codec (normal osd)</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1689</posX>
+			<posY>639</posY>
+			<width>181</width>
+			<height>105</height>
+			<texture>Logos\#Play.Current.AudioCodec.Texture.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Video codec (normal osd)</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1689</posX>
+			<posY>750</posY>
+			<width>181</width>
+			<height>105</height>
+			<texture>Logos\#Play.Current.VideoCodec.Texture.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>No Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1689</posX>
+			<posY>862</posY>
+			<width>181</width>
+			<height>105</height>
+			<texture>Logos\nosubtitles.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="100">windowopen</animation>
+			<visible>!string.equals(#Play.Current.HasSubtitles, True)</visible>
+		</control>
+		<control>
+			<description>Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1689</posX>
+			<posY>862</posY>
+			<width>181</width>
+			<height>105</height>
+			<texture>Logos\subtitles.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="100">windowopen</animation>
+			<visible>string.equals(#Play.Current.HasSubtitles, True)</visible>
+		</control>
+	</controls>
+</window>

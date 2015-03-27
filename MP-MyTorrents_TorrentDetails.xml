@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>5680</id>
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Torrent Details</define>
+	<define>#header.background:hover_mytorrents.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(5)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>150</posY>
+				<label>Name: </label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>180</posY>
+				<width>540</width>
+				<label>#MyTorrents.Details.Name</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>240</posY>
+				<label>ETA: </label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>270</posY>
+				<label>#MyTorrents.Details.ETA</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>330</posY>
+				<label>Downloading: </label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>360</posY>
+				<label>#MyTorrents.Details.DownloadSpeed</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>420</posY>
+				<label>Uploading: </label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>450</posY>
+				<label>#MyTorrents.Details.UploadSpeed</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>510</posY>
+				<label>Size: </label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>540</posY>
+				<label>#MyTorrents.Details.Size</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>600</posY>
+				<label>Peers: </label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>630</posY>
+				<label>#MyTorrents.Details.Peers</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>690</posY>
+				<label>Seeds: </label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>720</posY>
+				<label>#MyTorrents.Details.Seeds</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>780</posY>
+				<label>Progress: </label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>810</posY>
+				<label>#MyTorrents.Details.Progress%</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>870</posY>
+				<label>Ratio: </label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>900</posY>
+				<label>#MyTorrents.Details.Ratio</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>5</id>
+					<textXOff>-60</textXOff>
+					<scrollOffset>2</scrollOffset>
+					<onup>4</onup>
+					<ondown>4</ondown>
+					<onleft>4</onleft>
+					<onright>4</onright>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>4</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(5)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(5)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Try Me</description>
+					<type>button</type>
+					<id>4</id>
+					<posX>90</posX>
+					<posY>955</posY>
+					<label>Back</label>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					<onright>5</onright>
+					<onleft>5</onleft>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

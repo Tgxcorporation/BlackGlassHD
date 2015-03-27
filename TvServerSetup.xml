@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>709</id>
+	<defaultcontrol>24</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:605</define>
+	<define>#header.background:hover_my tv2.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-289,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-289,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>605</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>buttons</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>150</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<type>button</type>
+					<id>24</id>
+					<label>6029</label>
+				</control>
+				<control>
+					<type>button</type>
+					<id>25</id>
+					<label>8008</label>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<!-- 		<control>
+			<type>image</type>
+			<posX>490</posX>
+			<posY>47</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+					</control> -->
+			<control>
+				<type>label</type>
+				<description>Please specify the IP address or hostname</description>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>150</posY>
+				<label>6026</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>of the master TV-Server</description>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>195</posY>
+				<label>6027</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Current setting:</description>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>300</posY>
+				<label>6028</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>:</description>
+				<id>30</id>
+				<posX>780</posX>
+				<posY>345</posY>
+				<font>font16</font>
+				<label>-</label>
+			</control>
+		</control>
+	</controls>
+</window>

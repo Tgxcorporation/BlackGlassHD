@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>8900</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><disabletopbar>no</disabletopbar>
+	<define>#header.label:137</define>
+	<define>#header.background:hover_my radio.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="![control.hasfocus(11)|control.hasfocus(10)]">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>10</id>
+				<onleft>2</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>scheduler recordings listcontrol</description>
+					<type>listcontrol</type>
+					<id>11</id>
+					<onleft>10</onleft>
+					<onright>2</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+				</control>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="![control.hasfocus(11)|control.hasfocus(10)]">conditional</animation>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>REAL Current program title</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>112</posY>
+				<width>540</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Channel Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>181</posY>
+				<width>75</width>
+				<height>52</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture>#selectedthumb</texture>
+			</control>
+			<control>
+				<description>Current channel</description>
+				<type>label</type>
+				<id>16</id>
+				<posX>135</posX>
+				<posY>177</posY>
+				<!-- <width>380</width> -->
+				<font>font22</font>
+				<label>#Radio.Search.Channel</label>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>14</id>
+				<posX>45</posX>
+				<posY>252</posY>
+				<label>#Radio.Search.Time</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>genre</description>
+				<type>label</type>
+				<id>17</id>
+				<posX>45</posX>
+				<posY>307</posY>
+				<label>#Radio.Search.Genre</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>360</posY>
+				<width>540</width>
+				<height>489</height>
+				<label>#Radio.Search.Description</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<visible>player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="-600,0">visible</animation>
+			</control>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>360</posY>
+				<width>540</width>
+				<height>678</height>
+				<label>#Radio.Search.Description</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<visible>!player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="-600,0">visible</animation>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="![control.hasfocus(10)|control.hasfocus(11)]+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="[control.hasfocus(10)|control.hasfocus(11)]|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Sort by Name/Date/Channel</description>
+					<type>sortbutton</type>
+					<id>2</id>
+					<label>620</label>
+					<onup>17</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>View by Title/Genre</description>
+					<type>button</type>
+					<id>20</id>
+					<label>1522</label>
+					<onup>2</onup>
+					<ondown>7</ondown>
+				</control>
+				<control>
+					<description>Starts with</description>
+					<type>selectbutton</type>
+					<id>7</id>
+					<label>872</label>
+					<onup>20</onup>
+					<ondown>19</ondown>
+				</control>
+				<control>
+					<description>Search</description>
+					<type>button</type>
+					<id>19</id>
+					<label>2051</label>
+					<onup>7</onup>
+					<ondown>21</ondown>
+				</control>
+				<control>
+					<description>Search Description</description>
+					<type>button</type>
+					<id>21</id>
+					<label>1523</label>
+					<onup>19</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<description>Description1</description>
+			<type>textboxscrollup</type>
+			<id>15</id>
+			<posX>3693</posX>
+			<posY>862</posY>
+			<width>1146</width>
+			<height>127</height>
+			<label>#Radio.Search.Description</label>
+			<font>font13</font>
+			<textcolor>#ColorMain</textcolor>
+		</control>
+		<control>
+			<description>DUMMY Number of Files Label</description>
+			<type>label</type>
+			<id>12</id>
+			<posX>2205</posX>
+			<posY>805</posY>
+			<label>#itemcount #(L(507))</label>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+		</control>
+		<control>
+			<description>DUMMY Current program title</description>
+			<type>fadelabel</type>
+			<id>13</id>
+			<posX>45</posX>
+			<posY>3000</posY>
+			<width>570</width>
+			<font>font22</font>
+			<label>#TV.Search.Title</label>
+			<textcolor>#ColorMain</textcolor>
+		</control>
+	</controls>
+</window>

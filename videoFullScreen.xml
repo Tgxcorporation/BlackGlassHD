@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2005</id>
+	<defaultcontrol>13</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#play.progressbar.percentage:#percentage</define>
+	<define>#play.progressbar.currentplaytime:#currentplaytime</define>
+	<define>#play.progressbar.currentremaining:#currentremaining</define>
+	<controls>
+		<import>common.play.fullscreen.xml</import>
+		<import>common.play.progressbar.xml</import>
+		<import>common.play.fullscreen.volume.xml</import>
+		<!-- <import>common.play.clearart.xml</import> -->
+		
+		<!-- NOT USED -->
+		<control>
+			<type>image</type>
+			<id>502</id>
+			<posX>2864</posX>
+			<posY>450</posY>
+			<height>192</height>
+			<width>192</width>
+			<texture>video.action.forbidden.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>#ColorMain</colordiffuse>
+			<visible>no</visible>
+			<animation effect="fade" time="150">visiblechange</animation>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>5001</id>
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><animation effect="Fade" end="100" start="100" time="250">WindowClose</animation>
+	<define>#header.label:#MyAlarm.Translation.AlarmDetails.Label</define>
+	<define>#header.background:hover_my alarm.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>210</posX>
+			<posY>90</posY>
+			<width>1500</width>
+			<height>910</height>
+			<texture>bg_dialog_big.png</texture>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>61</id>
+			<description>CurrentAlarm.Enabled</description>
+			<type>label</type>
+			<visible>string.equals(#MyAlarm.SelectedAlarm.Enabled,True)</visible>
+		</control>
+		<control>
+			<id>62</id>
+			<description>CurrentAlarm.Recurring</description>
+			<type>label</type>
+			<visible>string.equals(#MyAlarm.SelectedAlarm.Recurring,True)</visible>
+		</control>
+		<control>
+			<id>63</id>
+			<description>CurrentAlarm.Selected</description>
+			<type>label</type>
+			<visible>!String.Contains(#MyAlarm.SelectedAlarm.Time.shorttime,MyAlarm.SelectedAlarm.Time.shorttime)+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime,)+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime, )+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime,  )</visible>
+		</control>
+		<control>
+			<id>64</id>
+			<description>CurrentAlarm.Snoozed</description>
+			<type>label</type>
+			<visible>!String.Contains(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,)+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime, )+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,  )</visible>
+		</control>
+		<control>
+			<id>3</id>
+			<description>Rename Button</description>
+			<type>button</type>
+			<onleft>3</onleft>
+			<onright>31</onright>
+			<onup>3</onup>
+			<ondown>21</ondown>
+			<posX>270</posX>
+			<posY>163</posY>
+			<width>750</width>
+			<height>75</height>
+			<font>font20</font>
+			<textureFocus>bg_button_text_focus.png</textureFocus>
+			<textureNoFocus>bg_button_text_nofocus.png</textureNoFocus>
+			<label>#MyAlarm.SelectedAlarm.Name</label>
+			<textalign>LEFT</textalign>
+			<textXOff>22</textXOff>
+			<textYOff>12</textYOff>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>21</id>
+			<description>enable / disabled alarm</description>
+			<type>checkmark</type>
+			<onleft>21</onleft>
+			<onright>31</onright>
+			<onup>3</onup>
+			<ondown>22</ondown>
+			<posX>285</posX>
+			<posY>285</posY>
+			<label>852</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>22</id>
+			<description>once / recurring alarm</description>
+			<type>checkmark</type>
+			<onleft>22</onleft>
+			<onright>10</onright>
+			<onup>21</onup>
+			<ondown>24</ondown>
+			<posX>285</posX>
+			<posY>375</posY>
+			<label>870</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>24</id>
+			<description>fade in volume</description>
+			<type>checkmark</type>
+			<onleft>24</onleft>
+			<onright>10</onright>
+			<onup>22</onup>
+			<ondown>23</ondown>
+			<posX>285</posX>
+			<posY>540</posY>
+			<label>860</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>23</id>
+			<description>wake up pc</description>
+			<type>checkmark</type>
+			<onleft>23</onleft>
+			<onright>23</onright>
+			<onup>24</onup>
+			<ondown>25</ondown>
+			<posX>285</posX>
+			<posY>630</posY>
+			<label>871</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>25</id>
+			<description>Media Type</description>
+			<type>button</type>
+			<onleft>25</onleft>
+			<onright>25</onright>
+			<onup>23</onup>
+			<ondown>5</ondown>
+			<posX>270</posX>
+			<posY>735</posY>
+			<width>375</width>
+			<height>90</height>
+			<font>font16</font>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>#MyAlarm.SelectedAlarm.MediaType.localized</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>3</textYOff>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<description>Media Type</description>
+			<type>fadelabel</type>
+			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,File)</visible>
+			<posX>660</posX>
+			<posY>757</posY>
+			<width>900</width>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>#MyAlarm.SelectedAlarm.Sound</label>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<id>0</id>
+			<description>Media Type</description>
+			<type>fadelabel</type>
+			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)</visible>
+			<posX>660</posX>
+			<posY>757</posY>
+			<width>900</width>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>#MyAlarm.SelectedAlarm.Playlist</label>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<id>0</id>
+			<description>Media Type</description>
+			<type>fadelabel</type>
+			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)</visible>
+			<posX>660</posX>
+			<posY>757</posY>
+			<width>900</width>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>#MyAlarm.SelectedAlarm.Message</label>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<posX>1215</posX>
+			<posY>285</posY>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>RIGHT</align>
+			<label>#MyAlarm.Translation.AlarmTime.Label:</label>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>31</id>
+			<description>alarm time hours</description>
+			<type>spincontrol</type>
+			<onleft>21</onleft>
+			<onright>32</onright>
+			<onup>3</onup>
+			<ondown>33</ondown>
+			<posX>1245</posX>
+			<posY>294</posY>
+			<digits>2</digits>
+			<spintype>INT</spintype>
+			<orientation>VERTICAL</orientation>
+			<showrange>NO</showrange>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>32</id>
+			<description>alarm time minutes</description>
+			<type>spincontrol</type>
+			<onleft>31</onleft>
+			<onright>31</onright>
+			<onup>3</onup>
+			<ondown>34</ondown>
+			<posX>1365</posX>
+			<posY>294</posY>
+			<digits>2</digits>
+			<spintype>INT</spintype>
+			<orientation>VERTICAL</orientation>
+			<showrange>NO</showrange>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<visible>!control.isvisible(62)</visible>
+			<posX>1215</posX>
+			<posY>375</posY>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>RIGHT</align>
+			<label>#MyAlarm.Translation.AlarmDate.Label:</label>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>33</id>
+			<description>DD</description>
+			<type>spincontrol</type>
+			<onleft>22</onleft>
+			<onright>34</onright>
+			<onup>31</onup>
+			<ondown>10</ondown>
+			<visible>!control.isvisible(62)</visible>
+			<posX>1245</posX>
+			<posY>384</posY>
+			<digits>2</digits>
+			<spintype>INT</spintype>
+			<orientation>VERTICAL</orientation>
+			<showrange>NO</showrange>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>34</id>
+			<description>MM</description>
+			<type>spincontrol</type>
+			<onleft>33</onleft>
+			<onright>35</onright>
+			<onup>32</onup>
+			<ondown>10</ondown>
+			<visible>!control.isvisible(62)</visible>
+			<posX>1365</posX>
+			<posY>384</posY>
+			<digits>2</digits>
+			<spintype>INT</spintype>
+			<orientation>VERTICAL</orientation>
+			<showrange>NO</showrange>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>35</id>
+			<description>YYYY</description>
+			<type>spincontrol</type>
+			<onleft>34</onleft>
+			<onright>16</onright>
+			<onup>32</onup>
+			<ondown>10</ondown>
+			<visible>!control.isvisible(62)</visible>
+			<posX>1485</posX>
+			<posY>384</posY>
+			<digits>4</digits>
+			<spintype>INT</spintype>
+			<orientation>VERTICAL</orientation>
+			<showrange>NO</showrange>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Enabled Days</description>
+			<type>label</type>
+			<visible>control.isvisible(62)</visible>
+			<posX>555</posX>
+			<posY>375</posY>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>#MyAlarm.Translation.EnabledOnTheseDays.Label:</label>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>10</id>
+			<description>Monday checkbox</description>
+			<type>checkmark</type>
+			<onleft>22</onleft>
+			<onright>11</onright>
+			<onup>33</onup>
+			<ondown>24</ondown>
+			<visible>control.isvisible(62)</visible>
+			<posX>555</posX>
+			<posY>442</posY>
+			<width>111</width>
+			<height>45</height>
+			<label>657</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>11</id>
+			<description>Tuesday checkbox</description>
+			<type>checkmark</type>
+			<onleft>10</onleft>
+			<onright>12</onright>
+			<onup>33</onup>
+			<ondown>24</ondown>
+			<visible>control.isvisible(62)</visible>
+			<posX>705</posX>
+			<posY>442</posY>
+			<width>100</width>
+			<height>45</height>
+			<label>658</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>12</id>
+			<description>Wednesday checkbox</description>
+			<type>checkmark</type>
+			<onleft>11</onleft>
+			<onright>13</onright>
+			<onup>33</onup>
+			<ondown>24</ondown>
+			<visible>control.isvisible(62)</visible>
+			<posX>855</posX>
+			<posY>442</posY>
+			<width>111</width>
+			<height>45</height>
+			<label>659</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>13</id>
+			<description>Thursday checkbox</description>
+			<type>checkmark</type>
+			<onleft>12</onleft>
+			<onright>14</onright>
+			<onup>33</onup>
+			<ondown>24</ondown>
+			<visible>control.isvisible(62)</visible>
+			<posX>1005</posX>
+			<posY>442</posY>
+			<width>100</width>
+			<height>45</height>
+			<label>660</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>14</id>
+			<description>Friday checkbox</description>
+			<type>checkmark</type>
+			<onleft>13</onleft>
+			<onright>15</onright>
+			<onup>33</onup>
+			<ondown>24</ondown>
+			<visible>control.isvisible(62)</visible>
+			<posX>1155</posX>
+			<posY>442</posY>
+			<width>85</width>
+			<height>45</height>
+			<label>661</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>15</id>
+			<description>Saturday checkbox</description>
+			<type>checkmark</type>
+			<onleft>14</onleft>
+			<onright>16</onright>
+			<onup>33</onup>
+			<ondown>24</ondown>
+			<visible>control.isvisible(62)</visible>
+			<posX>1305</posX>
+			<posY>442</posY>
+			<width>96</width>
+			<height>45</height>
+			<label>662</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>16</id>
+			<description>Sunday checkbox</description>
+			<type>checkmark</type>
+			<onleft>15</onleft>
+			<onright>33</onright>
+			<onup>33</onup>
+			<ondown>24</ondown>
+			<visible>control.isvisible(62)</visible>
+			<posX>1455</posX>
+			<posY>442</posY>
+			<width>103</width>
+			<height>45</height>
+			<label>663</label>
+			<animation>WindowClose</animation>
+			<animation>WindowOpen</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>246</posX>
+			<posY>780</posY>
+			<width>1429</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>5</id>
+			<description>Save Button</description>
+			<type>button</type>
+			<onleft>4</onleft>
+			<onright>6</onright>
+			<onup>25</onup>
+			<ondown>5</ondown>
+			<posX>450</posX>
+			<posY>862</posY>
+			<width>300</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>#MyAlarm.Translation.SaveAlarm.Label</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>6</id>
+			<description>Cancel Button</description>
+			<type>button</type>
+			<onleft>5</onleft>
+			<onright>4</onright>
+			<onup>25</onup>
+			<ondown>6</ondown>
+			<posX>810</posX>
+			<posY>862</posY>
+			<width>300</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>#MyAlarm.Translation.CancelAlarm.Label</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>4</id>
+			<description>Delete Button</description>
+			<type>button</type>
+			<onleft>6</onleft>
+			<onright>5</onright>
+			<onup>25</onup>
+			<ondown>4</ondown>
+			<posX>1170</posX>
+			<posY>862</posY>
+			<width>300</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>#MyAlarm.Translation.DeleteAlarm.Label</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+		</control>
+	</controls>
+</window>

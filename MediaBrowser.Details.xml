@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>201306032</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:Media Browser</define>
+	<define>#header.background:hover_MediaBrowser.png</define>
+	<define>#header.fanart:#MediaBrowser.Details.Name</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>MediaBrowser.Fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<!-- <import>MediaBrowser.Details.MediaInfo.xml</import> -->
+		<!-- <import>MediaBrowser.Details.Episode.xml</import> -->
+
+		<!-- :: MAIN DETAILS ::            -->
+
+
+		<control>
+			<description>MediaBrowser.Command.Play</description>
+			<type>button</type>
+			<id>10</id>
+			<label>-</label>
+			<onleft>10003</onleft>
+			<onright>10001</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+		</control>
+
+		<control>
+			<description>Plot</description>
+			<type>button</type>
+			<id>10001</id>
+			<label>-</label>
+			<onleft>10</onleft>
+			<onright>10002</onright>
+			<onup>10001</onup>
+			<ondown>10001</ondown>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+		</control>
+
+		<control>
+			<description>Technical Details</description>
+			<type>button</type>
+			<id>10002</id>
+			<label>-</label>
+			<onleft>10001</onleft>
+			<onright>505050</onright>
+			<onup>10002</onup>
+			<ondown>10002</ondown>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+		</control>
+
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>10</onright>
+			<onleft>10002</onleft>
+			<ondown>505050</ondown>
+			<onup>505050</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>details background</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>687</posX>
+			<posY>72</posY>
+			<width>1422</width>
+			<height>1149</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<type>image</type>
+			<posX>735</posX>
+			<posY>145</posY>
+			<width>1185</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<type>image</type>
+			<posX>735</posX>
+			<posY>507</posY>
+			<width>1185</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<visible>!Control.HasFocus(10001)+!Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<type>image</type>
+			<posX>738</posX>
+			<posY>880</posY>
+			<width>1185</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(10)+!control.hasfocus(10001)+!control.hasfocus(10002)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+		</control>
+		<import>MediaBrowser.Details.Movie.xml</import>
+		<import>MediaBrowser.Details.Episode.xml</import>
+
+
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>10003</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(10)+!control.hasfocus(10001)+!control.hasfocus(10002)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="[control.hasfocus(10)|control.hasfocus(10001)|control.hasfocus(10002)|control.hasfocus(505050)]">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Trailer Button</description>
+					<id>10003</id>
+					<type>button</type>
+					<label>Trailer</label>
+					<onup>20002</onup>
+					<ondown>10004</ondown>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:IMDb Movie Trailers|search:#(iif(neq(#MediaBrowser.Details.ProviderIds.Imdb,''),#MediaBrowser.Details.ProviderIds.Imdb,#MediaBrowser.Details.Name))|return:Locked</hyperlinkParameter>
+					<visible allowhiddenfocus="true">plugin.isenabled(OnlineVideos)</visible>
+				</control>
+
+				<control>
+					<description>Subtitle Button</description>
+					<id>10004</id>
+					<type>button</type>
+					<label>Subtitle</label>
+					<onup>10003</onup>
+					<ondown>97270</ondown>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<hyperlink>84623</hyperlink>
+					<visible>plugin.isenabled(SubCentral)</visible>
+				</control>
+
+				<control>
+					<description>Trakt Button</description>
+					<type>button</type>
+					<id>97270</id>
+					<label>Trakt</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>10004</onup>
+					<ondown>10001</ondown>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+			</control>
+			<control>
+				<description>MediaBrowser.Image.User</description>
+				<type>image</type>
+				<id>201</id>
+				<posX>49</posX>
+				<posY>758</posY>
+				<width>106</width>
+				<height>106</height>
+				<texture>#MediaBrowser.Image.User</texture>
+				<keepaspectratio>no</keepaspectratio>
+			</control>
+			<control>
+				<description>MediaBrowser.Image.User</description>
+				<type>image</type>
+				<id>201</id>
+				<posX>49</posX>
+				<posY>758</posY>
+				<width>106</width>
+				<height>106</height>
+				<texture>alpha\m.png</texture>
+				<keepaspectratio>no</keepaspectratio>
+				<visible>!Control.HasThumb(201)</visible>
+			</control>
+			<control>
+				<description>MediaBrowser.Image.User</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>41</posX>
+				<posY>750</posY>
+				<width>120</width>
+				<height>120</height>
+				<texture>CDCase.png</texture>
+			</control>  
+			<control>
+				<description>Current Category</description>
+				<type>label</type>
+				<id>0</id>
+				<font>font13</font>
+				<posX>180</posX>
+				<posY>750</posY>
+				<wrapString> : : : </wrapString>
+				<width>375</width>
+				<label>#MediaBrowser.User.Name</label>
+			</control>
+			<control>
+				<description>Current Category</description>
+				<type>label</type>
+				<id>0</id>
+				<font>font10</font>
+				<posX>180</posX>
+				<posY>808</posY>
+				<wrapString> : : : </wrapString>
+				<width>375</width>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#MediaBrowser.Translation.Client.Label #MediaBrowser.Version.String</label>
+			</control>
+			<control>
+				<description>Current Category</description>
+				<type>label</type>
+				<id>0</id>
+				<font>font10</font>
+				<posX>180</posX>
+				<posY>838</posY>
+				<wrapString> : : : </wrapString>
+				<width>375</width>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#MediaBrowser.Translation.Server.Label #MediaBrowser.System.Version</label>
+			</control>
+		</control>
+
+	</controls>
+</window>

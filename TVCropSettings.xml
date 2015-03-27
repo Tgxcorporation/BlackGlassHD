@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>3011</id>
+	<defaultcontrol>8</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>black.png</texture>
+			<colordiffuse>#ColorUnfocused</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>405</posX>
+			<posY>220</posY>
+			<width>1110</width>
+			<height>637</height>
+			<texture>bg_dialog_new.png</texture>
+		</control>
+		<control>
+			<description>dialog Heading</description>
+			<type>fadelabel</type>
+			<id>4</id>
+			<posX>480</posX>
+			<posY>310</posY>
+			<width>960</width>
+			<label>11000</label>
+			<textcolor>#ColorMain</textcolor>
+			<font>font22</font>
+			<align>left</align>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>445</posX>
+			<posY>322</posY>
+			<width>1029</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<description>Capture device text label</description>
+			<type>label</type>
+			<id>5</id>
+			<posX>-250</posX>
+			<posY>735</posY>
+			<width>69</width>
+			<font>font16</font>
+			<textcolor>#ColorMain</textcolor>
+		</control>
+		<control>
+			<description>Crop label top</description>
+			<type>label</type>
+			<id>6</id>
+			<posX>855</posX>
+			<posY>462</posY>
+			<label>11001</label>
+			<font>font16</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>center</align>
+		</control>
+		<control>
+			<description>Cropselect top</description>
+			<type>spincontrol</type>
+			<id>8</id>
+			<posX>1050</posX>
+			<posY>450</posY>
+			<onup>12</onup>
+			<ondown>12</ondown>
+			<onleft>16</onleft>
+			<onright>20</onright>
+			<textcolor>#ColorMain</textcolor>
+			<align>right</align>
+		</control>
+		<control>
+			<description>Crop label bottom</description>
+			<type>label</type>
+			<id>10</id>
+			<posX>855</posX>
+			<posY>657</posY>
+			<label>11002</label>
+			<font>font16</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>center</align>
+		</control>
+		<control>
+			<description>Cropselect bottom</description>
+			<type>spincontrol</type>
+			<id>12</id>
+			<posX>1050</posX>
+			<posY>645</posY>
+			<onup>8</onup>
+			<ondown>2</ondown>
+			<onleft>16</onleft>
+			<onright>20</onright>
+			<textcolor>#ColorMain</textcolor>
+			<align>right</align>
+		</control>
+		<control>
+			<description>Crop label left</description>
+			<type>label</type>
+			<id>14</id>
+			<posX>570</posX>
+			<posY>559</posY>
+			<label>11003</label>
+			<font>font16</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>center</align>
+		</control>
+		<control>
+			<description>Cropselect left</description>
+			<type>spincontrol</type>
+			<id>16</id>
+			<posX>765</posX>
+			<posY>547</posY>
+			<onup>8</onup>
+			<ondown>12</ondown>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<textcolor>#ColorMain</textcolor>
+			<align>right</align>
+		</control>
+		<control>
+			<description>Crop label right</description>
+			<type>label</type>
+			<id>18</id>
+			<posX>1170</posX>
+			<posY>559</posY>
+			<label>11004</label>
+			<font>font16</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<align>center</align>
+		</control>
+		<control>
+			<description>Cropselect right</description>
+			<type>spincontrol</type>
+			<id>20</id>
+			<posX>1365</posX>
+			<posY>547</posY>
+			<onup>8</onup>
+			<ondown>12</ondown>
+			<onleft>16</onleft>
+			<onright>16</onright>
+			<textcolor>#ColorMain</textcolor>
+			<align>right</align>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>445</posX>
+			<posY>630</posY>
+			<width>1029</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<description>OK button</description>
+			<type>button</type>
+			<id>2</id>
+			<posX>810</posX>
+			<posY>714</posY>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<width>300</width>
+			<height>90</height>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>186</label>
+			<onleft>16</onleft>
+			<onright>20</onright>
+			<onup>12</onup>
+			<ondown>8</ondown>
+			<textalign>center</textalign>
+		</control>
+	</controls>
+</window>

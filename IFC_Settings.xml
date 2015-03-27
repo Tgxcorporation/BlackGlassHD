@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>240782</id>
+	<defaultcontrol>18</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Intelligent Frame Correction</define>
+	<define>#header.background:hover_ifc settings.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>330</posX>
+				<posY>145</posY>
+				<width>1260</width>
+				<height>787</height>
+				<texture>bg_dialog_new.png</texture>
+			</control>
+			<control>
+				<id>6</id>
+				<description>Single Black Bar Height</description>
+				<type>spincontrol</type>
+				<onleft>6</onleft>
+				<onright>6</onright>
+				<onup>5</onup>
+				<ondown>7</ondown>
+				<posX>1395</posX>
+				<posY>619</posY>
+				<textcolor>#ColorMain</textcolor>
+				<digits>2</digits>
+				<spintype>INT</spintype>
+				<showrange>NO</showrange>
+				<align>RIGHT</align>
+			</control>
+			<control>
+				<id>7</id>
+				<description>Double Black Bar Height</description>
+				<type>spincontrol</type>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<onup>6</onup>
+				<ondown>8</ondown>
+				<posX>1395</posX>
+				<posY>687</posY>
+				<textcolor>#ColorMain</textcolor>
+				<digits>2</digits>
+				<spintype>INT</spintype>
+				<showrange>NO</showrange>
+				<align>RIGHT</align>
+			</control>
+			<control>
+				<id>16</id>
+				<description>Single Black Bar Height Label</description>
+				<type>label</type>
+				<posX>450</posX>
+				<posY>607</posY>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Single Black Bar Height</label>
+			</control>
+			<control>
+				<id>17</id>
+				<description>Double Black Bar Height Label</description>
+				<type>label</type>
+				<posX>450</posX>
+				<posY>675</posY>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Double Black Bar Height</label>
+			</control>
+			<control>
+				<id>8</id>
+				<description>Verbose Logging</description>
+				<type>checkbutton</type>
+				<onleft>8</onleft>
+				<onright>8</onright>
+				<onup>7</onup>
+				<ondown>18</ondown>
+				<posX>772</posX>
+				<posY>727</posY>
+				<width>120</width>
+				<height>75</height>
+				<!-- <label>Verbose Logging</label> -->
+				<AltTextureFocus>togglebuttonmini-off-focus.png</AltTextureFocus>
+				<AltTextureNoFocus>togglebuttonmini-off-nofocus.png</AltTextureNoFocus>
+				<textureFocus>togglebuttonmini-on-focus.png</textureFocus>
+				<textureNoFocus>togglebuttonmini-on-nofocus.png</textureNoFocus>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>450</posX>
+				<posY>742</posY>
+				<label>Verbose Logging</label>
+				<font>font16</font>
+			</control>
+			<control>
+				<id>15</id>
+				<description>Stabilizer Label</description>
+				<type>label</type>
+				<posX>450</posX>
+				<posY>540</posY>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Stabilizer</label>
+			</control>
+			<control>
+				<id>14</id>
+				<description>Max Brightness Threshold Label</description>
+				<type>label</type>
+				<posX>450</posX>
+				<posY>472</posY>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Max Brightness Threshold</label>
+			</control>
+			<control>
+				<id>13</id>
+				<description>Min Brightness Threshold Label</description>
+				<type>label</type>
+				<posX>450</posX>
+				<posY>405</posY>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Min Brightness Threshold</label>
+			</control>
+			<control>
+				<id>12</id>
+				<description>Detection Counter Label</description>
+				<type>label</type>
+				<posX>450</posX>
+				<posY>337</posY>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Detection Counter</label>
+			</control>
+			<control>
+				<id>11</id>
+				<description>Scan Interval Label</description>
+				<type>label</type>
+				<posX>450</posX>
+				<posY>270</posY>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>Scan Interval</label>
+			</control>
+			<control>
+				<id>18</id>
+				<description>Scan Interval</description>
+				<type>spincontrol</type>
+				<onleft>18</onleft>
+				<onright>18</onright>
+				<onup>9</onup>
+				<ondown>2</ondown>
+				<posX>1395</posX>
+				<posY>282</posY>
+				<textcolor>#ColorMain</textcolor>
+				<digits>2</digits>
+				<spintype>INT</spintype>
+				<showrange>NO</showrange>
+				<align>RIGHT</align>
+			</control>
+			<control>
+				<id>2</id>
+				<description>Detection Counter</description>
+				<type>spincontrol</type>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>18</onup>
+				<ondown>3</ondown>
+				<posX>1395</posX>
+				<posY>349</posY>
+				<textcolor>#ColorMain</textcolor>
+				<digits>2</digits>
+				<spintype>INT</spintype>
+				<showrange>NO</showrange>
+				<align>RIGHT</align>
+			</control>
+			<control>
+				<id>3</id>
+				<description>Min Brightness Treshold</description>
+				<type>spincontrol</type>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>2</onup>
+				<ondown>4</ondown>
+				<posX>1395</posX>
+				<posY>417</posY>
+				<textcolor>#ColorMain</textcolor>
+				<digits>2</digits>
+				<spintype>INT</spintype>
+				<showrange>NO</showrange>
+				<align>RIGHT</align>
+			</control>
+			<control>
+				<id>4</id>
+				<description>Max Brightness Treshold</description>
+				<type>spincontrol</type>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>3</onup>
+				<ondown>5</ondown>
+				<posX>1395</posX>
+				<posY>484</posY>
+				<textcolor>#ColorMain</textcolor>
+				<digits>2</digits>
+				<spintype>INT</spintype>
+				<showrange>NO</showrange>
+				<align>RIGHT</align>
+			</control>
+			<control>
+				<id>5</id>
+				<description>Stabilizer</description>
+				<type>spincontrol</type>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>4</onup>
+				<ondown>6</ondown>
+				<posX>1395</posX>
+				<posY>552</posY>
+				<textcolor>#ColorMain</textcolor>
+				<digits>2</digits>
+				<spintype>INT</spintype>
+				<showrange>NO</showrange>
+				<align>RIGHT</align>
+			</control>
+		</control>
+	</controls>
+</window>

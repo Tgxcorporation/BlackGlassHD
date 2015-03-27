@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>3000</id>
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-9</posX>
+			<posY>837</posY>
+			<width>729</width>
+			<height>249</height>
+			<texture>bg_overlay.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progress background</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>300</posX>
+			<posY>951</posY>
+			<width>382</width>
+			<height>42</height>
+			<texture>osd_progress_background2.png</texture>
+			<colordiffuse>40ffffff</colordiffuse>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>progress</type>
+			<description>track progress</description>
+			<id>0</id>
+			<posX>291</posX>
+			<posY>942</posY>
+			<width>391</width>
+			<height>42</height>
+			<label>#percentage</label>
+			<lefttexture>osd_progress_mid_overlay.png</lefttexture>
+			<midtexture>osd_progress_mid_overlay.png</midtexture>
+			<righttexture>osd_progress_mid_overlay.png</righttexture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>302</posX>
+			<posY>870</posY>
+			<width>377</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>302</posX>
+			<posY>915</posY>
+			<width>377</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>play time label</description>
+			<type>label</type>
+			<id>2</id>
+			<posX>309</posX>
+			<posY>875</posY>
+			<label>#currentplaytime</label>
+			<align>left</align>
+			<font>font28</font>
+			<textcolor>#ColorUnfocused</textcolor>
+			<visible>!string.equals(#currentplaytime,)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Info</description>
+			<type>fadelabel</type>
+			<id>5</id>
+			<width>350</width>
+			<height>55</height>
+			<posX>309</posX>
+			<posY>999</posY>
+			<font>font16</font>
+			<label>#Play.Current.Title</label>
+			<textcolor>BBFFFFFF</textcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<description>play time label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>309</posX>
+			<posY>949</posY>
+			<label>#currentremaining</label>
+			<align>left</align>
+			<font>font16</font>
+			<textcolor>40ffffff</textcolor>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>video preview window</description>
+			<type>videowindow</type>
+			<id>1</id>
+			<posX>50</posX>
+			<posY>894</posY>
+			<width>245</width>
+			<height>137</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<action>18</action>
+			<textureFocus>-</textureFocus>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>37</posX>
+			<posY>881</posY>
+			<width>271</width>
+			<height>163</height>
+			<texture>VideoCase.png</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<description>play logo</description>
+			<type>image</type>
+			<id>3</id>
+			<posX>4951</posX>
+			<posY>885</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>topbar_play_focus.png</texture>
+			<visible>player.playing</visible>
+		</control>
+		<control>
+			<description>Pause logo</description>
+			<type>image</type>
+			<id>4</id>
+			<posX>4951</posX>
+			<posY>885</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>topbar_pause_focus.png</texture>
+			<visible>player.paused</visible>
+		</control>
+		<control>
+			<description>FF logo</description>
+			<type>image</type>
+			<id>7</id>
+			<posX>4951</posX>
+			<posY>885</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>topbar_fastforward_focus.png</texture>
+			<visible>player.forwarding</visible>
+		</control>
+		<control>
+			<description>RW logo</description>
+			<type>image</type>
+			<id>8</id>
+			<posX>4951</posX>
+			<posY>885</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>topbar_rewind_focus.png</texture>
+			<visible>player.rewinding</visible>
+		</control>
+	</controls>
+</window>

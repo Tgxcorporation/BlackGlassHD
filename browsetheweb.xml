@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>54537688</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<disabletopbar>true</disabletopbar>
+	<define>#header.label:</define>
+	<define>#header.background:hover_BrowseTheWeb.png</define>
+	<define>#header.fanart:</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<description>Placeholder for browser component. If statusvisible=true, then bottom coordinate is decreased by the height of control with id of 545376891</description>
+			<type>image</type>
+			<id>545376890</id>
+			<width>1920</width>
+			<height>1080</height>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>1017</posY>
+			<width>1920</width>
+			<height>79</height>
+			<texture>black.png</texture>
+			<colordiffuse>#ColorMain</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>940</posY>
+			<width>1920</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>1021</posY>
+			<width>1920</width>
+			<height>79</height>
+			<texture>bg_facade_line_focus.png</texture>
+		</control>
+		<control>
+			<description>Status label</description>
+			<type>label</type>
+			<id>545376891</id>
+			<posX>15</posX>
+			<posY>1034</posY>
+			<label>#(L(126)) | #btWeb.status</label>
+			<font>font12</font>
+			<width>1500</width>
+			<textcolor>#ColorMain</textcolor>
+			<height>61</height>
+			<visible>string.equals(#btWeb.statusvisible, true)</visible>
+		</control>
+		<control>
+			<description>Link id label</description>
+			<type>label</type>
+			<id>9</id>
+			<posX>1905</posX>
+			<posY>1034</posY>
+			<label>#btWeb.linkid</label>
+			<font>font12</font>
+			<align>right</align>
+			<textcolor>#ColorMain</textcolor>
+			<visible>string.equals(#btWeb.statusvisible, true)</visible>
+		</control>
+	</controls>
+</window>

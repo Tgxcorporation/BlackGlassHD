@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>7979</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<!-- *** Dialog Background *** -->
+		<control>
+			<description>background</description>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>black.png</texture>
+			<colordiffuse>#ColorUnfocused</colordiffuse>
+		</control>
+		<control>
+			<description>background</description>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>270</posY>
+			<width>1920</width>
+			<height>540</height>
+			<texture>bg_dialog.png</texture>
+		</control>
+		<!-- *** MediaTip Headline *** -->
+		<control>
+			<description>Dialog Headline</description>
+			<type>label</type>
+			<id>10</id>
+			<posX>540</posX>
+			<posY>340</posY>
+			<font>font24</font>
+			<textcolor>#ColorMain</textcolor>
+			<label>#MediaTip.Headline</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>540</posX>
+			<posY>345</posY>
+			<width>1290</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<!-- *** MediaTip Headline Image *** -->
+		<!-- <control>
+			<description>Dialog Headline Image</description>
+			<type>image</type>
+			<id>11</id>
+			<posX>150</posX>
+			<posY>200</posY>
+			<width>50</width>
+			<height>50</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#MediaTip.HeadlineImage</texture>
+		</control> -->
+		<!-- *** MediaTip Music Property Lines *** -->
+		<control>
+			<description>Line 1</description>
+			<type>fadelabel</type>
+			<id>20</id>
+			<posX>540</posX>
+			<posY>450</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.FileName (#MediaTip.FileSize), #MediaTip.Date</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 2</description>
+			<type>fadelabel</type>
+			<id>21</id>
+			<posX>540</posX>
+			<posY>510</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionTrack #MediaTip.Track - #MediaTip.DescriptionTitle: #MediaTip.Title, #MediaTip.DescriptionAlbum: #MediaTip.Album</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 3</description>
+			<type>fadelabel</type>
+			<id>22</id>
+			<posX>540</posX>
+			<posY>570</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionArtist: #MediaTip.Artist, #MediaTip.DescriptionYear: #MediaTip.Year</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 4</description>
+			<type>fadelabel</type>
+			<id>23</id>
+			<posX>540</posX>
+			<posY>630</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionGenre: #MediaTip.Genre</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 5</description>
+			<type>fadelabel</type>
+			<id>24</id>
+			<posX>540</posX>
+			<posY>690</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>Audio: #MediaTip.AudioCodec, #MediaTip.AudioType, #MediaTip.AudioBitRate, #MediaTip.AudioSamplingRate</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<!-- *** MediaTip Music Cover *** -->
+		<control>
+			<type>image</type>
+			<description>Empty</description>
+			<id>0</id>
+			<posX>100</posX>
+			<posY>369</posY>
+			<width>348</width>
+			<height>348</height>
+			<texture>black.png</texture>
+			<colordiffuse>60ffffff</colordiffuse>
+			<visible>control.isvisible(26)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Cover</description>
+			<id>25</id>
+			<posX>100</posX>
+			<posY>369</posY>
+			<width>348</width>
+			<height>348</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#MediaTip.Cover</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Case</description>
+			<id>26</id>
+			<posX>79</posX>
+			<posY>348</posY>
+			<width>390</width>
+			<height>390</height>
+			<texture>CDCase.png</texture>
+		</control>
+		<!-- *** MediaTip Video Property Lines *** -->
+		<control>
+			<description>Line 1</description>
+			<type>fadelabel</type>
+			<id>30</id>
+			<posX>540</posX>
+			<posY>450</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.FileName (#MediaTip.FileSize), #MediaTip.Date</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 2</description>
+			<type>fadelabel</type>
+			<id>31</id>
+			<posX>540</posX>
+			<posY>510</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionTitle: #MediaTip.Title</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 3</description>
+			<type>fadelabel</type>
+			<id>32</id>
+			<posX>540</posX>
+			<posY>570</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>Audio: #MediaTip.AudioCodec, #MediaTip.AudioType, #MediaTip.AudioBitRate, #MediaTip.AudioSamplingRate</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 4</description>
+			<type>fadelabel</type>
+			<id>33</id>
+			<posX>540</posX>
+			<posY>630</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>Video: #MediaTip.VideoCodec, #MediaTip.VideoBitRate, #MediaTip.FrameRate, #MediaTip.Resolution</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 5</description>
+			<type>fadelabel</type>
+			<id>34</id>
+			<posX>540</posX>
+			<posY>690</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionGeometry: #MediaTip.Geometry, #MediaTip.Dimension, #MediaTip.AspectRatio</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<!-- *** MediaTip Video Cover *** -->
+		<control>
+			<type>image</type>
+			<description>Cover</description>
+			<id>35</id>
+			<posX>99</posX>
+			<posY>368</posY>
+			<width>387</width>
+			<height>217</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<zoom>yes</zoom>
+			<centered>yes</centered>
+			<texture>#MediaTip.Cover</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Case</description>
+			<id>36</id>
+			<posX>79</posX>
+			<posY>348</posY>
+			<width>427</width>
+			<height>257</height>
+			<texture>VideoCase.png</texture>
+		</control>
+		<!-- *** MediaTip Picture Property Lines *** -->
+		<control>
+			<description>Line 1</description>
+			<type>fadelabel</type>
+			<id>40</id>
+			<posX>540</posX>
+			<posY>450</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.FileName (#MediaTip.FileSize), #MediaTip.Date</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 2</description>
+			<type>fadelabel</type>
+			<id>41</id>
+			<posX>540</posX>
+			<posY>510</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionDimension: #MediaTip.Dimension, #MediaTip.DescriptionOrientation: #MediaTip.Orientation</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 3</description>
+			<type>fadelabel</type>
+			<id>42</id>
+			<posX>540</posX>
+			<posY>570</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionCameraModel: #MediaTip.CameraModel, #MediaTip.CameraEquipment</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 4</description>
+			<type>fadelabel</type>
+			<id>43</id>
+			<posX>540</posX>
+			<posY>630</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionFStop: #MediaTip.FStop, #MediaTip.DescriptionShutterSpeed: #MediaTip.ShutterSpeed, #MediaTip.DescriptionMeteringMode: #MediaTip.MeteringMode, #MediaTip.DescriptionFlashMode: #MediaTip.FlashMode</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 5</description>
+			<type>fadelabel</type>
+			<id>44</id>
+			<posX>540</posX>
+			<posY>690</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionExposureTime: #MediaTip.ExposureTime, #MediaTip.DescriptionExposureCompensation: #MediaTip.ExposureCompensation</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<!-- *** MediaTip Picture Cover *** -->
+		<control>
+			<type>image</type>
+			<description>Empty</description>
+			<id>0</id>
+			<posX>99</posX>
+			<posY>368</posY>
+			<width>377</width>
+			<height>282</height>
+			<texture>black.png</texture>
+			<colordiffuse>60ffffff</colordiffuse>
+			<visible>control.isvisible(45)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Cover</description>
+			<id>45</id>
+			<posX>99</posX>
+			<posY>368</posY>
+			<width>377</width>
+			<height>282</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<zoom>yes</zoom>
+			<centered>yes</centered>
+			<texture>#MediaTip.Cover</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Case</description>
+			<id>46</id>
+			<posX>79</posX>
+			<posY>348</posY>
+			<width>417</width>
+			<height>322</height>
+			<texture>PictureCase.png</texture>
+		</control>
+		<!-- *** MediaTip Directory Property Lines *** -->
+		<control>
+			<description>Line 1</description>
+			<type>fadelabel</type>
+			<id>50</id>
+			<posX>540</posX>
+			<posY>450</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DirectoryName (#MediaTip.Date)</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 2</description>
+			<type>fadelabel</type>
+			<id>51</id>
+			<posX>540</posX>
+			<posY>510</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionDirectorySize: #MediaTip.DirectorySize</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 3</description>
+			<type>fadelabel</type>
+			<id>52</id>
+			<posX>540</posX>
+			<posY>570</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<label>#MediaTip.DescriptionDirectoryFileCount: #MediaTip.DirectoryFileCount</label>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 4</description>
+			<type>fadelabel</type>
+			<id>53</id>
+			<posX>540</posX>
+			<posY>630</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 5</description>
+			<type>fadelabel</type>
+			<id>54</id>
+			<posX>540</posX>
+			<posY>690</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<!-- *** MediaTip Directory Cover *** -->
+		<control>
+			<type>image</type>
+			<description>Empty</description>
+			<id>0</id>
+			<posX>99</posX>
+			<posY>368</posY>
+			<width>377</width>
+			<height>282</height>
+			<texture>black.png</texture>
+			<colordiffuse>60ffffff</colordiffuse>
+			<visible>control.isvisible(55)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Cover</description>
+			<id>55</id>
+			<posX>99</posX>
+			<posY>368</posY>
+			<width>377</width>
+			<height>282</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<zoom>yes</zoom>
+			<centered>yes</centered>
+			<texture>#MediaTip.Cover</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Case</description>
+			<id>56</id>
+			<posX>79</posX>
+			<posY>348</posY>
+			<width>417</width>
+			<height>322</height>
+			<texture>PictureCase.png</texture>
+		</control>
+		<!-- *** MediaTip Radio Property Lines *** -->
+		<control>
+			<description>Line 1</description>
+			<type>fadelabel</type>
+			<id>60</id>
+			<posX>540</posX>
+			<posY>450</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>#MediaTip.Station</label>
+		</control>
+		<control>
+			<description>Line 2</description>
+			<type>fadelabel</type>
+			<id>61</id>
+			<posX>540</posX>
+			<posY>510</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>#MediaTip.Title</label>
+		</control>
+		<control>
+			<description>Line 3</description>
+			<type>fadelabel</type>
+			<id>62</id>
+			<posX>540</posX>
+			<posY>570</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 4</description>
+			<type>fadelabel</type>
+			<id>63</id>
+			<posX>540</posX>
+			<posY>630</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<control>
+			<description>Line 5</description>
+			<type>fadelabel</type>
+			<id>64</id>
+			<posX>540</posX>
+			<posY>690</posY>
+			<width>1290</width>
+			<font>font14</font>
+			<wrapString> : : : </wrapString>
+			<textcolor>#ColorAlternate</textcolor>
+		</control>
+		<!-- *** MediaTip Radio Cover *** -->
+		<control>
+			<type>image</type>
+			<description>Empty</description>
+			<id>0</id>
+			<posX>99</posX>
+			<posY>368</posY>
+			<width>377</width>
+			<height>282</height>
+			<texture>black.png</texture>
+			<colordiffuse>60ffffff</colordiffuse>
+			<visible>control.isvisible(65)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Cover</description>
+			<id>65</id>
+			<posX>99</posX>
+			<posY>368</posY>
+			<width>377</width>
+			<height>282</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<zoom>yes</zoom>
+			<centered>yes</centered>
+			<texture>#MediaTip.Cover</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Case</description>
+			<id>66</id>
+			<posX>79</posX>
+			<posY>348</posY>
+			<width>417</width>
+			<height>322</height>
+			<texture>PictureCase.png</texture>
+		</control>
+
+	</controls>
+</window>

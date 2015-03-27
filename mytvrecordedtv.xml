@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>603</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:604</define>
+	<define>#header.background:hover_my tv.png</define>
+	<define>#header.fanart:</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.recordings.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>536</width>
+				<height>301</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvRecorded">
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>229</posX>
+				<posY>196</posY>
+				<width>199</width>
+				<height>150</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#TV.RecordedTV.thumb</texture>
+				<centered>yes</centered>
+				<zoom>no</zoom>
+				<keepaspectratio>yes</keepaspectratio>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#selectedthumb,'')</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<id>500</id>
+				<type>image</type>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>536</width>
+				<height>301</height>
+				<texture>#selectedthumb</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<zoom>no</zoom>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>34</posX>
+				<posY>94</posY>
+				<width>590</width>
+				<height>355</height>
+				<texture>VideoCase.png</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>13</id>
+				<posX>45</posX>
+				<posY>480</posY>
+				<width>570</width>
+				<font>font22</font>
+				<label>#TV.RecordedTV.Title</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<description>Current program time</description>
+				<id>14</id>
+				<posX>45</posX>
+				<posY>547</posY>
+				<label>#TV.RecordedTV.Time</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>600</posY>
+				<label>#TV.RecordedTV.Channel</label>
+				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<width>570</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<description>Current program genre</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>652</posY>
+				<label>#TV.RecordedTV.Genre</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<width>577</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<type>textboxscrollup</type>
+				<description>Description1</description>
+				<id>15</id>
+				<posX>45</posX>
+				<posY>705</posY>
+				<width>577</width>
+				<height>345</height>
+				<colordiffuse>#ColorMain</colordiffuse>
+				<font>font16</font>
+				<label>#TV.RecordedTV.Description</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+!player.hasmedia</visible>
+				<seperator>: : :</seperator>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>textboxscrollup</type>
+				<description>Selected item Label</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>922</posY>
+				<width>1830</width>
+				<font>font24</font>
+				<height>67</height>
+				<textalign>center</textalign>
+				<label>#selecteditem</label>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>textboxscrollup</type>
+				<description>subTitle</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>1000</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font16</font>
+				<height>67</height>
+				<label>#TV.RecordedTV.Time     #TV.RecordedTV.Channel     #TV.RecordedTV.Genre</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<type>menubutton</type>
+					<description>View-As button</description>
+					<id>2</id>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<mode>dialoglist</mode>
+					<dialogTitle>792</dialogTitle>
+					<valueTextInButton>yes</valueTextInButton>
+					<valuePrefixText>95</valuePrefixText>
+				</control>
+				<control>
+					<type>sortbutton</type>
+					<id>3</id>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+					<label>620</label>
+				</control>
+				<control>
+					<type>menubutton</type>
+					<description>All,Genre,Channel button</description>
+					<id>5</id>
+					<onleft>5</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>6</ondown>
+					<mode>dialoglist</mode>
+					<dialogTitle>499</dialogTitle>
+					<valueTextInButton>yes</valueTextInButton>
+					<valuePrefixText>97</valuePrefixText>
+				</control>
+				<control>
+					<type>button</type>
+					<description>cleanup button</description>
+					<id>6</id>
+					<onleft>6</onleft>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>10</ondown>
+					<!-- <ondown>7</ondown> -->
+					<label>624</label>
+				</control>
+				<!-- <control>
+					<type>button</type>
+					<description>compress button</description>
+					<id>7</id>
+					<onleft>7</onleft>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>99</ondown>
+					<hyperlink>609</hyperlink>
+					<label>896</label>
+				</control> -->
+				<control>
+					<description>Scheduler</description>
+					<type>button</type>
+					<id>10</id>
+					<label>603</label>
+					<hyperlink>601</hyperlink>
+					<onup>6</onup>
+					<ondown>11</ondown>
+					<onright>50</onright>
+					<onleft>10</onleft>
+				</control>
+				<control>
+					<description>Search</description>
+					<type>button</type>
+					<id>11</id>
+					<label>137</label>
+					<hyperlink>604</hyperlink>
+					<onup>10</onup>
+					<ondown>2</ondown>
+					<onright>50</onright>
+					<onleft>11</onleft>
+				</control>
+			</control>
+		</control>
+		<!-- 		<control>
+			<id>500</id>
+			<type>image</type>
+			<posX>140</posX>
+			<posY>1200</posY>
+			<width>250</width>
+			<height>150</height>
+			<texture>#selectedthumb</texture>
+			<visible>facadeview.list+control.hasfocus(50)+control.HasThumb(500)</visible>
+			<keepaspectratio>yes</keepaspectratio>
+		</control> -->
+		<!-- NOT USED -->
+		<control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<id>12</id>
+			<posX>3765</posX>
+			<posY>989</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>left</align>
+			<textcolor>#ColorUnfocused</textcolor>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>76220</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:#burner_title</define>
+	<define>#header.background:hover_my burner.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(7)]">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<visible>control.isvisible(20)</visible>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<visible>control.isvisible(20)</visible>
+				<colordiffuse>77ffffff</colordiffuse>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<visible>control.isvisible(20)</visible>
+				<posX>735</posX>
+				<posY>646</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<id>1</id>
+				<description>progress bar background</description>
+				<type>image</type>
+				<posX>735</posX>
+				<posY>670</posY>
+				<width>1185</width>
+				<height>54</height>
+				<texture>osd_progress_background.png</texture>
+				<visible>control.isvisible(20)</visible>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<id>1</id>
+				<description>Status Bar</description>
+				<type>statusbar</type>
+				<visible>yes</visible>
+				<posX>717</posX>
+				<posY>670</posY>
+				<width>1221</width>
+				<height>54</height>
+				<posYTop>500</posYTop>
+				<texturebg>-</texturebg>
+				<lefttexture>osd_progress_left_dummy.png</lefttexture>
+				<midtexture>osd_progress_mid.png</midtexture>
+				<righttexture>-</righttexture>
+				<label>#burner_perc</label>
+				<visible>control.isvisible(20)</visible>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<id>1</id>
+				<description>My burner File Size label</description>
+				<type>label</type>
+				<posX>840</posX>
+				<posY>673</posY>
+				<width>624</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>#burner_size</label>
+				<shadowAngle>315</shadowAngle>
+				<shadowDistance>1</shadowDistance>
+				<shadowColor>FF000000</shadowColor>
+				<visible>control.isvisible(20)</visible>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<id>1</id>
+				<description>DVR Convert Info Label</description>
+				<type>label</type>
+				<posX>840</posX>
+				<posY>673</posY>
+				<width>624</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>#convert_info</label>
+				<visible>control.isvisible(20)</visible>
+				<shadowAngle>315</shadowAngle>
+				<shadowDistance>1</shadowDistance>
+				<shadowColor>FF000000</shadowColor>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<id>1</id>
+				<description>My burner Info Label</description>
+				<type>label</type>
+				<posX>840</posX>
+				<posY>673</posY>
+				<width>624</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>#burner_info</label>
+				<visible>control.isvisible(20)</visible>
+				<shadowAngle>315</shadowAngle>
+				<shadowDistance>1</shadowDistance>
+				<shadowColor>FF000000</shadowColor>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<id>50</id>
+				<description>CD Detail Panel</description>
+				<type>textbox</type>
+				<onleft>2</onleft>
+				<onright>3</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<posX>765</posX>
+				<posY>165</posY>
+				<width>1128</width>
+				<height>873</height>
+				<textcolor>#ColorMain</textcolor>
+				<font>font16</font>
+				<animation effect="Fade" time="250">VisibleChange</animation>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<id>20</id>
+					<description>file listcontrol</description>
+					<type>listcontrol</type>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+					<height>468</height>
+					<spinPosY>580</spinPosY>
+				</control>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<id>30</id>
+					<description>copy listcontrol</description>
+					<type>listcontrol</type>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+					<posY>726</posY>
+					<height>375</height>
+					<animation effect="Fade" time="250">VisibleChange</animation>
+				</control>
+			</control>
+		</control>
+
+		<control>
+			<description>action menu</description>
+			<type>actiongroup</type>
+			<dimColor>#ColorMain</dimColor>
+			<width>627</width>
+			<height>1080</height>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<onexit>0</onexit>
+			<defaultcontrol>2</defaultcontrol>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(7)]+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(7)]|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<width>499</width>
+				<font>font24</font>
+				<textcolor>#ColorMain</textcolor>
+				<align>LEFT</align>
+				<label>2100</label>
+			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>150</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<id>2</id>
+					<description>Video</description>
+					<type>button</type>
+					<onleft>2</onleft>
+					<onright>20</onright>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<label>2101</label>
+				</control>
+				<control>
+					<id>3</id>
+					<description>Audio</description>
+					<type>button</type>
+					<onleft>3</onleft>
+					<onright>20</onright>
+					<onup>2</onup>
+					<ondown>4</ondown>
+					<label>2102</label>
+				</control>
+				<control>
+					<id>4</id>
+					<description>Data</description>
+					<type>button</type>
+					<onleft>4</onleft>
+					<onright>20</onright>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<label>2103</label>
+				</control>
+				<control>
+					<id>5</id>
+					<description>cd info</description>
+					<type>button</type>
+					<onleft>5</onleft>
+					<onright>20</onright>
+					<onup>4</onup>
+					<ondown>6</ondown>
+					<label>2123</label>
+				</control>
+				<control>
+					<id>6</id>
+					<description>rw format</description>
+					<type>button</type>
+					<onleft>6</onleft>
+					<onright>20</onright>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<label>2114</label>
+				</control>
+				<control>
+					<id>7</id>
+					<description>cd eject</description>
+					<type>button</type>
+					<onleft>7</onleft>
+					<onright>20</onright>
+					<onup>6</onup>
+					<ondown>2</ondown>
+					<label>2126</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

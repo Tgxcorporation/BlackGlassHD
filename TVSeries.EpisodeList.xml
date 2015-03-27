@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-750,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+control.isvisible(1239)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>-109</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>138</posY>
+				<label>#TVSeries.Title</label>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>1200</width>
+				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>192</posY>
+				<label>#TVSeries.Series.Pretty_Name     #TVSeries.Subtitle</label>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+				<width>1185</width>
+				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>image</type>
+				<id>0</id>
+				<posX>-657</posX>
+				<posY>160</posY>
+				<width>1920</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<description>Big Episode Thumb</description>
+				<type>image</type>
+				<id>67</id>
+				<posX>55</posX>
+				<posY>281</posY>
+				<width>415</width>
+				<height>233</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#TVSeries.EpisodeImage</texture>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>image</type>
+				<id>0</id>
+				<posX>34</posX>
+				<posY>260</posY>
+				<width>457</width>
+				<height>275</height>
+				<texture>VideoCase.png</texture>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<!-- <control Style="FanartDisplayAnimationTvSeriesDetails">
+				<description>Episode Watched Icon Background</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>423</posX>
+				<posY>292</posY>
+				<width>48</width>
+				<height>60</height>
+				<texture>overlaywubg.png</texture>
+				<visible>control.isvisible(1239)</visible>
+			</control> -->
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>imagelist</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>262</posY>
+				<width>453</width>
+				<height>60</height>
+				<textureWidth>40</textureWidth>
+				<textureHeight>40</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#TVSeries.Episode.Rating</percentage>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>930</posX>
+				<posY>265</posY>
+				<width>380</width>
+				<label>(#(string.format('{0:f1}', cflt(#TVSeries.Episode.Rating))))</label>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font14</font>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>315</posY>
+				<width>720</width>
+				<label>#TVSeries.Episode.FilesizeValue    #TVSeries.Episode.VideoinfoValue</label>
+				<font>font14</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>367</posY>
+				<width>720</width>
+				<label>#TVSeries.Episode.DirectorKey #TVSeries.Episode.DirectorValue</label>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>420</posY>
+				<width>720</width>
+				<label>#TVSeries.Episode.WriterKey #TVSeries.Episode.WriterValue</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>472</posY>
+				<width>720</width>
+				<label>#TVSeries.Episode.ActorsKey #TVSeries.Episode.ActorsValue</label>
+				<textcolor>#ColorMain</textcolor>
+				<font>font14</font>
+				<visible>control.isvisible(1239)</visible>
+				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>525</posY>
+				<width>720</width>
+				<label>#TVSeries.Episode.GueststarKey #TVSeries.Episode.GueststarValue</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetails">
+				<type>image</type>
+				<id>0</id>
+				<posX>-657</posX>
+				<posY>517</posY>
+				<width>1920</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<visible>control.isvisible(1239)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetailsWatched">
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>622</posY>
+				<width>1200</width>
+				<height>202</height>
+				<font>font16</font>
+				<seperator>: : :</seperator>
+				<label>#TVSeries.Description</label>
+				<visible>control.isvisible(1239)+player.hasmedia</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetailsWatched">
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>622</posY>
+				<width>1200</width>
+				<height>300</height>
+				<font>font16</font>
+				<seperator>: : :</seperator>
+				<label>#TVSeries.Description</label>
+				<visible>control.isvisible(1239)+!player.hasmedia</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetailsWatched">
+				<type>image</type>
+				<id>0</id>
+				<posX>-657</posX>
+				<posY>876</posY>
+				<width>1920</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<visible>control.isvisible(1239)+!player.hasmedia</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetailsWatched">
+				<type>image</type>
+				<description>Logos</description>
+				<id>66</id>
+				<posX>45</posX>
+				<posY>981</posY>
+				<width>1200</width>
+				<height>75</height>
+				<texture>#TVSeries.Logos</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<visible>control.isvisible(1239)+!player.hasmedia</visible>
+			</control>
+			<!-- <control Style="FanartDisplayAnimationTvSeriesDetailsWatched">
+				<description>Episode Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>432</posX>
+				<posY>299</posY>
+				<width>36</width>
+				<height>36</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(1239)+control.isvisible(1243)+control.isvisible(1244)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetailsWatched">
+				<description>Episode Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>432</posX>
+				<posY>299</posY>
+				<width>36</width>
+				<height>36</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorAvailable</colordiffuse>
+				<visible>control.isvisible(1239)+!control.isvisible(1243)+control.isvisible(1244)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetailsWatched">
+				<description>Episode Not Available and Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>432</posX>
+				<posY>299</posY>
+				<width>36</width>
+				<height>36</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorUnavailable</colordiffuse>
+				<visible>control.isvisible(1239)+control.isvisible(1243)+!control.isvisible(1244)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationTvSeriesDetailsWatched">
+				<description>Episode Not Available and Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>432</posX>
+				<posY>299</posY>
+				<width>36</width>
+				<height>36</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorUnavailable</colordiffuse>
+				<visible>control.isvisible(1239)+!control.isvisible(1243)+!control.isvisible(1244)</visible>
+			</control> -->
+
+		</control>
+
+
+	</controls>
+</window>

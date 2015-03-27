@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>607</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:877</define>
+	<define>#header.background:hover_my tv.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>scheduler recordings listcontrol</description>
+					<type>updownlistcontrol</type>
+					<id>10</id>
+					<posX>735</posX>
+					<posY>150</posY>
+					<width>1185</width>
+					<height>930</height>
+					<textYOff>12</textYOff>
+					<textXOff>15</textXOff>
+					<textXOff2>0</textXOff2>
+					<textYOff2>12</textYOff2>
+					<textXOff3>0</textXOff3>
+					<textYOff3>12</textYOff3>
+					<IconXOff>15</IconXOff>
+					<IconYOff>10</IconYOff>
+					<spinWidth>69</spinWidth>
+					<spinHeight>49</spinHeight>
+					<spinPosX>1770</spinPosX>
+					<spinPosY>990</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinCanFocus>yes</spinCanFocus>
+					<itemWidth>73</itemWidth>
+					<itemHeight>55</itemHeight>
+					<textureFocus>bg_facade_line_focus.png</textureFocus>
+					<textureNoFocus>bg_facade_line_nofocus.png</textureNoFocus>
+					<spaceBetweenItems>0</spaceBetweenItems>
+					<textureHeight>79</textureHeight>
+					<keepaspectratio>no</keepaspectratio>
+					<font2>font16</font2>
+					<font3>font16</font3>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<unfocusedAlpha>120</unfocusedAlpha>
+				</control>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>REAL Current program title</description>
+				<type>fadelabel</type>
+				<id>13</id>
+				<posX>45</posX>
+				<posY>112</posY>
+				<width>540</width>
+				<font>font22</font>
+				<label>#TV.Scheduled.Title</label>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<!-- 		<control>
+			<description>Channel Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>121</posY>
+			<width>50</width>
+			<height>35</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#selectedthumb</texture>
+			<visible>control.hasfocus(10)</visible>
+		</control> -->
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>14</id>
+				<posX>45</posX>
+				<posY>252</posY>
+				<label>#TV.Scheduled.Time</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>genre</description>
+				<type>fadelabel</type>
+				<id>17</id>
+				<posX>45</posX>
+				<posY>307</posY>
+				<label>#TV.Scheduled.Genre</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>15</id>
+				<posX>45</posX>
+				<posY>360</posY>
+				<width>540</width>
+				<height>495</height>
+				<label>#TV.Scheduled.Description</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<visible>player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>360</posY>
+				<width>540</width>
+				<height>678</height>
+				<label>#TV.Scheduled.Description</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<visible>!player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+		</control>
+	</controls>
+</window>

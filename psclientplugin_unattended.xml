@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>6666</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>control.isvisible(13371337)</allowoverlay>
+  <define>#header.label:40001</define>
+  <define>#header.background:bg.jpg</define>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+  <controls>
+    <import>common.window.background.xml</import>
+    <import>common.window.overlay.xml</import>
+    <import>common.window.time.xml</import>
+    <control>
+      <type>group</type>
+      <dimColor>#ColorMain</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <control>
+        <type>fadelabel</type>
+        <width>1275</width>
+        <wrapString> : : : </wrapString>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>15</posY>
+        <label>#header.label</label>
+        <font>font28</font>
+        <align>left</align>
+        <textcolor>#ColorUnfocused</textcolor>
+      </control>
+      <control>
+        <posX>213</posX>
+        <posY>280</posY>
+        <type>label</type>
+        <id>2</id>
+        <label>40002</label>
+        <font>font12</font>
+        <textcolor>#ColorMain</textcolor>
+      </control>
+      <control>
+        <posX>213</posX>
+        <posY>375</posY>
+        <type>label</type>
+        <id>2</id>
+        <label>40003</label>
+        <font>font12</font>
+        <textcolor>#ColorMain</textcolor>
+      </control>
+    </control>
+  </controls>
+</window>

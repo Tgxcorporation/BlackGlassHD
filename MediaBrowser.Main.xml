@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<id>20130603</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:Media Browser</define>
+	<define>#header.background:hover_MediaBrowser.png</define>
+	<define>#header.fanart:</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>MediaBrowser.Fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<import>MediaBrowser.Facade.xml</import>
+		<import>MediaBrowser.HiddenMenu.xml</import>
+		<import>MediaBrowser.view.xml</import>
+		<import>MediaBrowser.movie.xml</import>
+		<import>MediaBrowser.series.xml</import>
+		<import>MediaBrowser.season.xml</import>
+		<import>MediaBrowser.episode.xml</import>
+		<import>MediaBrowser.person.xml</import>
+		<import>MediaBrowser.audio.xml</import>
+		<import>MediaBrowser.musicalbum.xml</import>
+		<import>MediaBrowser.artist.xml</import>
+		
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+		</control>
+
+
+	</controls>
+</window>

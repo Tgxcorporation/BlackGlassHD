@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>7978</id>
+  <defaultcontrol>70</defaultcontrol>
+  <allowoverlay>control.isvisible(13371337)</allowoverlay>
+  <define>#header.label:World Clock</define>
+  <define>#header.background:bg.jpg</define>
+  <define>#header.background:hover_worldclock.png</define>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+  <controls>
+    <import>common.window.background.xml</import>
+    <import>common.window.overlay.xml</import>
+    <import>common.window.time.xml</import>
+    <control>
+      <type>group</type>
+      <dimColor>#ColorMain</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <control>
+        <type>fadelabel</type>
+        <width>1275</width>
+        <wrapString> : : : </wrapString>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>15</posY>
+        <label>#header.label</label>
+        <font>font28</font>
+        <align>left</align>
+        <textcolor>#ColorUnfocused</textcolor>
+      </control>
+      <!-- *** Main Clock Frame *** -->
+      <control>
+        <description>Background Frame</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>735</posX>
+        <posY>75</posY>
+        <width>450</width>
+        <height>450</height>
+        <texture>WorldClock/worldclock_frame.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Main Clock *** -->
+      <control>
+        <description>Main Clock</description>
+        <type>image</type>
+        <id>50</id>
+        <posX>810</posX>
+        <posY>150</posY>
+        <width>300</width>
+        <height>300</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Main Clock indicator</description>
+        <type>image</type>
+        <id>60</id>
+        <posX>810</posX>
+        <posY>405</posY>
+        <width>45</width>
+        <height>45</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Main Clock button</description>
+        <type>button</type>
+        <id>70</id>
+        <posX>1062</posX>
+        <posY>402</posY>
+        <width>52</width>
+        <height>52</height>
+        <textureFocus>WorldClock/worldclock_focus.png</textureFocus>
+        <textureNoFocus>WorldClock/worldclock_nofocus.png</textureNoFocus>
+        <label>-</label>
+        <onup>72</onup>
+        <ondown>72</ondown>
+        <onleft>71</onleft>
+        <onright>73</onright>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Main Clock DateTime</description>
+        <type>label</type>
+        <id>80</id>
+        <posX>960</posX>
+        <posY>517</posY>
+        <align>center</align>
+        <textcolor>#ColorAlternate</textcolor>
+        <label>#WorldClock.MainClockDateTime</label>
+        <font>font12</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Main Clock Description</description>
+        <type>label</type>
+        <id>90</id>
+        <posX>960</posX>
+        <posY>555</posY>
+        <align>center</align>
+        <label>#WorldClock.MainClockDescription</label>
+        <font>font14</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Main Clock Sunrise Time</description>
+        <type>label</type>
+        <id>91</id>
+        <posX>960</posX>
+        <posY>52</posY>
+        <align>center</align>
+        <label>Sunrise Time: #WorldClock.MainClockSunriseTime</label>
+        <font>font10</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Main Clock Sunset Time</description>
+        <type>label</type>
+        <id>92</id>
+        <posX>960</posX>
+        <posY>75</posY>
+        <align>center</align>
+        <label>Sunset Time: #WorldClock.MainClockSunsetTime</label>
+        <font>font10</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Main Clock Moon Phase</description>
+        <type>label</type>
+        <id>93</id>
+        <posX>960</posX>
+        <posY>97</posY>
+        <align>center</align>
+        <label>Moon: #WorldClock.MainClockMoonPhase</label>
+        <font>font10</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 1 Frame *** -->
+      <control>
+        <description>Background Frame</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>240</posX>
+        <posY>615</posY>
+        <width>345</width>
+        <height>345</height>
+        <texture>WorldClock/worldclock_frame.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 1 *** -->
+      <control>
+        <description>Additional Clock 1</description>
+        <type>image</type>
+        <id>51</id>
+        <posX>300</posX>
+        <posY>675</posY>
+        <width>225</width>
+        <height>225</height>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 1 indicator</description>
+        <type>image</type>
+        <id>61</id>
+        <posX>300</posX>
+        <posY>862</posY>
+        <width>37</width>
+        <height>37</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 1 button</description>
+        <type>button</type>
+        <id>71</id>
+        <posX>490</posX>
+        <posY>865</posY>
+        <width>37</width>
+        <height>37</height>
+        <textureFocus>WorldClock/worldclock_focus.png</textureFocus>
+        <textureNoFocus>WorldClock/worldclock_nofocus.png</textureNoFocus>
+        <onup>70</onup>
+        <ondown>70</ondown>
+        <onleft>73</onleft>
+        <onright>72</onright>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 1 DateTime</description>
+        <type>label</type>
+        <id>81</id>
+        <posX>412</posX>
+        <posY>960</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock1DateTime</label>
+        <font>font10</font>
+        <textcolor>#ColorAlternate</textcolor>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 1 Description</description>
+        <type>textboxscrollup</type>
+        <id>91</id>
+        <posX>172</posX>
+        <posY>975</posY>
+        <textalign>center</textalign>
+        <width>480</width>
+        <height>75</height>
+        <label>#WorldClock.AdditionalClock1Description</label>
+        <font>font12</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 2 Frame *** -->
+      <control>
+        <description>Background Frame</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>787</posX>
+        <posY>615</posY>
+        <width>345</width>
+        <height>345</height>
+        <texture>WorldClock/worldclock_frame.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 2 *** -->
+      <control>
+        <description>Additional Clock 2</description>
+        <type>image</type>
+        <id>52</id>
+        <posX>847</posX>
+        <posY>675</posY>
+        <width>225</width>
+        <height>225</height>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 2 indicator</description>
+        <type>image</type>
+        <id>62</id>
+        <posX>847</posX>
+        <posY>862</posY>
+        <width>37</width>
+        <height>37</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 2 button</description>
+        <type>button</type>
+        <id>72</id>
+        <posX>1038</posX>
+        <posY>865</posY>
+        <width>37</width>
+        <height>37</height>
+        <textureFocus>WorldClock/worldclock_focus.png</textureFocus>
+        <textureNoFocus>WorldClock/worldclock_nofocus.png</textureNoFocus>
+        <onup>70</onup>
+        <ondown>70</ondown>
+        <onleft>71</onleft>
+        <onright>73</onright>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 2 DateTime</description>
+        <type>label</type>
+        <id>82</id>
+        <posX>960</posX>
+        <posY>960</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock2DateTime</label>
+        <font>font10</font>
+        <textcolor>#ColorAlternate</textcolor>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 2 Description</description>
+        <type>textboxscrollup</type>
+        <id>92</id>
+        <posX>720</posX>
+        <posY>975</posY>
+        <textalign>center</textalign>
+        <width>480</width>
+        <height>75</height>
+        <label>#WorldClock.AdditionalClock2Description</label>
+        <font>font12</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 3 Frame *** -->
+      <control>
+        <description>Background Frame</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>1335</posX>
+        <posY>615</posY>
+        <width>345</width>
+        <height>345</height>
+        <texture>WorldClock/worldclock_frame.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 3 *** -->
+      <control>
+        <description>Additional Clock 3</description>
+        <type>image</type>
+        <id>53</id>
+        <posX>1395</posX>
+        <posY>675</posY>
+        <width>225</width>
+        <height>225</height>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 3 indicator</description>
+        <type>image</type>
+        <id>63</id>
+        <posX>1395</posX>
+        <posY>862</posY>
+        <width>37</width>
+        <height>37</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 3 button</description>
+        <type>button</type>
+        <id>73</id>
+        <posX>1585</posX>
+        <posY>865</posY>
+        <width>37</width>
+        <height>37</height>
+        <textureFocus>WorldClock/worldclock_focus.png</textureFocus>
+        <textureNoFocus>WorldClock/worldclock_nofocus.png</textureNoFocus>
+        <onup>70</onup>
+        <ondown>70</ondown>
+        <onleft>72</onleft>
+        <onright>71</onright>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 3 DateTime</description>
+        <type>label</type>
+        <id>83</id>
+        <posX>1507</posX>
+        <posY>960</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock3DateTime</label>
+        <font>font10</font>
+        <textcolor>#ColorAlternate</textcolor>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 3 Description</description>
+        <type>textboxscrollup</type>
+        <id>93</id>
+        <posX>1267</posX>
+        <posY>975</posY>
+        <textalign>center</textalign>
+        <width>480</width>
+        <height>75</height>
+        <label>#WorldClock.AdditionalClock3Description</label>
+        <font>font12</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 4 Frame *** -->
+      <control>
+        <description>Background Frame</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>240</posX>
+        <posY>1200</posY>
+        <width>345</width>
+        <height>345</height>
+        <texture>WorldClock/worldclock_frame.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 4 *** -->
+      <control>
+        <description>Additional Clock 4</description>
+        <type>image</type>
+        <id>54</id>
+        <posX>300</posX>
+        <posY>1110</posY>
+        <width>225</width>
+        <height>225</height>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 4 indicator</description>
+        <type>image</type>
+        <id>64</id>
+        <posX>300</posX>
+        <posY>1297</posY>
+        <width>37</width>
+        <height>37</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 4 button</description>
+        <type>button</type>
+        <id>74</id>
+        <posX>490</posX>
+        <posY>1300</posY>
+        <width>37</width>
+        <height>37</height>
+        <textureFocus>WorldClock/worldclock_focus.png</textureFocus>
+        <textureNoFocus>WorldClock/worldclock_nofocus.png</textureNoFocus>
+        <onup>70</onup>
+        <ondown>70</ondown>
+        <onleft>73</onleft>
+        <onright>72</onright>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 4 DateTime</description>
+        <type>label</type>
+        <id>84</id>
+        <posX>412</posX>
+        <posY>1395</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock4DateTime</label>
+        <font>font10</font>
+        <textcolor>#ColorAlternate</textcolor>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 4 Description</description>
+        <type>label</type>
+        <id>94</id>
+        <posX>412</posX>
+        <posY>1425</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock4Description</label>
+        <font>font12</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 5 Frame *** -->
+      <control>
+        <description>Background Frame</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>787</posX>
+        <posY>1200</posY>
+        <width>345</width>
+        <height>345</height>
+        <texture>WorldClock/worldclock_frame.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 5 *** -->
+      <control>
+        <description>Additional Clock 5</description>
+        <type>image</type>
+        <id>55</id>
+        <posX>847</posX>
+        <posY>1110</posY>
+        <width>225</width>
+        <height>225</height>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 5 indicator</description>
+        <type>image</type>
+        <id>65</id>
+        <posX>847</posX>
+        <posY>1297</posY>
+        <width>37</width>
+        <height>37</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 5 button</description>
+        <type>button</type>
+        <id>75</id>
+        <posX>1038</posX>
+        <posY>1300</posY>
+        <width>37</width>
+        <height>37</height>
+        <textureFocus>WorldClock/worldclock_focus.png</textureFocus>
+        <textureNoFocus>WorldClock/worldclock_nofocus.png</textureNoFocus>
+        <onup>70</onup>
+        <ondown>70</ondown>
+        <onleft>71</onleft>
+        <onright>73</onright>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 5 DateTime</description>
+        <type>label</type>
+        <id>85</id>
+        <posX>960</posX>
+        <posY>1395</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock5DateTime</label>
+        <font>font10</font>
+        <textcolor>#ColorAlternate</textcolor>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 5 Description</description>
+        <type>label</type>
+        <id>95</id>
+        <posX>960</posX>
+        <posY>1425</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock5Description</label>
+        <font>font12</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 6 Frame *** -->
+      <control>
+        <description>Background Frame</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>1335</posX>
+        <posY>1200</posY>
+        <width>345</width>
+        <height>345</height>
+        <texture>WorldClock/worldclock_frame.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- *** Additional Clock 6 *** -->
+      <control>
+        <description>Additional Clock 6</description>
+        <type>image</type>
+        <id>56</id>
+        <posX>1395</posX>
+        <posY>1110</posY>
+        <width>225</width>
+        <height>225</height>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 6 indicator</description>
+        <type>image</type>
+        <id>66</id>
+        <posX>1395</posX>
+        <posY>1297</posY>
+        <width>37</width>
+        <height>37</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>-</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 6 button</description>
+        <type>button</type>
+        <id>76</id>
+        <posX>1585</posX>
+        <posY>1300</posY>
+        <width>37</width>
+        <height>37</height>
+        <textureFocus>WorldClock/worldclock_focus.png</textureFocus>
+        <textureNoFocus>WorldClock/worldclock_nofocus.png</textureNoFocus>
+        <onup>70</onup>
+        <ondown>70</ondown>
+        <onleft>72</onleft>
+        <onright>71</onright>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 6 DateTime</description>
+        <type>label</type>
+        <id>86</id>
+        <posX>1507</posX>
+        <posY>1395</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock6DateTime</label>
+        <font>font10</font>
+        <textcolor>#ColorAlternate</textcolor>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Additional Clock 6 Description</description>
+        <type>label</type>
+        <id>96</id>
+        <posX>1507</posX>
+        <posY>1425</posY>
+        <align>center</align>
+        <label>#WorldClock.AdditionalClock6Description</label>
+        <font>font12</font>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+    </control>
+  </controls>
+</window>

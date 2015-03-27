@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
+			<dimColor>#ColorMain</dimColor>
+			<control>
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1297</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>control.isvisible(51)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>1345</posX>
+				<posY>71</posY>
+				<width>574</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>control.isvisible(51)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
+			</control>
+			<control>
+				<type>facadeview</type>
+				<id>51</id>
+				<control>
+					<description>Categories List</description>
+					<type>listcontrol</type>
+					<id>51</id>
+					<onleft>51</onleft>
+					<onright>51</onright>
+					<textYOff>12</textYOff>
+					<textXOff>-20</textXOff>
+					<IconXOff>3015</IconXOff>
+					<posX>1345</posX>
+					<width>574</width>
+					<itemWidth>37</itemWidth>
+					<itemHeight>55</itemHeight>
+					<keepaspectratio>no</keepaspectratio>
+					<visible>control.isvisible(51)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
+				</control>
+			</control>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>600</posY>
+			<width>2520</width>
+			<height>480</height>
+			<texture>gradient.png</texture>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+control.isvisible(50)+!control.hasfocus(505050)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="150">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<dimColor>#ColorMain</dimColor>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1297</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>image</type>
+				<posX>1345</posX>
+				<posY>71</posY>
+				<width>574</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.list+control.isvisible(50)+[!string.equals(#MovingPictures.general.filteredmoviecount,)+!string.equals(#MovingPictures.general.filteredmoviecount,0)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.smallicons+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.largeicons+control.isvisible(50)</visible>
+			</control>
+			<control>
+				<type>facadeview</type>
+				<id>50</id>
+				<control Style="FanartDisplayAnimationMovingPictures">
+					<description>Movie List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>505050</onright>
+					<textXOff>-20</textXOff>
+					<textYOff>3</textYOff>
+					<textXOff2>0</textXOff2>
+					<textYOff2>49</textYOff2>
+					<textXOff3>30</textXOff3>
+					<textYOff3>49</textYOff3>
+					<IconXOff>1947</IconXOff>
+					<IconYOff>61</IconYOff>
+					<textcolor2>#ColorSub</textcolor2>
+					<textcolor3>#ColorSub</textcolor3>
+					<font2>font11</font2>
+					<font3>font11</font3>
+					<posX>1345</posX>
+					<width>574</width>
+					<itemWidth>37</itemWidth>
+					<itemHeight>55</itemHeight>
+					<textureFocus>bg_facade3_line_focus.png</textureFocus>
+					<textureNoFocus>bg_facade3_line_nofocus.png</textureNoFocus>
+					<textureHeight>88</textureHeight>
+					<keepaspectratio>no</keepaspectratio>
+					<!-- group headers -->
+					<textcolor3>ff3E99D7</textcolor3>
+					<visible>control.isvisible(50)</visible>
+				</control>
+				<control Style="FanartDisplayAnimationMovingPictures">
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>505050</onright>
+					<posX>750</posX>
+					<posY>142</posY>
+					<width>1222</width>
+					<height>805</height>
+					<scrollOffset>1</scrollOffset>
+					<itemWidth>193</itemWidth>
+					<itemHeight>266</itemHeight>
+					<textureWidth>192</textureWidth>
+					<textureHeight>266</textureHeight>
+					<thumbWidth>166</thumbWidth>
+					<thumbHeight>240</thumbHeight>
+					<thumbPosX>13</thumbPosX>
+					<thumbPosY>13</thumbPosY>
+					<itemWidthBig>288</itemWidthBig>
+					<itemHeightBig>399</itemHeightBig>
+					<textureWidthBig>288</textureWidthBig>
+					<textureHeightBig>399</textureHeightBig>
+					<thumbWidthBig>250</thumbWidthBig>
+					<thumbHeightBig>361</thumbHeightBig>
+					<thumbPosXBig>19</thumbPosXBig>
+					<thumbPosYBig>19</thumbPosYBig>
+					<thumbZoom>yes</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>no</renderFocusText>
+					<renderUnfocusText>no</renderUnfocusText>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<textXOff>3</textXOff>
+					<textYOff>3</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<showFrame>true</showFrame>
+					<!-- <textureMask>DVDCase_coverflow_mask.png</textureMask> -->
+					<frameNoFocus>DVDCase_nofocus.png</frameNoFocus>
+					<frameFocus>DVDCase.png</frameFocus>
+					<visible>control.isvisible(50)</visible>
+				</control>
+				<control Style="FanartDisplayAnimationMovingPictures">
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<ondown>505050</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<posX>30</posX>
+					<posY>482</posY>
+					<width>1905</width>
+					<height>334</height>
+					<spinCanFocus>no</spinCanFocus>
+					<itemWidth>270</itemWidth>
+					<itemHeight>334</itemHeight>
+					<textureWidth>255</textureWidth>
+					<textureHeight>353</textureHeight>
+					<thumbWidth>221</thumbWidth>
+					<thumbHeight>319</thumbHeight>
+					<thumbPosX>17</thumbPosX>
+					<thumbPosY>17</thumbPosY>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder>DVDCase_nofocus.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<!-- <textureMask>DVDCase_coverflow_mask.png</textureMask> -->
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<visible>control.isvisible(50)</visible>
+					<scrollOffset>3</scrollOffset>
+					<scrollbarYOff>396</scrollbarYOff>
+				</control>
+				<control Style="FanartDisplayAnimationMovingPictures">
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>#ColorMain</colordiffuse>
+					<dimColor>#ColorAlternate</dimColor>
+					<id>50</id>
+					<posX>45</posX>
+					<posY>472</posY>
+					<width>1905</width>
+					<height>1080</height>
+					<ondown>505050</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<selectedCard>0</selectedCard>
+					<cardWidth>262</cardWidth>
+					<cardHeight>370</cardHeight>
+					<angle>45</angle>
+					<sideShift>240</sideShift>
+					<sideGap>200</sideGap>
+					<sideDepth>250</sideDepth>
+					<offsetY>0</offsetY>
+					<selectedOffsetY>-10</selectedOffsetY>
+					<speed>8</speed>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<frameWidth>282</frameWidth>
+					<frameHeight>390</frameHeight>
+					<spinSpeed>8</spinSpeed>
+					<font1>font14</font1>
+					<font2>font11</font2>
+					<label1YOff>607</label1YOff>
+					<label2YOff>645</label2YOff>
+					<pageSize>5</pageSize>
+					<scrollbarYOff>406</scrollbarYOff>
+					<keepaspectratio>no</keepaspectratio>
+					<cards mask="DVDCase_coverflow_mask.png"/>
+					<camera xpos="0" ypos="80">yes</camera>
+					<visible>control.isvisible(50)</visible>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>276</width>
+									<height>390</height>
+									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png">black.png</texture>
+								</control>
+
+								
+								<control>
+									<description>Watched Icon</description>
+									<type>image</type>
+									<id>0</id>
+									<posX>237</posX>
+									<posY>15</posY>
+									<width>22</width>
+									<height>22</height>
+									<texture>overlaywatched.png</texture>
+									<colordiffuse>#ColorPlayed</colordiffuse>
+									<visible>string.contains(#MovingPictures.UserMovieSettings.watched, 1)</visible>
+								</control>
+								<control>
+									<description>Un-Watched Icon</description>
+									<type>image</type>
+									<id>0</id>
+									<posX>237</posX>
+									<posY>15</posY>
+									<width>22</width>
+									<height>22</height>
+									<texture>overlayunwatched.png</texture>
+									<colordiffuse>#ColorAvailable</colordiffuse>
+									<visible>!string.contains(#MovingPictures.UserMovieSettings.watched, 1)</visible>
+								</control>
+								
+								<control>
+									<description>Movie Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>9</posY>
+									<width>225</width>
+									<label>#MovingPictures.SelectedMovie.title</label>
+									<font>font13</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> : : : </wrapString>
+									<shadowAngle>45</shadowAngle>
+									<shadowDistance>2</shadowDistance>
+									<shadowColor>FF000000</shadowColor>
+								</control>
+								
+								<control>
+									<type>image</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>-30</posY>
+									<width>231</width>
+									<height>79</height>
+									<texture>bg_button_nofocus_top.png</texture>
+								</control>
+							
+
+								<control>
+									<type>imagelist</type>
+									<id>1</id>
+									<posX>22</posX>
+									<posY>61</posY>
+									<width>277</width>
+									<height>60</height>
+									<textureWidth>22</textureWidth>
+									<textureHeight>22</textureHeight>
+									<subitems>
+										<subitem>star_nofocus.png</subitem>
+										<subitem>star_focus.png</subitem>
+									</subitems>
+									<orientation>horizontal</orientation>
+									<align>left</align>
+									<imagesToDraw>10</imagesToDraw>
+									<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+								</control>
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>93</posY>
+									<width>247</width>
+									<label>#MovingPictures.SelectedMovie.genres</label>
+									<font>font11</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>year</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>130</posY>
+									<width>240</width>
+									<label>#MovingPictures.SelectedMovie.year     #MovingPictures.SelectedMovie.runtime.localized.short     #MovingPictures.SelectedMovie.certification</label>
+									<font>font11</font>
+									<textcolor>#ColorAlternate</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								
+								
+								<control>
+									<description>Director</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>168</posY>
+									<width>240</width>
+									<label>Dir. by #MovingPictures.SelectedMovie.directors</label>
+									<font>font11</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>cast</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>210</posY>
+									<width>240</width>
+									<label>#MovingPictures.SelectedMovie.actors</label>
+									<font>font10</font>
+									<lineSpacing>2</lineSpacing>
+									<align>left</align>
+									<textcolor>#ColorAlternate</textcolor>
+								</control>
+								
+								<control>
+									<description>plot</description>
+									<type>textboxscrollup</type>
+									<posX>22</posX>
+									<posY>247</posY>
+									<width>240</width>
+									<height>62</height>
+									<label>#MovingPictures.SelectedMovie.summary</label>
+									<font>font9</font>
+									<lineSpacing>2</lineSpacing>
+									<textcolor>#ColorMain</textcolor>
+								</control>
+								
+							</controls>
+							]]>
+						</subitem>
+					</subitems>
+				</control>
+			</control>
+
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>label</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>989</posY>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+				<label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>label</type>
+				<description>Number of Files Label</description>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.smallicons+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>label</type>
+				<description>Number of Files Label</description>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.largeicons+control.isvisible(50)</visible>
+			</control>
+
+		</control>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+
+	</controls>
+</window>

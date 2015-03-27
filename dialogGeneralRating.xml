@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>28380</id>
+  <defaultcontrol>10</defaultcontrol>
+  <allowoverlay>player.hasmedia</allowoverlay>
+  <controls>
+    <import>common.dialog.xml</import>
+    <control>
+      <description>1 Star</description>
+      <type>checkbutton</type>
+      <id>100</id>
+      <posX>732</posX>
+      <posY>543</posY>
+      <width>48</width>
+      <height>48</height>
+      <textureFocus>star_focus.png</textureFocus>
+      <textureNoFocus>star_focus.png</textureNoFocus>
+      <AltTextureFocus>star_nofocus.png</AltTextureFocus>
+      <AltTextureNoFocus>star_nofocus.png</AltTextureNoFocus>
+    </control>
+    <control>
+      <description>2 Star</description>
+      <type>checkbutton</type>
+      <id>101</id>
+      <posX>840</posX>
+      <posY>543</posY>
+      <width>48</width>
+      <height>48</height>
+      <textureFocus>star_focus.png</textureFocus>
+      <textureNoFocus>star_focus.png</textureNoFocus>
+      <AltTextureFocus>star_nofocus.png</AltTextureFocus>
+      <AltTextureNoFocus>star_nofocus.png</AltTextureNoFocus>
+    </control>
+    <control>
+      <description>3 Star</description>
+      <type>checkbutton</type>
+      <id>102</id>
+      <posX>946</posX>
+      <posY>543</posY>
+      <width>48</width>
+      <height>48</height>
+      <textureFocus>star_focus.png</textureFocus>
+      <textureNoFocus>star_focus.png</textureNoFocus>
+      <AltTextureFocus>star_nofocus.png</AltTextureFocus>
+      <AltTextureNoFocus>star_nofocus.png</AltTextureNoFocus>
+    </control>
+    <control>
+      <description>4 Star</description>
+      <type>checkbutton</type>
+      <id>103</id>
+      <posX>1053</posX>
+      <posY>543</posY>
+      <width>48</width>
+      <height>48</height>
+      <textureFocus>star_focus.png</textureFocus>
+      <textureNoFocus>star_focus.png</textureNoFocus>
+      <AltTextureFocus>star_nofocus.png</AltTextureFocus>
+      <AltTextureNoFocus>star_nofocus.png</AltTextureNoFocus>
+    </control>
+    <control>
+      <description>5 Star</description>
+      <type>checkbutton</type>
+      <id>104</id>
+      <posX>1159</posX>
+      <posY>543</posY>
+      <width>48</width>
+      <height>48</height>
+      <textureFocus>star_focus.png</textureFocus>
+      <textureNoFocus>star_focus.png</textureNoFocus>
+      <AltTextureFocus>star_nofocus.png</AltTextureFocus>
+      <AltTextureNoFocus>star_nofocus.png</AltTextureNoFocus>
+    </control>
+    <control>
+      <description>dialog text</description>
+      <type>label</type>
+      <id>7</id>
+      <posX>1200</posX>
+      <posY>600</posY>
+      <font>font13</font>
+      <align>right</align>
+      <width>300</width>
+      <textcolor>#ColorMain</textcolor>
+    </control>
+  </controls>
+</window>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<!-- common volume gfx -->
+		<control>
+			<type>image</type>
+			<id>999901</id>
+			<posX>607</posX>
+			<posY>33</posY>
+			<width>705</width>
+			<height>160</height>
+			<texture>volume.states.back.png</texture>
+			<visible>[control.isvisible(501)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<id>500</id>
+			<posX>607</posX>
+			<posY>33</posY>
+			<width>705</width>
+			<height>160</height>
+			<texture>volume.states.muted.png</texture>
+			<visible>no</visible>
+		</control>
+		<control>
+			<type>volumebar</type>
+			<id>501</id>
+			<posX>672</posX>
+			<posY>96</posY>
+			<width>576</width>
+			<align>left</align>
+			<height>36</height>
+			<imageHeight>3</imageHeight>
+			<texture>volume.states.png</texture>
+			<colordiffuse>#ColorMain</colordiffuse>
+			<visible>no</visible>
+			<!-- <animation effect="fade" time="100">visiblechange</animation> -->
+		</control>
+	</controls>
+</window>

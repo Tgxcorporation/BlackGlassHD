@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>4755</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+!control.isvisible(51)</allowoverlay>
+	<define>#header.label:#OnlineVideos.HeaderLabel</define>
+	<define>#header.image:#OnlineVideos.HeaderImage</define>
+	<define>#useSelectedFanart:Yes</define>
+	<define>#header.background:hover_OnlineVideos.png</define>
+	<define>#header.fanart:</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<!-- *** WINDOW DEFAULTS *** -->
+		<import>common.window.background.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>label</type>
+			<description>Buffering Label</description>
+			<id>0</id>
+			<posX>885</posX>
+			<posY>541</posY>
+			<label>#OnlineVideos.buffered%</label>
+			<align>center</align>
+			<width>150</width>
+			<textcolor>#ColorMain</textcolor>
+			<font>font10</font>
+			<visible>string.equals(#OnlineVideos.IsBuffering, true) + !player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>2</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+		</control>
+		<import>common.window.time.xml</import>
+		<import>myonlinevideos.facade.xml</import>
+		<!-- *** left part *** -->
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>![String.Equals(#OnlineVideos.state,details)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<type>image</type>
+				<description>Empty</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>121</posY>
+				<width>526</width>
+				<height>391</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<id>500</id>
+				<type>image</type>
+				<posX>57</posX>
+				<posY>121</posY>
+				<width>526</width>
+				<height>391</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#selectedthumb</texture>
+				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<centered>yes</centered>
+				<zoom>no</zoom>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<type>image</type>
+				<id>0</id>
+				<posX>32</posX>
+				<posY>94</posY>
+				<width>576</width>
+				<height>445</height>
+				<texture>PictureCase.png</texture>
+				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>55</posX>
+				<posY>115</posY>
+				<width>270</width>
+				<height>390</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<id>0</id>
+				<type>image</type>
+				<posX>55</posX>
+				<posY>115</posY>
+				<width>270</width>
+				<height>390</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#selectedthumb</texture>
+				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<centered>yes</centered>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<type>image</type>
+				<id>0</id>
+				<posX>34</posX>
+				<posY>94</posY>
+				<width>312</width>
+				<height>432</height>
+				<texture>DVDCase.png</texture>
+				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>imagelist</type>
+				<id>101</id>
+				<posX>45</posX>
+				<posY>556</posY>
+				<width>453</width>
+				<height>60</height>
+				<textureWidth>33</textureWidth>
+				<textureHeight>33</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#OnlineVideos.Details.Rating</percentage>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]+string.equals(#OnlineVideos.selectedSiteUtil, YouTube) + !string.contains(#selecteditem, ..)</visible>
+			</control>
+
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>612</posY>
+				<width>577</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Length</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>675</posY>
+				<width>630</width>
+				<label>#(switch(eq(#OnlineVideos.length,''),'#OnlineVideos.aired',neq(#OnlineVideos.length,''),'#OnlineVideos.length     #OnlineVideos.aired'))</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>725</posY>
+				<width>532</width>
+				<height>303</height>
+				<colordiffuse>#ColorMain</colordiffuse>
+				<font>font16</font>
+				<label>#OnlineVideos.desc</label>
+				<textcolor>#ColorMain</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]+!player.hasmedia</visible>
+				<seperator>: : :</seperator>
+			</control>
+		</control>
+		<!-- *** HIDDEN MENU *** -->
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>2</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<visible>!String.Equals(#OnlineVideos.state,details)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!String.Equals(#OnlineVideos.state,details)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!String.Equals(#OnlineVideos.state,details)+!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![!String.Equals(#OnlineVideos.state,details)+!control.hasfocus(50)]|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>View-As</description>
+					<type>button</type>
+					<id>2</id>
+					<label>#OnlineVideos.Translation.LayoutList.Label</label>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>10</ondown>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+				</control>
+				<control>
+					<type>button</type>
+					<description>Search</description>
+					<id>10</id>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>9</ondown>
+					<label>#OnlineVideos.Translation.Search.Label</label>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
+				</control>
+				<control>
+					<description>select category</description>
+					<type>selectbutton</type>
+					<id>9</id>
+					<onright>50</onright>
+					<onup>10</onup>
+					<ondown>5</ondown>
+					<label>#OnlineVideos.Translation.Category.Label</label>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
+				</control>
+				<control>
+					<type>selectbutton</type>
+					<description>Max Results</description>
+					<id>5</id>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>6</ondown>
+					<label>#OnlineVideos.Translation.MaxResults.Label</label>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
+				</control>
+				<control>
+					<type>selectbutton</type>
+					<description>Order By</description>
+					<id>6</id>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<label>#OnlineVideos.Translation.SortOptions.Label</label>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
+				</control>
+				<control>
+					<type>selectbutton</type>
+					<description>TimeFrame button</description>
+					<id>7</id>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					<label>#OnlineVideos.Translation.Timeframe.Label</label>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Update button</description>
+					<id>8</id>
+					<onright>50</onright>
+					<onup>7</onup>
+					<ondown>12</ondown>
+					<label>#OnlineVideos.Translation.Refresh.Label</label>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
+				</control>
+				<!-- <control>
+					<type>button</type>
+					<description>Favorites</description>
+					<id>11</id>
+					<onright>50</onright>
+					<onup>8</onup>
+					<ondown>12</ondown>
+					<label>#OnlineVideos.Translation.Favourites.Label</label>
+					<height>49</height>
+					<textYOff>7</textYOff>
+				</control> -->
+				<control>
+					<type>button</type>
+					<description>Do Age Check</description>
+					<id>12</id>
+					<onright>50</onright>
+					<onup>8</onup>
+					<ondown>13</ondown>
+					<label>#OnlineVideos.Translation.EnterPin.Label</label>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Update Sites</description>
+					<id>13</id>
+					<onright>50</onright>
+					<onup>12</onup>
+					<ondown>2</ondown>
+					<label>#OnlineVideos.Translation.ManageSites.Label</label>
+					<hyperlink>4757</hyperlink>
+					<!-- <height>49</height>
+					<textYOff>7</textYOff> -->
+					<visible>!Control.HasFocus(50) + !Control.HasFocus(51)</visible>
+				</control>
+			</control>
+			<control>
+				<description>Current Category</description>
+				<type>label</type>
+				<id>505</id>
+				<font>font11</font>
+				<posX>45</posX>
+				<posY>1020</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<label>#OnlineVideos.filter</label>
+			</control>
+		</control>
+		<import>myonlinevideos.details.xml</import>
+
+
+		<!-- NOT USED -->
+		<control>
+			<description>number of current downloads</description>
+			<type>button</type>
+			<id>47016</id>
+			<posX>60</posX>
+			<posY>3120</posY>
+			<width>40</width>
+			<height>40</height>
+			<textureFocus>OnlineVideos\disk.png</textureFocus>
+			<textureNoFocus>OnlineVideos\disk.png</textureNoFocus>
+			<label>#OnlineVideos.currentDownloads</label>
+			<font>font10</font>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>17</onup>
+			<ondown>2</ondown>
+			<visible>!string.equals(#OnlineVideos.currentDownloads, 0)</visible>
+		</control>
+	</controls>
+</window>

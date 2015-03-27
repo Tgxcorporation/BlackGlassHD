@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2000</id>
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>bg.jpg</texture>
+			<colordiffuse>#ColorMain</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>60</posX>
+			<posY>52</posY>
+			<width>1800</width>
+			<height>994</height>
+			<texture>bg_dialog_big.png</texture>
+		</control>
+		<!-- <control>
+			<description>Select text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>147</posX>
+			<posY>145</posY>
+			<width>1500</width>
+			<label>#selecteditem</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+		</control> -->
+		<control>
+			<description>Select text label</description>
+			<type>label</type>
+			<id>4</id>
+			<posX>147</posX>
+			<posY>145</posY>
+			<width>1500</width>
+			<label>181</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>102</posX>
+			<posY>179</posY>
+			<width>1716</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>albums listcontrol</description>
+				<type>listcontrol</type>
+				<id>3</id>
+				<posX>102</posX>
+				<posY>258</posY>
+				<width>1716</width>
+				<height>720</height>
+				<textYOff>12</textYOff>
+				<textXOff>-55</textXOff>
+				<spinPosX>1650</spinPosX>
+				<spinPosY>919</spinPosY>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+		</control>
+		
+		
+		<control>
+			<type>image</type>
+			<posX>102</posX>
+			<posY>811</posY>
+			<width>1716</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<description>IMDB</description>
+			<type>button</type>
+			<id>5</id>
+			<posX>138</posX>
+			<posY>900</posY>
+			<label>368</label>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>21</onup>
+			<ondown>3</ondown>
+			<width>375</width>
+			<height>90</height>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<font>font20</font>
+			<textalign>center</textalign>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+		</control>
+	</controls>
+</window>

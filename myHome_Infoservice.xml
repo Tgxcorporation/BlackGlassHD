@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <controls>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>1024</posY>
+      <width>1920</width>
+      <height>79</height>
+      <texture>black.png</texture>
+      <colordiffuse>b0ffffff</colordiffuse>
+      <visible>plugin.isenabled(InfoService)+[string.equals(#infoservice.feed.enabled, true)|string.equals(#infoservice.twitter.enabled, true)]</visible>
+      <animation effect="fade" time="250" delay="125">WindowOpen</animation>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>946</posY>
+      <width>1920</width>
+      <height>79</height>
+      <texture>bg_facade_line_nofocus_top.png</texture>
+      <colordiffuse>ffa0a0a0</colordiffuse>
+      <visible>plugin.isenabled(InfoService)+[string.equals(#infoservice.feed.enabled, true)|string.equals(#infoservice.twitter.enabled, true)]</visible>
+      <animation effect="fade" time="250" delay="125">WindowOpen</animation>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>1026</posY>
+      <width>1920</width>
+      <height>79</height>
+      <texture>bg_facade_line_focus.png</texture>
+      <colordiffuse>ffa0a0a0</colordiffuse>
+      <visible>plugin.isenabled(InfoService)+[string.equals(#infoservice.feed.enabled, true)|string.equals(#infoservice.twitter.enabled, true)]</visible>
+      <animation effect="fade" time="250" delay="125">WindowOpen</animation>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control>
+      <description>RSS Button</description>
+      <type>button</type>
+      <id>1111</id>
+      <posX>7</posX>
+      <posY>1030</posY>
+      <width>45</width>
+      <height>45</height>
+      <onup>19</onup>
+      <ondown>17</ondown>
+      <onleft>1112</onleft>
+      <onright>1112</onright>
+      <hyperlink>16001</hyperlink>
+      <textureFocus>InfoService/home_rss_focus.png</textureFocus>
+      <textureNoFocus>InfoService/home_rss_nofocus.png</textureNoFocus>
+      <visible>plugin.isenabled(InfoService)+string.equals(#infoservice.feed.enabled, true)</visible>
+      <animation effect="fade" time="250" delay="125">WindowOpen</animation>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control>
+      <description>Twitter Button</description>
+      <type>button</type>
+      <id>1112</id>
+      <posX>1867</posX>
+      <posY>1030</posY>
+      <width>45</width>
+      <height>45</height>
+      <onup>19</onup>
+      <ondown>17</ondown>
+      <hyperlink>16003</hyperlink>
+      <onleft>1111</onleft>
+      <onright>1111</onright>
+      <textureFocus>InfoService/home_twitter_focus.png</textureFocus>
+      <textureNoFocus>InfoService/home_twitter_nofocus.png</textureNoFocus>
+      <visible>plugin.isenabled(InfoService)+string.equals(#infoservice.twitter.enabled, true)</visible>
+      <animation effect="fade" time="250" delay="125">WindowOpen</animation>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control>
+      <description>Feed Items</description>
+      <type>fadelabel</type>
+      <id>0</id>
+      <width>1785</width>
+      <height>75</height>
+      <posX>67</posX>
+      <posY>1032</posY>
+      <font>font14</font>
+      <textcolor>ff888888</textcolor>
+      <label>#infoservice.feed.alltitles</label>
+      <animation effect="fade" time="250">VisibleChange</animation>
+      <wrapString> : : : </wrapString>
+      <visible>plugin.isenabled(InfoService)+string.equals(#infoservice.feed.enabled, true)+!control.hasfocus(1112)</visible>
+      <animation effect="fade" time="250" delay="125">WindowOpen</animation>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+    <control>
+      <description>Twitter Items</description>
+      <type>fadelabel</type>
+      <id>0</id>
+      <width>1785</width>
+      <height>75</height>
+      <posX>67</posX>
+      <posY>1032</posY>
+      <font>font14</font>
+      <textcolor>ff888888</textcolor>
+      <label>#infoservice.twitter.messages</label>
+      <animation effect="fade" time="250">VisibleChange</animation>
+      <wrapString> : : : </wrapString>
+      <visible>plugin.isenabled(InfoService)+string.equals(#infoservice.twitter.enabled, true)+control.hasfocus(1112)</visible>
+      <animation effect="fade" time="250" delay="125">WindowOpen</animation>
+      <animation effect="fade" time="250" delay="0">WindowClose</animation>
+    </control>
+  </controls>
+</window>

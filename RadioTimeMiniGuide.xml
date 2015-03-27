@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>25651</id>
+	<defaultcontrol>35</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<control>
+			<description>background image</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>bg_dialog_big.png</texture>
+			<posX>60</posX>
+			<posY>60</posY>
+			<width>1800</width>
+			<height>970</height>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>list to show channels without channel state logos</description>
+				<type>listcontrol</type>
+				<id>35</id>
+				<posX>102</posX>
+				<posY>217</posY>
+				<width>1714</width>
+				<height>810</height>
+				<textYOff>52</textYOff>
+				<textXOff>150</textXOff>
+				<textXOff2>1590</textXOff2>
+				<textYOff2>52</textYOff2>
+				<textXOff3>150</textXOff3>
+				<textYOff3>7</textYOff3>
+				<IconXOff>15</IconXOff>
+				<IconYOff>12</IconYOff>
+				<PinIconXOff>1620</PinIconXOff>
+				<PinIconYOff>15</PinIconYOff>
+				<PinIconWidth>50</PinIconWidth>
+				<PinIconHeight>50</PinIconHeight>
+				<itemWidth>97</itemWidth>
+				<itemHeight>75</itemHeight>
+				<spaceBetweenItems>0</spaceBetweenItems>
+				<textureHeight>97</textureHeight>
+				<keepaspectratio>no</keepaspectratio>
+				<font>font12</font>
+				<font2>font12</font2>
+				<font3>font18</font3>
+				<textvisible2>yes</textvisible2>
+				<textvisible3>yes</textvisible3>
+				<textcolor>#ColorSub</textcolor>
+				<textcolor2>#ColorSub</textcolor2>
+				<textcolor3>#ColorMain</textcolor3>
+				<remoteColor>#ColorPlayed</remoteColor>
+				<playedColor>#ColorPlayed</playedColor>
+				<onleft>36</onleft>
+				<onright>34</onright>
+				<scrollOffset>2</scrollOffset>
+				<spinPosX>1680</spinPosX>
+				<spinPosY>912</spinPosY>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>102</posX>
+			<posY>120</posY>
+			<width>1714</width>
+			<height>97</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>list to show channels with channel state logos</description>
+				<type>listcontrol</type>
+				<id>37</id>
+				<posX>102</posX>
+				<posY>217</posY>
+				<width>1714</width>
+				<height>810</height>
+				<textYOff>52</textYOff>
+				<textXOff>150</textXOff>
+				<textXOff2>1590</textXOff2>
+				<textYOff2>52</textYOff2>
+				<textXOff3>150</textXOff3>
+				<textYOff3>7</textYOff3>
+				<IconXOff>15</IconXOff>
+				<IconYOff>12</IconYOff>
+				<PinIconXOff>1620</PinIconXOff>
+				<PinIconYOff>15</PinIconYOff>
+				<PinIconWidth>50</PinIconWidth>
+				<PinIconHeight>50</PinIconHeight>
+				<itemWidth>97</itemWidth>
+				<itemHeight>75</itemHeight>
+				<spaceBetweenItems>0</spaceBetweenItems>
+				<textureHeight>97</textureHeight>
+				<keepaspectratio>no</keepaspectratio>
+				<font>font12</font>
+				<font2>font12</font2>
+				<font3>font18</font3>
+				<textvisible2>yes</textvisible2>
+				<textvisible3>yes</textvisible3>
+				<textcolor>#ColorSub</textcolor>
+				<textcolor2>#ColorSub</textcolor2>
+				<textcolor3>#ColorMain</textcolor3>
+				<remoteColor>#ColorPlayed</remoteColor>
+				<playedColor>#ColorPlayed</playedColor>
+				<onleft>36</onleft>
+				<onright>34</onright>
+				<scrollOffset>2</scrollOffset>
+				<spinPosX>1680</spinPosX>
+				<spinPosY>912</spinPosY>
+			</control>
+		</control>
+		<control>
+			<description>Heading text label</description>
+			<type>label</type>
+			<id>4</id>
+			<label>10105</label>
+			<posX>510</posX>
+			<posY>168</posY>
+			<width>900</width>
+			<textcolor>#ColorMain</textcolor>
+			<font>font28</font>
+			<align>center</align>
+		</control>
+		
+		<control>
+			<description>groups spin control</description>
+			<type>spincontrol</type>
+			<id>36</id>
+			<posX>120</posX>
+			<posY>915</posY>
+			<showrange>no</showrange>
+			<orientation>horizontal</orientation>
+			<font>font16</font>
+			<align>center</align>
+			<textureUp>spin_right_nofocus.png</textureUp>
+			<textureDown>spin_left_nofocus.png</textureDown>
+			<textureUpFocus>spin_right_focus.png</textureUpFocus>
+			<textureDownFocus>spin_left_focus.png</textureDownFocus>
+			<ondown>35</ondown>
+			<onup>36</onup>
+			<onright>34</onright>
+			<onleft>36</onleft>
+			<width>51</width>
+			<height>60</height>
+		</control>
+		<control>
+			<description>Current Time Info</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1752</posX>
+			<posY>147</posY>
+			<label>#time</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<align>right</align>
+		</control>
+		<control>
+			<description>time logo</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>1759</posX>
+			<posY>148</posY>
+			<width>36</width>
+			<height>36</height>
+			<texture>time.png</texture>
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<description>exit button</description>
+			<type>button</type>
+			<id>34</id>
+			<posX>3725</posX>
+			<posY>145</posY>
+			<width>45</width>
+			<height>45</height>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<dimColor>#ColorAlternate</dimColor>
+			<label>-</label>
+			<onleft>36</onleft>
+			<onright>34</onright>
+			<ondown>35</ondown>
+			<onup>34</onup>
+		</control>
+	</controls>
+</window>

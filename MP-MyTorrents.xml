@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>5678</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><disabletopbar>no</disabletopbar>
+	<define>#header.label:My Torrents</define>
+	<define>#header.background:hover_mytorrents.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(8)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>fadelabel</type>
+				<id>101</id>
+				<posX>45</posX>
+				<posY>165</posY>
+				<label>DOWN #MyTorrents.CombinedDownloadSpeed</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>585</width>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>fadelabel</type>
+				<id>102</id>
+				<posX>45</posX>
+				<posY>210</posY>
+				<label>UP #MyTorrents.CombinedUploadSpeed</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>585</width>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>fadelabel</type>
+				<id>103</id>
+				<posX>45</posX>
+				<posY>255</posY>
+				<label>DOWNLOADING #MyTorrents.Downloads.Count</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>585</width>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>fadelabel</type>
+				<id>104</id>
+				<posX>45</posX>
+				<posY>300</posY>
+				<label>SEEDING #MyTorrents.Uploads.Count</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>585</width>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>fadelabel</type>
+				<id>105</id>
+				<posX>45</posX>
+				<posY>345</posY>
+				<label>IDLE #MyTorrents.Ready.Count</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>585</width>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>fadelabel</type>
+				<id>106</id>
+				<posX>45</posX>
+				<posY>390</posY>
+				<label>UNFINISHED #MyTorrents.Unfinished.Count</label>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>585</width>
+			</control>
+			<control>
+				<description>Torrents List</description>
+				<type>listcontrol</type>
+				<id>8</id>
+				<textXOff>-60</textXOff>
+				<scrollOffset>2</scrollOffset>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<onleft>4</onleft>
+				<onright>4</onright>
+			</control>
+			<control>
+				<description>Spin control Label</description>
+				<type>fadelabel</type>
+				<label>#MyTorrents.Count Torrents</label>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>991</posY>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<width>540</width>
+				<wrapString> : : : </wrapString>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(8)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(8)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Active Torrents</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Active torrents</label>
+					<onup>7</onup>
+					<ondown>3</ondown>
+					<onright>8</onright>
+					<onleft>8</onleft>
+				</control>
+				<control>
+					<description>All Torrents</description>
+					<type>button</type>
+					<id>3</id>
+					<label>All torrents</label>
+					<onup>2</onup>
+					<ondown>4</ondown>
+					<onright>8</onright>
+					<onleft>8</onleft>
+				</control>
+				<control>
+					<description>Search</description>
+					<type>button</type>
+					<id>4</id>
+					<label>Search torrents</label>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<onright>8</onright>
+					<onleft>8</onleft>
+				</control>
+				<control>
+					<description>WatchList</description>
+					<type>button</type>
+					<id>5</id>
+					<label>Watchlist</label>
+					<onup>4</onup>
+					<ondown>6</ondown>
+					<onright>8</onright>
+					<onleft>8</onleft>
+				</control>
+				<control>
+					<description>RSS</description>
+					<type>button</type>
+					<id>6</id>
+					<label>RSS</label>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<onright>8</onright>
+					<onleft>8</onleft>
+				</control>
+				<control>
+					<description>Log</description>
+					<type>button</type>
+					<id>7</id>
+					<label>Log</label>
+					<onup>6</onup>
+					<ondown>2</ondown>
+					<onright>8</onright>
+					<onleft>8</onleft>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

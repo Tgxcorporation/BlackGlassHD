@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>7658</id>
+	<defaultcontrol>859</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<import>common.time.xml</import>
+		<import>MP-MyTorrents.common.overlay.xml</import>
+		<control>
+			<description>Spin Control BG</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1644</posX>
+			<posY>15</posY>
+			<width>220</width>
+			<height>46</height>
+			<texture>mediacountbg.png</texture>
+			<visible>true</visible>
+		</control>
+		<control>
+			<description>Spin Control Label</description>
+			<type>label</type>
+			<label>#MyTorrents.Count Torrents</label>
+			<id>0</id>
+			<posX>1654</posX>
+			<posY>21</posY>
+			<font>mediastream9c</font>
+			<textcolor>ff025984</textcolor>
+			<visible>true</visible>
+		</control>
+		<control>
+			<description>folder name albel</description>
+			<type>label</type>
+			<id>860</id>
+			<posX>60</posX>
+			<posY>330</posY>
+			<font>mediastream10c</font>
+			<visible>true</visible>
+		</control>
+		<control>
+			<description>listcontrol</description>
+			<type>listcontrol</type>
+			<id>859</id>
+			<posX>300</posX>
+			<posY>375</posY>
+			<width>1500</width>
+			<height>600</height>
+			<textXOff>120</textXOff>
+			<textXOff2>1500</textXOff2>
+			<textXOff3>15</textXOff3>
+			<scrollOffset>2</scrollOffset>
+			<onup>4</onup>
+			<ondown>4</ondown>
+			<onleft>856</onleft>
+			<onright>4</onright>
+			<font>mediastream10c</font>
+		</control>
+		<control>
+			<description>Try Me</description>
+			<type>button</type>
+			<id>856</id>
+			<posX>90</posX>
+			<posY>955</posY>
+			<label>Back</label>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+	</controls>
+</window>

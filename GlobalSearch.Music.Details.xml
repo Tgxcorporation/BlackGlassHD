@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>30886</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Global Search</define>
+	<define>#useSelectedFanart:Yes</define>
+	<define>#header.background:hover_search music.png</define>
+	<define>#header.fanart:#GlobalSearch.Music.Details.Artist</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.music.fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<id>0</id>
+				<type>image</type>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<posX>735</posX>
+				<posY>145</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>Empty</description>
+				<id>0</id>
+				<posX>59</posX>
+				<posY>121</posY>
+				<width>466</width>
+				<height>466</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>album art image</description>
+				<id>7</id>
+				<posX>59</posX>
+				<posY>121</posY>
+				<width>466</width>
+				<height>466</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture>#GlobalSearch.Music.Details.CoverArt</texture>
+				<zoom>yes</zoom>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>nowplaying shine</description>
+				<id>0</id>
+				<posX>32</posX>
+				<posY>94</posY>
+				<width>520</width>
+				<height>520</height>
+				<texture>CDCase.png</texture>
+			</control>
+
+			<control Style="FanartDisplayAnimation">
+				<description>Title label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>780</posX>
+				<posY>142</posY>
+				<label>#GlobalSearch.Music.Details.Artist - #GlobalSearch.Music.Details.Title</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>1125</width>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Rating Value</description>
+				<type>imagelist</type>
+				<id>1337</id>
+				<posX>780</posX>
+				<posY>247</posY>
+				<width>172</width>
+				<height>19</height>
+				<textureWidth>40</textureWidth>
+				<textureHeight>40</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#GlobalSearch.Music.Details.Rating</percentage>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<id>25</id>
+				<posX>780</posX>
+				<posY>330</posY>
+				<label>#(string.rtrim(L(171),':'))</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>360</posY>
+				<label>#GlobalSearch.Music.Details.Artist</label>
+				<textcolor>#ColorMain</textcolor>
+				<font>font14</font>
+				<width>510</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<id>26</id>
+				<posX>780</posX>
+				<posY>435</posY>
+				<label>#(string.rtrim(L(170),':'))</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>2</id>
+				<posX>780</posX>
+				<posY>465</posY>
+				<label>#GlobalSearch.Music.Details.Album</label>
+				<textcolor>#ColorMain</textcolor>
+				<font>font14</font>
+				<width>510</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<id>27</id>
+				<posX>780</posX>
+				<posY>540</posY>
+				<label>179</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>3</id>
+				<posX>780</posX>
+				<posY>570</posY>
+				<label>#GlobalSearch.Music.Details.Title</label>
+				<textcolor>#ColorMain</textcolor>
+				<font>font14</font>
+				<width>510</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<description>Label Duration</description>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>645</posY>
+				<label>180</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>9</id>
+				<posX>780</posX>
+				<posY>675</posY>
+				<label>#GlobalSearch.Music.Details.Duration</label>
+				<font>font14</font>
+				<width>510</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<id>28</id>
+				<posX>780</posX>
+				<posY>750</posY>
+				<label>#(string.rtrim(L(174),':'))</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>4</id>
+				<posX>780</posX>
+				<posY>780</posY>
+				<label>#GlobalSearch.Music.Details.Genre</label>
+				<textcolor>#ColorMain</textcolor>
+				<font>font14</font>
+				<width>510</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<id>29</id>
+				<posX>780</posX>
+				<posY>855</posY>
+				<label>#(string.rtrim(L(172),':'))</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>5</id>
+				<posX>780</posX>
+				<posY>885</posY>
+				<label>#GlobalSearch.Music.Details.Year</label>
+				<textcolor>#ColorMain</textcolor>
+				<font>font14</font>
+				<width>510</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<id>30</id>
+				<posX>1362</posX>
+				<posY>330</posY>
+				<label>863</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>6</id>
+				<posX>1362</posX>
+				<posY>360</posY>
+				<label>#GlobalSearch.Music.Details.FileName</label>
+				<textcolor>#ColorMain</textcolor>
+				<font>font14</font>
+				<width>510</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<id>37</id>
+				<posX>1362</posX>
+				<posY>435</posY>
+				<label>Last played</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>10</id>
+				<posX>1362</posX>
+				<posY>465</posY>
+				<label>#GlobalSearch.Music.Details.DateTimePlayed</label>
+				<textcolor>#ColorMain</textcolor>
+				<width>510</width>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>label</type>
+				<id>35</id>
+				<posX>1362</posX>
+				<posY>540</posY>
+				<label>Playcount</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>8</id>
+				<posX>1362</posX>
+				<posY>570</posY>
+				<label>#GlobalSearch.Music.Details.TimesPlayed</label>
+				<textcolor>#ColorMain</textcolor>
+				<width>510</width>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Audio Codec</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1362</posX>
+				<posY>645</posY>
+				<label>6001</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1362</posX>
+				<posY>675</posY>
+				<label>#GlobalSearch.Music.Details.Codec</label>
+				<textcolor>#ColorMain</textcolor>
+				<width>510</width>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Bit-Rate</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1362</posX>
+				<posY>750</posY>
+				<label>990</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<font>font12</font>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1362</posX>
+				<posY>780</posY>
+				<label>#GlobalSearch.Music.Details.BitRatebps (#GlobalSearch.Music.Details.BitRateMode), #GlobalSearch.Music.Details.SampleRateFormatted</label>
+				<textcolor>#ColorMain</textcolor>
+				<width>510</width>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>11</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<type>button</type>
+					<description>Play now</description>
+					<id>11</id>
+					<onup>12</onup>
+					<ondown>15</ondown>
+					<label>4552</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Add to favorites</description>
+					<id>15</id>
+					<onup>11</onup>
+					<ondown>14</ondown>
+					<label>930</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Add album to playlist</description>
+					<id>14</id>
+					<onup>15</onup>
+					<ondown>13</ondown>
+					<label>33041</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Add to playlist</description>
+					<id>13</id>
+					<onup>14</onup>
+					<ondown>12</ondown>
+					<label>926</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Play next</description>
+					<id>12</id>
+					<onup>13</onup>
+					<ondown>11</ondown>
+					<label>4551</label>
+					<onright>50</onright>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+			<onright>505050</onright>
+			<onleft>11</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+			<onright>11</onright>
+			<onleft>50</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<description>clearart</description>
+			<id>300</id>
+			<type>image</type>
+			<posX>1615</posX>
+			<posY>860</posY>
+			<width>300</width>
+			<height>168</height>
+			<centered>yes</centered>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#TVSeries.Play.ClearArt</texture>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+		</control>
+		<control>
+			<description>clearart</description>
+			<id>300</id>
+			<type>image</type>
+			<posX>1548</posX>
+			<posY>354</posY>
+			<width>300</width>
+			<height>168</height>
+			<centered>yes</centered>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#TVSeries.Play.ClearArt</texture>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible|player.playing]+window.isosdvisible</visible>
+		</control>
+	</controls>
+</window>

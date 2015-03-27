@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7975</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Screen Control</define>
+	<define>#header.background:hover_screencontrol.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(5)|control.hasfocus(10)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(50)]">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<!-- *** Power *** -->
+			<control>
+				<description>Power</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>142</posY>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Power</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>130</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>735</posX>
+				<posY>210</posY>
+				<control>
+					<description>Power brightness enabled</description>
+					<type>checkbutton</type>
+					<id>31</id>
+					<label>Dim display</label>
+					<onleft>30</onleft>
+					<onright>11</onright>
+					<onup>40</onup>
+					<ondown>32</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>12</textYOff>
+				</control>
+				<control>
+					<description>Power screensaver enabled</description>
+					<type>checkbutton</type>
+					<id>32</id>
+					<label>Activate screensaver</label>
+					<onleft>30</onleft>
+					<onright>11</onright>
+					<onup>31</onup>
+					<ondown>33</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>12</textYOff>
+				</control>
+				<control>
+					<description>Power turnoff enabled</description>
+					<type>checkbutton</type>
+					<id>33</id>
+					<label>Turn off display</label>
+					<onleft>30</onleft>
+					<onright>11</onright>
+					<onup>32</onup>
+					<ondown>37</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>12</textYOff>
+				</control>
+				<control>
+					<description>Power music prevention</description>
+					<type>checkbutton</type>
+					<id>37</id>
+					<label>Prevent, if music/radio is playing</label>
+					<onleft>30</onleft>
+					<onright>11</onright>
+					<onup>33</onup>
+					<ondown>38</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>12</textYOff>
+				</control>
+				<control>
+					<description>Power full screen prevention</description>
+					<type>checkbutton</type>
+					<id>38</id>
+					<label>Prevent, if full screen is active</label>
+					<onleft>30</onleft>
+					<onright>51</onright>
+					<onup>37</onup>
+					<ondown>34</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>12</textYOff>
+				</control>
+			</control>
+			<control>
+				<description>Dim display timeout</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>630</posY>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font12</font>
+				<label>Dim display timeout</label>
+			</control>
+			<control>
+				<description>Dim display timeout</description>
+				<type>spincontrol</type>
+				<id>34</id>
+				<posX>1222</posX>
+				<posY>636</posY>
+				<onup>38</onup>
+				<ondown>35</ondown>
+				<font>font12</font>
+				<align>right</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>607</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>Activate screensaver timeout</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>709</posY>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font12</font>
+				<label>Screensaver timeout</label>
+			</control>
+			<control>
+				<description>Activate screensaver timeout</description>
+				<type>spincontrol</type>
+				<id>35</id>
+				<posX>1222</posX>
+				<posY>715</posY>
+				<onup>34</onup>
+				<ondown>36</ondown>
+				<font>font12</font>
+				<align>right</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>687</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>Turn off display timout</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>789</posY>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font12</font>
+				<label>Turn off display timout</label>
+			</control>
+			<control>
+				<description>Turn off display timout</description>
+				<type>spincontrol</type>
+				<id>36</id>
+				<posX>1222</posX>
+				<posY>795</posY>
+				<onup>35</onup>
+				<ondown>39</ondown>
+				<font>font12</font>
+				<align>right</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>766</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>Default brightness level</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>868</posY>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font12</font>
+				<label>Default brightness level</label>
+			</control>
+			<control>
+				<description>Default brightness level</description>
+				<type>spincontrol</type>
+				<id>39</id>
+				<posX>1222</posX>
+				<posY>871</posY>
+				<onup>36</onup>
+				<ondown>40</ondown>
+				<font>font12</font>
+				<align>right</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>846</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>Timeout brightness level</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>949</posY>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font12</font>
+				<label>Timeout brightness level</label>
+			</control>
+			<control>
+				<description>Timeout brightness level</description>
+				<type>spincontrol</type>
+				<id>40</id>
+				<posX>1222</posX>
+				<posY>954</posY>
+				<onup>39</onup>
+				<ondown>31</ondown>
+				<font>font12</font>
+				<align>right</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>925</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<!-- *** ScreenJump *** -->
+			<control>
+				<description>ScreenJump</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>142</posY>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Screen Jump</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1342</posX>
+				<posY>130</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>1342</posX>
+				<posY>210</posY>
+				<control>
+					<description>ScreenJump full screen prevention</description>
+					<type>checkbutton</type>
+					<id>11</id>
+					<label>prevent, if full screen is active</label>
+					<onleft>31</onleft>
+					<onright>30</onright>
+					<onup>12</onup>
+					<ondown>12</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>12</textYOff>
+				</control>
+			</control>
+			<control>
+				<description>ScreenJump timeout</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>310</posY>
+				<label>Screen Jump timeout</label>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font12</font>
+			</control>
+			<control>
+				<description>ScreenJump timeout</description>
+				<type>spincontrol</type>
+				<id>12</id>
+				<posX>1830</posX>
+				<posY>316</posY>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<font>font12</font>
+				<align>right</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1342</posX>
+				<posY>289</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<!-- *** SpeechRecognition *** -->
+			<control>
+				<description>SpeechRecognition</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>462</posY>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Speech Recognition</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1342</posX>
+				<posY>450</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>1342</posX>
+				<posY>529</posY>
+				<control>
+					<description>SpeechRecognition startup</description>
+					<type>checkbutton</type>
+					<id>21</id>
+					<label>start listening at startup</label>
+					<onleft>31</onleft>
+					<onright>30</onright>
+					<onup>22</onup>
+					<ondown>22</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>12</textYOff>
+				</control>
+				<control>
+					<description>SpeechRecognition full screen prevention</description>
+					<type>checkbutton</type>
+					<id>22</id>
+					<label>prevent, if full screen is active</label>
+					<onleft>31</onleft>
+					<onright>30</onright>
+					<onup>21</onup>
+					<ondown>21</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>12</textYOff>
+				</control>
+			</control>
+			<!-- *** Resolution *** -->
+			<control>
+				<description>Resolution</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>781</posY>
+				<font>font20</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>Resolution</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1342</posX>
+				<posY>769</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>1342</posX>
+				<posY>849</posY>
+				<control>
+					<description>Resolution set</description>
+					<type>button</type>
+					<id>51</id>
+					<label>Set resolution</label>
+					<onleft>31</onleft>
+					<onright>30</onright>
+					<onup>51</onup>
+					<ondown>51</ondown>
+					<font>font14</font>
+					<textXOff>30</textXOff>
+					<textYOff>18</textYOff>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>30</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(5)|control.hasfocus(10)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(50)]+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(5)|control.hasfocus(10)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(50)]|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Power enabled</description>
+					<type>checkbutton</type>
+					<id>30</id>
+					<label>Power</label>
+					<onleft>30</onleft>
+					<onright>31</onright>
+					<onup>17</onup>
+					<ondown>10</ondown>
+				</control>
+				<control>
+					<description>ScreenJump enabled</description>
+					<type>checkbutton</type>
+					<id>10</id>
+					<label>Screen Jump</label>
+					<onleft>10</onleft>
+					<onright>11</onright>
+					<onup>30</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>SpeechRecognition enabled</description>
+					<type>checkbutton</type>
+					<id>20</id>
+					<label>Speech Recognition</label>
+					<onleft>20</onleft>
+					<onright>21</onright>
+					<onup>10</onup>
+					<ondown>50</ondown>
+				</control>
+				<control>
+					<description>Resolution enabled</description>
+					<type>checkbutton</type>
+					<id>50</id>
+					<label>Resolution</label>
+					<onleft>50</onleft>
+					<onright>51</onright>
+					<onup>20</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Save settings on exit</description>
+					<type>checkbutton</type>
+					<id>5</id>
+					<label>Save settings on exit</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<onup>50</onup>
+					<ondown>30</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

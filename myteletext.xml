@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7700</id>
+	<defaultcontrol>502</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.background:hover_my tv.png</define>
+	<define>#header.label:1441</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<description>tele-text rendering image</description>
+				<type>image</type>
+				<id>500</id>
+				<posX>750</posX>
+				<posY>181</posY>
+				<width>1140</width>
+				<height>855</height>
+				<texture>black.png</texture>
+			</control>
+			<control>
+				<description>tele-text rendering image 2</description>
+				<type>image</type>
+				<id>501</id>
+				<posX>750</posX>
+				<posY>181</posY>
+				<width>1140</width>
+				<height>855</height>
+				<texture>black.png</texture>
+			</control>
+			<control>
+				<description>template for program title darkarea </description>
+				<type>label</type>
+				<visible>no</visible>
+				<id>26</id>
+				<label>-</label>
+				<font>font12</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>template for program title darkarea </description>
+				<type>label</type>
+				<visible>no</visible>
+				<posX>7</posX>
+				<posY>375</posY>
+				<id>27</id>
+				<label>-</label>
+				<font>font12</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>627</width>
+			<height>1080</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>#ColorMain</colorDiffuse>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<id>1</id>
+			<type>label</type>
+			<posX>45</posX>
+			<posY>52</posY>
+			<label>#header.label</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>71</posY>
+			<width>577</width>
+			<height>79</height>
+			<texture>bg_button_nofocus_top.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<layout>StackLayout(0, Vertical, true)</layout>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<posX>0</posX>
+			<posY>150</posY>
+			<control>
+				<description>Page100</description>
+				<type>button</type>
+				<id>502</id>
+				<posX>159</posX>
+				<posY>181</posY>
+				<label>590</label>
+				<onup>17</onup>
+				<ondown>503</ondown>
+				<onright>502</onright>
+			</control>
+			<control>
+				<description>Page200</description>
+				<type>button</type>
+				<id>503</id>
+				<posX>159</posX>
+				<posY>244</posY>
+				<label>591</label>
+				<onup>502</onup>
+				<ondown>504</ondown>
+				<onright>503</onright>
+			</control>
+			<control>
+				<description>Page300</description>
+				<type>button</type>
+				<id>504</id>
+				<posX>159</posX>
+				<posY>309</posY>
+				<label>592</label>
+				<onup>503</onup>
+				<ondown>505</ondown>
+				<onright>504</onright>
+			</control>
+			<control>
+				<description>hidden mode</description>
+				<type>checkbutton</type>
+				<id>505</id>
+				<posX>159</posX>
+				<posY>372</posY>
+				<label>593</label>
+				<textcolor>#ColorMain</textcolor>
+				<colordiffuse>#ColorMain</colordiffuse>
+				<onup>504</onup>
+				<ondown>506</ondown>
+				<onright>505</onright>
+			</control>
+			<control>
+				<description>subpage</description>
+				<type>selectbutton</type>
+				<id>506</id>
+				<posX>159</posX>
+				<posY>436</posY>
+				<label>594</label>
+				<onup>505</onup>
+				<ondown>507</ondown>
+				<onright>506</onright>
+				<subitems>
+					<subitem>./1</subitem>
+					<subitem>./2</subitem>
+					<subitem>./3</subitem>
+					<subitem>./4</subitem>
+					<subitem>./5</subitem>
+					<subitem>./6</subitem>
+					<subitem>./7</subitem>
+					<subitem>./8</subitem>
+					<subitem>./9</subitem>
+					<subitem>./10</subitem>
+					<subitem>./11</subitem>
+					<subitem>./12</subitem>
+					<subitem>./13</subitem>
+					<subitem>./14</subitem>
+					<subitem>./15</subitem>
+					<subitem>./16</subitem>
+					<subitem>./17</subitem>
+					<subitem>./18</subitem>
+					<subitem>./19</subitem>
+					<subitem>./20</subitem>
+					<subitem>./21</subitem>
+					<subitem>./22</subitem>
+					<subitem>./23</subitem>
+					<subitem>./24</subitem>
+					<subitem>./25</subitem>
+					<subitem>./26</subitem>
+					<subitem>./27</subitem>
+					<subitem>./28</subitem>
+					<subitem>./29</subitem>
+					<subitem>./30</subitem>
+					<subitem>./31</subitem>
+					<subitem>./32</subitem>
+					<subitem>./33</subitem>
+					<subitem>./34</subitem>
+					<subitem>./35</subitem>
+					<subitem>./36</subitem>
+				</subitems>
+			</control>
+			<control>
+				<description>Fullscreen</description>
+				<type>button</type>
+				<id>507</id>
+				<posX>159</posX>
+				<posY>499</posY>
+				<label>595</label>
+				<onup>506</onup>
+				<ondown>508</ondown>
+				<onright>507</onright>
+			</control>
+		</control>
+		<control>
+			<description>TV preview window</description>
+			<type>videowindow</type>
+			<id>508</id>
+			<posX>58</posX>
+			<posY>743</posY>
+			<width>415</width>
+			<height>234</height>
+			<action>18</action>
+			<onup>507</onup>
+			<ondown>502</ondown>
+			<textureFocus>-</textureFocus>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>732</posY>
+			<width>440</width>
+			<height>290</height>
+			<texture>VideoCase.png</texture>
+		</control>
+	</controls>
+</window>

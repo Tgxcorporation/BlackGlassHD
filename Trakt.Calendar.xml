@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>87259</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:#Trakt.CurrentView</define>
+	<define>#Fanart.1:#Trakt.Calendar.Fanart.1</define>
+	<define>#Fanart.2:#Trakt.Calendar.Fanart.2</define>
+	<define>#header.background:hover_trakt.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>Trakt.Common.Fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>Calendar - #Trakt.CurrentView</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1297</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1347</posX>
+				<posY>71</posY>
+				<width>574</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-750,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>-109</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>129</posY>
+				<label>#Trakt.Episode.Title</label>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>1200</width>
+				<wrapString> : : : </wrapString>
+				<visible>!string.equals(#Trakt.Episode.Title,)</visible>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>184</posY>
+				<label>#Trakt.Show.Title     #Trakt.Translation.Season.Label #Trakt.Episode.Season     #Trakt.Translation.Episode.Label #Trakt.Episode.Number</label>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+				<width>1185</width>
+				<wrapString> : : : </wrapString>
+				<visible>!string.equals(#Trakt.Episode.Season,)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-657</posX>
+				<posY>150</posY>
+				<width>1920</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>Big Episode Thumb</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>270</posY>
+				<width>427</width>
+				<height>239</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#selectedthumb</texture>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>270</posY>
+				<width>427</width>
+				<height>239</height>
+				<texture>VideoCase_coverflow.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Show.Year     #Trakt.Show.Country</label>
+				<type>fadelabel</type>
+				<posX>510</posX>
+				<posY>270</posY>
+				<width>720</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>!string.equals(#Trakt.Show.Year,)</visible>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Show.Network</label>
+				<type>fadelabel</type>
+				<posX>510</posX>
+				<posY>318</posY>
+				<width>720</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>!string.equals(#Trakt.Show.Network,)</visible>
+			</control>
+			<control>
+				<label>#Trakt.Show.AirDay     #Trakt.Show.AirTime    #Trakt.Show.Runtime mins</label>
+				<type>fadelabel</type>
+				<posX>510</posX>
+				<posY>366</posY>
+				<width>720</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>!string.equals(#Trakt.Show.AirDay,)</visible>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Show.Certification</label>
+				<type>fadelabel</type>
+				<posX>510</posX>
+				<posY>414</posY>
+				<width>720</width>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>!string.equals(#Trakt.Show.Certification,)</visible>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Translation.FirstAired.Label: #Trakt.Show.FirstAired</label>
+				<type>fadelabel</type>
+				<posX>510</posX>
+				<posY>462</posY>
+				<width>720</width>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>!string.equals(#Trakt.Show.FirstAired,)</visible>
+			</control>
+			<control>
+				<description>Rating Percent</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>510</posY>
+				<width>720</width>
+				<font>font16</font>
+				<label>#Trakt.Episode.Ratings.Percentage%     #Trakt.Episode.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>!string.equals(#Trakt.Episode.Ratings.Percentage,)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-657</posX>
+				<posY>517</posY>
+				<width>1920</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>622</posY>
+				<width>1200</width>
+				<height>300</height>
+				<font>font16</font>
+				<visible>!player.hasmedia+!string.equals(#Trakt.Episode.Overview,)</visible>
+				<seperator>: : :</seperator>
+				<label>#Trakt.Episode.Overview</label>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">visible</animation>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>622</posY>
+				<width>1200</width>
+				<height>202</height>
+				<font>font16</font>
+				<visible>player.hasmedia+!string.equals(#Trakt.Episode.Overview,)</visible>
+				<seperator>: : :</seperator>
+				<label>#Trakt.Episode.Overview</label>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">visible</animation>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>Text List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<posX>970</posX>
+					<posX>1345</posX>
+					<width>574</width>
+					<height>885</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<textXOff>-60</textXOff>
+					<textYOff>13</textYOff>
+					<textXOff2>0</textXOff2>
+					<textYOff2>22</textYOff2>
+					<textXOff3>30</textXOff3>
+					<textYOff3>22</textYOff3>
+					<IconXOff>1947</IconXOff>
+					<IconYOff>61</IconYOff>
+					<playedColor>#ColorPlayed</playedColor>
+					<!-- watched -->
+					<downloadColor>#ColorMain</downloadColor>
+					<!-- (normal) -->
+					<remoteColor>#ColorOffline</remoteColor>
+					<!-- file not present color -->
+					<textcolor>#ColorMain</textcolor>
+					<!-- not watched (normal) -->
+					<textcolor2>#ColorSub</textcolor2>
+					<textcolor3>#ColorSub</textcolor3>
+					<font2>font12</font2>
+					<font3>font12</font3>
+					<textureHeight>79</textureHeight>
+				</control>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>989</posY>
+				<label>#Trakt.Items</label>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Switch View</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Switch View</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>3</ondown>
+				</control>
+				<control>
+					<description>Start Date</description>
+					<type>button</type>
+					<id>3</id>
+					<label>-</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

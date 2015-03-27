@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<window>
+	<id>700</id>
+	<defaultcontrol>30</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:605</define>
+	<define>#header.background:hover_settings.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>30</defaultcontrol>
+			<onexit>40</onexit>
+			<buttonX>45</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>532</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(30)|control.hasfocus(27)|control.hasfocus(28)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(33)|control.hasfocus(35)|control.hasfocus(36)]+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(30)|control.hasfocus(27)|control.hasfocus(28)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(33)|control.hasfocus(35)|control.hasfocus(36)]|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>#header.label</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>70</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>70</posY>
+					<width>577</width>
+					<height>79</height>
+					<texture>bg_button_nofocus_top.png</texture>
+				</control>
+				<control>
+					<description>Automatically turn TV on</description>
+					<type>button</type>
+					<id>30</id>
+					<onleft>40</onleft>
+					<label>6006</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>De-interlacing</description>
+					<type>button</type>
+					<id>27</id>
+					<onleft>40</onleft>
+					<label>6003</label>
+				</control>
+				<control>
+					<description>Apect Ratio</description>
+					<type>button</type>
+					<id>28</id>
+					<onleft>40</onleft>
+					<label>6004</label>
+				</control>
+				<control>
+					<description>MPEG-2 Video Codecs</description>
+					<type>button</type>
+					<id>24</id>
+					<onleft>40</onleft>
+					<label>6000</label>
+				</control>
+				<control>
+					<description>H.264 Video Codecs</description>
+					<type>button</type>
+					<id>35</id>
+					<onleft>40</onleft>
+					<label>6036</label>
+				</control>
+				<control>
+					<description>Audio Codecs</description>
+					<type>button</type>
+					<id>25</id>
+					<onleft>40</onleft>
+					<label>6001</label>
+				</control>
+				<control>
+					<description>LATM AAC Audio Codecs</description>
+					<type>button</type>
+					<id>36</id>
+					<onleft>40</onleft>
+					<label>6039</label>
+				</control>
+				<control>
+					<description>Audio Renderer</description>
+					<type>button</type>
+					<id>33</id>
+					<label>6002</label>
+					<onleft>40</onleft>
+					<ondown>30</ondown>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>900</posY>
+					<width>577</width>
+					<height>79</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>40</defaultcontrol>
+			<onexit>30</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>45</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(40)|control.hasfocus(41)|control.hasfocus(42)|control.hasfocus(43)|control.hasfocus(97262)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(40)|control.hasfocus(41)|control.hasfocus(42)|control.hasfocus(43)|control.hasfocus(97262)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>#header.label</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>70</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>70</posY>
+					<width>577</width>
+					<height>79</height>
+					<texture>bg_button_nofocus_top.png</texture>
+				</control>
+				<control>
+					<description>Use button colors for TVGuide</description>
+					<type>checkbutton</type>
+					<id>40</id>
+					<label>1246</label>
+					<onleft>30</onleft>
+					<onup>17</onup>
+					<ondown>41</ondown>
+					<font>font13</font>
+					<textYOff>21</textYOff>
+					<textvalign>top</textvalign>
+					<selected>#(skin.hassetting('#skin.tvguide.usecolorsforbuttons'))</selected>
+					<onclick>#(skin.togglesetting('#skin.tvguide.usecolorsforbuttons'))</onclick>
+				</control>
+				<control>
+					<description>Use guide colors for genre</description>
+					<type>checkbutton</type>
+					<id>41</id>
+					<label>1247</label>
+					<onleft>30</onleft>
+					<onup>40</onup>
+					<ondown>42</ondown>
+					<font>font13</font>
+					<textYOff>21</textYOff>
+					<textvalign>top</textvalign>
+					<selected>#(skin.hassetting('#skin.tvguide.usecolorsforgenre'))</selected>
+					<onclick>#(skin.togglesetting('#skin.tvguide.usecolorsforgenre'))</onclick>
+				</control>
+				<control>
+					<description>Use highlight</description>
+					<type>checkbutton</type>
+					<id>42</id>
+					<label>1248</label>
+					<onleft>30</onleft>
+					<onup>41</onup>
+					<ondown>43</ondown>
+					<font>font13</font>
+					<textYOff>21</textYOff>
+					<textvalign>top</textvalign>
+					<selected>#(skin.hassetting('#skin.tvguide.useborderhighlight'))</selected>
+					<onclick>#(skin.togglesetting('#skin.tvguide.useborderhighlight'))</onclick>
+				</control>
+				<control>
+					<description>Show genre color key</description>
+					<type>checkbutton</type>
+					<id>43</id>
+					<label>1249</label>
+					<onleft>30</onleft>
+					<onup>42</onup>
+					<ondown>40</ondown>
+					<font>font13</font>
+					<textYOff>21</textYOff>
+					<textvalign>top</textvalign>
+					<selected>#(skin.hassetting('#skin.tvguide.showgenrekey'))</selected>
+					<onclick>#(skin.togglesetting('#skin.tvguide.showgenrekey'))</onclick>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>900</posY>
+					<width>577</width>
+					<height>79</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
+

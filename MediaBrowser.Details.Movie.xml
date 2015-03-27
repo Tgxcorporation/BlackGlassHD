@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<controls>
+		<!-- COMMON -->
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>image</type>
+			<description>Current program channel</description>
+			<id>0</id>
+			<posX>66</posX>
+			<posY>134</posY>
+			<width>611</width>
+			<height>883</height>
+			<texture>black.png</texture>
+			<colordiffuse>60ffffff</colordiffuse>
+			<visible>!player.hasmedia+string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>MediaBrowser.Image.Movie.Primary</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>66</posX>
+			<posY>134</posY>
+			<width>611</width>
+			<height>883</height>
+			<zoom>no</zoom>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#MediaBrowser.Image.Movie.Primary</texture>
+			<visible>!player.hasmedia+string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Cover Art Glass Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>19</posX>
+			<posY>87</posY>
+			<width>705</width>
+			<height>977</height>
+			<texture>DVDCase.png</texture>
+			<visible>!player.hasmedia+string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>image</type>
+			<description>Current program channel</description>
+			<id>0</id>
+			<posX>62</posX>
+			<posY>130</posY>
+			<width>480</width>
+			<height>693</height>
+			<texture>black.png</texture>
+			<colordiffuse>60ffffff</colordiffuse>
+			<visible>player.hasmedia+string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>MediaBrowser.Image.Movie.Primary</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>62</posX>
+			<posY>130</posY>
+			<width>480</width>
+			<height>693</height>
+			<zoom>yes</zoom>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#MediaBrowser.Image.Movie.Primary</texture>
+			<visible>player.hasmedia+string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Cover Art Glass Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>25</posX>
+			<posY>93</posY>
+			<width>554</width>
+			<height>767</height>
+			<texture>DVDCase.png</texture>
+			<visible>player.hasmedia+string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Title label</description>
+			<id>0</id>
+			<type>fadelabel</type>
+			<posX>780</posX>
+			<posY>142</posY>
+			<label>#MediaBrowser.Details.Name</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<width>1125</width>
+			<wrapString> : : : </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+
+
+		<!-- DETAILS -->
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>IMDB Rating Value</description>
+			<type>imagelist</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>247</posY>
+			<width>172</width>
+			<height>19</height>
+			<textureWidth>40</textureWidth>
+			<textureHeight>40</textureHeight>
+			<subitems>
+				<subitem>star_nofocus.png</subitem>
+				<subitem>star_focus.png</subitem>
+			</subitems>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<imagesToDraw>10</imagesToDraw>
+			<percentage>#MediaBrowser.Details.CommunityRating.Localized</percentage>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Subtitle value</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1200</posX>
+			<posY>250</posY>
+			<width>380</width>
+			<label>(#MediaBrowser.Details.CommunityRating.Localized)</label>
+			<textcolor>#ColorUnfocused</textcolor>
+			<font>font14</font>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Genres</description>
+			<type>fadelabel</type>
+			<label>#MediaBrowser.Details.Genres.List</label>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>300</posY>
+			<width>1125</width>
+			<font>font16</font>
+			<wrapString> : : : </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>year</description>
+			<type>fadelabel</type>
+			<label>#MediaBrowser.Details.PremiereDate.ShortDate     #(math.round(cflt(#MediaBrowser.Details.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Details.OfficialRating</label>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>352</posY>
+			<width>1125</width>
+			<font>font18</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Directors</description>
+			<type>fadelabel</type>
+			<label>Director: #MediaBrowser.Details.People.Director.List</label>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>412</posY>
+			<width>1125</width>
+			<font>font18</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Directors</description>
+			<type>fadelabel</type>
+			<label>#MediaBrowser.Details.Studios.List</label>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>472</posY>
+			<width>1125</width>
+			<font>font15</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Directors</description>
+			<type>fadelabel</type>
+			<label>#MediaBrowser.Details.Tags.List</label>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>528</posY>
+			<width>1125</width>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>actors</description>
+			<type>textboxscrollup</type>
+			<label>Actors: #MediaBrowser.Details.People.Actor.List</label>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>607</posY>
+			<width>1125</width>
+			<height>337</height>
+			<font>font18</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<seperator>: : :</seperator>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
+		</control>
+		<!-- <control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>607</posY>
+			<width>1125</width>
+			<height>337</height>
+			<textcolor>#ColorMain</textcolor>
+			<font>font18</font>
+			<label>#MediaBrowser.Details.Overview</label>
+			<seperator>: : :</seperator>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control> -->
+
+
+		<!-- PLOT -->
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<description>Description</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>247</posY>
+			<width>1125</width>
+			<height>660</height>
+			<textcolor>#ColorMain</textcolor>
+			<font>font18</font>
+			<label>#MediaBrowser.Details.Overview</label>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10001)</visible>
+		</control>
+
+
+		<!-- TECH -->
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>250</posY>
+			<width>350</width>
+			<label>Video Format</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>250</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.MediaStreams.Video.0.Codec</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>300</posY>
+			<width>350</width>
+			<label>Aspect Ratio</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>300</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.MediaStreams.Video.0.AspectRatio</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>350</posY>
+			<width>350</width>
+			<label>Resolution</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>350</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.MediaStreams.Video.0.Width x #MediaBrowser.Details.MediaStreams.Video.0.Height</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>400</posY>
+			<width>350</width>
+			<label>Frame Rate</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>400</posY>
+			<width>800</width>
+			<label>#(math.round(cflt(#MediaBrowser.Details.MediaStreams.Video.0.AverageFrameRate.Localized),3)) fps</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>450</posY>
+			<width>350</width>
+			<label>Audio Format</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>450</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.MediaStreams.Audio.0.Codec</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>500</posY>
+			<width>350</width>
+			<label>Audio Channels</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>500</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.MediaStreams.Audio.0.Channels</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>550</posY>
+			<width>350</width>
+			<label>Date Added</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>550</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.DateCreated.ShortDate #MediaBrowser.Details.DateCreated.TimeOfDay.Hours:#MediaBrowser.Details.DateCreated.TimeOfDay.Minutes</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+			<wrapString> ·· </wrapString>
+		</control>
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>600</posY>
+			<width>350</width>
+			<label>Media Type</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>600</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.MediaType</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>650</posY>
+			<width>350</width>
+			<label>Watched Count</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>650</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.UserData.PlayCount</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>label</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>700</posY>
+			<width>350</width>
+			<label>Path</label>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1080</posX>
+			<posY>700</posY>
+			<width>800</width>
+			<label>#MediaBrowser.Details.Path</label>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<wrapString> ·· </wrapString>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
+		</control>
+
+
+
+		<!-- Media logos [Details View] -->
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>Video Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>982</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MediaBrowser.Details.MediaStreams.Video.0.Codec.png</texture>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>Video Resolution</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>915</posX>
+			<posY>982</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MediaBrowser.Details.MediaStreams.Video.0.Heightp.png</texture>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>Video Aspect Ratio</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1050</posX>
+			<posY>982</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MediaBrowser.Details.MediaStreams.Video.0.AspectRatio.png</texture>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>Audio Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1185</posX>
+			<posY>982</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MediaBrowser.Details.MediaStreams.Audio.0.Codec.png</texture>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>Audio Channels</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1320</posX>
+			<posY>982</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MediaBrowser.Details.MediaStreams.Audio.0.Channels.png</texture>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>Fps</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1455</posX>
+			<posY>982</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\empty.png</texture>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>1455</posX>
+			<posY>1014</posY>
+			<label>#(math.round(cflt(#MediaBrowser.Details.MediaStreams.Video.0.AverageFrameRate.Localized),3))</label>
+			<font>font11</font>
+			<align>center</align>
+			<width>109</width>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowserDetails">
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>1455</posX>
+			<posY>1035</posY>
+			<label>fps</label>
+			<font>font7</font>
+			<align>center</align>
+			<width>109</width>
+			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
+		</control>
+
+	</controls>
+</window>

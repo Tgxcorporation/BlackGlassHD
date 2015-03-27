@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>567834</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Mastermind</define>
+	<define>#header.background:hover_my mastermind.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>BW Label</description>
+				<type>label</type>
+				<id>95</id>
+				<posX>45</posX>
+				<posY>150</posY>
+				<width>570</width>
+				<label>Correct computer</label>
+			</control>
+			<control>
+				<description>Black Comp</description>
+				<type>selectbutton</type>
+				<id>96</id>
+				<posX>37</posX>
+				<posY>195</posY>
+				<width>570</width>
+				<label>Black: 0</label>
+				<font>font16</font>
+				<textYOff>16</textYOff>
+				<textYOff2>16</textYOff2>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<texturebg>-</texturebg>
+				<onleft>5</onleft>
+				<!--<onright>0</onright>-->
+				<onup>5</onup>
+				<ondown>97</ondown>
+				<subitems>
+					<subitem>Black: 0</subitem>
+					<subitem>Black: 1</subitem>
+					<subitem>Black: 2</subitem>
+					<subitem>Black: 3</subitem>
+					<subitem>Black: 4</subitem>
+				</subitems>
+			</control>
+			<control>
+				<description>White Comp</description>
+				<type>selectbutton</type>
+				<id>97</id>
+				<posX>37</posX>
+				<posY>255</posY>
+				<width>570</width>
+				<label>White: 0</label>
+				<font>font16</font>
+				<textYOff>16</textYOff>
+				<textYOff2>16</textYOff2>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<texturebg>-</texturebg>
+				<onleft>5</onleft>
+				<!--<onright>0</onright>-->
+				<onup>96</onup>
+				<ondown>98</ondown>
+				<subitems>
+					<subitem>White: 0</subitem>
+					<subitem>White: 1</subitem>
+					<subitem>White: 2</subitem>
+					<subitem>White: 3</subitem>
+					<subitem>White: 4</subitem>
+				</subitems>
+			</control>
+			<control>
+				<description>Ok Comp</description>
+				<type>button</type>
+				<id>98</id>
+				<posX>37</posX>
+				<posY>315</posY>
+				<width>570</width>
+				<label>Correct</label>
+				<font>font16</font>
+				<textYOff>16</textYOff>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onleft>5</onleft>
+				<onright>98</onright>
+				<onup>97</onup>
+				<ondown>5</ondown>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<description>Playground Human</description>
+				<type>image</type>
+				<id>20</id>
+				<visible>no</visible>
+				<posX>765</posX>
+				<posY>154</posY>
+				<texture>Mastermind_Back.png</texture>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Playground Computer</description>
+				<type>image</type>
+				<id>21</id>
+				<visible>no</visible>
+				<posX>1350</posX>
+				<posY>154</posY>
+				<texture>Mastermind_Back.png</texture>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+		<!-- MENU -->
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>New Game</description>
+					<type>button</type>
+					<id>2</id>
+					<label>19002</label>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>8</ondown>
+				</control>
+				<control>
+					<description>GameType</description>
+					<type>selectbutton</type>
+					<id>8</id>
+					<label>Game: Standard</label>
+					<onleft>8</onleft>
+					<onup>2</onup>
+					<ondown>3</ondown>
+					<subitems>
+						<subitem>Game: Standard</subitem>
+						<subitem>Game: Same</subitem>
+						<subitem>Game: Different</subitem>
+						<subitem>Game: Computer</subitem>
+					</subitems>
+				</control>
+				<control>
+					<description>Level</description>
+					<type>selectbutton</type>
+					<id>3</id>
+					<label>Level: Amateur</label>
+					<onleft>3</onleft>
+					<onup>8</onup>
+					<ondown>4</ondown>
+					<subitems>
+						<subitem>Level: Amateur</subitem>
+						<subitem>Level: Normal</subitem>
+						<subitem>Level: Professional</subitem>
+					</subitems>
+				</control>
+				<control>
+					<description>CheckRow</description>
+					<type>button</type>
+					<id>4</id>
+					<label>Check row</label>
+					<onleft>4</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Surrender</description>
+					<type>button</type>
+					<id>5</id>
+					<label>I Surrender</label>
+					<onleft>5</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>6</ondown>
+				</control>
+				<control>
+					<description>Zoom level</description>
+					<type>selectbutton</type>
+					<id>6</id>
+					<label>Zoom: 100%</label>
+					<onleft>6</onleft>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<subitems>
+						<subitem>Zoom: 100%</subitem>
+						<subitem>Zoom: 120%</subitem>
+						<subitem>Zoom: 140%</subitem>
+						<subitem>Zoom: 160%</subitem>
+						<subitem>Zoom: 180%</subitem>
+						<subitem>Zoom: 200%</subitem>
+						<subitem>Zoom: 220%</subitem>
+						<subitem>Zoom: 240%</subitem>
+						<subitem>Zoom: 260%</subitem>
+						<subitem>Zoom: 280%</subitem>
+						<subitem>Zoom: 300%</subitem>
+						<subitem>Zoom: 320%</subitem>
+						<subitem>Zoom: 340%</subitem>
+						<subitem>Zoom: 360%</subitem>
+						<subitem>Zoom: 380%</subitem>
+						<subitem>Zoom: 400%</subitem>
+					</subitems>
+				</control>
+				<control>
+					<description>Whatsthis</description>
+					<type>button</type>
+					<id>7</id>
+					<label>What's Mastermind?</label>
+					<onleft>7</onleft>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>Dummy button for hidden menu</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>330</posX>
+			<posY>0</posY>
+			<width>0</width>
+			<height>1080</height>
+			<!--<onright>96</onright>-->
+			<!--<onleft>2</onleft>-->
+			<ondown>50</ondown>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible allowhiddenfocus="false">!Control.HasFocus(50)+[!Control.HasFocus(96)+!Control.HasFocus(97)+!Control.HasFocus(98)]+[Control.HasFocus(2)|Control.HasFocus(3)|Control.HasFocus(4)|Control.HasFocus(5)|Control.HasFocus(6)|Control.HasFocus(7)|Control.HasFocus(8)]</visible>
+		</control>
+	</controls>
+</window>

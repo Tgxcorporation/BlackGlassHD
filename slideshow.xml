@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>2007</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>control.isvisible(13371337)</allowoverlay>
+  <controls>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>-150</posX>
+      <posY>-420</posY>
+      <width>2370</width>
+      <height>607</height>
+      <texture>bg_dialog.png</texture>
+    </control>
+    <control>
+      <description>row 1 label</description>
+      <type>label</type>
+      <id>10</id>
+      <posX>186</posX>
+      <posY>42</posY>
+      <label>-</label>
+      <align>left</align>
+      <font>font16</font>
+      <textcolor>#ColorMain</textcolor>
+    </control>
+    <control>
+      <description>row 2 label</description>
+      <type>label</type>
+      <id>11</id>
+      <posX>1599</posX>
+      <posY>42</posY>
+      <label>-</label>
+      <align>left</align>
+      <font>font16</font>
+      <textcolor>#ColorMain</textcolor>
+    </control>
+    <control>
+      <description>row 2 extra label</description>
+      <type>label</type>
+      <id>12</id>
+      <posX>1200</posX>
+      <posY>42</posY>
+      <label>-</label>
+      <align>left</align>
+      <font>font16</font>
+      <textcolor>#ColorMain</textcolor>
+    </control>
+  </controls>
+</window>

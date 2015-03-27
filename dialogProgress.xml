@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>101</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="Fade" time="250">WindowOpen</animation>
+	<animation effect="Fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.dialog.xml</import>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>445</posX>
+			<posY>630</posY>
+			<width>1030</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<id>100</id>
+			<type>image</type>
+			<posX>445</posX>
+			<posY>655</posY>
+			<width>1030</width>
+			<texture>osd_progress_background.png</texture>
+		</control>
+		<control>
+			<id>20</id>
+			<description>progress control</description>
+			<type>progress</type>
+			<posX>433</posX>
+			<posY>655</posY>
+			<width>1051</width>
+		</control>
+		<control>
+			<id>10</id>
+			<description>Cancel button</description>
+			<type>button</type>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<posX>810</posX>
+			<posY>714</posY>
+			<width>330</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>222</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>445</posX>
+			<posY>630</posY>
+			<width>1030</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+	</controls>
+</window>

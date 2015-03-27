@@ -1,0 +1,1288 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(5050)">conditional</animation>
+			<visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Graphic)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-150</posX>
+				<posY>72</posY>
+				<width>2475</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>190</posY>
+				<width>1920</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>location label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>177</posY>
+				<width>1920</width>
+				<font>font22</font>
+				<align>center</align>
+				<textcolor>#ColorMain</textcolor>
+				<label>#WorldWeather.Location</label>
+			</control>
+			<control>
+				<description>update time label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>231</posY>
+				<label>#WorldWeather.HourForecastProvider: #WorldWeather.RefreshDate #WorldWeather.RefreshTime</label>
+				<font>font13</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<align>center</align>
+				<width>1920</width>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ********************************    Labels Column    **************************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>temperature label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#WorldWeather.TranslationCondition</label>
+				<posX>135</posX>
+				<posY>402</posY>
+				<font>font11</font>
+			</control>
+			<control>
+				<description>wind label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#WorldWeather.TranslationWind</label>
+				<posX>135</posX>
+				<posY>483</posY>
+				<font>font11</font>
+			</control>
+			<control>
+				<description>temperature label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#WorldWeather.TranslationTemperature</label>
+				<posX>135</posX>
+				<posY>558</posY>
+				<font>font11</font>
+			</control>
+			<control>
+				<description>pressure label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#WorldWeather.TranslationPressure</label>
+				<posX>135</posX>
+				<posY>633</posY>
+				<font>font11</font>
+			</control>
+			<control>
+				<description>humidity label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#WorldWeather.TranslationHumidity</label>
+				<posX>135</posX>
+				<posY>708</posY>
+				<font>font11</font>
+			</control>
+			<control>
+				<description>precipitation label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#WorldWeather.TranslationPrecipitation</label>
+				<posX>135</posX>
+				<posY>783</posY>
+				<font>font11</font>
+			</control>
+			<control>
+				<description>cloud coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<label>#WorldWeather.TranslationCloudCoverage</label>
+				<posX>135</posX>
+				<posY>858</posY>
+				<font>font11</font>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ********************************      Hours Row      **************************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>hour 0 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>450</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour0StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour0StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 1 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>562</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour1StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour1StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 2 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>675</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour2StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour2StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 3 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>787</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour3StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour3StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 4 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>900</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour4StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour4StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 5 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1012</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour5StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour5StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 6 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1125</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour6StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour6StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 7 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1237</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour7StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour7StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 8 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1350</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour8StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour8StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 9 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1462</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour9StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour9StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 10 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1575</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour10StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour10StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 11 start time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1687</posX>
+				<posY>360</posY>
+				<width>90</width>
+				<align>center</align>
+				<label>#WorldWeather.ForecastHour11StartTime</label>
+				<font>font10</font>
+				<visible>!string.equals(#WorldWeather.ForecastHour11StartDay, )</visible>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ******************************  Condition Icons Row  **************************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>hour 0 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>457</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour0IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour0StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 1 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour1IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour1StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 2 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>682</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour2IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour2StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 3 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>795</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour3IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour3StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 4 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>907</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour4IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour4StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 5 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1020</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour5IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour5StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 6 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1132</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour6IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour6StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 7 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1245</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour7IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour7StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 8 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1357</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour8IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour8StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 9 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1470</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour9IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour9StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 10 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1582</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour10IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour10StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 11 condition icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1695</posX>
+				<posY>382</posY>
+				<width>75</width>
+				<height>75</height>
+				<texture>#WorldWeather.ForecastHour11IconImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour11StartDay, )</visible>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ******************************    Wind Icons Row     **************************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>hour 0 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>472</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour0WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour0StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 1 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>585</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour1WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour1StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 2 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>697</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour2WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour2StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 3 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>810</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour3WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour3StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 4 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>923</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour4WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour4StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 5 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour5WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour5StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 6 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1147</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour6WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour6StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 7 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1260</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour7WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour7StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 8 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour8WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour8StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 9 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1485</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour9WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour9StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 10 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1597</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour10WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour10StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 11 wind icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1710</posX>
+				<posY>480</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour11WindDirectionImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour11StartDay, )</visible>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ******************************  Temperature Icons Row  ************************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>hour 0 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>472</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour0TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour0StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 1 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>585</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour1TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour1StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 2 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>697</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour2TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour2StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 3 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>810</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour3TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour3StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 4 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>923</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour4TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour4StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 5 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour5TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour5StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 6 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1147</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour6TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour6StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 7 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1260</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour7TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour7StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 8 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour8TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour8StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 9 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1485</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour9TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour9StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 10 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1597</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour10TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour10StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 11 temperature icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1710</posX>
+				<posY>555</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour11TemperatureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour11StartDay, )</visible>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ******************************   Pressure Icons Row  **************************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>hour 0 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>472</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour0PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour0StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 1 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>585</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour1PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour1StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 2 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>697</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour2PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour2StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 3 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>810</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour3PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour3StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 4 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>923</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour4PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour4StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 5 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour5PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour5StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 6 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1147</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour6PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour6StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 7 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1260</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour7PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour7StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 8 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour8PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour8StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 9 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1485</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour9PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour9StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 10 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1597</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour10PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour10StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 11 Pressure icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1710</posX>
+				<posY>630</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour11PressureImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour11StartDay, )</visible>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ******************************  Humidity Icons Row  * *************************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>hour 0 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>472</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour0HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour0StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 1 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>585</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour1HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour1StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 2 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>697</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour2HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour2StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 3 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>810</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour3HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour3StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 4 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>923</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour4HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour4StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 5 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour5HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour5StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 6 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1147</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour6HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour6StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 7 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1260</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour7HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour7StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 8 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour8HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour8StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 9 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1485</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour9HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour9StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 10 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1597</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour10HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour10StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 11 Humidity icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1710</posX>
+				<posY>705</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour11HumidityImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour11StartDay, )</visible>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ****************************  Precipitation Icons Row  ************************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>hour 0 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>472</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour0PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour0StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 1 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>585</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour1PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour1StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 2 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>697</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour2PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour2StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 3 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>810</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour3PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour3StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 4 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>923</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour4PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour4StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 5 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour5PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour5StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 6 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1147</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour6PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour6StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 7 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1260</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour7PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour7StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 8 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour8PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour8StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 9 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1485</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour9PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour9StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 10 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1597</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour10PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour10StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 11 Precipitation icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1710</posX>
+				<posY>780</posY>
+				<width>45</width>
+				<height>45</height>
+				<align>center</align>
+				<texture>#WorldWeather.ForecastHour11PrecipitationImage</texture>
+				<visible>!string.equals(#WorldWeather.ForecastHour11StartDay, )</visible>
+			</control>
+			<!--     *******************************************************************************************  -->
+			<!--     ****************************  Cloud Coverage Label Row   **********************************  -->
+			<!--     *******************************************************************************************  -->
+			<control>
+				<description>hour 0 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>450</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour0CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour0StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 1 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>562</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour1CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour1StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 2 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>675</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour2CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour2StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 3 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>787</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour3CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour3StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 4 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>900</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour4CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour4StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 5 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1012</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour5CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour5StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 6 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1125</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour6CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour6StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 7 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1237</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour7CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour7StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 8 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1350</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour8CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour8StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 9 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1462</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour9CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour9StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 10 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1575</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour10CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour10StartDay, )</visible>
+			</control>
+			<control>
+				<description>hour 11 Cloud Coverage label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1687</posX>
+				<posY>877</posY>
+				<width>90</width>
+				<align>center</align>
+				<font>font10</font>
+				<label>#WorldWeather.ForecastHour11CloudCoverage</label>
+				<visible>!string.equals(#WorldWeather.ForecastHour11StartDay, )</visible>
+			</control>
+		</control>
+	</controls>
+</window>

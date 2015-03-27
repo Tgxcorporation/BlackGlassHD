@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>1015</id>
+	<defaultcontrol>6</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:300187</define>
+	<define>#header.background:hover_settings.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>		
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>105</posX>
+				<posY>157</posY>
+				<width>1710</width>
+				<height>900</height>
+				<texture>bg_dialog_big.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>865</posX>
+				<posY>205</posY>
+				<width>3</width>
+				<height>807</height>
+				<texture>bg_button_vertical.png</texture>
+				<colordiffuse>#ColorMain</colordiffuse>
+			</control>
+
+			<control>
+				<description>Slideshow transition label</description>
+				<type>label</type>
+				<id>100</id>
+				<posX>190</posX>
+				<posY>225</posY>
+				<label>300183</label>
+				<textcolor>ffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>145</posX>
+				<posY>217</posY>
+				<width>720</width>
+				<height>67</height>
+				<texture>bg_button_nofocus_top.png</texture>
+				<!-- <colordiffuse>ccffffff</colordiffuse> -->
+			</control>
+			<control>
+				<description>Ken Buns transitions</description>
+				<type>checkbutton</type>
+				<id>6</id>
+				<posX>145</posX>
+				<posY>285</posY>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<label>13008</label>
+				<width>720</width>
+				<onup>123</onup>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+			<control>
+				<description>X-fade transitions</description>
+				<type>checkbutton</type>
+				<id>5</id>
+				<posX>145</posX>
+				<posY>352</posY>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<label>13010</label>
+				<width>720</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+			<control>
+				<description>Random transitions</description>
+				<type>checkbutton</type>
+				<id>7</id>
+				<posX>145</posX>
+				<posY>420</posY>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<label>13009</label>
+				<width>720</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+			<!--Rotation settings group-->
+
+			<control>
+				<description>Rotation settings</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>190</posX>
+				<posY>607</posY>
+				<label>300184</label>
+				<textcolor>ffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>145</posX>
+				<posY>600</posY>
+				<width>720</width>
+				<height>67</height>
+				<texture>bg_button_nofocus_top.png</texture>
+				<!-- <colordiffuse>ccffffff</colordiffuse> -->
+			</control>
+			<control>
+				<description>EXIF rotation</description>
+				<type>checkbutton</type>
+				<id>41</id>
+				<posX>145</posX>
+				<posY>667</posY>
+				<label>300185</label>
+				<onleft>43</onleft>
+				<onright>43</onright>
+				<width>720</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+			<control>
+				<description>Picasa.ini rotation</description>
+				<type>checkbutton</type>
+				<id>42</id>
+				<posX>145</posX>
+				<posY>735</posY>
+				<label>300186</label>
+				<onleft>44</onleft>
+				<onright>44</onright>
+				<ondown>2</ondown>
+				<width>720</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+			<!--Slideshow Settings group-->
+
+			<control>
+				<description>Slideshow settings</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>915</posX>
+				<posY>225</posY>
+				<label>300187</label>
+				<textcolor>ffffff</textcolor>
+			</control>
+			<control>
+				<description>Speed label</description>
+				<type>label</type>
+				<id>100</id>
+				<posX>915</posX>
+				<posY>297</posY>
+				<label>224</label>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font14</font>
+			</control>
+			<control>
+				<description>Speed select</description>
+				<type>spincontrol</type>
+				<id>2</id>
+				<posX>1680</posX>
+				<posY>304</posY>
+				<onleft>6</onleft>
+				<onright>6</onright>
+				<ondown>3</ondown>
+				<onup>42</onup>
+				<buddycontrolid>100</buddycontrolid>
+				<font>font14</font>
+				<align>right</align>
+			</control>
+			<control>
+				<description>Transition time label</description>
+				<type>label</type>
+				<id>101</id>
+				<posX>915</posX>
+				<posY>364</posY>
+				<label>225</label>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font14</font>
+			</control>
+			<control>
+				<description>Transition time select</description>
+				<type>spincontrol</type>
+				<id>3</id>
+				<posX>1680</posX>
+				<posY>372</posY>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>2</onup>
+				<ondown>4</ondown>
+				<buddycontrolid>101</buddycontrolid>
+				<font>font14</font>
+				<align>right</align>
+			</control>
+			<control>
+				<description>ken burns speed label</description>
+				<type>label</type>
+				<id>102</id>
+				<posX>915</posX>
+				<posY>432</posY>
+				<label>13011</label>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font14</font>
+			</control>
+			<control>
+				<description>ken burns speed select</description>
+				<type>spincontrol</type>
+				<id>4</id>
+				<posX>1680</posX>
+				<posY>439</posY>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<onup>3</onup>
+				<ondown>8</ondown>
+				<buddycontrolid>102</buddycontrolid>
+				<font>font14</font>
+				<align>right</align>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>870</posX>
+				<posY>420</posY>
+				<width>906</width>
+				<height>67</height>
+				<texture>bg_button_nofocus_top.png</texture>
+				<!-- <colordiffuse>ccffffff</colordiffuse> -->
+			</control>
+			<control>
+				<description>Repeat/loop slideshows</description>
+				<type>checkbutton</type>
+				<id>8</id>
+				<posX>870</posX>
+				<posY>487</posY>
+				<onup>4</onup>
+				<ondown>9</ondown>
+				<label>6020</label>
+				<width>906</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+			<control>
+				<description>Auto shuffle slideshow</description>
+				<type>checkbutton</type>
+				<id>9</id>
+				<posX>870</posX>
+				<posY>555</posY>
+				<onup>8</onup>
+				<label>6021</label>
+				<width>906</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+
+			<!--View settings group-->
+			<!--Slideshow Settings group-->
+
+			<control>
+				<description>View settings</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>915</posX>
+				<posY>678</posY>
+				<label>300188</label>
+				<textcolor>ffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>870</posX>
+				<posY>667</posY>
+				<width>906</width>
+				<height>67</height>
+				<texture>bg_button_nofocus_top.png</texture>
+				<!-- <colordiffuse>ccffffff</colordiffuse> -->
+			</control>
+			<control>
+				<description>Group by day</description>
+				<type>checkbutton</type>
+				<id>43</id>
+				<posX>870</posX>
+				<posY>735</posY>
+				<label>300189</label>
+				<onup>9</onup>
+				<onleft>41</onleft>
+				<onright>41</onright>
+				<width>906</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+			<control>
+				<description>Enable playing videos</description>
+				<type>checkbutton</type>
+				<id>44</id>
+				<posX>870</posX>
+				<posY>802</posY>
+				<label>300190</label>
+				<onleft>42</onleft>
+				<onright>42</onright>
+				<width>906</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+			<control>
+				<description>Play videos in slideshow</description>
+				<type>checkbutton</type>
+				<id>45</id>
+				<posX>870</posX>
+				<posY>870</posY>
+				<label>300191</label>
+				<onleft>40</onleft>
+				<onright>40</onright>
+				<ondown>6</ondown>
+				<onup>44</onup>
+				<width>906</width>
+				<font>font14</font>
+				<height>67</height>
+			</control>
+		</control>
+	</controls>
+</window>
+

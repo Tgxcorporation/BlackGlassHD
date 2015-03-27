@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>1912</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>black.png</texture>
+			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>405</posX>
+			<posY>220</posY>
+			<width>1110</width>
+			<height>727</height>
+			<texture>bg_dialog_new.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>dialog Heading</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>298</posY>
+			<width>960</width>
+			<label>Skype Contact Details</label>
+			<textcolor>#ColorMain</textcolor>
+			<font>font22</font>
+			<align>left</align>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>445</posX>
+			<posY>300</posY>
+			<width>1029</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Name Lib</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>397</posY>
+			<width>450</width>
+			<label>Name: </label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Name</description>
+			<type>fadelabel</type>
+			<id>2</id>
+			<posX>705</posX>
+			<posY>397</posY>
+			<width>750</width>
+			<label>#Skype.ContactInfos.Name</label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Birthdate Lib</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>442</posY>
+			<width>450</width>
+			<label>Birthdate: </label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Birthdate</description>
+			<type>fadelabel</type>
+			<id>3</id>
+			<posX>705</posX>
+			<posY>442</posY>
+			<width>750</width>
+			<label>#Skype.ContactInfos.Birthdate</label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Country</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>487</posY>
+			<width>450</width>
+			<label>Country: </label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Country</description>
+			<type>fadelabel</type>
+			<id>4</id>
+			<posX>705</posX>
+			<posY>487</posY>
+			<width>750</width>
+			<label>#Skype.ContactInfos.Country</label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact City Lib</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>532</posY>
+			<width>450</width>
+			<label>City: </label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact City</description>
+			<type>fadelabel</type>
+			<id>5</id>
+			<posX>705</posX>
+			<posY>532</posY>
+			<width>750</width>
+			<label>#Skype.ContactInfos.City</label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Province Lib</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>577</posY>
+			<width>450</width>
+			<label>Province: </label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Province</description>
+			<type>label</type>
+			<id>6</id>
+			<posX>705</posX>
+			<posY>577</posY>
+			<width>750</width>
+			<label>#Skype.ContactInfos.Province</label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Sex Lib</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>622</posY>
+			<width>450</width>
+			<label>Gender: </label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Sex</description>
+			<type>fadelabel</type>
+			<id>7</id>
+			<posX>705</posX>
+			<posY>622</posY>
+			<width>750</width>
+			<label>#Skype.ContactInfos.Sex</label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Homepage Lib</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>667</posY>
+			<width>450</width>
+			<label>Homepage: </label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Homepage</description>
+			<type>fadelabel</type>
+			<id>8</id>
+			<posX>705</posX>
+			<posY>667</posY>
+			<width>750</width>
+			<label>#Skype.ContactInfos.HomePage</label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Status Lib</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>480</posX>
+			<posY>712</posY>
+			<width>450</width>
+			<label>Status: </label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>10</id>
+			<posX>705</posX>
+			<posY>705</posY>
+			<width>48</width>
+			<height>48</height>
+			<zoom>false</zoom>
+			<texture>#Skype.Image.UserStatus</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Contact Status</description>
+			<type>label</type>
+			<id>9</id>
+			<posX>765</posX>
+			<posY>712</posY>
+			<width>600</width>
+			<label>#Skype.ContactInfos.Status</label>
+			<font>font13</font>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>445</posX>
+			<posY>697</posY>
+			<width>1029</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>OK button</description>
+			<type>button</type>
+			<id>20</id>
+			<posX>810</posX>
+			<posY>787</posY>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<width>300</width>
+			<height>90</height>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<textalign>center</textalign>
+			<label>Close</label>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+	</controls>
+</window>

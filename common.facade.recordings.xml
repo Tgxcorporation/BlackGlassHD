@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>600</posY>
+			<width>2520</width>
+			<height>480</height>
+			<texture>gradient.png</texture>
+			<visible>[facadeview.filmstrip|facadeview.coverflow]+control.isvisible(50)+!control.hasfocus(505050)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="150">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.list+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.list+control.isvisible(50)+string.equals(#itemcount,)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.list+control.isvisible(50)+!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.smallicons+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.smallicons+control.isvisible(50)+string.equals(#itemcount,)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.smallicons+control.isvisible(50)+!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.largeicons+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.largeicons+control.isvisible(50)+string.equals(#itemcount,)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.largeicons+control.isvisible(50)+!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.playlist+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.playlist+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.playlist+control.isvisible(50)+string.equals(#itemcount,)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.playlist+control.isvisible(50)+!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+
+
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.album+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.album+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.album+control.isvisible(50)+string.equals(#itemcount,)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>facadeview.album+control.isvisible(50)+!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control Style="FanartDisplayAnimation">
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>505050</onright>
+					<scrollOffset>2</scrollOffset>
+					<textcontent3>-</textcontent3>
+				</control>
+				<control Style="FanartDisplayAnimation">
+					<description>album view listcontrol</description>
+					<type>listcontrol</type>
+					<subtype>album</subtype>
+					<id>50</id>
+					<textXOff2>1155</textXOff2>
+					<textYOff2>97</textYOff2>
+					<textYOff3>97</textYOff3>
+					<textXOff2>1155</textXOff2>
+					<textXOff3>210</textXOff3>
+					<textcolor2>#ColorSub</textcolor2> 
+					<textcolor3>#ColorSub</textcolor3> 
+					<font>font20</font>
+					<itemWidth>180</itemWidth>
+					<itemHeight>135</itemHeight>
+					<IconYOff>12</IconYOff>
+					<textureHeight>160</textureHeight>
+					<onleft>2</onleft>
+					<onright>505050</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<textureFocus>bg_facade2_line_focus.png</textureFocus>
+					<textureNoFocus>bg_facade2_line_nofocus.png</textureNoFocus>
+					<PinIconXOff>1161</PinIconXOff>
+					<PinIconYOff>55</PinIconYOff>
+				</control>
+				<control Style="FanartDisplayAnimation">
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>505050</onright>
+					<posX>750</posX>
+					<posY>142</posY>
+					<width>1222</width>
+					<height>825</height>
+					<scrollOffset>1</scrollOffset>
+					<itemWidth>230</itemWidth>
+					<itemHeight>134</itemHeight>
+					<textureWidth>229</textureWidth>
+					<textureHeight>138</textureHeight>
+					<thumbWidth>207</thumbWidth>
+					<thumbHeight>116</thumbHeight>
+					<thumbPosX>11</thumbPosX>
+					<thumbPosY>11</thumbPosY>
+					<itemWidthBig>383</itemWidthBig>
+					<itemHeightBig>200</itemHeightBig>
+					<textureWidthBig>341</textureWidthBig>
+					<textureHeightBig>205</textureHeightBig>
+					<thumbWidthBig>309</thumbWidthBig>
+					<thumbHeightBig>173</thumbHeightBig>
+					<thumbPosXBig>16</thumbPosXBig>
+					<thumbPosYBig>16</thumbPosYBig>
+					<unfocusedAlpha>127</unfocusedAlpha>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>no</renderFocusText>
+					<renderUnfocusText>no</renderUnfocusText>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<thumbZoom>no</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<textXOff>1</textXOff>
+					<textYOff>3</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<showFrame>true</showFrame>
+					<frameNoFocus>VideoCase_nofocus.png</frameNoFocus>
+					<frameFocus>VideoCase.png</frameFocus>
+					<keepaspectratio>yes</keepaspectratio>
+					<centered>yes</centered>
+					<!-- <scrollbarXOff>-296</scrollbarXOff> -->
+				</control>
+				<control Style="FanartDisplayAnimation">
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<dimColor>#ColorAlternate</dimColor>
+					<id>50</id>
+					<ondown>505050</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<posX>30</posX>
+					<posY>618</posY>
+					<width>1905</width>
+					<height>237</height>
+					<itemWidth>379</itemWidth>
+					<itemHeight>237</itemHeight>
+					<textureWidth>360</textureWidth>
+					<textureHeight>217</textureHeight>
+					<thumbWidth>326</thumbWidth>
+					<thumbHeight>183</thumbHeight>
+					<thumbPosX>17</thumbPosX>
+					<thumbPosY>17</thumbPosY>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder>VideoCase_nofocus.png</imageFolder>
+					<imageFolderFocus>VideoCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<scrollOffset>3</scrollOffset>
+					<scrollbarYOff>251</scrollbarYOff>
+					<thumbZoom>no</thumbZoom>
+				</control>
+
+				<control Style="FanartDisplayAnimation">
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>#ColorMain</colordiffuse>
+					<dimColor>#ColorAlternate</dimColor>
+					<id>50</id>
+					<posX>30</posX>
+					<posY>540</posY>
+					<width>1905</width>
+					<height>1080</height>
+					<ondown>505050</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<selectedCard>0</selectedCard>
+					<cardWidth>481</cardWidth>
+					<cardHeight>270</cardHeight>
+					<angle>45</angle>
+					<sideShift>360</sideShift>
+					<sideGap>200</sideGap>
+					<sideDepth>250</sideDepth>
+					<offsetY>0</offsetY>
+					<selectedOffsetY>0</selectedOffsetY>
+					<speed>8</speed>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<frameWidth>481</frameWidth>
+					<frameHeight>270</frameHeight>
+					<spinSpeed>8</spinSpeed>
+					<font1>font14</font1>
+					<font2>font11</font2>
+					<label1YOff>382</label1YOff>
+					<label2YOff>420</label2YOff>
+					<pageSize>5</pageSize>
+					<scrollbarYOff>325</scrollbarYOff>
+					<thumbZoom>yes</thumbZoom>
+					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="VideoCase_coverflow_mask.png"/>
+					<camera xpos="0" ypos="135">yes</camera>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>481</width>
+									<height>270</height>
+									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="VideoCase_coverflow_mask.png">black.png</texture>
+								</control>
+								
+								<control>
+									<description>Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>13</posY>
+									<width>435</width>
+									<label>#selecteditem</label>
+									<font>font16</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> : : : </wrapString>
+									<shadowAngle>45</shadowAngle>
+									<shadowDistance>2</shadowDistance>
+									<shadowColor>FF000000</shadowColor>
+								</control>
+								
+								<!-- <control>
+									<type>image</type>
+									<id>0</id>
+									<posX>1</posX>
+									<posY>-10</posY>
+									<width>278</width>
+									<height>53</height>
+									<texture>bg_button_nofocus_top.png</texture>
+								</control> -->
+								
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>72</posY>
+									<width>435</width>
+									<label>#selecteditem2</label>
+									<font>font11</font>
+									<textcolor>#ColorAlternate</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								
+							</controls>
+							]]>
+						</subitem>
+					</subitems>
+				</control>
+				<control Style="FanartDisplayAnimation">
+					<description>playlist listcontrol</description>
+					<type>playlistcontrol</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>505050</onright>
+					<itemWidth>60</itemWidth>
+					<itemHeight>45</itemHeight>
+					<IconXOff>15</IconXOff>
+					<IconYOff>16</IconYOff>
+					<scrollOffset>2</scrollOffset>
+				</control>
+			</control>
+
+
+
+		</control>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+	</controls>
+</window>

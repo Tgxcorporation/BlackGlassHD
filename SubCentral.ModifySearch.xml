@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<type>fadelabel</type>
+			<width>1275</width>
+			<wrapString> : : : </wrapString>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>15</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>#ColorUnfocused</textcolor>
+			<visible>Control.isvisible(103)</visible>
+			<animation effect="Fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<visible>Control.isvisible(103)</visible>
+			<posX>210</posX>
+			<posY>90</posY>
+			<width>1500</width>
+			<height>910</height>
+			<texture>bg_dialog_big.png</texture>
+			<animation effect="Fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<id>216</id>
+			<description>Movie Search Button</description>
+			<type>button</type>
+			<onleft>217</onleft>
+			<onright>217</onright>
+			<onup>216</onup>
+			<ondown>222</ondown>
+			<visible>Control.isvisible(103)</visible>
+			<posX>258</posX>
+			<posY>147</posY>
+			<width>300</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_tab_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_tab_button2_nofocus.png</textureNoFocus>
+			<label>#SubCentral.Translation.Movie.Label</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>217</id>
+			<description>TV Show Search Button</description>
+			<type>button</type>
+			<onleft>216</onleft>
+			<onright>216</onright>
+			<onup>217</onup>
+			<ondown>222</ondown>
+			<visible>Control.isvisible(103)</visible>
+			<posX>558</posX>
+			<posY>147</posY>
+			<width>300</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_tab_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_tab_button2_nofocus.png</textureNoFocus>
+			<label>#SubCentral.Translation.TVShow.Label</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<visible>Control.isvisible(103)+!Control.HasFocus(216)+String.Equals(#SubCentral.ModifySearch.SearchType.Type,MOVIE)</visible>
+			<posX>256</posX>
+			<posY>196</posY>
+			<width>300</width>
+			<font>font20</font>
+			<textcolor>a0ffffff</textcolor>
+			<align>CENTER</align>
+			<label>#SubCentral.Translation.Movie.Label</label>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<visible>Control.isvisible(103)+!Control.HasFocus(217)+String.Equals(#SubCentral.ModifySearch.SearchType.Type,TVSHOW)</visible>
+			<posX>559</posX>
+			<posY>196</posY>
+			<width>300</width>
+			<font>font20</font>
+			<textcolor>a0ffffff</textcolor>
+			<align>CENTER</align>
+			<label>#SubCentral.Translation.TVShow.Label</label>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<visible>Control.isvisible(103)</visible>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>246</posX>
+			<posY>142</posY>
+			<width>1429</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<visible>Control.isvisible(103)+Control.isvisible(222)</visible>
+			<posX>270</posX>
+			<posY>255</posY>
+			<font>font18</font>
+			<label>#SubCentral.Translation.Title.Label:</label>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>222</id>
+			<description>Title Button</description>
+			<type>button</type>
+			<onleft>222</onleft>
+			<onright>222</onright>
+			<onup>216</onup>
+			<ondown>223</ondown>
+			<visible>Control.isvisible(103)</visible>
+			<posX>480</posX>
+			<posY>240</posY>
+			<width>1155</width>
+			<height>75</height>
+			<font>font20</font>
+			<textureFocus>bg_button_text_long_focus.png</textureFocus>
+			<textureNoFocus>bg_button_text_long_nofocus.png</textureNoFocus>
+			<label>#SubCentral.ManualSearch.Media.Title</label>
+			<textalign>LEFT</textalign>
+			<textXOff>22</textXOff>
+			<textYOff>12</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<visible>Control.isvisible(103)+Control.isvisible(223)</visible>
+			<posX>270</posX>
+			<posY>345</posY>
+			<font>font18</font>
+			<label>#SubCentral.Translation.Year.Label:</label>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>223</id>
+			<description>Year Button</description>
+			<type>button</type>
+			<onleft>223</onleft>
+			<onright>214</onright>
+			<onup>222</onup>
+			<ondown>221</ondown>
+			<visible>Control.isvisible(103)+String.Equals(#SubCentral.ModifySearch.SearchType.Type,MOVIE)</visible>
+			<posX>480</posX>
+			<posY>330</posY>
+			<width>345</width>
+			<height>75</height>
+			<font>font20</font>
+			<textureFocus>bg_button_text_short_focus.png</textureFocus>
+			<textureNoFocus>bg_button_text_short_nofocus.png</textureNoFocus>
+			<label>#SubCentral.ManualSearch.Media.Year</label>
+			<textalign>LEFT</textalign>
+			<textXOff>22</textXOff>
+			<textYOff>12</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<visible>Control.isvisible(103)+Control.isvisible(221)</visible>
+			<posX>270</posX>
+			<posY>435</posY>
+			<font>font18</font>
+			<label>#SubCentral.Translation.IMDbID.Label:</label>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>221</id>
+			<description>IMDb Button</description>
+			<type>button</type>
+			<onleft>225</onleft>
+			<onright>214</onright>
+			<onup>223</onup>
+			<ondown>224</ondown>
+			<visible>Control.isvisible(103)+String.Equals(#SubCentral.ModifySearch.SearchType.Type,MOVIE)</visible>
+			<posX>480</posX>
+			<posY>420</posY>
+			<width>345</width>
+			<height>75</height>
+			<font>font20</font>
+			<textureFocus>bg_button_text_short_focus.png</textureFocus>
+			<textureNoFocus>bg_button_text_short_nofocus.png</textureNoFocus>
+			<label>#SubCentral.ManualSearch.Media.IMDb.ID.Complete</label>
+			<textalign>LEFT</textalign>
+			<textXOff>22</textXOff>
+			<textYOff>12</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<visible>Control.isvisible(103)+Control.isvisible(224)</visible>
+			<posX>270</posX>
+			<posY>345</posY>
+			<font>font18</font>
+			<label>#SubCentral.Translation.Season.Label:</label>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>224</id>
+			<description>Season Button</description>
+			<type>button</type>
+			<onleft>224</onleft>
+			<onright>226</onright>
+			<onup>221</onup>
+			<ondown>225</ondown>
+			<visible>Control.isvisible(103)+String.Equals(#SubCentral.ModifySearch.SearchType.Type,TVSHOW)</visible>
+			<posX>480</posX>
+			<posY>330</posY>
+			<width>345</width>
+			<height>75</height>
+			<font>font20</font>
+			<textureFocus>bg_button_text_short_focus.png</textureFocus>
+			<textureNoFocus>bg_button_text_short_nofocus.png</textureNoFocus>
+			<label>#SubCentral.ManualSearch.Media.Season</label>
+			<textalign>LEFT</textalign>
+			<textXOff>22</textXOff>
+			<textYOff>12</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<visible>Control.isvisible(103)+Control.isvisible(225)</visible>
+			<posX>270</posX>
+			<posY>435</posY>
+			<font>font18</font>
+			<label>#SubCentral.Translation.Episode.Label:</label>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>225</id>
+			<description>Episode Button</description>
+			<type>button</type>
+			<onleft>221</onleft>
+			<onright>226</onright>
+			<onup>224</onup>
+			<ondown>214</ondown>
+			<visible>Control.isvisible(103)+String.Equals(#SubCentral.ModifySearch.SearchType.Type,TVSHOW)</visible>
+			<posX>480</posX>
+			<posY>420</posY>
+			<width>345</width>
+			<height>75</height>
+			<font>font20</font>
+			<textureFocus>bg_button_text_short_focus.png</textureFocus>
+			<textureNoFocus>bg_button_text_short_nofocus.png</textureNoFocus>
+			<label>#SubCentral.ManualSearch.Media.Episode</label>
+			<textalign>LEFT</textalign>
+			<textXOff>22</textXOff>
+			<textYOff>12</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<description>Absolute Numbering Button</description>
+			<type>checkmark</type>
+			<id>226</id>
+			<label>#SubCentral.Translation.AbsoluteNumbering.Label</label>
+			<font>font14</font>
+			<posX>900</posX>
+			<posY>442</posY>
+			<onup>224</onup>
+			<ondown>214</ondown>
+			<onleft>225</onleft>
+			<onright>214</onright>
+			<font>font16</font>
+			<MarkWidth>45</MarkWidth>
+			<MarkHeight>45</MarkHeight>
+			<align>right</align>
+			<visible>Control.isvisible(103)+String.Equals(#SubCentral.ModifySearch.SearchType.Type,TVSHOW)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<visible>Control.isvisible(103)</visible>
+			<posX>270</posX>
+			<posY>525</posY>
+			<font>font18</font>
+			<label>#SubCentral.Translation.MediaFiles.Label:</label>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>214</id>
+			<description>Clear Files Button</description>
+			<type>button</type>
+			<onleft>226</onleft>
+			<onright>214</onright>
+			<onup>225</onup>
+			<ondown>211</ondown>
+			<visible>Control.isvisible(103)</visible>
+			<posX>1275</posX>
+			<posY>507</posY>
+			<width>375</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_tab_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_tab_button2_nofocus.png</textureNoFocus>
+			<label>Clear files</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<visible>Control.isvisible(103)</visible>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>246</posX>
+			<posY>502</posY>
+			<width>1429</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<description>Media Files</description>
+			<type>textboxscrollup</type>
+			<visible>Control.isvisible(103)</visible>
+			<colordiffuse>#ColorMain</colordiffuse>
+			<posX>270</posX>
+			<posY>600</posY>
+			<width>1372</width>
+			<height>240</height>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+			<font>font16</font>
+			<label>#SubCentral.ManualSearch.Files.AllNames</label>
+			<seperator>: : :</seperator>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<visible>Control.isvisible(103)</visible>
+			<posX>246</posX>
+			<posY>780</posY>
+			<width>1429</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>211</id>
+			<description>OK/Search Button</description>
+			<type>button</type>
+			<onleft>213</onleft>
+			<onright>212</onright>
+			<onup>214</onup>
+			<ondown>211</ondown>
+			<visible>Control.isvisible(103)</visible>
+			<posX>330</posX>
+			<posY>862</posY>
+			<width>375</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>OK/Search</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>212</id>
+			<description>Cancel Button</description>
+			<type>button</type>
+			<onleft>211</onleft>
+			<onright>213</onright>
+			<onup>214</onup>
+			<ondown>212</ondown>
+			<visible>Control.isvisible(103)</visible>
+			<posX>780</posX>
+			<posY>862</posY>
+			<width>375</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>Cancel</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+		<control>
+			<id>213</id>
+			<description>Revert Button</description>
+			<type>button</type>
+			<onleft>212</onleft>
+			<onright>211</onright>
+			<onup>214</onup>
+			<ondown>213</ondown>
+			<visible>Control.isvisible(103)</visible>
+			<posX>1230</posX>
+			<posY>862</posY>
+			<width>375</width>
+			<height>90</height>
+			<font>font20</font>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>Revert</label>
+			<textalign>CENTER</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<animation effect="Fade" time="250">VisibleChange</animation>
+		</control>
+	</controls>
+</window>

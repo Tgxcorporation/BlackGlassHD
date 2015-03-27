@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>29052</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:YouTube.fm</define>
+	<define>#header.background:hover_youtubefm.png</define>
+	<define>#viewmode:largeicons</define>
+	<!-- <define>#usePlayFanart:Yes</define> -->
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<!-- <import>common.window.music.play.fanart.xml</import> -->
+		<control>
+			<description>Fan Art</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>#Youtube.fm.NowPlaying.Video.FanArt</texture>
+			<animation effect="fade" time="1">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<description>Video Image</description>
+			<type>videowindow</type>
+			<id>51</id>
+			<posX>60</posX>
+			<posY>135</posY>
+			<width>513</width>
+			<height>382</height>
+			<action>18</action>
+			<textureFocus>-</textureFocus>
+			<keepaspectratio>yes</keepaspectratio>
+			<visible>Player.HasVideo</visible>
+			<ondown>5555</ondown>
+			<onright>5555</onright>
+			<onup>5555</onup>
+			<onleft>5555</onleft>
+			<animation effect="fade" time="1">WindowClose</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Progress Bar</description>
+				<type>progress</type>
+				<id>118</id>
+				<posX>60</posX>
+				<posY>517</posY>
+				<width>513</width>
+				<height>30</height>
+				<texturebg>osd_progress_background.png</texturebg>
+				<onlymidtexture>yes</onlymidtexture>
+				<midwidth>342</midwidth>
+				<midheight>20</midheight>
+				<midoffsetX>0</midoffsetX>
+				<midoffsetY>0</midoffsetY>
+				<midtexture>osd_progress_mid.png</midtexture>
+				<label>#percentage</label>
+				<visible>player.hasmedia</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>120</posY>
+				<width>543</width>
+				<height>441</height>
+				<texture>VideoCase.png</texture>
+			</control>
+			<control>
+				<description>Full Screen Button</description>
+				<type>button</type>
+				<id>5555</id>
+				<posX>585</posX>
+				<posY>120</posY>
+				<width>105</width>
+				<height>105</height>
+				<textureFocus>button_fullscreen2_focus.png</textureFocus>
+				<textureNoFocus>button_fullscreen2_nofocus.png</textureNoFocus>
+				<label>-</label>
+				<action>18</action>
+				<onleft>51</onleft>
+				<onright>50</onright>
+				<onup>96</onup>
+				<ondown>96</ondown>
+			</control>
+			<control>
+				<description>Info Screen Button/Jump To Info Screen</description>
+				<type>button</type>
+				<id>96</id>
+				<posX>585</posX>
+				<posY>217</posY>
+				<width>105</width>
+				<height>105</height>
+				<textureFocus>button_details_focus.png</textureFocus>
+				<textureNoFocus>button_details_nofocus.png</textureNoFocus>
+				<label>-</label>
+				<onleft>51</onleft>
+				<onright>50</onright>
+				<onup>5555</onup>
+				<ondown>5555</ondown>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<description>Track Progress/Currentplaytime</description>
+				<posX>67</posX>
+				<posY>522</posY>
+				<label>#currentplaytime</label>
+				<font>font9</font>
+				<align>left</align>
+				<visible>player.hasmedia</visible>
+				<shadowAngle>315</shadowAngle>
+				<shadowDistance>1</shadowDistance>
+				<shadowColor>FF000000</shadowColor>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<description>Track Progress/Duration</description>
+				<posX>562</posX>
+				<posY>522</posY>
+				<label>#Youtube.fm.NowPlaying.Video.Duration</label>
+				<font>font9</font>
+				<align>right</align>
+				<visible>player.hasmedia</visible>
+				<shadowAngle>315</shadowAngle>
+				<shadowDistance>1</shadowDistance>
+				<shadowColor>FF000000</shadowColor>
+			</control>
+			<control>
+				<description>HD Logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>40</posX>
+				<posY>975</posY>
+				<width>105</width>
+				<height>72</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>Logos\hd.png</texture>
+				<visible>[!string.equals(#Youtube.fm.NowPlaying.Video.IsHD, false )]</visible>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>SD Logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>40</posX>
+				<posY>975</posY>
+				<width>105</width>
+				<height>72</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>Logos\sd.png</texture>
+				<visible>[string.equals(#Youtube.fm.NowPlaying.Video.IsHD, false )]</visible>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<description>IsDownloaded Logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>157</posX>
+				<posY>975</posY>
+				<width>105</width>
+				<height>72</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>Logos\file.png</texture>
+				<visible>[!string.equals(#Youtube.fm.NowPlaying.Video.IsDownloaded, false )]</visible>
+				<animation effect="fade" time="150">visible</animation>
+			</control>
+			<control>
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>577</posY>
+				<width>630</width>
+				<height>36</height>
+				<textureWidth>36</textureWidth>
+				<textureHeight>36</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Youtube.fm.NowPlaying.Video.Rating</percentage>
+			</control>
+			<control>
+				<description>meta label</description>
+				<type>fadelabel</type>
+				<id>47</id>
+				<posX>45</posX>
+				<posY>622</posY>
+				<width>585</width>
+				<font>font22</font>
+				<label>#Youtube.fm.NowPlaying.Video.Title</label>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>meta label</description>
+				<type>fadelabel</type>
+				<id>47</id>
+				<posX>45</posX>
+				<posY>697</posY>
+				<width>585</width>
+				<label>#Youtube.fm.NowPlaying.Artist.Name</label>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>title2</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>750</posY>
+				<width>585</width>
+				<label>#Youtube.fm.NowPlaying.Video.NumLike   #Youtube.fm.Translation.Like.Label</label>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>title2</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>802</posY>
+				<width>585</width>
+				<label>#Youtube.fm.NowPlaying.Video.NumDisLike   #Youtube.fm.Translation.Dislike.Label</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>title2</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>855</posY>
+				<width>585</width>
+				<label>#Youtube.fm.NowPlaying.Video.ViewCount   #Youtube.fm.Translation.ViewCount.Label</label>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>title2</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>907</posY>
+				<width>585</width>
+				<label>#Youtube.fm.NowPlaying.Video.FavoriteCount   #Youtube.fm.Translation.FavoriteCount.Label</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>150</posY>
+				<width>607</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>title2</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>765</posX>
+				<posY>148</posY>
+				<width>525</width>
+				<label>#Youtube.fm.Translation.RelatedVideos.Label</label>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+				<font>font22</font>
+			</control>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<onleft>5555</onleft>
+					<onright>166</onright>
+					<posX>750</posX>
+					<posY>244</posY>
+					<width>600</width>
+					<height>900</height>
+					<scrollOffset>1</scrollOffset>
+					<itemWidth>231</itemWidth>
+					<itemHeight>162</itemHeight>
+					<textureWidth>211</textureWidth>
+					<textureHeight>162</textureHeight>
+					<thumbWidth>190</thumbWidth>
+					<thumbHeight>142</thumbHeight>
+					<thumbPosX>10</thumbPosX>
+					<thumbPosY>10</thumbPosY>
+					<itemWidthBig>385</itemWidthBig>
+					<itemHeightBig>270</itemHeightBig>
+					<textureWidthBig>349</textureWidthBig>
+					<textureHeightBig>270</textureHeightBig>
+					<thumbWidthBig>315</thumbWidthBig>
+					<thumbHeightBig>236</thumbHeightBig>
+					<thumbPosXBig>17</thumbPosXBig>
+					<thumbPosYBig>17</thumbPosYBig>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>yes</renderFocusText>
+					<renderUnfocusText>yes</renderUnfocusText>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<thumbZoom>yes</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<textXOff>3</textXOff>
+					<textYOff>3</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<showFrame>true</showFrame>
+					<!-- <textureMask>PictureCase_coverflow_mask.png</textureMask> -->
+					<frameNoFocus>PictureCase_nofocus.png</frameNoFocus>
+					<frameFocus>PictureCase.png</frameFocus>
+					<spinPosX>4200</spinPosX>
+					<spinCanFocus>no</spinCanFocus>
+					<scrollbarXOff>200</scrollbarXOff>
+				</control>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1309</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>1360</posX>
+				<posY>150</posY>
+				<width>559</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>title2</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1390</posX>
+				<posY>148</posY>
+				<width>525</width>
+				<label>#Youtube.fm.Translation.SimilarArtists.Label</label>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+				<font>font22</font>
+			</control>
+			<control>
+				<type>group</type>
+				<control>
+					<id>166</id>
+					<description>Similar Artists List</description>
+					<type>listcontrol</type>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<width>559</width>
+					<posX>1360</posX>
+					<posY>229</posY>
+					<spinPosX>4200</spinPosX>
+					<spinCanFocus>no</spinCanFocus>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

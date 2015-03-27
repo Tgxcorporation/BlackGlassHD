@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7988</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>black.png</texture>
+			<colordiffuse>#ColorUnfocused</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>405</posX>
+			<posY>220</posY>
+			<width>1110</width>
+			<height>637</height>
+			<texture>bg_dialog_new.png</texture>
+		</control>
+		<control>
+			<description>dialog Heading</description>
+			<type>fadelabel</type>
+			<id>2</id>
+			<posX>480</posX>
+			<posY>310</posY>
+			<width>960</width>
+			<label>934</label>
+			<textcolor>#ColorMain</textcolor>
+			<font>font22</font>
+			<align>left</align>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>445</posX>
+			<posY>322</posY>
+			<width>1029</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<!-- 		<control> 
+			<description>Rating label</description>
+			<type>label</type>
+			<id>3</id>
+			<posX>320</posX>
+			<posY>285</posY>
+			<label>204</label>
+			<font>font12</font>
+			<textcolor>#ColorMain</textcolor>
+		</control> -->
+		<control>
+			<description>Rating value</description>
+			<type>label</type>
+			<id>4</id>
+			<posX>957</posX>
+			<posY>520</posY>
+			<label>#myfilms.rating</label>
+			<font>font24</font>
+			<align>center</align>
+			<colordiffuse>#ColorMain</colordiffuse>
+			<textcolor>#ColorMain</textcolor>
+		</control>
+		<control>
+			<description>right button</description>
+			<type>button</type>
+			<id>10</id>
+			<posX>1012</posX>
+			<posY>487</posY>
+			<width>51</width>
+			<height>60</height>
+			<textureFocus>spin_right_focus.png</textureFocus>
+			<textureNoFocus>spin_right_nofocus.png</textureNoFocus>
+			<onleft>11</onleft>
+			<onright>10</onright>
+			<onup>12</onup>
+			<ondown>12</ondown>
+		</control>
+		<control>
+			<description>left button</description>
+			<type>button</type>
+			<id>11</id>
+			<posX>840</posX>
+			<posY>487</posY>
+			<width>51</width>
+			<height>60</height>
+			<textureFocus>spin_left_focus.png</textureFocus>
+			<textureNoFocus>spin_left_nofocus.png</textureNoFocus>
+			<onleft>11</onleft>
+			<onright>10</onright>
+			<onup>12</onup>
+			<ondown>12</ondown>
+		</control>
+		<control>
+			<type>imagelist</type>
+			<id>100</id>
+			<posX>637</posX>
+			<posY>579</posY>
+			<width>825</width>
+			<height>108</height>
+			<textureWidth>64</textureWidth>
+			<textureHeight>64</textureHeight>
+			<subitems>
+				<subitem>star_nofocus.png</subitem>
+				<subitem>star_focus.png</subitem>
+			</subitems>
+			<orientation>horizontal</orientation>
+			<percentage>#myfilms.rating</percentage>
+			<imagesToDraw>10</imagesToDraw>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>445</posX>
+			<posY>630</posY>
+			<width>1029</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<description>OK button</description>
+			<type>button</type>
+			<id>12</id>
+			<posX>810</posX>
+			<posY>714</posY>
+			<width>300</width>
+			<font>font18</font>
+			<textalign>center</textalign>
+			<height>90</height>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<label>186</label>
+			<onleft>11</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>12</ondown>
+		</control>
+	</controls>
+</window>

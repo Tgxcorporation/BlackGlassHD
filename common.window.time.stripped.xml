@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1887</posX>
+			<posY>63</posY>
+			<label>#date</label>
+			<align>right</align>
+			<font>font11</font>
+			<visible>!plugin.isenabled(World Weather)</visible>
+			<textcolor>aaffffff</textcolor>
+		</control>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1887</posX>
+			<posY>63</posY>
+			<label>#WorldWeather.TodayTemperature     #date</label>
+			<align>right</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(World Weather)</visible>
+			<textcolor>aaffffff</textcolor>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1887</posX>
+			<posY>22</posY>
+			<label>#time</label>
+			<align>right</align>
+			<font>font16</font>
+			<textcolor>#ColorMain</textcolor>
+		</control>
+	</controls>
+</window>

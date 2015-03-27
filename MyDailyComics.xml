@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>7676</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#my.header.label:#MyDailyComics.Title</define>
+	<define>#header.label:#MyDailyComics.Title</define>
+	<define>#itemcount:</define>
+	<define>#header.background:hover_my daily comics.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<!--
+		<control>
+			<description>Title</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>56</posY>
+			<font>font11</font>
+			<width>340</width>
+			<label>#MyDailyComics.Selected.Title, #MyDailyComics.Selected.Date</label>
+			<wrapString> : : : </wrapString>
+		</control>
+		-->
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>612</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>660</posX>
+				<posY>145</posY>
+				<width>1260</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<!-- Header label -->
+			<control>
+				<description>Label top</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>705</posX>
+				<posY>144</posY>
+				<label>#MyDailyComics.Selected.Title, #MyDailyComics.Selected.Date</label>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>1074</width>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<!-- Comic images -->
+			<control>
+				<description>Comic Image</description>
+				<type>image</type>
+				<id>100</id>
+				<posX>705</posX>
+				<posY>255</posY>
+				<width>1170</width>
+				<height>795</height>
+				<visible>no</visible>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>true</centered>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Language Flag</description>
+				<type>image</type>
+				<id>102</id>
+				<posX>1818</posX>
+				<posY>142</posY>
+				<width>72</width>
+				<height>72</height>
+				<centered>no</centered>
+				<texture />
+				<keepaspectratio>yes</keepaspectratio>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Comic</description>
+					<type>selectbutton</type>
+					<id>2</id>
+					<label>Comic</label>
+					<onright>50</onright>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Date</description>
+					<type>selectbutton</type>
+					<id>3</id>
+					<label>Date</label>
+					<onright>50</onright>
+					<ondown>2</ondown>
+				</control>
+			</control>
+			<control>
+				<description>Comic Banner</description>
+				<type>image</type>
+				<id>101</id>
+				<posX>45</posX>
+				<posY>990</posY>
+				<width>510</width>
+				<height>60</height>
+				<centered>no</centered>
+				<keepaspectratio>yes</keepaspectratio>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+		<control>
+			<description>Dummy button for hidden menu</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>600</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<ondown>2</ondown>
+			<onup>2</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+	</controls>
+</window>

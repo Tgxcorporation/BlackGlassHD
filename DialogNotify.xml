@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2016</id>
+	<defaultcontrol>4</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>1000</posX>
+			<posY>753</posY>
+			<width>912</width>
+			<height>325</height>
+			<texture>bg_overlay.png</texture>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>1050</posX>
+			<posY>795</posY>
+			<width>810</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<description>Heading text label</description>
+			<type>label</type>
+			<id>3</id>
+			<posX>1068</posX>
+			<posY>811</posY>
+			<label>181</label>
+			<font>font20</font>
+			<textcolor>#ColorMain</textcolor>
+			<width>697</width>
+		</control>
+
+		<!-- <control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1695</posX>
+			<posY>886</posY>
+			<width>132</width>
+			<height>100</height>
+			<texture>black.png</texture>
+		</control> -->
+		 <control>
+			<description>logo</description>
+			<type>image</type>
+			<id>5</id>
+			<posX>1710</posX>
+			<posY>901</posY>
+			<width>132</width>
+			<height>100</height>
+			<texture>#thumb</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+		</control>
+		<!-- <control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1731</posX>
+			<posY>750</posY>
+			<width>184</width>
+			<height>154</height>
+			<texture>ChannelCase.png</texture>
+		</control> -->
+		<control>
+			<description>textarea</description>
+			<type>textbox</type>
+			<id>6</id>
+			<posX>1068</posX>
+			<posY>879</posY>
+			<width>586</width>
+			<height>168</height>
+			<spinPosX>3046</spinPosX>
+			<spinPosY>961</spinPosY>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>4</onup>
+			<ondown>4</ondown>
+			<label>-</label>
+			<textcolor>b0FFFFFF</textcolor>
+		</control>
+		<control>
+			<description>OK button</description>
+			<type>button</type>
+			<id>4</id>
+			<posX>1799</posX>
+			<posY>815</posY>
+			<width>49</width>
+			<height>49</height>
+			<label>-</label>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>4</onup>
+			<ondown>4</ondown>
+			<texture>-</texture>
+			<textureFocus>topbar_exit_focus.png</textureFocus>
+			<textureNoFocus>topbar_exit_nofocus.png</textureNoFocus>
+		</control>
+	</controls>
+</window>

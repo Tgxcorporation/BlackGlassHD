@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>298375</id>
+  <defaultcontrol>3565</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <disabletopbar>no</disabletopbar>
+  <define>#MP3D.IsMode3D:no</define>
+  <controls>
+    <control>
+      <type>image</type>
+      <id>3573</id>
+      <posX>-150</posX>
+      <posY>-420</posY>
+      <width>2370</width>
+      <height>637</height>
+      <texture>bg_dialog.png</texture>
+      <visible>!string.equals(#MP3D.CurrentOSD, 0)</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>3574</id>
+      <posX>3015</posX>
+      <posY>150</posY>
+      <width>1605</width>
+      <height>75</height>
+      <texture>-</texture>
+    </control>
+    <control>
+      <id>3565</id>
+      <type>image</type>
+      <posX>45</posX>
+      <posY>22</posY>
+      <width>96</width>
+      <height>96</height>
+      <visible>string.equals(#MP3D.IsMode3D, True)</visible>
+      <texture>MP3D\Mode3d.png</texture>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <type>label</type>
+      <id>3566</id>
+      <posX>195</posX>
+      <posY>22</posY>
+      <width>1650</width>
+      <height>15</height>
+      <visible>!string.equals(#MP3D.CurrentOSD, 0)</visible>
+      <label>#MP3D.Mode3DTitleLabel</label>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <type>label</type>
+      <id>3567</id>
+      <posX>195</posX>
+      <posY>67</posY>
+      <width>1650</width>
+      <height>15</height>
+      <visible>string.equals(#MP3D.CurrentOSD, 21)</visible>
+      <label>#MP3D.CurrentSourceFormatLabel #MP3D.CurrentSourceFormat</label>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <type>label</type>
+      <id>3568</id>
+      <posX>195</posX>
+      <posY>112</posY>
+      <width>1650</width>
+      <height>15</height>
+      <visible>string.equals(#MP3D.CurrentOSD, 21)</visible>
+      <label>#MP3D.CycleSourceFormatsLabel</label>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <type>label</type>
+      <id>3569</id>
+      <posX>195</posX>
+      <posY>67</posY>
+      <width>1650</width>
+      <height>15</height>
+      <visible>string.equals(#MP3D.CurrentOSD, 22)</visible>
+      <label>#MP3D.CurrentOutputFormatLabel #MP3D.CurrentOutputFormat</label>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <type>label</type>
+      <id>3570</id>
+      <posX>195</posX>
+      <posY>112</posY>
+      <width>1650</width>
+      <height>15</height>
+      <visible>string.equals(#MP3D.CurrentOSD, 22)</visible>
+      <label>#MP3D.CycleOutputFormatsLabel</label>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <type>label</type>
+      <id>3571</id>
+      <posX>195</posX>
+      <posY>67</posY>
+      <width>1650</width>
+      <height>15</height>
+      <visible>string.equals(#MP3D.CurrentOSD, 23)</visible>
+      <label>#MP3D.HorizontalParallaxLabel (#MP3D.CurrentHorizontalParallax)</label>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <type>label</type>
+      <id>3572</id>
+      <posX>195</posX>
+      <posY>112</posY>
+      <width>1650</width>
+      <height>15</height>
+      <visible>string.equals(#MP3D.CurrentOSD, 23)</visible>
+      <label>#MP3D.VerticalParallaxLabel (#MP3D.CurrentVerticalParallax)</label>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+  </controls>
+</window>

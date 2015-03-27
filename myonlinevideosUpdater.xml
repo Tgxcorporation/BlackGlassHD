@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>4757</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:#OnlineVideos.HeaderLabel</define>
+	<define>#header.image:#OnlineVideos.HeaderImage</define>
+	<define>#header.background:hover_OnlineVideos.png</define>
+	<define>#header.fanart:</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<!-- *** WINDOW DEFAULTS *** -->
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control Style="FanartDisplayAnimation">
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<scrollOffset>2</scrollOffset>
+					<onleft>508</onleft>
+					<onright>505050</onright>
+					<textYOff>13</textYOff>
+					<textXOff>15</textXOff>
+					<textXOff2>712</textXOff2>
+					<textYOff2>13</textYOff2>
+					<textXOff3>765</textXOff3>
+					<textYOff3>16</textYOff3>
+				</control>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>Empty</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>121</posY>
+				<width>526</width>
+				<height>391</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<id>0</id>
+				<type>image</type>
+				<posX>57</posX>
+				<posY>121</posY>
+				<width>526</width>
+				<height>391</height>
+				<texture>#selectedthumb</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<zoom>no</zoom>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>32</posX>
+				<posY>94</posY>
+				<width>576</width>
+				<height>445</height>
+				<texture>PictureCase.png</texture>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<description>Current title</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>562</posY>
+				<width>540</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Owner Label</description>
+				<type>label</type>
+				<id>501</id>
+				<posX>45</posX>
+				<posY>625</posY>
+				<width>525</width>
+				<label>#OnlineVideos.Translation.Creator.Label: #OnlineVideos.owner</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>675</posY>
+				<width>532</width>
+				<height>147</height>
+				<colordiffuse>#ColorMain</colordiffuse>
+				<font>font16</font>
+				<label>#OnlineVideos.desc</label>
+				<textcolor>#ColorMain</textcolor>
+				<seperator>: : :</seperator>
+				<visible>player.hasmedia</visible>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>675</posY>
+				<width>532</width>
+				<height>343</height>
+				<colordiffuse>#ColorMain</colordiffuse>
+				<font>font16</font>
+				<label>#OnlineVideos.desc</label>
+				<textcolor>#ColorMain</textcolor>
+				<seperator>: : :</seperator>
+				<visible>!player.hasmedia</visible>
+			</control>
+		</control>
+		<!-- *** HIDDEN MENU *** -->
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>508</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<type>button</type>
+					<description>automatic update button</description>
+					<id>508</id>
+					<onright>50</onright>
+					<onup>17</onup>          
+					<ondown>503</ondown>
+					<label>#OnlineVideos.Translation.AutomaticUpdate.Label</label>
+				</control>     
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button</description>
+					<id>503</id>
+					<onright>50</onright>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.State.Label</label>
+				</control>
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Creator</description>
+					<id>506</id>
+					<onright>50</onright>
+					<onup>503</onup>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Creator.Label</label>
+				</control>
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Language</description>
+					<id>507</id>
+					<onright>50</onright>
+					<onup>506</onup>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Language.Label</label>
+				</control>      
+				<control>
+					<type>selectbutton</type>
+					<description>Order By</description>
+					<id>504</id>
+					<onright>50</onright>
+					<onup>507</onup>
+					<ondown>508</ondown>
+					<label>#OnlineVideos.Translation.SortOptions.Label</label>
+				</control>   
+
+			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+	</controls>
+</window>

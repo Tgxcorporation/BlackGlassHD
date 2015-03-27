@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>3002</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control>
+			<description>rec logo</description>
+			<type>image</type>
+			<id>4</id>
+			<posX>1881</posX>
+			<posY>-25</posY>
+			<width>64</width>
+			<height>64</height>
+			<texture>rec.png</texture>
+			<!-- <animation effect="fade" start="50" time="2000" condition="true" pulse="true">Conditional</animation> -->
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>3007</id>
+	<defaultcontrol>220</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<controls>
+
+
+
+
+
+		<control>
+			<description>background</description>
+			<id>999101</id>
+			<type>image</type>
+			<posX>233</posX>
+			<posY>483</posY>
+			<width>1454</width>
+			<height>537</height>
+			<texture>bg_dialog_new2.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<id>101</id>
+			<description>Start Time Info</description>
+			<type>label</type>
+			<posX>310</posX>
+			<posY>569</posY>
+			<align>left</align>
+			<font>font14</font>
+			<textcolor>#ColorMain</textcolor>
+			<label>#TV.View.start</label>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>On tv NOW</description>
+			<id>36</id>
+			<type>textbox</type>
+			<posX>490</posX>
+			<posY>549</posY>
+			<width>925</width>
+			<font>font22</font>
+			<height>55</height>
+			<align>left</align>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+
+		<control>
+			<id>38</id>
+			<description>Zap to channel no</description>
+			<type>label</type>
+			<visible>no</visible>
+			<posX>1420</posX>
+			<posY>549</posY>
+			<font>font24</font>
+			<textcolor>#ColorMain</textcolor>
+			<align>right</align>
+			<label>-</label>
+			<animation effect="Fade" time="100">WindowOpen</animation>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<id>999103</id>
+			<posX>278</posX>
+			<posY>542</posY>
+			<width>1163</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>End Time Info</description>
+			<type>label</type>
+			<id>102</id>
+			<posX>310</posX>
+			<posY>637</posY>
+			<font>font14</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>#TV.View.stop</label>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Current channel</description>
+			<type>label</type>
+			<id>35</id>
+			<posX>490</posX>
+			<posY>628</posY>
+			<width>925</width>
+			<label>-</label>
+			<align>left</align>
+			<font>font18</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>999104</id>
+			<posX>278</posX>
+			<posY>605</posY>
+			<width>1363</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Plot</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>310</posX>
+			<posY>695</posY>
+			<width>1300</width>
+			<height>245</height>
+			<label>#TV.View.description</label>
+			<font>font16</font>
+			<seperator>: : :</seperator>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+
+		<control>
+			<type>image</type>
+			<description>Current program channel</description>
+			<id>0</id>
+			<posX>1447</posX>
+			<posY>492</posY>
+			<width>235</width>
+			<height>176</height>
+			<texture>black.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<id>10</id>
+			<description>TV Logo</description>
+			<type>image</type>
+			<posX>1447</posX>
+			<posY>492</posY>
+			<width>235</width>
+			<height>176</height>
+			<texture>#TV.View.thumb</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>999103</id>
+			<posX>1435</posX>
+			<posY>480</posY>
+			<width>259</width>
+			<height>200</height>
+			<texture>PictureCase.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>rec logo</description>
+			<type>image</type>
+			<id>39</id>
+			<posX>1881</posX>
+			<posY>-25</posY>
+			<width>64</width>
+			<height>64</height>
+			<texture>rec.png</texture>
+			<colordiffuse>#ColorMain</colordiffuse>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+
+
+
+
+		<!-- NOT USED -->
+
+
+		<control>
+			<description>On tv NEXT</description>
+			<id>37</id>
+			<type>textbox</type>
+			<posX>3550</posX>
+			<posY>900</posY>
+			<width>750</width>
+			<height>55</height>
+			<font>font18</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<id>100</id>
+			<description>Current Time</description>
+			<type>label</type>
+			<visible>no</visible>
+			<posX>2237</posX>
+			<posY>474</posY>
+			<font>font22</font>
+			<textcolor>#ColorMain</textcolor>
+			<label>-</label>
+		</control>
+	</controls>
+</window>

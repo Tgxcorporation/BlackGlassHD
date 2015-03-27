@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<description>group element</description>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>textboxscrollup</type>
+				<description>Title (Filmstrip)</description>
+				<id>640</id>
+				<posX>57</posX>
+				<posY>922</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font24</font>
+				<height>67</height>
+				<label>#MovingPictures.SelectedMovie.title</label>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>textboxscrollup</type>
+				<description>Title (Filmstrip)</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>1000</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font16</font>
+				<height>67</height>
+				<label>#MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.genres</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
+			</control>
+		</control>
+	</controls>
+</window>

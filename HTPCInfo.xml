@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7972</id>
+	<defaultcontrol>5051</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:HTPC Info</define>
+	<define>#header.background:hover_htpcinfo.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<!-- *** Sections *** -->
+			<control>
+				<description>Section Overview</description>
+				<type>label</type>
+				<id>50</id>
+				<posX>45</posX>
+				<posY>97</posY>
+				<label>#HTPCInfo.SectionName</label>
+				<font>font12</font>
+				<visible>control.isvisible(50)</visible>
+			</control>
+			<control>
+				<description>Section Details</description>
+				<type>label</type>
+				<id>51</id>
+				<posX>45</posX>
+				<posY>97</posY>
+				<label>#HTPCInfo.SectionName</label>
+				<font>font12</font>
+				<visible>control.isvisible(51)</visible>
+			</control>
+			<control>
+				<description>Section Gauges</description>
+				<type>label</type>
+				<id>52</id>
+				<posX>45</posX>
+				<posY>97</posY>
+				<label>#HTPCInfo.SectionName</label>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+			<control>
+				<description>Section Progressbars</description>
+				<type>label</type>
+				<id>53</id>
+				<posX>45</posX>
+				<posY>97</posY>
+				<label>#HTPCInfo.SectionName</label>
+				<font>font12</font>
+				<visible>control.isvisible(53)</visible>
+			</control>
+			<control>
+				<description>Section Self designed</description>
+				<type>label</type>
+				<id>54</id>
+				<posX>45</posX>
+				<posY>97</posY>
+				<label>#HTPCInfo.SectionName</label>
+				<font>font12</font>
+				<visible>control.isvisible(54)</visible>
+			</control>
+			<control>
+				<description>Section Summary</description>
+				<type>label</type>
+				<id>55</id>
+				<posX>45</posX>
+				<posY>97</posY>
+				<label>#HTPCInfo.SectionName</label>
+				<font>font12</font>
+				<visible>control.isvisible(55)</visible>
+			</control>
+		</control>
+		<!-- *** Section Import *** -->
+		<import>HTPCInfoOverview.xml</import>
+		<import>HTPCInfoDetails.xml</import>
+		<import>HTPCInfoGauges.xml</import>
+		<!-- <import>HTPCInfoProgressbars.xml</import> -->
+		<import>HTPCInfoSummary.xml</import>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>5051</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(5051)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(5051)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Section</description>
+					<type>button</type>
+					<id>6</id>
+					<onup>17</onup>
+					<ondown>2</ondown>
+					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Flush Memory</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Flush Memory</label>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Flush Caches</description>
+					<type>button</type>
+					<id>8</id>
+					<label>Flush Memory</label>
+					<onup>2</onup>
+					<ondown>3</ondown>
+					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Empty Recycle Bin</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Empty Recycle Bin</label>
+					<onup>8</onup>
+					<ondown>4</ondown>
+					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Kill Not Responding Processes</description>
+					<type>button</type>
+					<id>4</id>
+					<label>Kill Not Responding Processes</label>
+					<onup>3</onup>
+					<ondown>9</ondown>
+					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Safely remove hardware</description>
+					<type>button</type>
+					<id>9</id>
+					<label>Safely remove</label>
+					<onup>4</onup>
+					<ondown>5</ondown>
+					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Synchronize Time</description>
+					<type>button</type>
+					<id>5</id>
+					<label>Synchronize Time</label>
+					<onup>9</onup>
+					<ondown>7</ondown>
+					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Wake On LAN</description>
+					<type>button</type>
+					<id>7</id>
+					<label>Wake On LAN</label>
+					<onup>5</onup>
+					<ondown>10</ondown>
+					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Create Restore Point</description>
+					<type>button</type>
+					<id>10</id>
+					<label>Create Restore Point</label>
+					<onup>9</onup>
+					<ondown>6</ondown>
+					<width>240</width>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>5051</id>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+			<onright>6</onright>
+			<onleft>6</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+	</controls>
+</window>

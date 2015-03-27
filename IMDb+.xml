@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>31415</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:#IMDb.Translation.ScraperOptionsTitle.Label</define>
+	<define>#header.background:hover_imdb+.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>Torrents List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<scrollOffset>2</scrollOffset>
+					<onleft>96742</onleft>
+					<onright>96742</onright>
+				</control>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(496))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(496))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>List Option Description</description>
+				<type>textboxscrollup</type>
+				<id>500</id>
+				<posX>45</posX>
+				<posY>150</posY>
+				<width>592</width>
+				<height>630</height>
+				<font>font16</font>
+				<label>#IMDb.Option.Description</label>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>96742</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>MovingPictures</description>
+					<id>96742</id>
+					<type>button</type>
+					<label>Moving Pictures</label>
+					<hyperlink>96742</hyperlink>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>99999</onup>
+					<ondown>2</ondown>
+				</control>
+				<control>
+					<description>Force IMDb+</description>
+					<type>button</type>
+					<id>2</id>
+					<label>#IMDb.Translation.ForceIMDbPlus.Label...</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>96742</onup>
+					<ondown>3</ondown>
+					<visible>string.equals(#IMDb.ForceIMDbPlus.Visible,true)</visible>
+				</control>
+				<control>
+					<description>Refresh Movies</description>
+					<type>button</type>
+					<id>3</id>
+					<label>-</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<description>IMDb+ Info</description>
+					<type>button</type>
+					<id>4</id>
+					<label>#IMDb.Translation.IMDbInfo.Label...</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>99999</ondown>
+				</control>
+				<control>
+					<description>MPEIUPDATE:9d064213_0b4d_4cee_96a5_405812422b58</description>
+					<type>button</type>
+					<id>99999</id>
+					<label>#MPEI.Translation.UpdateAvailable.Label</label>
+					<onup>4</onup>
+					<ondown>96742</ondown>
+					<onleft>50</onleft>
+					<visible>string.equals(#mpei.9d064213_0b4d_4cee_96a5_405812422b58.haveupdate,true)</visible>
+				</control>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Last Scraper Update Time Label</description>
+				<label>#IMDb.Translation.LastScraperUpdate.Label</label>
+				<type>label</type>
+				<font>font12</font>
+				<posX>45</posX>
+				<posY>960</posY>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Last Scraper Update Time</description>
+				<label>#IMDb.Scraper.LastUpdated</label>
+				<type>label</type>
+				<font>font12</font>
+				<posX>45</posX>
+				<posY>989</posY>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+		</control>
+		<control>
+			<description>Progress Indicator Animation</description>
+			<type>animation</type>
+			<id>13</id>
+			<posX>825</posX>
+			<posY>120</posY>
+			<width>144</width>
+			<height>144</height>
+			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
+			<Duration>0:0:01.5</Duration>
+			<keepaspectratio>yes</keepaspectratio>
+			<visible>string.equals(#IMDb.Movie.Refresh.Active,true)</visible>
+		</control>
+	</controls>
+</window>

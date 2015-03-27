@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7980</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:MediaTip</define>
+	<define>#header.background:hover_mediatip.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<!-- *** Music Overview *** -->
+			<control>
+				<description>Music</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>765</posX>
+				<posY>150</posY>
+				<width>73</width>
+				<height>73</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>defaultAudio.png</texture>
+			</control>
+			<control>
+				<description>Music</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>142</posY>
+				<label>#MediaTip.MusicHeadline</label>
+				<font>font18</font>
+			</control>
+			<control>
+				<description>Music Directory Name/Size Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>195</posY>
+				<label>Directory:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Music Directory Name/Size Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>195</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.MusicDirectory0Name - #MediaTip.MusicDirectorySize</label>
+			</control>
+			<control>
+				<description>Music File Count Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>232</posY>
+				<label>Files:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Music File Count Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>232</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.MusicDirectoryFileCount</label>
+			</control>
+			<control>
+				<description>Music Album Artist Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>270</posY>
+				<label>Album Artists:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Music Album Artist Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>270</posY>
+				<font>font12</font>
+				<width>810</width>
+				<label>#MediaTip.MusicAlbumArtistCount</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Music Artist Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>307</posY>
+				<label>Artists:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Music Artist Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>307</posY>
+				<font>font12</font>
+				<width>810</width>
+				<label>#MediaTip.MusicArtistCount</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Music Song Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>345</posY>
+				<label>Songs:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Music Song Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>345</posY>
+				<font>font12</font>
+				<width>810</width>
+				<label>#MediaTip.MusicSongCount in #MediaTip.MusicGenreCount genre(s)</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>315</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<!-- *** Video Overview *** -->
+			<control>
+				<description>Video</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>765</posX>
+				<posY>420</posY>
+				<width>73</width>
+				<height>73</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>defaultVideo.png</texture>
+			</control>
+			<control>
+				<description>Videos</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>412</posY>
+				<label>#MediaTip.VideoHeadline</label>
+				<font>font18</font>
+			</control>
+			<control>
+				<description>Video Directory Name/Size Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>465</posY>
+				<label>Directory:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Video Directory Name/Size Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>465</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.VideoDirectory0Name - #MediaTip.VideoDirectorySize</label>
+			</control>
+			<control>
+				<description>Video File Count Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>502</posY>
+				<label>Videos:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Video File Count Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>502</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.VideoCount in #MediaTip.VideoGenreCount genre(s)</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>472</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<!-- *** Picture Overview *** -->
+			<control>
+				<description>Picture</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>765</posX>
+				<posY>577</posY>
+				<width>73</width>
+				<height>73</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>defaultPicture.png</texture>
+			</control>
+			<control>
+				<description>Picture</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>570</posY>
+				<label>#MediaTip.PictureHeadline</label>
+				<font>font18</font>
+			</control>
+			<control>
+				<description>Picture Directory Name/Size Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>622</posY>
+				<label>Directory:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Picture Directory Name/Size Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>622</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.PictureDirectory0Name - #MediaTip.PictureDirectorySize</label>
+			</control>
+			<control>
+				<description>Picture File Count Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>660</posY>
+				<label>Files:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Picture File Count Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>660</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.PictureDirectoryFileCount</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>630</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<!-- *** Additional Directory 1 Overview *** -->
+			<control>
+				<description>Additional</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>765</posX>
+				<posY>735</posY>
+				<width>73</width>
+				<height>73</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>defaultFolder.png</texture>
+			</control>
+			<control>
+				<description>Additional</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>727</posY>
+				<label>#MediaTip.AdditionalDirectory0Headline</label>
+				<font>font18</font>
+			</control>
+			<control>
+				<description>Additional Directory Name/Size Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>780</posY>
+				<label>Directory:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Additional Directory Name/Size Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>780</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.AdditionalDirectory0Name - #MediaTip.AdditionalDirectory0Size</label>
+			</control>
+			<control>
+				<description>Additional File Count Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>817</posY>
+				<label>Files:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Additional File Count Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>817</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.AdditionalDirectory0FileCount</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>787</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<!-- *** Additional Directory 2 Overview *** -->
+			<control>
+				<description>Additional</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>765</posX>
+				<posY>892</posY>
+				<width>73</width>
+				<height>73</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>defaultFolder.png</texture>
+			</control>
+			<control>
+				<description>Additional</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>885</posY>
+				<label>#MediaTip.AdditionalDirectory1Headline</label>
+				<font>font18</font>
+			</control>
+			<control>
+				<description>Additional Directory Name/Size Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>937</posY>
+				<label>Directory:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Additional Directory Name/Size Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>937</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.AdditionalDirectory1Name - #MediaTip.AdditionalDirectory1Size</label>
+		</control>
+			<control>
+				<description>Additional File Count Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>862</posX>
+				<posY>975</posY>
+				<label>Files:</label>
+				<font>font12</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Additional File Count Value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1072</posX>
+				<posY>975</posY>
+				<font>font12</font>
+				<width>810</width>
+				<wrapString> : : : </wrapString>
+				<label>#MediaTip.AdditionalDirectory1FileCount</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>945</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+		</control>
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Refresh Overview</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Refresh Overview</label>
+					<onup>5</onup>
+					<ondown>3</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Music Button</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Reorganize Music Database</label>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onright>50</onright>
+				</control>
+				<!-- <control>
+					<description>Movie Button</description>
+					<type>button</type>
+					<id>4</id>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Pictures Button</description>
+					<type>button</type>
+					<id>5</id>
+					<onup>4</onup>
+					<ondown>2</ondown>
+					<onright>50</onright>
+				</control> -->
+			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+	</controls>
+</window>

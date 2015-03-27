@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		
+		<!-- COMMON LIST - THUMBS -->
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>image</type>
+			<description>Current program channel</description>
+			<id>0</id>
+			<posX>59</posX>
+			<posY>121</posY>
+			<width>466</width>
+			<height>466</height>
+			<texture>black.png</texture>
+			<colordiffuse>60ffffff</colordiffuse>
+			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<description>MediaBrowser.Image.Audio</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>59</posX>
+			<posY>121</posY>
+			<width>466</width>
+			<height>466</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>no</centered>
+			<zoom>no</zoom>
+			<texture>#MediaBrowser.Image.Audio</texture>
+			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<description>Cover Art Glass Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>32</posX>
+			<posY>94</posY>
+			<width>520</width>
+			<height>520</height>
+			<texture>CDCase.png</texture>
+			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		
+		<!-- LIST -->
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>670</posY>
+			<width>1200</width>
+			<font>font22</font>
+			<label>#MediaBrowser.Selected.Name</label>
+			<wrapString> : : : </wrapString>
+			<visible>facadeview.list+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>747</posY>
+			<width>1200</width>
+			<label>#MediaBrowser.Selected.Artists.0</label>
+			<textcolor>#ColorAlternate</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>facadeview.list+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<description>Genre value</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>807</posY>
+			<width>1200</width>
+			<label>#(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
+			<wrapString> : : : </wrapString>
+			<visible>facadeview.list+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		
+		
+		<!-- THUMBS -->
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>670</posY>
+			<width>630</width>
+			<font>font22</font>
+			<label>#MediaBrowser.Selected.Name</label>
+			<wrapString> : : : </wrapString>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>747</posY>
+			<width>630</width>
+			<label>#MediaBrowser.Selected.Artists.0</label>
+			<textcolor>#ColorAlternate</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<description>Genre value</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>807</posY>
+			<width>630</width>
+			<label>#(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
+			<wrapString> : : : </wrapString>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		
+		
+		
+		<!-- COVERFLOW/FILMSTRIP -->
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>textboxscrollup</type>
+			<description>Title (Filmstrip)</description>
+			<id>640</id>
+			<posX>57</posX>
+			<posY>922</posY>
+			<width>1830</width>
+			<textalign>center</textalign>
+			<font>font24</font>
+			<height>67</height>
+			<label>#MediaBrowser.Selected.Name</label>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>textboxscrollup</type>
+			<description>Title (Filmstrip)</description>
+			<id>0</id>
+			<posX>57</posX>
+			<posY>1000</posY>
+			<width>1830</width>
+			<textalign>center</textalign>
+			<font>font16</font>
+			<height>67</height>
+			<label>#MediaBrowser.Selected.Artists.0     #(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
+			<textcolor>#ColorAlternate</textcolor>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]+[string.equals(#MediaBrowser.Selected.Type,Audio)]</visible>
+		</control>
+
+	</controls>
+</window>

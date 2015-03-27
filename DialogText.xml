@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7900</id>
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>black.png</texture>
+			<colordiffuse>#ColorUnfocused</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>405</posX>
+			<posY>145</posY>
+			<width>1110</width>
+			<height>787</height>
+			<texture>bg_dialog_new.png</texture>
+		</control>
+		<control>
+			<description>dialog Heading</description>
+			<type>label</type>
+			<id>4</id>
+			<posX>480</posX>
+			<posY>235</posY>
+			<width>960</width>
+			<label>181</label>
+			<textcolor>#ColorMain</textcolor>
+			<font>font22</font>
+			<align>left</align>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>445</posX>
+			<posY>240</posY>
+			<width>1029</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<description>OK button</description>
+			<type>button</type>
+			<id>2</id>
+			<posX>810</posX>
+			<posY>783</posY>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<width>300</width>
+			<height>90</height>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<label>186</label>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<textalign>center</textalign>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>445</posX>
+			<posY>705</posY>
+			<width>1029</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<description>textarea</description>
+			<type>textbox</type>
+			<id>3</id>
+			<posX>480</posX>
+			<posY>352</posY>
+			<width>900</width>
+			<height>465</height>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<spinPosX>1215</spinPosX>
+			<spinPosY>799</spinPosY>
+			<spinColor>#ColorUnfocused</spinColor>
+			<spinCanFocus>no</spinCanFocus>
+			<spinAlign>Right</spinAlign>
+		</control>
+	</controls>
+</window>

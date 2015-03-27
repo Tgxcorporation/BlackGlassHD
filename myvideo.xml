@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>6</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:3</define>
+	<define>#useSelectedFanart:Yes</define>
+	<define>#header.background:hover_my videos.png</define>
+	<define>#header.fanart:</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.video.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>356</width>
+				<height>514</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>fanart list</description>
+				<type>image</type>
+				<id>500</id>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>356</width>
+				<height>514</height>
+				<colordiffuse>#ColorMain</colordiffuse>
+				<texture>#selectedthumb</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<zoom>no</zoom>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Highlight item</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>34</posX>
+				<posY>94</posY>
+				<width>410</width>
+				<height>568</height>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<texture>DVDCase.png</texture>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>747</posY>
+				<width>540</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<wrapString> : : : </wrapString>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>fadelabel</type>
+				<description>Current program</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>817</posY>
+				<label>#selecteditem2</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>textboxscrollup</type>
+				<description>Selected item Label</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>922</posY>
+				<width>1830</width>
+				<font>font24</font>
+				<height>67</height>
+				<textalign>center</textalign>
+				<label>#selecteditem</label>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>textboxscrollup</type>
+				<description>subTitle</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>1000</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font16</font>
+				<height>67</height>
+				<label>#selecteditem2</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
+			</control>
+		</control>
+		<import>myvideoHiddenMenu.xml</import>
+	</controls>
+</window>

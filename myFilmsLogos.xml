@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <section name="ID0000">
+    <entry name="LogosPath">
+    </entry>
+    <entry name="LogoPresets">Use Logos of currently selected skin</entry>
+    <entry name="Spacing">2</entry>
+  </section>
+  <section name="ID2001">
+    <entry name="ID2001_0">VideoFormat;contains;div;or;VideoFormat;contains;dx;DIVX.png</entry>
+    <entry name="ID2001_1">VideoFormat;contains;xvid;;;;;XVID.png</entry>
+    <entry name="ID2001_2">VideoFormat;contains;h264;or;VideoFormat;contains;avc;H264.png</entry>
+    <entry name="ID2001_3">VideoFormat;contains;wmv;;;;;wmv.png</entry>
+    <entry name="ID2001_4">VideoFormat;contains;vc-1;;;;;vc-1.png</entry>
+    <entry name="ID2001_5">VideoFormat;contains;vp6;;;;;VP6.png</entry>
+    <entry name="ID2001_6">VideoFormat;contains;mp4;or;VideoFormat;contains;mpeg 4;MP4V.png</entry>
+    <entry name="ID2001_7">VideoFormat;contains;mpeg2;or;VideoFormat;contains;mpeg-2;MP2V.png</entry>
+    <entry name="ID2001_8">VideoFormat;contains;sorenson;or;VideoFormat;contains;svq;Sorenson 1.png</entry>
+    <entry name="ID2001_9">VideoFormat;contains;flash;;;;;FLASH.png</entry>
+    <entry name="ID2001_10">VideoFormat;contains;real;;;;;realvideo.png</entry>
+    <entry name="ID2001_11">Resolution;contains;1080;;;;;1080p.png</entry>
+    <entry name="ID2001_12">Resolution;contains;720;;;;;720p.png</entry>
+    <entry name="ID2001_13">Resolution;contains;540;;;;;540p.png</entry>
+    <entry name="ID2001_14">AudioFormat;contains;a_mpeg;or;AudioFormat;contains;mpa1l3;MPEG AUDIO VERSION 1 LAYER 3.png</entry>
+    <entry name="ID2001_15">AudioFormat;contains;layer 2;;;;;MPEG AUDIO VERSION 1 LAYER 2.png</entry>
+    <entry name="ID2001_16">AudioFormat;contains;mpeg2;or;AudioFormat;contains;mpa1l2;MPEG AUDIO VERSION 1 LAYER 2.png</entry>
+    <entry name="ID2001_17">AudioFormat;contains;mp3;or;AudioFormat;contains;layer 3;MPEG AUDIO VERSION 1 LAYER 3.png</entry>
+    <entry name="ID2001_18">AudioFormat;contains;ac3;or;;;;AC3.png</entry>
+    <entry name="ID2001_19">AudioFormat;contains;dts;;;;;DTS.png</entry>
+    <entry name="ID2001_20">AudioFormat;contains;acc;;;;;AAC.png</entry>
+    <entry name="ID2001_21">AudioFormat;contains;flac;;;;;FLAC.png</entry>
+    <entry name="ID2001_22">AudioFormat;contains;wma2;;;;;wma.png</entry>
+    <entry name="ID2001_23">AudioFormat;contains;truehd;;;;;TRUEHD.png</entry>
+    <entry name="ID2001_24">AudioFormat;contains;vorbis;;;;;Vorbis.png</entry>
+    <entry name="ID2001_25">AudioFormat;contains;pcm;;;;;PCM.png</entry>
+    <entry name="ID2001_26">AudioFormat;contains;real;;;;;realaudio.png</entry>
+    <entry name="ID2001_27">Source;contains;bluray;;;;;BluRay.png</entry>
+    <entry name="ID2001_28">Source;contains;hdtv;;;;;hdtv.png</entry>
+    <entry name="ID2001_29">Source;contains;dvd;;;;;DVD.png</entry>
+    <entry name="ID2001_30">Source;contains;hddvd;;;;;HDDVD.png</entry>
+    <entry name="ID2001_31">Source;contains;svcd;;;;;svcd.png</entry>
+    <entry name="ID2001_33">Subtitles;filled;;;;;;Subtitles.png</entry>
+  </section>
+  <section name="ID2002">
+  </section>
+</profile>

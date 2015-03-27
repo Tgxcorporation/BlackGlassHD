@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>31</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:673</define>
+	<define>#header.background:hover_settings.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>		
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>255</posX>
+				<posY>232</posY>
+				<width>1410</width>
+				<height>750</height>
+				<texture>bg_dialog_big.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>Horizontal Speed label</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>427</posX>
+					<posY>334</posY>
+					<label>1442</label>
+				</control>
+				<control>
+					<description>Horizontal Speed select</description>
+					<type>spincontrol</type>
+					<id>2</id>
+					<posX>1227</posX>
+					<posY>342</posY>
+					<align>right</align>
+					<onup>17</onup>
+					<ondown>4</ondown>
+					<onleft>2</onleft>
+					<onright>2</onright>
+				</control>
+				<control>
+					<description>Vertical Speed label</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>427</posX>
+					<posY>385</posY>
+					<label>1443</label>
+				</control>
+				<control>
+					<description>Vertical Speed select</description>
+					<type>spincontrol</type>
+					<id>4</id>
+					<posX>1227</posX>
+					<posY>393</posY>
+					<align>right</align>
+					<onup>2</onup>
+					<ondown>3</ondown>
+					<onleft>4</onleft>
+					<onright>4</onright>
+				</control>
+				<control>
+					<description>FPS label</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>427</posX>
+					<posY>436</posY>
+					<label>973</label>
+				</control>
+				<control>
+					<description>FPS select</description>
+					<type>spincontrol</type>
+					<id>3</id>
+					<posX>1227</posX>
+					<posY>444</posY>
+					<align>right</align>
+					<onup>4</onup>
+					<ondown>99</ondown>
+					<onleft>3</onleft>
+					<onright>3</onright>
+				</control>
+				<control>
+					<description>currentFPS count</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>1360</posX>
+					<posY>436</posY>
+					<label>#fps</label>
+				</control>
+				<!-- <control>
+					<description>Example label</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>532</posX>
+					<posY>487</posY>
+					<width>1066</width>
+					<label>675</label>
+				</control> -->
+				<control>
+					<description>TagLine value</description>
+					<type>fadelabel</type>
+					<id>25</id>
+					<posX>427</posX>
+					<posY>555</posY>
+					<width>1050</width>
+					<label>-</label>
+					<font>font16</font>
+					<textcolor>#ColorAlternate</textcolor>
+				</control>
+				<control>
+					<description>Description1</description>
+					<type>textboxscrollup</type>
+					<id>26</id>
+					<posX>427</posX>
+					<posY>610</posY>
+					<width>1050</width>
+					<height>247</height>
+					<label>-</label>
+					<font>font16</font>
+					<seperator>: : :</seperator>
+					<textcolor>#ColorMain</textcolor>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

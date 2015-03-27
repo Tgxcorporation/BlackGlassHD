@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <section name="booleansettings">
+    <entry name="#skin.tvguide.usecolorsforbuttons">False</entry>
+    <entry name="#skin.tvguide.usecolorsforgenre">False</entry>
+    <entry name="#skin.tvguide.useborderhighlight">False</entry>
+    <entry name="#skin.tvguide.showgenrekey">False</entry>
+    <entry name="#skin.fanart.basichome">False</entry>
+    <entry name="#skin.no.latestmedia">False</entry>
+    <entry name="#skin.no.category.fanart">False</entry>
+  </section>
+  <section name="theme">
+    <entry name="name">Skin default</entry>
+  </section>
+  <section name="tvguidecolors">
+    <entry name="guidecolorchannelbutton">#ColorAlternate</entry>
+    <entry name="guidecolorchannelbuttonselected">#ColorMain</entry>
+    <entry name="guidecolorgroupbutton">#ColorAlternate</entry>
+    <entry name="guidecolorgroupbuttonselected">#ColorMain</entry>
+    <entry name="guidecolorprogramselected">#ColorMain</entry>
+    <entry name="guidecolorprogramended">90FF6666</entry>
+    <entry name="guidecolorborderhighlight">#ColorMain</entry>
+    <entry name="defaultgenre">#ColorMain,#ColorMain</entry>
+    <entry name="0">FF18D22E,FF18D22E</entry>
+    <entry name="1">FFFF69B4,FFFF69B4</entry>
+    <entry name="2">FFFA1919,FFFA1919</entry>
+    <entry name="3">FF800000,FF800000</entry>
+    <entry name="4">FF2169EE,FF2169EE</entry>
+    <entry name="5">FFFFD700,FFFFD700</entry>
+    <entry name="6">FF006400,FF006400</entry>
+    <entry name="genre0">00000000,00000000</entry>
+    <entry name="genre1">00000000,00000000</entry>
+    <entry name="genre2">00000000,00000000</entry>
+    <entry name="genre3">00000000,00000000</entry>
+    <entry name="genre4">00000000,00000000</entry>
+    <entry name="genre5">00000000,00000000</entry>
+    <entry name="genre6">00000000,00000000</entry>
+  </section>
+</profile>

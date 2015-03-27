@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		
+				
+		<!-- THUMBS -->
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>121</posY>
+			<width>630</width>
+			<font>font22</font>
+			<label>#MediaBrowser.Selected.Name</label>
+			<wrapString> : : : </wrapString>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,View)]</visible>
+		</control>
+		
+		
+		<!-- COVERFLOW/FILMSTRIP -->
+		<control Style="FanartDisplayAnimationMediaBrowser">
+			<type>textboxscrollup</type>
+			<description>Title (Filmstrip)</description>
+			<id>0</id>
+			<posX>57</posX>
+			<posY>922</posY>
+			<width>1830</width>
+			<textalign>center</textalign>
+			<font>font24</font>
+			<height>67</height>
+			<label>#MediaBrowser.Selected.Name</label>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]+[string.equals(#MediaBrowser.Selected.Type,View)]</visible>
+		</control>
+
+	</controls>
+</window>

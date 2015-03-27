@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>10234</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>control.isvisible(13371337)</allowoverlay>
+  <disabletopbar>yes</disabletopbar>
+  <animation effect="fade" time="250">WindowOpen</animation>
+  <animation effect="fade" time="250">WindowClose</animation>
+  <controls>
+    <control>
+      <type>image</type>
+      <id>25</id>
+      <posX>-150</posX>
+      <posY>-420</posY>
+      <width>2370</width>
+      <height>607</height>
+      <texture>bg_dialog.png</texture>
+      <animation effect="fade" time="250">visible</animation>
+      <animation effect="fade" time="250">hidden</animation>
+    </control>
+    <control>
+      <description>Longitude</description>
+      <type>label</type>
+      <id>3</id>
+      <posX>84</posX>
+      <posY>27</posY>
+      <label>Longitude</label>
+      <font>font16</font>
+      <align>left</align>
+      <textcolor>#ColorMain</textcolor>
+    </control>
+    <control>
+      <description>Latitude</description>
+      <type>label</type>
+      <id>4</id>
+      <posX>84</posX>
+      <posY>69</posY>
+      <label>Latitude</label>
+      <font>font16</font>
+      <align>left</align>
+      <textcolor>#ColorMain</textcolor>
+    </control>
+    <control>
+      <description>MapType</description>
+      <type>label</type>
+      <id>2</id>
+      <posX>1813</posX>
+      <posY>27</posY>
+      <label>Map type</label>
+      <font>font16</font>
+      <align>right</align>
+      <textcolor>#ColorMain</textcolor>
+    </control>
+    <control>
+      <description>Zoom Mode</description>
+      <type>label</type>
+      <id>5</id>
+      <posX>1813</posX>
+      <posY>69</posY>
+      <label>Zoom Mode</label>
+      <font>font16</font>
+      <align>right</align>
+      <textcolor>#ColorMain</textcolor>
+    </control>
+    <control>
+      <description>Progressbar Placeholder (gives skinners the chance to define the position of the progressbar)</description>
+      <type>image</type>
+      <id>99</id>
+      <posX>28</posX>
+      <posY>982</posY>
+      <width>34</width>
+      <height>34</height>
+      <texture>WMprogressDummy.png</texture>
+    </control>
+  </controls>
+</window>

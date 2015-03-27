@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2020</id>
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:1900</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>fadelabel</type>
+			<width>1275</width>
+			<wrapString> : : : </wrapString>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>15</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>#ColorUnfocused</textcolor>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>460</posX>
+			<posY>30</posY>
+			<width>1003</width>
+			<height>1032</height>
+			<texture>bg_dialog_conflict.png</texture>
+		</control>
+		<control>
+			<description>dialog Heading</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>540</posX>
+			<posY>105</posY>
+			<width>840</width>
+			<label>#header.label</label>
+			<textcolor>#ColorMain</textcolor>
+			<font>font22</font>
+			<align>left</align>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>508</posX>
+			<posY>105</posY>
+			<width>907</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<id>0</id>
+			<description>dialog line 1</description>
+			<type>textbox</type>
+			<posX>508</posX>
+			<posY>195</posY>
+			<width>907</width>
+			<height>480</height>
+			<textcolor>#ColorMain</textcolor>
+			<font>font13</font>
+			<label>#(string.format(1901, #userskin))</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>508</posX>
+			<posY>726</posY>
+			<width>907</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+		</control>
+		<control>
+			<id>2</id>
+			<description>Ignore check box</description>
+			<type>checkmark</type>
+			<posX>660</posX>
+			<posY>837</posY>
+			<width>600</width>
+			<label>1902</label>
+			<align>right</align>
+			<ondown>3</ondown>
+			<onup>3</onup>
+			<onleft>2</onleft>
+			<onright>2</onright>
+		</control>
+		<control>
+			<id>3</id>
+			<description>Continue button</description>
+			<type>button</type>
+			<posX>660</posX>
+			<posY>904</posY>
+			<textXOff>0</textXOff>
+			<textYOff>4</textYOff>
+			<width>600</width>
+			<height>90</height>
+			<textureFocus>bg_button3_focus.png</textureFocus>
+			<textureNoFocus>bg_button3_nofocus.png</textureNoFocus>
+			<textalign>center</textalign>
+			<label>#(string.format(1903,#countdownseconds))</label>
+			<ondown>2</ondown>
+			<onup>2</onup>
+			<onleft>3</onleft>
+			<onright>3</onright>
+		</control>
+	</controls>
+</window>

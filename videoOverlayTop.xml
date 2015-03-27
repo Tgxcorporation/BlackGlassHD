@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<defaultcontrol>4</defaultcontrol>
+	<id>3008</id>
+	<controls>
+		<control>
+			<description>Pause logo</description>
+			<type>image</type>
+			<id>4</id>
+			<posX>600</posX>
+			<posY>877</posY>
+			<width>75</width>
+			<height>75</height>
+			<texture>topbar_pause_focus.png</texture>
+			<visible>player.paused</visible>
+			<animation effect="fade" time="100">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>FF logo</description>
+			<type>image</type>
+			<id>5</id>
+			<posX>600</posX>
+			<posY>877</posY>
+			<width>75</width>
+			<height>75</height>
+			<texture>topbar_fastforward_focus.png</texture>
+			<visible>player.forwarding</visible>
+			<animation effect="fade" time="100">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>RW logo</description>
+			<type>image</type>
+			<id>6</id>
+			<posX>600</posX>
+			<posY>877</posY>
+			<width>75</width>
+			<height>75</height>
+			<texture>topbar_rewind_focus.png</texture>
+			<visible>player.rewinding</visible>
+			<animation effect="fade" time="100">visible</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<!-- <control>
+			<description>Image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>613</posX>
+			<posY>886</posY>
+			<width>21</width>
+			<height>51</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImagePeakChannel0</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]</visible>
+		</control>
+		<control>
+			<description>Image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>643</posX>
+			<posY>886</posY>
+			<width>21</width>
+			<height>51</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImagePeakChannel1</texture>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]</visible>
+		</control> -->
+	</controls>
+</window>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>16002</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>control.isvisible(13371337)</allowoverlay>
+  <disabletopbar>true</disabletopbar>
+  <define>#header.label:</define>
+  <define>#header.background:hover_webbrowser.png</define>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+  <controls>
+    <import>common.window.background.xml</import>
+    <import>common.window.overlay.xml</import>
+    <control>
+      <type>fadelabel</type>
+      <width>1275</width>
+      <wrapString> : : : </wrapString>
+      <id>0</id>
+      <posX>45</posX>
+      <posY>15</posY>
+      <label>#header.label</label>
+      <font>font28</font>
+      <align>left</align>
+      <textcolor>#ColorUnfocused</textcolor>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <!-- 		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-150</posX>
+			<posY>-4</posY>
+			<texture>basichome_upper_gradient.png</texture>
+			<width>1480</width>
+			<height>160</height>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control> -->
+    <control>
+      <description>Date</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1887</posX>
+      <posY>55</posY>
+      <label>#date</label>
+      <align>right</align>
+      <font>font10</font>
+      <visible>!plugin.isenabled(World Weather)</visible>
+      <textcolor>aaffffff</textcolor>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Date</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1887</posX>
+      <posY>55</posY>
+      <label>#WorldWeather.TodayTemperature     #date</label>
+      <align>right</align>
+      <font>font10</font>
+      <visible>plugin.isenabled(World Weather)</visible>
+      <textcolor>aaffffff</textcolor>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Time</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>1887</posX>
+      <posY>15</posY>
+      <label>#time</label>
+      <align>right</align>
+      <font>font14</font>
+      <textcolor>#ColorMain</textcolor>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Back button</description>
+      <type>button</type>
+      <id>2</id>
+      <posX>30</posX>
+      <posY>21</posY>
+      <width>61</width>
+      <height>60</height>
+      <label>-</label>
+      <textureFocus>spin_left_focus.png</textureFocus>
+      <textureNoFocus>spin_left_nofocus.png</textureNoFocus>
+      <onright>3</onright>
+      <onleft>8</onleft>
+      <ondown>2</ondown>
+      <onup>2</onup>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Forward button</description>
+      <type>button</type>
+      <id>3</id>
+      <posX>118</posX>
+      <posY>21</posY>
+      <label>-</label>
+      <width>51</width>
+      <height>60</height>
+      <textureFocus>spin_right_focus.png</textureFocus>
+      <textureNoFocus>spin_right_nofocus.png</textureNoFocus>
+      <onright>4</onright>
+      <onleft>2</onleft>
+      <ondown>3</ondown>
+      <onup>3</onup>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Refresh button</description>
+      <type>button</type>
+      <id>4</id>
+      <posX>202</posX>
+      <posY>25</posY>
+      <width>51</width>
+      <height>51</height>
+      <label>-</label>
+      <textureFocus>button_refresh_focus.png</textureFocus>
+      <textureNoFocus>button_refresh_nofocus.png</textureNoFocus>
+      <onright>5</onright>
+      <onleft>3</onleft>
+      <ondown>4</ondown>
+      <onup>4</onup>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Stop button</description>
+      <type>button</type>
+      <id>5</id>
+      <posX>264</posX>
+      <posY>21</posY>
+      <width>60</width>
+      <height>60</height>
+      <label>-</label>
+      <textureFocus>topbar_stop_focus</textureFocus>
+      <textureNoFocus>topbar_stop_nofocus.png</textureNoFocus>
+      <onright>6</onright>
+      <onleft>4</onleft>
+      <ondown>5</ondown>
+      <onup>5</onup>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Home button</description>
+      <type>button</type>
+      <id>6</id>
+      <posX>339</posX>
+      <posY>25</posY>
+      <width>51</width>
+      <height>51</height>
+      <label>-</label>
+      <textureFocus>topbar_home_focus.png</textureFocus>
+      <textureNoFocus>topbar_home_nofocus.png</textureNoFocus>
+      <onright>8</onright>
+      <onleft>5</onleft>
+      <ondown>6</ondown>
+      <onup>6</onup>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <!-- <control>
+			<description>Favorites Button</description>
+			<type>button</type>
+			<id>7</id>
+			<posX>275</posX>
+			<posY>17</posY>
+			<width>35</width>
+			<height>35</height>
+			<label>-</label>
+			<textureFocus>favorites_focus.png</textureFocus>
+			<textureNoFocus>favorites_nofocus.png</textureNoFocus>
+			<onright>8</onright>
+			<onleft>6</onleft>
+			<ondown>7</ondown>
+			<onup>7</onup>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control> -->
+    <control>
+      <description>URL button</description>
+      <type>button</type>
+      <id>8</id>
+      <posX>412</posX>
+      <posY>16</posY>
+      <label>-</label>
+      <textureFocus>bg_button_text_long_focus.png</textureFocus>
+      <textureNoFocus>bg_button_text_long_nofocus.png</textureNoFocus>
+      <onright>2</onright>
+      <onleft>6</onleft>
+      <height>67</height>
+      <width>1048</width>
+      <ondown>8</ondown>
+      <onup>8</onup>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>1024</posY>
+      <width>1920</width>
+      <height>79</height>
+      <texture>black.png</texture>
+      <colordiffuse>#ColorMain</colordiffuse>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>945</posY>
+      <width>1920</width>
+      <height>79</height>
+      <texture>bg_facade_line_nofocus_top.png</texture>
+      <colordiffuse>ffa0a0a0</colordiffuse>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>1026</posY>
+      <width>1920</width>
+      <height>79</height>
+      <texture>bg_facade_line_focus.png</texture>
+      <colordiffuse>ffa0a0a0</colordiffuse>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Status label</description>
+      <type>fadelabel</type>
+      <id>9</id>
+      <posX>10</posX>
+      <posY>1035</posY>
+      <label>#webbrowser.status</label>
+      <font>font12</font>
+      <align>left</align>
+      <width>1500</width>
+      <textcolor>#ColorMain</textcolor>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>Link id label</description>
+      <type>fadelabel</type>
+      <id>9</id>
+      <posX>1890</posX>
+      <posY>1035</posY>
+      <label>#webbrowser.zoom%</label>
+      <font>font12</font>
+      <align>right</align>
+      <textcolor>#ColorMain</textcolor>
+      <wrapString> : : : </wrapString>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <description>URL label</description>
+      <type>fadelabel</type>
+      <id>11</id>
+      <posX>472</posX>
+      <posY>36</posY>
+      <width>967</width>
+      <label>#webbrowser.link</label>
+      <font>font12</font>
+      <align>left</align>
+      <textcolor>#ColorMain</textcolor>
+      <wrapString> : : : </wrapString>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>430</posX>
+      <posY>36</posY>
+      <width>30</width>
+      <height>30</height>
+      <texture>#webbrowser.icon</texture>
+      <animation effect="fade" time="250">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+  </controls>
+</window>

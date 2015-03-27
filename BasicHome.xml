@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>35</id>
+	<defaultcontrol>107</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
+	<!-- <animation effect="fade" time="150" start="0" end="100">WindowOpen</animation> -->
+	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
+	<controls>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>basichome_bg.jpg</texture>
+			<width>1920</width>
+			<height>1080</height>
+		</control>
+		<control>
+			<description>VideoWallpaper Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>basichome_bg.jpg</texture>
+			<width>1921</width>
+			<height>1080</height>
+			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="150">visiblechange</animation>
+			<colordiffuse>a0ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>basichome_side.png</texture>
+			<width>1920</width>
+			<height>1080</height>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="250">WindowClose</animation>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>960</posX>
+			<posY>110</posY>
+			<label>#time</label>
+			<align>center</align>
+			<font>font24</font>
+			<textcolor>#ColorMain</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>3</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>960</posX>
+			<posY>161</posY>
+			<label>#date</label>
+			<align>center</align>
+			<font>font13</font>
+			<textcolor>aaffffff</textcolor>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>3</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+
+
+		<!-- INFOSERVICE RSS FEED -->
+		<import>BasicHome_Infoservice.xml</import>
+		<!-- MAIN BUTTONS -->
+		<import>BasicHome_Buttons.xml</import>
+		<!-- FANART SCRAPER -->
+		<import>BasicHome_Fanart_Scraper.xml</import>
+		<!-- OVERLAY -->
+		<!-- <import>minioverlay.xml</import> -->
+
+
+	</controls>
+</window>

@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<description>dummy (visible when music is playing)</description>
+			<type>label</type>
+			<id>3337</id>
+			<posX>3000</posX>
+			<label>#Play.Current.Album</label>
+			<visible>player.hasmedia+control.hastext(3337)</visible>
+		</control>
+		<control>
+			<description>dummy (visible when there is a next track)</description>
+			<type>label</type>
+			<id>3338</id>
+			<posX>2700</posX>
+			<label>#Play.Next.Title</label>
+			<visible>player.hasmedia+control.hastext(3338)</visible>
+		</control>
+		<!-- MUSIC OVERLAY -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>723</posX>
+			<posY>60</posY>
+			<width>474</width>
+			<height>174</height>
+			<texture>bg_overlay.png</texture>
+			<colordiffuse>ccffffff</colordiffuse>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progress background</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>872</posX>
+			<posY>138</posY>
+			<width>300</width>
+			<height>31</height>
+			<texture>osd_progress_background2.png</texture>
+			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>progress</type>
+			<description>track progress</description>
+			<id>0</id>
+			<posX>860</posX>
+			<posY>133</posY>
+			<width>324</width>
+			<height>31</height>
+			<label>#percentage</label>
+			<lefttexture>osd_progress_mid_minioverlay.png</lefttexture>
+			<midtexture>osd_progress_mid_minioverlay.png</midtexture>
+			<righttexture>osd_progress_mid_minioverlay.png</righttexture>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>872</posX>
+			<posY>59</posY>
+			<width>300</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>872</posX>
+			<posY>90</posY>
+			<width>300</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>music logo</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>758</posX>
+			<posY>93</posY>
+			<width>106</width>
+			<height>105</height>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>no</centered>
+			<texture>#Play.Current.Thumb</texture>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>button</type>
+			<id>3340</id>
+			<posX>758</posX>
+			<posY>93</posY>
+			<width>106</width>
+			<height>108</height>
+			<action>18</action>
+			<textureFocus>bg_button_focus.png</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>752</posX>
+			<posY>87</posY>
+			<width>118</width>
+			<height>118</height>
+			<texture>CDCase.png</texture>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Info</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>878</posX>
+			<posY>169</posY>
+			<width>273</width>
+			<height>55</height>
+			<font>font13</font>
+			<label>#Play.Current.Title : : : #Play.Current.Artist</label>
+			<textcolor>BBFFFFFF</textcolor>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<description>play time label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>878</posX>
+			<posY>81</posY>
+			<label>#currentplaytime</label>
+			<align>left</align>
+			<font>font22</font>
+			<textcolor>#ColorUnfocused</textcolor>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>play time label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>878</posX>
+			<posY>136</posY>
+			<label>#currentremaining</label>
+			<align>left</align>
+			<font>font12</font>
+			<textcolor>40ffffff</textcolor>
+			<visible>player.hasmedia+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Pause logo</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1128</posX>
+			<posY>88</posY>
+			<width>46</width>
+			<height>46</height>
+			<texture>topbar_pause_focus.png</texture>
+			<visible>player.paused+control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1131</posX>
+			<posY>96</posY>
+			<width>12</width>
+			<height>31</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImagePeakChannel0</texture>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]+control.isvisible(3337)</visible>
+		</control>
+		<control>
+			<description>Image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1151</posX>
+			<posY>96</posY>
+			<width>12</width>
+			<height>31</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImagePeakChannel1</texture>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]+control.isvisible(3337)</visible>
+		</control>
+		<!-- VIDEO OVERLAY -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>675</posX>
+			<posY>60</posY>
+			<width>570</width>
+			<height>174</height>
+			<texture>bg_overlay.png</texture>
+			<colordiffuse>ccffffff</colordiffuse>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progress background</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>910</posX>
+			<posY>138</posY>
+			<width>303</width>
+			<height>31</height>
+			<texture>osd_progress_background2.png</texture>
+			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>progress</type>
+			<description>track progress</description>
+			<id>0</id>
+			<posX>898</posX>
+			<posY>133</posY>
+			<width>327</width>
+			<height>31</height>
+			<label>#percentage</label>
+			<lefttexture>osd_progress_mid_minioverlay.png</lefttexture>
+			<midtexture>osd_progress_mid_minioverlay.png</midtexture>
+			<righttexture>osd_progress_mid_minioverlay.png</righttexture>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>910</posX>
+			<posY>59</posY>
+			<width>303</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>910</posX>
+			<posY>90</posY>
+			<width>303</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>video preview window</description>
+			<type>videowindow</type>
+			<id>3339</id>
+			<posX>714</posX>
+			<posY>93</posY>
+			<width>186</width>
+			<height>105</height>
+			<action>18</action>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<textureFocus>-</textureFocus>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>708</posX>
+			<posY>87</posY>
+			<width>201</width>
+			<height>118</height>
+			<texture>CDCase.png</texture>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Info</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>916</posX>
+			<posY>169</posY>
+			<width>273</width>
+			<height>55</height>
+			<font>font13</font>
+			<label>#Play.Current.Title</label>
+			<textcolor>BBFFFFFF</textcolor>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<description>play time label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>916</posX>
+			<posY>81</posY>
+			<label>#currentplaytime</label>
+			<align>left</align>
+			<font>font22</font>
+			<textcolor>#ColorUnfocused</textcolor>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>play time label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>916</posX>
+			<posY>136</posY>
+			<label>#currentremaining</label>
+			<align>left</align>
+			<font>font12</font>
+			<textcolor>40ffffff</textcolor>
+			<visible>player.hasmedia+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Pause logo</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1167</posX>
+			<posY>88</posY>
+			<width>46</width>
+			<height>46</height>
+			<texture>topbar_pause_focus.png</texture>
+			<visible>player.paused+!control.isvisible(3337)</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1170</posX>
+			<posY>96</posY>
+			<width>12</width>
+			<height>31</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImagePeakChannel0</texture>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]+!control.isvisible(3337)</visible>
+		</control>
+		<control>
+			<description>Image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1189</posX>
+			<posY>96</posY>
+			<width>12</width>
+			<height>31</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>#VolumeControl.ImagePeakChannel1</texture>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]+!control.isvisible(3337)</visible>
+		</control>
+	</controls>
+</window>

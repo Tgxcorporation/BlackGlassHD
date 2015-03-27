@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>426144</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Pipes</define>
+	<define>#header.background:hover_pipes.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(10)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Time</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>150</posY>
+				<label>#(iif(eq(string.trim(#pipes_time), ''), 'Not timed', #pipes_time))</label>
+				<font>font20</font>
+			</control>
+			<!--
+			<control>
+				<type>label</type>
+				<description>No Time</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<label>Not timed</label>
+				<font>font20</font>
+				<visible>string.equals(#pipes_time,)</visible>
+			</control>
+-->
+			<control>
+				<type>label</type>
+				<description>Level: label</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>220</posY>
+				<label>19006</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Level</description>
+				<id>0</id>
+				<posX>514</posX>
+				<posY>220</posY>
+				<label>#pipes_level</label>
+				<align>right</align>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Moves: label</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>280</posY>
+				<label>Moves</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Moves</description>
+				<id>0</id>
+				<posX>514</posX>
+				<posY>280</posY>
+				<label>#pipes_moves</label>
+				<align>right</align>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Score: label</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>340</posY>
+				<label>19005</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Score</description>
+				<id>0</id>
+				<posX>514</posX>
+				<posY>340</posY>
+				<label>#pipes_score</label>
+				<align>right</align>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Highscore: label</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>400</posY>
+				<label>19008</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Highscore</description>
+				<id>0</id>
+				<posX>514</posX>
+				<posY>400</posY>
+				<label>#pipes_highscore</label>
+				<align>right</align>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>Pipes</type>
+				<description>Pipes control</description>
+				<id>10</id>
+				<posX>870</posX>
+				<posY>154</posY>
+				<width>900</width>
+				<height>900</height>
+				<colordiffuse>#ColorUnfocused</colordiffuse>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<nextblocky>100</nextblocky>
+				<texturefocus>panel_focus.png</texturefocus>
+				<texture>panel_focus.png</texture>
+				<font>font18</font>
+				<textcolor>ff000000</textcolor>
+				<onback>2</onback>
+			</control>
+		</control>
+		<!-- MENU -->
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(10)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(10)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>New Game</description>
+					<type>button</type>
+					<id>2</id>
+					<label>19002</label>
+					<onright>10</onright>
+					<onup>17</onup>
+					<ondown>8</ondown>
+				</control>
+				<control>
+					<type>checkbutton</type>
+					<description>Timed Game</description>
+					<id>8</id>
+					<label>635</label>
+					<onright>10</onright>
+					<onup>2</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<type>checkbutton</type>
+					<description>Sounds</description>
+					<id>4</id>
+					<label>19004</label>
+					<onright>10</onright>
+					<onup>8</onup>
+					<ondown>6</ondown>
+				</control>
+				<control>
+					<type>checkbutton</type>
+					<description>Keyboard</description>
+					<id>6</id>
+					<label>Keyboard</label>
+					<onright>10</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

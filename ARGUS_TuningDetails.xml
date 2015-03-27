@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>3012</id>
+	<defaultcontrol>99</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="Fade" end="100" start="100" time="250">WindowClose</animation>
+	<define>#header.label:200041</define>
+	<define>#header.background:hover_my tv.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="Fade" time="250">WindowOpen</animation>
+			<animation effect="Fade" time="250">WindowClose</animation>
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<posX>60</posX>
+				<posY>22</posY>
+				<width>1800</width>
+				<height>1035</height>
+				<texture>bg_dialog_big.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>102</posX>
+				<posY>90</posY>
+				<width>1716</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>Album value</description>
+				<type>label</type>
+				<posX>180</posX>
+				<posY>97</posY>
+				<width>1200</width>
+				<font>font22</font>
+				<textcolor>#ColorMain</textcolor>
+				<align>LEFT</align>
+				<label>#header.label</label>
+			</control>
+			<control>
+				<type>label</type>
+				<id>2</id>
+				<posX>180</posX>
+				<posY>187</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.ChannelName.label: #TV.TuningDetails.ChannelName.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>3</id>
+				<posX>1066</posX>
+				<posY>187</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Frequency.label: #TV.TuningDetails.Frequency.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>4</id>
+				<posX>180</posX>
+				<posY>225</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.ChannelType.label: #TV.TuningDetails.ChannelType.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>5</id>
+				<posX>1066</posX>
+				<posY>225</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Detail1.label: #TV.TuningDetails.Detail1.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>6</id>
+				<posX>180</posX>
+				<posY>262</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Provider.label: #TV.TuningDetails.Provider.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>7</id>
+				<posX>1066</posX>
+				<posY>262</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Detail2.label: #TV.TuningDetails.Detail2.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>8</id>
+				<posX>180</posX>
+				<posY>300</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.StreamingMode.label: #TV.TuningDetails.StreamingMode.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>9</id>
+				<posX>1066</posX>
+				<posY>300</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Detail3.label: #TV.TuningDetails.Detail3.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>10</id>
+				<posX>180</posX>
+				<posY>337</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.RTSPURL.label: #TV.TuningDetails.RTSPURL.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>11</id>
+				<posX>1066</posX>
+				<posY>337</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Detail4.label: #TV.TuningDetails.Detail4.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>12</id>
+				<posX>180</posX>
+				<posY>375</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.VideoResolution.label: #TV.TuningDetails.VideoResolution.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>13</id>
+				<posX>1066</posX>
+				<posY>375</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Detail5.label: #TV.TuningDetails.Detail5.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>14</id>
+				<posX>180</posX>
+				<posY>412</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.AudioType.label: #TV.TuningDetails.AudioType.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>15</id>
+				<posX>1066</posX>
+				<posY>412</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Detail6.label: #TV.TuningDetails.Detail6.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>16</id>
+				<posX>180</posX>
+				<posY>450</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.AudioLanguage.label: #TV.TuningDetails.AudioLanguage.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>17</id>
+				<posX>1066</posX>
+				<posY>450</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Detail7.label: #TV.TuningDetails.Detail7.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>18</id>
+				<posX>180</posX>
+				<posY>487</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.SubtitleStream.label: #TV.TuningDetails.SubtitleStream.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>19</id>
+				<posX>1066</posX>
+				<posY>487</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.Detail8.label: #TV.TuningDetails.Detail8.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>22</id>
+				<posX>180</posX>
+				<posY>555</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.SignalLevel.label: #TV.TuningDetails.SignalLevel.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<description>progress background image</description>
+				<id>1</id>
+				<posX>180</posX>
+				<posY>612</posY>
+				<width>600</width>
+				<height>54</height>
+				<texture>osd_progress_background.png</texture>
+			</control>
+			<control>
+				<description>Signal quality progress bar</description>
+				<type>progress</type>
+				<id>25</id>
+				<posX>168</posX>
+				<posY>612</posY>
+				<width>624</width>
+				<offset>0</offset>
+				<height>54</height>
+				<innerheight>36</innerheight>
+				<texturebg>-</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>osd_progress_mid.png</midtexture>
+				<righttexture>-</righttexture>
+				<label>#TV.TuningDetails.SignalLevel.value</label>
+				<visible>yes</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<id>24</id>
+				<posX>1066</posX>
+				<posY>555</posY>
+				<font>font14</font>
+				<label>#TV.TuningDetails.SignalQuality.label: #TV.TuningDetails.SignalQuality.value</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<description>progress background image</description>
+				<id>1</id>
+				<posX>1066</posX>
+				<posY>612</posY>
+				<width>600</width>
+				<height>54</height>
+				<texture>osd_progress_background.png</texture>
+			</control>
+			<control>
+				<description>Signal quality progress bar</description>
+				<type>progress</type>
+				<id>25</id>
+				<posX>1054</posX>
+				<posY>612</posY>
+				<width>624</width>
+				<offset>0</offset>
+				<height>54</height>
+				<innerheight>36</innerheight>
+				<texturebg>-</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>osd_progress_mid.png</midtexture>
+				<righttexture>-</righttexture>
+				<label>#TV.TuningDetails.SignalQuality.value</label>
+				<visible>yes</visible>
+			</control>
+			<control>
+				<description>TV preview window</description>
+				<type>videowindow</type>
+				<id>99</id>
+				<posX>187</posX>
+				<posY>720</posY>
+				<width>462</width>
+				<height>259</height>
+				<action>18</action>
+				<textureFocus>-</textureFocus>
+			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>174</posX>
+				<posY>711</posY>
+				<width>490</width>
+				<height>276</height>
+				<texture>VideoCase.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>

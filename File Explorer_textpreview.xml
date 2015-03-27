@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>557312</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="Fade" end="100" start="100" time="250">WindowClose</animation>
+	<define>#header.label:File Explorer</define>
+	<define>#header.background:bg.jpg</define>
+	<define>#header.background:hover_file explorer.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="Fade" time="150">WindowClose</animation>
+			<animation effect="Slide" reversible="FALSE" start="1350,0" time="200" tween="Circle">WindowOpen</animation>
+			<animation effect="Slide" end="1350,0" reversible="FALSE" time="200" tween="Circle">WindowClose</animation>
+			<control>
+				<id>0</id>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<posX>45</posX>
+				<posY>15</posY>
+				<font>font28</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<align>LEFT</align>
+				<label>#header.label</label>
+			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>7</posX>
+				<posY>82</posY>
+				<width>1905</width>
+				<height>985</height>
+				<texture>bg_dialog_big.png</texture>
+			</control>
+			<control>
+				<id>4</id>
+				<description>dialog Heading</description>
+				<type>label</type>
+				<posX>82</posX>
+				<posY>142</posY>
+				<width>1200</width>
+				<font>font22</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>52</posX>
+				<posY>130</posY>
+				<width>1815</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>52</posX>
+				<posY>873</posY>
+				<width>1815</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<control>
+				<id>2</id>
+				<type>textbox</type>
+				<posX>82</posX>
+				<posY>225</posY>
+				<width>1773</width>
+				<height>780</height>
+				<textcolor>#ColorMain</textcolor>
+				<spinPosX>1665</spinPosX>
+				<spinPosY>960</spinPosY>
+				<font>font13</font>
+			</control>
+		</control>
+	</controls>
+</window>

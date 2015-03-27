@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7971</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.background:hover_volumecontrol.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-289,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-289,0" reversible="false">WindowClose</animation>
+			<!-- *** Button *** -->
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>Volume Control</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>150</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>Activate Adjustments</description>
+					<type>checkbutton</type>
+					<id>2</id>
+					<label>Activate Adjustments</label>
+					<onleft>77</onleft>
+					<onright>10</onright>
+					<onup>17</onup>
+					<ondown>3</ondown>
+				</control>
+				<control>
+					<description>Profiles</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Profiles</label>
+					<onleft>77</onleft>
+					<onright>10</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Devices</description>
+					<type>button</type>
+					<id>5</id>
+					<label>Devices</label>
+					<onright>10</onright>
+					<onup>3</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<description>Channel Mode</description>
+					<type>checkbutton</type>
+					<id>4</id>
+					<label>Channel Mode</label>
+					<onright>10</onright>
+					<onup>5</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>145</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<!-- *** Volume Control Informations *** -->
+			<control>
+				<description>VolumeControl Device Name</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>138</posY>
+				<label>Default Device: #VolumeControl.DefaultSoundDeviceName</label>
+				<font>font16</font>
+			</control>
+			<control>
+				<description>VolumeControl Device Channels</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>180</posY>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#VolumeControl.ChannelCount Channel(s), Output Range between #VolumeControl.MinimumDecibel and #VolumeControl.MaximumDecibel</label>
+				<font>font11</font>
+			</control>
+			<!-- *** Volume Control Peak Channel0 *** -->
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>360</posY>
+				<width>135</width>
+				<height>450</height>
+				<texture>CDCase.png</texture>
+			</control>
+			<control>
+				<description>VolumeControl Peak Channel0 Text</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>777</posX>
+				<posY>270</posY>
+				<width>120</width>
+				<height>60</height>
+				<textalign>center</textalign>
+				<label>#VolumeControl.LabelPeakChannel0</label>
+				<font>font9</font>
+			</control>
+			<control>
+				<description>VolumeControl Peak Left Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>781</posX>
+				<posY>372</posY>
+				<width>130</width>
+				<height>423</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#VolumeControl.ImagePeakChannel0</texture>
+			</control>
+			<control>
+				<description>VolumeControl Peak Channel0 Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>870</posY>
+				<width>135</width>
+				<align>center</align>
+				<label>#VolumeControl.LevelPeakChannel0</label>
+				<font>font11</font>
+			</control>
+			<!-- *** Volume Control Peak Channel1 *** -->
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>930</posX>
+				<posY>360</posY>
+				<width>135</width>
+				<height>450</height>
+				<texture>CDCase.png</texture>
+			</control>
+			<control>
+				<description>VolumeControl Peak Channel1 Text</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>922</posX>
+				<posY>270</posY>
+				<width>120</width>
+				<height>60</height>
+				<textalign>center</textalign>
+				<label>#VolumeControl.LabelPeakChannel1</label>
+				<font>font9</font>
+			</control>
+			<control>
+				<description>VolumeControl Peak Channel1 Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>931</posX>
+				<posY>372</posY>
+				<width>130</width>
+				<height>423</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#VolumeControl.ImagePeakChannel1</texture>
+			</control>
+			<control>
+				<description>VolumeControl Peak Right Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>930</posX>
+				<posY>870</posY>
+				<width>135</width>
+				<align>center</align>
+				<label>#VolumeControl.LevelPeakChannel1</label>
+				<font>font11</font>
+			</control>
+			<!-- *** Volume Control Level Channel0 *** -->
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>1110</posX>
+				<posY>360</posY>
+				<width>120</width>
+				<height>450</height>
+				<texture>CDCase.png</texture>
+				<visible>control.isvisible(50)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel0 Text</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>1095</posX>
+				<posY>247</posY>
+				<width>120</width>
+				<height>60</height>
+				<textalign>center</textalign>
+				<label>#VolumeControl.LabelChannel0</label>
+				<font>font9</font>
+				<visible>control.isvisible(50)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Mute Channel0 Text</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1110</posX>
+				<posY>330</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.StateChannel0</label>
+				<font>font9</font>
+				<visible>control.isvisible(50)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel0 Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1113</posX>
+				<posY>372</posY>
+				<width>112</width>
+				<height>423</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#VolumeControl.ImageChannel0</texture>
+				<visible>control.isvisible(50)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel0 Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1110</posX>
+				<posY>870</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.LevelChannel0</label>
+				<font>font11</font>
+				<visible>control.isvisible(50)</visible>
+			</control>
+			<!-- *** Volume Control Level Channel1 *** -->
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>1245</posX>
+				<posY>360</posY>
+				<width>120</width>
+				<height>450</height>
+				<texture>CDCase.png</texture>
+				<visible>control.isvisible(55)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel1 Text</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>1230</posX>
+				<posY>247</posY>
+				<width>120</width>
+				<height>60</height>
+				<textalign>center</textalign>
+				<label>#VolumeControl.LabelChannel1</label>
+				<font>font9</font>
+				<visible>control.isvisible(55)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Mute Channel1 Text</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1245</posX>
+				<posY>330</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.StateChannel1</label>
+				<font>font9</font>
+				<visible>control.isvisible(55)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel1 Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1248</posX>
+				<posY>372</posY>
+				<width>112</width>
+				<height>423</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#VolumeControl.ImageChannel1</texture>
+				<visible>control.isvisible(55)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel1 Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1245</posX>
+				<posY>870</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.LevelChannel1</label>
+				<font>font11</font>
+				<visible>control.isvisible(55)</visible>
+			</control>
+			<!-- *** Volume Control Level Channel2 *** -->
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>1380</posX>
+				<posY>360</posY>
+				<width>120</width>
+				<height>450</height>
+				<texture>CDCase.png</texture>
+				<visible>control.isvisible(60)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel2 Text</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>1365</posX>
+				<posY>247</posY>
+				<width>120</width>
+				<height>60</height>
+				<textalign>center</textalign>
+				<label>#VolumeControl.LabelChannel2</label>
+				<font>font9</font>
+				<visible>control.isvisible(60)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Mute Channel2 Text</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1380</posX>
+				<posY>330</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.StateChannel2</label>
+				<font>font9</font>
+				<visible>control.isvisible(60)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel2 Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1383</posX>
+				<posY>372</posY>
+				<width>112</width>
+				<height>423</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#VolumeControl.ImageChannel2</texture>
+				<visible>control.isvisible(60)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel2 Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1380</posX>
+				<posY>870</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.LevelChannel2</label>
+				<font>font11</font>
+				<visible>control.isvisible(60)</visible>
+			</control>
+			<!-- *** Volume Control Level Channel3 *** -->
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>1515</posX>
+				<posY>360</posY>
+				<width>120</width>
+				<height>450</height>
+				<texture>CDCase.png</texture>
+				<visible>control.isvisible(65)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel3 Text</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>1500</posX>
+				<posY>247</posY>
+				<width>120</width>
+				<height>60</height>
+				<textalign>center</textalign>
+				<label>#VolumeControl.LabelChannel3</label>
+				<font>font9</font>
+				<visible>control.isvisible(65)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Mute Channel3 Text</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1515</posX>
+				<posY>330</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.StateChannel3</label>
+				<font>font9</font>
+				<visible>control.isvisible(65)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel3 Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1518</posX>
+				<posY>372</posY>
+				<width>112</width>
+				<height>423</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#VolumeControl.ImageChannel3</texture>
+				<visible>control.isvisible(65)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel3 Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1515</posX>
+				<posY>870</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.LevelChannel3</label>
+				<font>font11</font>
+				<visible>control.isvisible(65)</visible>
+			</control>
+			<!-- *** Volume Control Level Channel4 *** -->
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>1650</posX>
+				<posY>360</posY>
+				<width>120</width>
+				<height>450</height>
+				<texture>CDCase.png</texture>
+				<visible>control.isvisible(70)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel4 Text</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>1635</posX>
+				<posY>247</posY>
+				<width>120</width>
+				<height>60</height>
+				<textalign>center</textalign>
+				<label>#VolumeControl.LabelChannel4</label>
+				<font>font9</font>
+				<visible>control.isvisible(70)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Mute Channel4 Text</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1650</posX>
+				<posY>330</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.StateChannel4</label>
+				<font>font9</font>
+				<visible>control.isvisible(70)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel4 Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1653</posX>
+				<posY>372</posY>
+				<width>112</width>
+				<height>423</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#VolumeControl.ImageChannel4</texture>
+				<visible>control.isvisible(70)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel4 Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1650</posX>
+				<posY>870</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.LevelChannel4</label>
+				<font>font11</font>
+				<visible>control.isvisible(70)</visible>
+			</control>
+			<!-- *** Volume Control Level Channel5 *** -->
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>1785</posX>
+				<posY>360</posY>
+				<width>120</width>
+				<height>450</height>
+				<texture>CDCase.png</texture>
+				<visible>control.isvisible(75)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel5 Text</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>1770</posX>
+				<posY>247</posY>
+				<width>120</width>
+				<height>60</height>
+				<textalign>center</textalign>
+				<label>#VolumeControl.LabelChannel5</label>
+				<font>font9</font>
+				<visible>control.isvisible(75)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Mute Channel5 Text</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1785</posX>
+				<posY>330</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.StateChannel5</label>
+				<font>font9</font>
+				<visible>control.isvisible(75)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel5 Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1788</posX>
+				<posY>372</posY>
+				<width>112</width>
+				<height>423</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#VolumeControl.ImageChannel5</texture>
+				<visible>control.isvisible(75)</visible>
+			</control>
+			<control>
+				<description>VolumeControl Level Channel5 Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1785</posX>
+				<posY>870</posY>
+				<width>120</width>
+				<align>center</align>
+				<label>#VolumeControl.LevelChannel5</label>
+				<font>font11</font>
+				<visible>control.isvisible(75)</visible>
+			</control>
+			<!-- *** Channel Handling Indicator *** -->
+			<control>
+				<description>Channel Handling Indicator</description>
+				<type>label</type>
+				<id>20</id>
+				<posX>15</posX>
+				<posY>15</posY>
+			</control>
+			<control>
+				<description>Button bg</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>772</posX>
+				<posY>900</posY>
+				<width>300</width>
+				<height>120</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>bg_button3_focus.png</texture>
+				<!-- <visible>control.isvisible(20)</visible> -->
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			</control>
+			<!-- *** Master Volume Up Button *** -->
+			<control>
+				<description>Master Volume Up Button</description>
+				<type>button</type>
+				<id>10</id>
+				<posX>810</posX>
+				<posY>930</posY>
+				<width>60</width>
+				<height>60</height>
+				<onleft>4</onleft>
+				<onright>12</onright>
+				<onup>4</onup>
+				<ondown>12</ondown>
+				<textureFocus>volume_up.png</textureFocus>
+				<textureNoFocus>volume_up_nf.png</textureNoFocus>
+				<visible>control.isvisible(20)</visible>
+			</control>
+			<!-- *** Master Mute Button *** -->
+			<control>
+				<type>button</type>
+				<id>12</id>
+				<posX>892</posX>
+				<posY>930</posY>
+				<width>60</width>
+				<height>60</height>
+				<onleft>10</onleft>
+				<onright>11</onright>
+				<onup>10</onup>
+				<ondown>11</ondown>
+				<textureFocus>volume_mute.png</textureFocus>
+				<textureNoFocus>volume_mute_nf.png</textureNoFocus>
+			</control>
+			<!-- *** Master Volume Down Button *** -->
+			<control>
+				<description>Master Volume Down Button</description>
+				<type>button</type>
+				<id>11</id>
+				<posX>982</posX>
+				<posY>930</posY>
+				<width>60</width>
+				<height>60</height>
+				<onleft>12</onleft>
+				<onright>51</onright>
+				<onup>12</onup>
+				<ondown>51</ondown>
+				<textureFocus>volume_down.png</textureFocus>
+				<textureNoFocus>volume_down_nf.png</textureNoFocus>
+				<visible>control.isvisible(20)</visible>
+			</control>
+			<!-- *** Channel0 Volume Channel Indicator *** -->
+			<control>
+				<description>Channel0 Volume Channel Indicator</description>
+				<type>label</type>
+				<id>50</id>
+				<posX>15</posX>
+				<posY>15</posY>
+			</control>
+			<control>
+				<description>Button bg</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1102</posX>
+				<posY>915</posY>
+				<width>132</width>
+				<height>90</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>bg_button3_focus.png</texture>
+				<visible>control.isvisible(51)</visible>
+			</control>
+			<!-- *** Channel0 Volume Up Button *** -->
+			<control>
+				<description>Channel0 Volume Up Button</description>
+				<type>button</type>
+				<id>51</id>
+				<posX>1125</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>11</onleft>
+				<onright>52</onright>
+				<onup>11</onup>
+				<ondown>52</ondown>
+				<textureFocus>volume_up.png</textureFocus>
+				<textureNoFocus>volume_up_nf.png</textureNoFocus>
+			</control>
+			<!-- *** Channel0 Volume Down Button *** -->
+			<control>
+				<description>Channel0 Volume Down Button</description>
+				<type>button</type>
+				<id>52</id>
+				<posX>1179</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>51</onleft>
+				<onright>56</onright>
+				<onup>51</onup>
+				<ondown>56</ondown>
+				<textureFocus>volume_down.png</textureFocus>
+				<textureNoFocus>volume_down_nf.png</textureNoFocus>
+			</control>
+			<!-- *** Channel1 Volume Channel Indicator *** -->
+			<control>
+				<description>Channel1 Volume Channel Indicator</description>
+				<type>label</type>
+				<id>55</id>
+				<posX>15</posX>
+				<posY>15</posY>
+			</control>
+			<control>
+				<description>Button bg</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1237</posX>
+				<posY>915</posY>
+				<width>132</width>
+				<height>90</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>bg_button3_focus.png</texture>
+				<visible>control.isvisible(56)</visible>
+			</control>
+			<!-- *** Channel1 Volume Up Button *** -->
+			<control>
+				<description>Channel1 Volume Up Button</description>
+				<type>button</type>
+				<id>56</id>
+				<posX>1260</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>52</onleft>
+				<onright>57</onright>
+				<onup>52</onup>
+				<ondown>57</ondown>
+				<textureFocus>volume_up.png</textureFocus>
+				<textureNoFocus>volume_up_nf.png</textureNoFocus>
+				<visible>control.isvisible(55)</visible>
+			</control>
+			<!-- *** Channel1 Volume Down Button *** -->
+			<control>
+				<description>Channel1 Volume Down Button</description>
+				<type>button</type>
+				<id>57</id>
+				<posX>1314</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>56</onleft>
+				<onright>61</onright>
+				<onup>56</onup>
+				<ondown>61</ondown>
+				<textureFocus>volume_down.png</textureFocus>
+				<textureNoFocus>volume_down_nf.png</textureNoFocus>
+				<visible>control.isvisible(55)</visible>
+			</control>
+			<!-- *** Channel2 Volume Channel Indicator *** -->
+			<control>
+				<description>Channel2 Volume Channel Indicator</description>
+				<type>label</type>
+				<id>60</id>
+				<posX>15</posX>
+				<posY>15</posY>
+			</control>
+			<control>
+				<description>Button bg</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1372</posX>
+				<posY>915</posY>
+				<width>132</width>
+				<height>90</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>bg_button3_focus.png</texture>
+				<visible>control.isvisible(61)</visible>
+			</control>
+			<!-- *** Channel2 Volume Up Button *** -->
+			<control>
+				<description>Channel2 Volume Up Button</description>
+				<type>button</type>
+				<id>61</id>
+				<posX>1395</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>57</onleft>
+				<onright>62</onright>
+				<onup>57</onup>
+				<ondown>62</ondown>
+				<textureFocus>volume_up.png</textureFocus>
+				<textureNoFocus>volume_up_nf.png</textureNoFocus>
+				<visible>control.isvisible(60)</visible>
+			</control>
+			<!-- *** Channel2 Volume Down Button *** -->
+			<control>
+				<description>Channel2 Volume Down Button</description>
+				<type>button</type>
+				<id>62</id>
+				<posX>1449</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>61</onleft>
+				<onright>66</onright>
+				<onup>61</onup>
+				<ondown>66</ondown>
+				<textureFocus>volume_down.png</textureFocus>
+				<textureNoFocus>volume_down_nf.png</textureNoFocus>
+				<visible>control.isvisible(60)</visible>
+			</control>
+			<!-- *** Channel3 Volume Channel Indicator *** -->
+			<control>
+				<description>Channel3 Volume Channel Indicator</description>
+				<type>label</type>
+				<id>65</id>
+				<posX>15</posX>
+				<posY>15</posY>
+			</control>
+			<control>
+				<description>Button bg</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1507</posX>
+				<posY>915</posY>
+				<width>132</width>
+				<height>90</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>bg_button3_focus.png</texture>
+				<visible>control.isvisible(66)</visible>
+			</control>
+			<!-- *** Channel3 Volume Up Button *** -->
+			<control>
+				<description>Channel3 Volume Up Button</description>
+				<type>button</type>
+				<id>66</id>
+				<posX>1530</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>62</onleft>
+				<onright>67</onright>
+				<onup>62</onup>
+				<ondown>67</ondown>
+				<textureFocus>volume_up.png</textureFocus>
+				<textureNoFocus>volume_up_nf.png</textureNoFocus>
+				<visible>control.isvisible(65)</visible>
+			</control>
+			<!-- *** Channel3 Volume Down Button *** -->
+			<control>
+				<description>Channel3 Volume Down Button</description>
+				<type>button</type>
+				<id>67</id>
+				<posX>1584</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>66</onleft>
+				<onright>71</onright>
+				<onup>66</onup>
+				<ondown>71</ondown>
+				<textureFocus>volume_down.png</textureFocus>
+				<textureNoFocus>volume_down_nf.png</textureNoFocus>
+				<visible>control.isvisible(65)</visible>
+			</control>
+			<!-- *** Channel4 Volume Channel Indicator *** -->
+			<control>
+				<description>Channel4 Volume Channel Indicator</description>
+				<type>label</type>
+				<id>70</id>
+				<posX>15</posX>
+				<posY>15</posY>
+			</control>
+			<control>
+				<description>Button bg</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1642</posX>
+				<posY>915</posY>
+				<width>132</width>
+				<height>90</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>bg_button3_focus.png</texture>
+				<visible>control.isvisible(71)</visible>
+			</control>
+			<!-- *** Channel4 Volume Up Button *** -->
+			<control>
+				<description>Channel4 Volume Up Button</description>
+				<type>button</type>
+				<id>71</id>
+				<posX>1665</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>67</onleft>
+				<onright>72</onright>
+				<onup>67</onup>
+				<ondown>72</ondown>
+				<textureFocus>volume_up.png</textureFocus>
+				<textureNoFocus>volume_up_nf.png</textureNoFocus>
+				<visible>control.isvisible(70)</visible>
+			</control>
+			<!-- *** Channel4 Volume Down Button *** -->
+			<control>
+				<description>Channel4 Volume Down Button</description>
+				<type>button</type>
+				<id>72</id>
+				<posX>1719</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>71</onleft>
+				<onright>76</onright>
+				<onup>71</onup>
+				<ondown>76</ondown>
+				<textureFocus>volume_down.png</textureFocus>
+				<textureNoFocus>volume_down_nf.png</textureNoFocus>
+				<visible>control.isvisible(70)</visible>
+			</control>
+			<!-- *** Channel5 Volume Channel Indicator *** -->
+			<control>
+				<description>Channel5 Volume Channel Indicator</description>
+				<type>label</type>
+				<id>75</id>
+				<posX>15</posX>
+				<posY>15</posY>
+			</control>
+			<control>
+				<description>Button bg</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>1777</posX>
+				<posY>915</posY>
+				<width>132</width>
+				<height>90</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>bg_button3_focus.png</texture>
+				<visible>control.isvisible(76)</visible>
+			</control>
+			<!-- *** Channel5 Volume Up Button *** -->
+			<control>
+				<description>Channel5 Volume Up Button</description>
+				<type>button</type>
+				<id>76</id>
+				<posX>1800</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>72</onleft>
+				<onright>77</onright>
+				<onup>72</onup>
+				<ondown>77</ondown>
+				<textureFocus>volume_up.png</textureFocus>
+				<textureNoFocus>volume_up_nf.png</textureNoFocus>
+				<visible>control.isvisible(75)</visible>
+			</control>
+			<!-- *** Channel5 Volume Down Button *** -->
+			<control>
+				<description>Channel5 Volume Down Button</description>
+				<type>button</type>
+				<id>77</id>
+				<posX>1854</posX>
+				<posY>942</posY>
+				<width>37</width>
+				<height>37</height>
+				<onleft>76</onleft>
+				<onright>2</onright>
+				<onup>76</onup>
+				<ondown>2</ondown>
+				<textureFocus>volume_down.png</textureFocus>
+				<textureNoFocus>volume_down_nf.png</textureNoFocus>
+				<visible>control.isvisible(75)</visible>
+			</control>
+		</control>
+		<control>
+			<type>button</type>
+			<id>999</id>
+			<posX>30</posX>
+			<posY>37</posY>
+			<width>37</width>
+			<height>34</height>
+			<label>-</label>
+			<action>10</action>
+			<keepaspectratio>yes</keepaspectratio>
+			<textureFocus>header_volumecontrol.png</textureFocus>
+			<textureNoFocus>header_volumecontrol.png</textureNoFocus>
+		</control>
+	</controls>
+</window>

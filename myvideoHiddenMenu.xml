@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<controls>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>button group</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>150</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>View-As</description>
+					<type>menubutton</type>
+					<id>2</id>
+					<label/>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<mode>dialoglist</mode>
+					<dialogTitle>792</dialogTitle>
+					<valueTextInButton>yes</valueTextInButton>
+					<valuePrefixText>95</valuePrefixText>
+				</control>
+				<control>
+					<description>Sort</description>
+					<type>sortbutton</type>
+					<id>3</id>
+					<label>103</label>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Switch View</description>
+					<type>menubutton</type>
+					<id>5</id>
+					<label/>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>6</ondown>
+					<mode>dialoglist</mode>
+					<dialogTitle>499</dialogTitle>
+					<valueTextInButton>yes</valueTextInButton>
+					<valuePrefixText>97</valuePrefixText>
+				</control>
+				<control>
+					<description>Play DVD</description>
+					<type>button</type>
+					<id>6</id>
+					<label>341</label>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>Current Playlist</description>
+					<type>button</type>
+					<id>20</id>
+					<label>4555</label>
+					<action>33</action>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>9</ondown>
+				</control>
+				<control>
+					<description>My Playlists</description>
+					<type>button</type>
+					<id>9</id>
+					<label>983</label>
+					<onright>50</onright>
+					<onup>20</onup>
+					<ondown>7</ondown>
+				</control>
+				<control>
+					<description>Scan new videos</description>
+					<type>button</type>
+					<id>7</id>
+					<label>102</label>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>9114</ondown>
+				</control>
+				<control>
+					<description>SubCentral</description>
+					<type>button</type>
+					<id>9114</id>
+					<label>287</label>
+					<hyperlink>84623</hyperlink>
+					<visible>plugin.isenabled(SubCentral)</visible>
+					<onright>50</onright>
+					<onup>7</onup>
+					<ondown>66614</ondown>
+				</control>
+				<control>
+					<description>Trakt</description>
+					<type>button</type>
+					<id>66614</id>
+					<label>Trakt</label>
+					<hyperlink>87258</hyperlink>
+					<onup>9114</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+			</control>
+			<control>
+				<description>Content locked</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>1013</posY>
+				<width>45</width>
+				<height>45</height>
+				<texture>lock2.png</texture>
+				<visible>string.equals(#MyVideos.PinLocked, True)+control.isvisible(5050)</visible>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Last Online Update Value</description>
+				<label>#(L(1279)) #lastupdate</label>
+				<type>fadelabel</type>
+				<font>font11</font>
+				<posX>45</posX>
+				<posY>1020</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<visible>control.isvisible(5050)</visible>
+			</control>
+			<!-- NOT USED -->
+			<control>
+				<type>button</type>
+				<id>8</id>
+				<posX>3000</posX>
+				<label>-</label>
+				<visible>no</visible>
+			</control>
+		</control>
+	</controls>
+</window>

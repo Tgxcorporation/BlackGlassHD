@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>1206</id>
+	<defaultcontrol>8</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:File Info</define>
+	<define>#header.background:hover_my programs.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="![control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>735</posX>
+				<posY>145</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<control>
+				<description>File Title</description>
+				<id>20</id>
+				<type>label</type>
+				<posX>780</posX>
+				<posY>142</posY>
+				<label>-</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+				<width>1110</width>
+				<!-- <wrapString> : : : </wrapString> -->
+			</control>
+			<control>
+				<description>System</description>
+				<type>label</type>
+				<id>31</id>
+				<posX>780</posX>
+				<posY>247</posY>
+				<width>1110</width>
+				<label>13000</label>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Manufacturer</description>
+				<type>label</type>
+				<id>32</id>
+				<posX>780</posX>
+				<posY>300</posY>
+				<width>1110</width>
+				<label>13001</label>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Rating</description>
+				<type>label</type>
+				<id>33</id>
+				<posX>780</posX>
+				<posY>352</posY>
+				<width>1110</width>
+				<label>173</label>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>Genre</description>
+				<type>label</type>
+				<id>34</id>
+				<posX>780</posX>
+				<posY>405</posY>
+				<width>1110</width>
+				<label>174</label>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<description>System value</description>
+				<type>fadelabel</type>
+				<id>21</id>
+				<posX>1050</posX>
+				<posY>247</posY>
+				<width>825</width>
+				<label>-</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Manufacturer value</description>
+				<type>fadelabel</type>
+				<id>22</id>
+				<posX>1050</posX>
+				<posY>300</posY>
+				<width>825</width>
+				<label>-</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Rating value</description>
+				<type>fadelabel</type>
+				<id>23</id>
+				<posX>1050</posX>
+				<posY>352</posY>
+				<width>825</width>
+				<label>-</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Genre value</description>
+				<type>fadelabel</type>
+				<id>24</id>
+				<posX>1050</posX>
+				<posY>405</posY>
+				<width>825</width>
+				<label>-</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<description>Empty</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>121</posY>
+				<width>526</width>
+				<height>391</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>3</id>
+				<type>image</type>
+				<posX>57</posX>
+				<posY>121</posY>
+				<width>526</width>
+				<height>391</height>
+				<texture>-</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>32</posX>
+				<posY>94</posY>
+				<width>576</width>
+				<height>445</height>
+				<texture>PictureCase.png</texture>
+			</control>
+			<control>
+				<description>Overview</description>
+				<type>textbox</type>
+				<id>4</id>
+				<posX>780</posX>
+				<posY>600</posY>
+				<width>1065</width>
+				<font>font14</font>
+				<height>495</height>
+				<spinPosX>1680</spinPosX>
+				<spinPosY>1005</spinPosY>
+				<label>-</label>
+				<onleft>8</onleft>
+				<onright>8</onright>
+				<onup>8</onup>
+				<ondown>8</ondown>
+			</control>
+			<control>
+				<description>DUMMY BUTTON</description>
+				<type>button</type>
+				<id>50</id>
+				<posX>720</posX>
+				<posY>0</posY>
+				<width>1200</width>
+				<height>900</height>
+				<onright>4</onright>
+				<onleft>12</onleft>
+				<ondown>4</ondown>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<!-- <scrollWrapString/> -->
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>12</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="![control.hasfocus(50)|control.hasfocus(4)]+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="[control.hasfocus(50)|control.hasfocus(4)]|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Refresh</description>
+					<type>button</type>
+					<id>12</id>
+					<label>184</label>
+					<onup>17</onup>
+					<ondown>11</ondown>
+					<onleft>4</onleft>
+					<onright>4</onright>
+				</control>
+				<control>
+					<description>Overview / Screenshot Toggle</description>
+					<type>button</type>
+					<id>11</id>
+					<label>13006</label>
+					<onup>12</onup>
+					<ondown>7</ondown>
+					<onleft>4</onleft>
+					<onright>4</onright>
+				</control>
+				<control>
+					<description>Prev</description>
+					<type>button</type>
+					<id>7</id>
+					<label>210</label>
+					<onup>11</onup>
+					<ondown>9</ondown>
+					<onleft>4</onleft>
+					<onright>4</onright>
+				</control>
+				<control>
+					<description>Next</description>
+					<type>button</type>
+					<id>9</id>
+					<label>209</label>
+					<onup>7</onup>
+					<ondown>8</ondown>
+					<onleft>4</onleft>
+					<onright>4</onright>
+				</control>
+				<control>
+					<description>Launch</description>
+					<type>button</type>
+					<id>8</id>
+					<label>13002</label>
+					<onup>9</onup>
+					<ondown>12</ondown>
+					<onleft>4</onleft>
+					<onright>4</onright>
+				</control>
+			</control>
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<description>Screenshot big</description>
+			<type>image</type>
+			<id>10</id>
+			<posX>3625</posX>
+			<posY>379</posY>
+			<width>819</width>
+			<height>679</height>
+			<texture>-</texture>
+			<colorkey>FFFF00FF</colorkey>
+			<colordiffuse>#ColorMain</colordiffuse>
+			<keepaspectratio>yes</keepaspectratio>
+		</control>
+	</controls>
+</window>

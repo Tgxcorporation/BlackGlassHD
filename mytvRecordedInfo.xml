@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>759</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:604</define>
+	<define>#header.background:hover_my tv.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>145</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>13</id>
+				<posX>765</posX>
+				<posY>145</posY>
+				<width>1125</width>
+				<font>font22</font>
+				<label>-</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Current program time</description>
+				<id>14</id>
+				<posX>765</posX>
+				<posY>240</posY>
+				<label>-</label>
+				<font>font18</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<description>genre</description>
+				<id>17</id>
+				<posX>765</posX>
+				<posY>300</posY>
+				<label>-</label>
+				<align>left</align>
+				<font>font18</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description1</description>
+				<id>15</id>
+				<posX>765</posX>
+				<posY>360</posY>
+				<width>1125</width>
+				<height>655</height>
+				<colordiffuse>#ColorMain</colordiffuse>
+				<font>font18</font>
+				<label>-</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<type>button</type>
+					<description>Keep</description>
+					<id>2</id>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<label>1042</label>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>27</id>
+			<posX>3693</posX>
+			<posY>187</posY>
+			<label>-</label>
+			<disabledcolor>ff808080</disabledcolor>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Current program time</description>
+			<id>26</id>
+			<posX>3693</posX>
+			<posY>225</posY>
+			<label>-</label>
+			<textcolor>ffb2d4f5</textcolor>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description1</description>
+			<id>25</id>
+			<posX>3693</posX>
+			<posY>262</posY>
+			<width>1146</width>
+			<height>618</height>
+			<colordiffuse>#ColorMain</colordiffuse>
+			<font>font13</font>
+			<label>#TV.RecordedTV.Description</label>
+			<textcolor>#ColorMain</textcolor>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Current program background</description>
+			<id>300</id>
+			<posX>3117</posX>
+			<posY>829</posY>
+			<width>328</width>
+			<height>186</height>
+			<texture>Picture_cover.png</texture>
+		</control>
+		<control>
+			<type>videowindow</type>
+			<description>TV preview window</description>
+			<id>99</id>
+			<posX>3129</posX>
+			<posY>837</posY>
+			<width>304</width>
+			<height>172</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<action>18</action>
+			<textureFocus>-</textureFocus>
+		</control>
+		<control>
+			<type>label</type>
+			<description>genre</description>
+			<id>24</id>
+			<posX>3259</posX>
+			<posY>225</posY>
+			<label>-</label>
+			<align>right</align>
+			<textcolor>ffb2d4f5</textcolor>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>601</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:646</define>
+	<define>#header.background:hover_my tv.png</define>
+	<define>#header.fanart:</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(10)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>#ColorUnfocused</textcolor>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control Style="FanartDisplayAnimation">
+				<description>scheduler recordings listcontrol</description>
+					<type>listcontrol</type>
+					<id>10</id>
+					<onleft>2</onleft>
+					<onright>505050</onright>
+					<onup>-</onup>
+					<ondown>-</ondown>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(10)+!control.hasfocus(505050)">conditional</animation>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>REAL Current program title</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>112</posY>
+				<width>570</width>
+				<font>font22</font>
+				<label>#TV.Scheduled.Title</label>
+				<textcolor>#ColorMain</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<!-- <control>
+				<description>Channel Image</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>121</posY>
+				<width>50</width>
+				<height>35</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture>#selectedthumb</texture>
+				<visible>control.hasfocus(10)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control> -->
+			<control Style="FanartDisplayAnimation">
+				<description>Current channel</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>183</posY>
+				<width>570</width>
+				<font>font20</font>
+				<label>#selecteditem</label>
+				<align>left</align>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>Current program time</description>
+				<type>label</type>
+				<id>14</id>
+				<posX>45</posX>
+				<posY>252</posY>
+				<label>#TV.Scheduled.Time</label>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<description>genre</description>
+				<type>label</type>
+				<id>17</id>
+				<posX>45</posX>
+				<posY>307</posY>
+				<label>#TV.Scheduled.Genre</label>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>15</id>
+				<posX>45</posX>
+				<posY>360</posY>
+				<width>570</width>
+				<height>495</height>
+				<label>#TV.Scheduled.Description</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<visible>player.hasmedia</visible>
+				<seperator>: : :</seperator>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>360</posY>
+				<width>570</width>
+				<height>678</height>
+				<label>#TV.Scheduled.Description</label>
+				<font>font16</font>
+				<textcolor>#ColorMain</textcolor>
+				<visible>!player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(10)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(10)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<type>sortbutton</type>
+					<id>2</id>
+					<label>620</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>17</onup>
+					<ondown>11</ondown>
+				</control>
+				<control>
+					<description>Toggle button series</description>
+					<type>checkbutton</type>
+					<id>11</id>
+					<label>3019</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+				</control>
+				<control>
+					<description>New button</description>
+					<type>button</type>
+					<id>6</id>
+					<label>617</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>11</onup>
+					<ondown>7</ondown>
+				</control>
+				<control>
+					<description>Cleanup</description>
+					<type>button</type>
+					<id>7</id>
+					<label>624</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+				</control>
+				<control>
+					<description>Priorities</description>
+					<type>button</type>
+					<id>8</id>
+					<label>877</label>
+					<hyperlink>607</hyperlink>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>7</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+		
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>10</onright>
+			<onleft>10</onleft>
+			<ondown>10</ondown>
+			<onup>10</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<description>Conflicts</description>
+			<type>button</type>
+			<id>9</id>
+			<posX>3429</posX>
+			<posY>4</posY>
+			<label>892</label>
+			<hyperlink>608</hyperlink>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>8</onup>
+			<ondown>99</ondown>
+		</control>
+	</controls>
+</window>

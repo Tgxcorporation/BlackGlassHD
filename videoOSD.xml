@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>2901</id>
+	<defaultcontrol>220</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#play.progressbar.percentage:#percentage</define>
+	<define>#play.progressbar.currentplaytime:#currentplaytime</define>
+	<define>#play.progressbar.currentremaining:#currentremaining</define>
+	<controls>
+		<control>
+			<description>background</description>
+			<id>999100</id>
+			<type>image</type>
+			<posX>233</posX>
+			<posY>483</posY>
+			<width>1454</width>
+			<height>537</height>
+			<texture>bg_dialog_new2.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Movie Name</description>
+			<id>36</id>
+			<type>fadelabel</type>
+			<posX>310</posX>
+			<posY>547</posY>
+			<width>1050</width>
+			<height>67</height>
+			<font>font24</font>
+			<label>#Play.Current.Title</label>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>999103</id>
+			<posX>278</posX>
+			<posY>542</posY>
+			<width>1106</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Channel Name</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>310</posX>
+			<posY>628</posY>
+			<width>1050</width>
+			<font>font18</font>
+			<label>#Play.Current.Year     #Play.Current.Genre</label>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <wrapString> : : : </wrapString> -->
+		</control>
+		<control>
+			<type>image</type>
+			<id>999104</id>
+			<posX>278</posX>
+			<posY>605</posY>
+			<width>1106</width>
+			<height>79</height>
+			<texture>bg_facade_line_nofocus_top.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Plot</description>
+			<type>textboxscrollup</type>
+			<id>104</id>
+			<posX>310</posX>
+			<posY>695</posY>
+			<width>1050</width>
+			<height>245</height>
+			<label>#Play.Current.Plot</label>
+			<font>font16</font>
+			<seperator>: : :</seperator>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<description>Current program channel</description>
+			<id>0</id>
+			<posX>1394</posX>
+			<posY>474</posY>
+			<width>308</width>
+			<height>445</height>
+			<texture>black.png</texture>
+			<!-- <colordiffuse>60ffffff</colordiffuse> -->
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>102</id>
+			<posX>1394</posX>
+			<posY>474</posY>
+			<width>308</width>
+			<height>445</height>
+			<texture>#Play.Current.Thumb</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>103</id>
+			<posX>1370</posX>
+			<posY>450</posY>
+			<width>356</width>
+			<height>493</height>
+			<texture>DVDCase.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+
+
+		<!-- <import>videoOSD_mediainfo_mp110rc2.xml</import> -->
+		<!-- <import>common.play.osd.xml</import> -->
+	</controls>
+</window>

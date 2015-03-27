@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>87275</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>player.hasmedia</allowoverlay>
+  <define>#header.label:#Trakt.Translation.Lists.Label</define>
+  <define>#header.background:hover_trakt.png</define>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+  <controls>
+    <import>common.window.background.xml</import>
+    <!-- <import>Trakt.Common.Fanart.xml</import> -->
+    <import>common.window.overlay.xml</import>
+    <control>
+      <type>group</type>
+      <dimColor>#ColorMain</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <control>
+        <type>fadelabel</type>
+        <width>1275</width>
+        <wrapString> : : : </wrapString>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>15</posY>
+        <label>#header.label</label>
+        <font>font28</font>
+        <align>left</align>
+        <textcolor>#ColorUnfocused</textcolor>
+      </control>
+      <control>
+        <description>Date</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>1887</posX>
+        <posY>63</posY>
+        <label>#date</label>
+        <align>right</align>
+        <font>font11</font>
+        <visible>!plugin.isenabled(World Weather)</visible>
+        <textcolor>aaffffff</textcolor>
+      </control>
+      <control>
+        <description>Date</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>1887</posX>
+        <posY>63</posY>
+        <label>#WorldWeather.TodayTemperature     #date</label>
+        <align>right</align>
+        <font>font11</font>
+        <visible>plugin.isenabled(World Weather)</visible>
+        <textcolor>aaffffff</textcolor>
+      </control>
+      <control>
+        <description>Time</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>1887</posX>
+        <posY>22</posY>
+        <label>#time</label>
+        <align>right</align>
+        <font>font16</font>
+        <textcolor>#ColorMain</textcolor>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>71</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus_top.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <description>composite control consisting of a list control and a thumbnail panel</description>
+        <type>facadeview</type>
+        <id>50</id>
+        <control>
+          <description>listcontrol</description>
+          <type>listcontrol</type>
+          <id>50</id>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <scrollOffset>2</scrollOffset>
+        </control>
+      </control>
+      <control>
+        <type>label</type>
+        <id>1</id>
+        <posX>45</posX>
+        <posY>150</posY>
+        <width>630</width>
+        <font>font20</font>
+        <label>#Trakt.Lists.CurrentUser</label>
+        <textcolor>#ColorAlternate</textcolor>
+      </control>
+      <control>
+        <description>Plot value</description>
+        <type>textboxscrollup</type>
+        <id>1</id>
+        <posX>45</posX>
+        <posY>225</posY>
+        <width>630</width>
+        <height>531</height>
+        <label>#Trakt.List.Description</label>
+        <font>font16</font>
+        <textcolor>#ColorMain</textcolor>
+        <seperator>: : :</seperator>
+      </control>
+    </control>
+  </controls>
+</window>

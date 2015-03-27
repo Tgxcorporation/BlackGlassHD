@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>600</posY>
+			<width>2520</width>
+			<height>480</height>
+			<texture>gradient.png</texture>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="150">WindowOpen</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<dimColor>#ColorMain</dimColor>
+			<visible>facadeview.list+[control.isvisible(50)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1297</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>1345</posX>
+				<posY>71</posY>
+				<width>574</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus_top.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>989</posY>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+				<label>0 #(L(507))</label>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>1372</posX>
+				<posY>989</posY>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+				<label>#itemcount #(L(507))</label>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<dimColor>#ColorMain</dimColor>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+				<label>0 #(L(507))</label>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+				<label>#itemcount #(L(507))</label>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<dimColor>#ColorMain</dimColor>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<type>listcontrol</type>
+					<description>listcontrol</description>
+					<id>50</id>
+					<posX>1345</posX>
+					<width>574</width>
+					<height>885</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<textXOff>-60</textXOff>
+					<textYOff>3</textYOff>
+					<textXOff2>0</textXOff2>
+					<textYOff2>49</textYOff2>
+					<textXOff3>30</textXOff3>
+					<textYOff3>49</textYOff3>
+					<IconXOff>1947</IconXOff>
+					<IconYOff>61</IconYOff>
+					<font2>font11</font2>
+					<font3>font11</font3>
+					<textureFocus>bg_facade3_line_focus.png</textureFocus>
+					<textureNoFocus>bg_facade3_line_nofocus.png</textureNoFocus>
+					<textureHeight>88</textureHeight>
+					<visible>control.isvisible(745381)+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
+				</control>
+				<control>
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<posX>750</posX>
+					<posY>142</posY>
+					<width>1222</width>
+					<height>805</height>
+					<scrollOffset>1</scrollOffset>
+					<itemWidth>193</itemWidth>
+					<itemHeight>266</itemHeight>
+					<textureWidth>192</textureWidth>
+					<textureHeight>266</textureHeight>
+					<thumbWidth>166</thumbWidth>
+					<thumbHeight>240</thumbHeight>
+					<thumbPosX>13</thumbPosX>
+					<thumbPosY>13</thumbPosY>
+					<itemWidthBig>288</itemWidthBig>
+					<itemHeightBig>399</itemHeightBig>
+					<textureWidthBig>288</textureWidthBig>
+					<textureHeightBig>399</textureHeightBig>
+					<thumbWidthBig>250</thumbWidthBig>
+					<thumbHeightBig>361</thumbHeightBig>
+					<thumbPosXBig>19</thumbPosXBig>
+					<thumbPosYBig>19</thumbPosYBig>
+					<thumbZoom>yes</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>no</renderFocusText>
+					<renderUnfocusText>no</renderUnfocusText>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<textXOff>3</textXOff>
+					<textYOff>3</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<showFrame>true</showFrame>
+					<!-- <textureMask>DVDCase_coverflow_mask.png</textureMask> -->
+					<frameNoFocus>DVDCase_nofocus.png</frameNoFocus>
+					<frameFocus>DVDCase.png</frameFocus>
+					<visible>[control.isvisible(745382)|control.isvisible(745383)]+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<dimColor>#ColorAlternate</dimColor>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<posX>30</posX>
+					<posY>482</posY>
+					<width>1905</width>
+					<height>334</height>
+					<spinCanFocus>no</spinCanFocus>
+					<itemWidth>270</itemWidth>
+					<itemHeight>334</itemHeight>
+					<textureWidth>255</textureWidth>
+					<textureHeight>353</textureHeight>
+					<thumbWidth>221</thumbWidth>
+					<thumbHeight>319</thumbHeight>
+					<thumbPosX>17</thumbPosX>
+					<thumbPosY>17</thumbPosY>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder>DVDCase_nofocus.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<!-- <textureMask>DVDCase_coverflow_mask.png</textureMask> -->
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<scrollOffset>3</scrollOffset>
+					<scrollbarYOff>396</scrollbarYOff>
+					<visible>control.isvisible(745384)+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+				</control>
+				<control>
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>#ColorMain</colordiffuse>
+					<dimColor>#ColorAlternate</dimColor>
+					<id>50</id>
+					<posX>45</posX>
+					<posY>472</posY>
+					<width>1905</width>
+					<height>1080</height>
+					<ondown>505050</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<selectedCard>0</selectedCard>
+					<cardWidth>262</cardWidth>
+					<cardHeight>370</cardHeight>
+					<angle>45</angle>
+					<sideShift>240</sideShift>
+					<sideGap>200</sideGap>
+					<sideDepth>250</sideDepth>
+					<offsetY>0</offsetY>
+					<selectedOffsetY>-10</selectedOffsetY>
+					<speed>8</speed>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<frameWidth>282</frameWidth>
+					<frameHeight>390</frameHeight>
+					<spinSpeed>8</spinSpeed>
+					<font1>font14</font1>
+					<font2>font11</font2>
+					<label1YOff>607</label1YOff>
+					<label2YOff>645</label2YOff>
+					<pageSize>5</pageSize>
+					<scrollbarYOff>406</scrollbarYOff>
+					<keepaspectratio>no</keepaspectratio>
+					<cards mask="DVDCase_coverflow_mask.png"/>
+					<camera xpos="0" ypos="80">yes</camera>
+					<visible>control.isvisible(745385)+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>276</width>
+									<height>390</height>
+									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png">black.png</texture>
+								</control>
+
+								
+								<control>
+									<description>Watched Icon</description>
+									<type>image</type>
+									<id>0</id>
+									<posX>237</posX>
+									<posY>15</posY>
+									<width>22</width>
+									<height>22</height>
+									<texture>overlaywatched.png</texture>
+									<colordiffuse>#ColorPlayed</colordiffuse>
+									<visible>string.contains(#myfilms.user.watched.value)</visible>
+								</control>
+								<control>
+									<description>Un-Watched Icon</description>
+									<type>image</type>
+									<id>0</id>
+									<posX>237</posX>
+									<posY>15</posY>
+									<width>22</width>
+									<height>22</height>
+									<texture>overlayunwatched.png</texture>
+									<colordiffuse>#ColorAvailable</colordiffuse>
+									<visible>!string.contains(#myfilms.user.watched.value)</visible>
+								</control>
+								
+								<control>
+									<description>Movie Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>9</posY>
+									<width>225</width>
+									<label>#myfilms.user.mastertitle.value</label>
+									<font>font13</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> : : : </wrapString>
+									<shadowAngle>45</shadowAngle>
+									<shadowDistance>2</shadowDistance>
+									<shadowColor>FF000000</shadowColor>
+								</control>
+								
+								<control>
+									<type>image</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>-27</posY>
+									<width>231</width>
+									<height>79</height>
+									<texture>bg_button_nofocus_top.png</texture>
+								</control>
+							
+
+								<control>
+									<type>imagelist</type>
+									<id>1</id>
+									<posX>22</posX>
+									<posY>61</posY>
+									<width>277</width>
+									<height>60</height>
+									<textureWidth>22</textureWidth>
+									<textureHeight>22</textureHeight>
+									<subitems>
+										<subitem>star_nofocus.png</subitem>
+										<subitem>star_focus.png</subitem>
+									</subitems>
+									<orientation>horizontal</orientation>
+									<align>left</align>
+									<imagesToDraw>10</imagesToDraw>
+									<percentage>#myfilms.db.rating.value</percentage>
+								</control>
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>93</posY>
+									<width>247</width>
+									<label>#myfilms.db.category.value</label>
+									<font>font11</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> : : : </wrapString>
+									</control>
+								<control>
+									<description>year</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>130</posY>
+									<width>240</width>
+									<label>#myfilms.db.year.value     #myfilms.db.length.value #myfilms.db.length.unit</label>
+									<font>font11</font>
+									<textcolor>#ColorAlternate</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								
+								
+								<control>
+									<description>Director</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>168</posY>
+									<width>240</width>
+									<label>Dir. by #myfilms.db.director.value</label>
+									<font>font11</font>
+									<textcolor>#ColorMain</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>cast</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>210</posY>
+									<width>240</width>
+									<label>#myfilms.db.actors.value</label>
+									<font>font10</font>
+									<lineSpacing>2</lineSpacing>
+									<align>left</align>
+									<textcolor>#ColorAlternate</textcolor>
+								</control>
+								
+								<control>
+									<description>plot</description>
+									<type>textboxscrollup</type>
+									<posX>22</posX>
+									<posY>247</posY>
+									<width>240</width>
+									<height>62</height>
+									<label>#myfilms.db.description.value</label>
+									<font>font9</font>
+									<lineSpacing>2</lineSpacing>
+									<textcolor>#ColorMain</textcolor>
+								</control>
+								
+							</controls>
+						]]>
+						</subitem>
+					</subitems>
+				</control>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy listcontrol</description>
+				<id>745381</id>
+				<label>-</label>
+				<visible>facadeview.list</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy smallicons</description>
+				<id>745382</id>
+				<label>-</label>
+				<visible>facadeview.smallicons</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy largeicons</description>
+				<id>745383</id>
+				<label>-</label>
+				<visible>facadeview.largeicons</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy filmstrip</description>
+				<id>745384</id>
+				<label>-</label>
+				<visible>facadeview.filmstrip</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy coverflow</description>
+				<id>745385</id>
+				<label>-</label>
+				<visible>facadeview.coverflow</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy playlist</description>
+				<id>745386</id>
+				<label>-</label>
+				<visible>facadeview.playlist</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<description>dummy album</description>
+				<id>745387</id>
+				<label>-</label>
+				<visible>facadeview.album</visible>
+			</control>
+
+		</control>
+	</controls>
+</window>

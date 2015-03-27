@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1921</width>
+			<height>1080</height>
+			<texture>bg.jpg</texture>
+			<colordiffuse>c0ffffff</colordiffuse>
+			<animation effect="fade" time="150">WindowOpen</animation>
+			<animation effect="fade" time="150" condition="window.isvisible(9811)">conditional</animation>
+			<animation effect="fade" time="150" condition="window.isvisible(96742)">conditional</animation>
+			<animation effect="fade" time="150" condition="window.isvisible(20130603)">conditional</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<visible>!control.hasfocus(505050)+!control.hasfocus(505060)</visible>
+			<animation effect="fade" time="200">visiblechange</animation>
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-150</posX>
+			<posY>-3</posY>
+			<texture>basichome_upper_gradient.png</texture>
+			<width>2220</width>
+			<height>240</height>
+			<visible>control.hasfocus(505050)|control.hasfocus(505060)</visible>
+			<animation effect="fade" time="200">visiblechange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-150</posX>
+			<posY>840</posY>
+			<width>2220</width>
+			<height>240</height>
+			<texture>basichome_bottom_gradient.png</texture>
+			<visible>control.hasfocus(505050)|control.hasfocus(505060)</visible>
+			<animation effect="fade" time="200">visiblechange</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Selected item Label</description>
+			<id>0</id>
+			<posX>57</posX>
+			<posY>976</posY>
+			<width>1830</width>
+			<font>font24</font>
+			<height>67</height>
+			<textalign>center</textalign>
+			<label>#header.fanart</label>
+			<visible>control.hasfocus(505050)|control.hasfocus(505060)</visible>
+			<animation effect="fade" time="200">visiblechange</animation>
+		</control>
+	</controls>
+</window>

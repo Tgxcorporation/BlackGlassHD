@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>356</width>
+				<height>514</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>60</id>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>356</width>
+				<height>514</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+				<texture>#MovingPictures.Coverart</texture>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>34</posX>
+				<posY>94</posY>
+				<width>410</width>
+				<height>568</height>
+				<texture>DVDCase.png</texture>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<!-- <control Style="FanartDisplayAnimationMovingPictures">
+				<description>Watched Icon Background</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>378</posX>
+				<posY>146</posY>
+				<width>48</width>
+				<height>60</height>
+				<texture>overlaywubg.png</texture>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPicturesWatched">
+				<description>Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>385</posX>
+				<posY>153</posY>
+				<width>36</width>
+				<height>36</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>facadeview.list+control.isvisible(50)+control.isvisible(9)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPicturesWatched">
+				<description>Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>385</posX>
+				<posY>153</posY>
+				<width>36</width>
+				<height>36</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorAvailable</colordiffuse>
+				<visible>facadeview.list+control.isvisible(50)+!control.isvisible(9)</visible>
+			</control> -->
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>685</posY>
+				<width>453</width>
+				<height>60</height>
+				<textureWidth>33</textureWidth>
+				<textureHeight>33</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>390</posX>
+				<posY>685</posY>
+				<width>380</width>
+				<label>(#MovingPictures.SelectedMovie.score.localized)</label>
+				<textcolor>#ColorUnfocused</textcolor>
+				<font>font12</font>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>747</posY>
+				<width>1200</width>
+				<font>font22</font>
+				<label>#MovingPictures.SelectedMovie.title</label>
+				<wrapString> : : : </wrapString>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<description>Genre value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>817</posY>
+				<width>1200</width>
+				<label>#MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.genres</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPicturesWatched">
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>877</posY>
+				<width>1200</width>
+				<height>172</height>
+				<font>font14</font>
+				<textcolor>#ColorMain</textcolor>
+				<label>#MovingPictures.SelectedMovie.summary</label>
+				<visible>facadeview.list+control.isvisible(50)+ !player.hasmedia</visible>
+				<seperator>: : :</seperator>
+			</control>
+		</control>
+	</controls>
+</window>

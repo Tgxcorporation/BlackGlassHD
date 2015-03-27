@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>1017</id>
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:300082</define>
+	<define>#header.background:hover_settings.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>		
+		<import>common.window.time.basic.xml</import>
+
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>105</posX>
+				<posY>60</posY>
+				<width>1710</width>
+				<height>1032</height>
+				<texture>bg_dialog_big.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>145</posX>
+				<posY>63</posY>
+				<width>1629</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+				<!-- <colordiffuse>ccffffff</colordiffuse> -->
+			</control>
+			<!-- Startup resume-->
+			<!--Right part-->
+			<control>
+				<description>buttons</description>
+				<type>group</type>
+				<posX>145</posX>
+				<posY>142</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>Turn off monitor blank screen</description>
+					<type>checkbutton</type>
+					<id>20</id>
+					<label>300095</label>
+					<width>1629</width>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Show last module</description>
+					<type>checkbutton</type>
+					<id>21</id>
+					<label>300100</label>
+					<width>1629</width>
+				</control>
+				<control>
+					<description>Stop playback in removal of audio renderer</description>
+					<type>checkbutton</type>
+					<id>22</id>
+					<label>300230</label>
+					<width>1629</width>
+				</control>      
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<width>1629</width>
+					<height>79</height>
+					<texture>bg_button_nofocus_top.png</texture>
+				</control>
+				<control>
+					<description>Delay button</description>
+					<type>button</type>
+					<id>30</id>
+					<width>1629</width>
+					<label>300102</label>
+				</control>
+				<control>
+					<description>Delay on MP start</description>
+					<type>checkbutton</type>
+					<id>31</id>
+					<width>1629</width>
+					<label>300103</label>
+					<onup>30</onup>
+				</control>
+				<control>
+					<description>Delay on MP resume</description>
+					<type>checkbutton</type>
+					<id>32</id>
+					<width>1629</width>
+					<label>300104</label>
+					<onup>31</onup>
+				</control>
+				
+				
+				
+				
+			</control>
+			<control>
+				<description>Screen button</description>
+				<type>button</type>
+				<id>24</id>
+				<posX>145</posX>
+				<posY>697</posY>
+				<width>60</width>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+			</control>
+			<control>
+				<type>label</type>
+				<id>2</id>
+				<posX>175</posX>
+				<posY>735</posY>
+				<label>#defScreen</label>
+				<align>left</align>
+				<font>font11</font>
+				<!--visible>control.isvisible(24)</visible-->
+			</control>
+			<!--Delay section-->
+			<!--Delay startup label-->
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>1747</posX>
+				<posY>795</posY>
+				<label>#delayStartup</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<align>right</align>
+				<font>font16</font>
+			</control>
+
+		</control>
+	</controls>
+</window>
+

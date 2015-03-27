@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>7969</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Sleep Control</define>
+	<define>#header.background:hover_sleepcontrol.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
+				<description>Status</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>84</posY>
+				<font>font11</font>
+				<width>1125</width>
+				<label>#SleepControl.Text</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<!-- *** Sleep Activity *** -->
+			<control>
+				<description>Sleep Activity</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>360</posX>
+				<posY>397</posY>
+				<width>1200</width>
+				<label>#SleepControl.Activity</label>
+				<align>center</align>
+				<font>font40</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<!-- *** Sleep Method *** -->
+			<control>
+				<description>Sleep Method</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>360</posX>
+				<posY>472</posY>
+				<width>1200</width>
+				<label>#SleepControl.Method</label>
+				<align>center</align>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<!-- *** Sleep Counter *** -->
+			<control>
+				<description>Sleep Counter</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>360</posX>
+				<posY>577</posY>
+				<width>1200</width>
+				<label>#SleepControl.Counter</label>
+				<align>center</align>
+				<font>font40</font>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<!-- *** Sleep Start/End *** -->
+			<control>
+				<description>Sleep Method</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>360</posX>
+				<posY>652</posY>
+				<width>1200</width>
+				<label>#SleepControl.Start #SleepControl.End</label>
+				<align>center</align>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<!-- *** Sleep Status *** -->
+			<control>
+				<description>Sleep Status</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>360</posX>
+				<posY>712</posY>
+				<width>1200</width>
+				<label>#SleepControl.Status</label>
+				<align>center</align>
+				<font>font16</font>
+				<textcolor>#ColorAlternate</textcolor>
+			</control>
+			<!-- *** Recording Count *** -->
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>360</posX>
+				<posY>765</posY>
+				<width>1200</width>
+				<align>center</align>
+				<label>#SleepControl.RecordingTimerCount possible recording timer found</label>
+				<visible>!string.equals(#SleepControl.Recordings, )</visible>
+			</control>
+			<!-- *** Recording List *** -->
+			<control>
+				<description>Text</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>360</posX>
+				<posY>795</posY>
+				<width>1200</width>
+				<height>247</height>
+				<textalign>center</textalign>
+				<font>font13</font>
+				<textcolor>#ColorAlternate</textcolor>
+				<label>#SleepControl.Recordings</label>
+			</control>
+		</control>
+		<!-- *** Button *** -->
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>577</width>
+				<height>79</height>
+				<texture>bg_button_nofocus_top.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Sleep Mode</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Sleep Mode</label>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Set Timer manually</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Set Timer manually</label>
+					<onup>2</onup>
+					<ondown>4</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Set Timer by recording selection</description>
+					<type>button</type>
+					<id>4</id>
+					<label>Set Timer by recording selection</label>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Start/Stop Timer</description>
+					<type>button</type>
+					<id>5</id>
+					<label>Start Timer</label>
+					<onup>4</onup>
+					<ondown>6</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Pause Timer</description>
+					<type>button</type>
+					<id>6</id>
+					<label>Pause Timer</label>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Increment Timer</description>
+					<type>button</type>
+					<id>7</id>
+					<label>Increment Timer</label>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Decrement Timer</description>
+					<type>button</type>
+					<id>8</id>
+					<label>Decrement Timer</label>
+					<onup>7</onup>
+					<ondown>9</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Wait until tasks finished</description>
+					<type>checkbutton</type>
+					<id>9</id>
+					<label>Wait until tasks finished</label>
+					<onup>8</onup>
+					<ondown>10</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Volume Reduction</description>
+					<type>checkbutton</type>
+					<id>10</id>
+					<label>Volume Reduction</label>
+					<onup>9</onup>
+					<ondown>2</ondown>
+					<onright>50</onright>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>Dummy Button</description>
+			<type>button</type>
+			<id>50</id>
+			<label>-</label>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+	</controls>
+</window>
