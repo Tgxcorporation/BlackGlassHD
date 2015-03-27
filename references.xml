@@ -4,7 +4,7 @@
 	<skin>
 		<width>1920</width>
 		<height>1080</height>
-		<version>1.9.0.0</version>
+		<version>1.4.0.0</version>
 		<author>Tgx</author>
 	</skin>
 	<define>#ColorMain:ffffffff</define>

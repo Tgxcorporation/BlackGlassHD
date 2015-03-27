@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <profile>
   <section name="booleansettings">
-    <entry name="#skin.tvguide.usecolorsforbuttons">False</entry>
-    <entry name="#skin.tvguide.usecolorsforgenre">False</entry>
+    <entry name="#skin.tvguide.usecolorsforbuttons">True</entry>
+    <entry name="#skin.tvguide.usecolorsforgenre">True</entry>
     <entry name="#skin.tvguide.useborderhighlight">False</entry>
-    <entry name="#skin.tvguide.showgenrekey">False</entry>
+    <entry name="#skin.tvguide.showgenrekey">True</entry>
     <entry name="#skin.fanart.basichome">False</entry>
     <entry name="#skin.no.latestmedia">False</entry>
     <entry name="#skin.no.category.fanart">False</entry>
+    <entry name="#skin.enable.latest.Series">False</entry>
+    <entry name="#skin.enable.latest.MovingPictures">False</entry>
+    <entry name="#skin.enable.latest.myVideo">False</entry>
+    <entry name="#skin.show.selectedbackdrops">False</entry>
   </section>
   <section name="theme">
     <entry name="name">Skin default</entry>
@@ -35,5 +39,11 @@
     <entry name="genre4">00000000,00000000</entry>
     <entry name="genre5">00000000,00000000</entry>
     <entry name="genre6">00000000,00000000</entry>
+  </section>
+  <section name="stringsettings">
+    <entry name="#skin.layout.movingpictures.thumbview">default</entry>
+    <entry name="#skin.tvguide.rows"> 7</entry>
+    <entry name="#skin.mymusic.info">None</entry>
+    <entry name="#skin.basichome.moviePlugin">MyVideo</entry>
   </section>
 </profile>

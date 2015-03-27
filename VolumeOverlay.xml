@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    <id>3004</id>
+    <defaultcontrol>2</defaultcontrol>
+    <controls>
+        <control>
+            <type>image</type>
+            <id>501</id>
+            <posX>607</posX>
+            <posY>33</posY>
+            <width>705</width>
+            <height>160</height>
+            <texture>volume.states.back.png</texture>
+            <animation effect="fade" time="100">visiblechange</animation>
+            <animation effect="fade" time="100">WindowOpen</animation>
+        </control>
+        <control>
+            <type>image</type>
+            <id>502</id>
+            <posX>607</posX>
+            <posY>33</posY>
+            <width>705</width>
+            <height>160</height>
+            <texture>volume.states.muted.png</texture>
+            <animation effect="fade" time="100">visiblechange</animation>
+            <animation effect="fade" time="100">WindowOpen</animation>
+        </control>
+        <control>
+            <type>volumebar</type>
+            <id>503</id>
+            <posX>672</posX>
+            <posY>96</posY>
+            <width>576</width>
+            <align>left</align>
+            <height>36</height>
+            <imageHeight>3</imageHeight>
+            <texture>volume.states.png</texture>
+            <colordiffuse>#ColorMain</colordiffuse>
+            <animation effect="fade" time="100">visiblechange</animation>
+            <animation effect="fade" time="100">WindowOpen</animation>
+        </control>
+    </controls>
+</window> 
