@@ -17,7 +17,7 @@
 			<posY>0</posY>
 			<width>1200</width>
 			<height>1080</height>
-			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<visible allowhiddenfocus="true">!control.isvisible(50)+!control.isvisible(51)</visible>
 		</control>
 		<control>
 			<description>dummy tech info</description>		

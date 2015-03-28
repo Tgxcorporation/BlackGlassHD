@@ -12,29 +12,17 @@
 	are parameters to give the skinner a tiny bit more control over the presentation.
 	-->
 	<define>#largeicons.available:true</define>
-	<!-- true if this skin implements the largeicons view -->
 	<define>#largeicons.backdrop.used:true</define>
-	<!-- true if backdrop (fanart) should be displayed in this view -->
 	<define>#smallicons.available:true</define>
-	<!-- Set to true if this skin implements the smallicons view -->
 	<define>#smallicons.backdrop.used:true</define>
-	<!-- true if backdrop (fanart) should be displayed in this view -->
 	<define>#list.available:true</define>
-	<!-- Set to true if this skin implements the list view -->
 	<define>#list.backdrop.used:true</define>
-	<!-- true if backdrop (fanart) should be displayed in this view -->
 	<define>#filmstrip.available:true</define>
-	<!-- Set to true if this skin implements the filmstrip view -->
 	<define>#filmstrip.backdrop.used:true</define>
-	<!-- true if backdrop (fanart) should be displayed in this view -->
 	<define>#coverflow.available:true</define>
-	<!-- Set to true if this skin implements the coverflow view -->
 	<define>#coverflow.backdrop.used:true</define>
-	<!-- true if backdrop (fanart) should be displayed in this view -->
 	<define>#categories.backdrop.used:true</define>
-	<!-- true if backdrop (fanart) should be displayed in this view -->
 	<define>#details.backdrop.used:true</define>
-	<!-- true if backdrop (fanart) should be displayed in this view -->
 	<!-- Change the values below to adjust the delay  in (seconds) that text scrolls in movie overviews -->
 	<define>#textboxscrolldelay.list:12</define>
 	<define>#textboxscrolldelay.thumbs:12</define>
@@ -66,7 +54,15 @@
 			<posY>-112</posY>
 			<width>0</width>
 		</control>
-		<control>
+        <control>
+            <description>Visibile when Parental Controls are enabled</description>
+            <type>image</type>
+            <id>16</id>
+            <posX>-112</posX>
+            <posY>-112</posY>
+            <width>0</width>
+        </control>
+        <control>
 			<description>Visibile when movies are filtered.</description>
 			<type>image</type>
 			<id>17</id>

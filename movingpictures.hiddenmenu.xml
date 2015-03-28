@@ -92,16 +92,26 @@
 					<label>#MovingPictures.Translation.SortBy.Label: #MovingPictures.Sort.Field</label>
 					<onright>50</onright>
 					<onup>4</onup>
-					<ondown>15</ondown>
+					<ondown>19</ondown>
 					<visible>control.isvisible(50)+!control.isvisible(51)</visible>
 				</control>
+                <control>
+                    <description>Search</description>
+                    <type>button</type>
+                    <id>19</id>
+                    <label>#MovingPictures.Translation.Search.Label ...</label>
+                    <onright>50</onright>
+                    <ondown>15</ondown>
+                    <onup>14</onup>
+                    <visible>control.isvisible(50)+!control.isvisible(51)</visible>
+                </control>
 				<control>
 					<description>Parental controls</description>
 					<type>button</type>
 					<id>15</id>
-					<label>#MovingPictures.Translation.ToggleParentalLock.Label</label>
+                    <label>#MovingPictures.Translation.ToggleParentalLock.Label</label>
 					<onright>50</onright>
-					<onup>14</onup>
+					<onup>19</onup>
 					<ondown>97259</ondown>
 					<visible>control.isvisible(50)+!control.isvisible(51)</visible>
 				</control>
@@ -109,7 +119,7 @@
 					<description>Importer</description>
 					<type>button</type>
 					<id>97259</id>
-					<label>Importer (#MovingPictures.Importer.NeedInput.Count Pending)</label>
+                    <label>#MovingPictures.Importer.Menu.Label ...</label>
 					<hyperlink>96743</hyperlink>
 					<onup>15</onup>
 					<ondown>66614</ondown>
