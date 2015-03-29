@@ -2,59 +2,37 @@
 <!--            :: HIDDEN MENU ::            -->
 <window>
 	<controls>
-
-		<control>
+		<control Style="LeftMenuGroup">
 			<type>actiongroup</type>
-			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
 			<onexit>2</onexit>
-			<buttonX>150</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>427</buttonwidth>
-			<buttonheight>1080</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>637</width>
-			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
 			<visible>control.isvisible(50)+!control.isvisible(51)</visible>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
-			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
-			<control>
+            <control Style="LeftMenuBackground">
 				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>627</width>
-				<height>1080</height>
-				<texture>bg_left.png</texture>
 			</control>
-			<control>
-				<id>0</id>
+            <control Style="LeftMenuHeader">
 				<type>label</type>
-				<posX>45</posX>
-				<posY>52</posY>
-				<label>924</label>
-				<width>499</width>
-				<font>font24</font>
 			</control>
-			<control>
+            <control Style="LeftMenuTopLine">
 				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>71</posY>
-				<width>577</width>
-				<height>79</height>
-				<texture>bg_button_nofocus_top.png</texture>
 			</control>
+            <control Style="LeftMenuTopLine">
+                <type>image</type>
+            </control>
+            <control Style="LeftMenuBottomLine">
+                <type>image</type>
+            </control>
+            <control Style="LeftMenuBottomLine">
+                <type>image</type>
+            </control>
 			<control>
 				<type>group</type>
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>0</posX>
-				<posY>150</posY>
+				<posY>78</posY>
 				<control>
 					<description>Cycle View</description>
 					<type>button</type>
@@ -142,19 +120,19 @@
 				<description>Parental controls Lock Indicator</description>
 				<type>image</type>
 				<id>16</id>
-				<posX>0</posX>
-				<posY>1013</posY>
-				<width>45</width>
-				<height>45</height>
+				<posX>5</posX>
+				<posY>1018</posY>
+				<width>35</width>
+				<height>35</height>
 				<texture>lock2.png</texture>
 			</control>
 			<control>
 				<description>Current Category</description>
 				<type>label</type>
 				<id>9916</id>
-				<font>font11</font>
+				<font>font10</font>
 				<posX>45</posX>
-				<posY>1020</posY>
+				<posY>1022</posY>
 				<wrapString> : : : </wrapString>
 				<width>510</width>
 				<label>#MovingPictures.CurrentNode.name</label>
@@ -164,9 +142,9 @@
 				<description>Current Category / Filter</description>
 				<type>label</type>
 				<id>9917</id>
-				<font>font11</font>
+				<font>font10</font>
 				<posX>45</posX>
-				<posY>1020</posY>
+				<posY>1022</posY>
 				<wrapString> : : : </wrapString>
 				<width>510</width>
 				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
@@ -176,9 +154,9 @@
 				<description>Current Category</description>
 				<type>label</type>
 				<id>9918</id>
-				<font>font11</font>
+				<font>font10</font>
 				<posX>45</posX>
-				<posY>1020</posY>
+				<posY>1022</posY>
 				<wrapString> : : : </wrapString>
 				<width>510</width>
 				<label>#MovingPictures.CurrentNode.name</label>
@@ -188,15 +166,14 @@
 				<description>Current Category / Filter</description>
 				<type>label</type>
 				<id>9919</id>
-				<font>font11</font>
+				<font>font10</font>
 				<posX>45</posX>
-				<posY>1020</posY>
+				<posY>1022</posY>
 				<wrapString> : : : </wrapString>
 				<width>510</width>
 				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
 				<visible>control.isvisible(16)+control.isvisible(17)</visible>
 			</control>
-
 		</control>
 	</controls>
 </window>
