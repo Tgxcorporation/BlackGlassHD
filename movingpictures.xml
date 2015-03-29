@@ -3,7 +3,8 @@
 <window>
 	<id>96742</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:#MovingPictures.Settings.HomeScreenName</define>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+    <define>#header.label:#MovingPictures.Settings.HomeScreenName</define>
 	<define>#header.background:hover_moving pictures.png</define>
 	<define>#header.fanart:#MovingPictures.SelectedMovie.title</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>

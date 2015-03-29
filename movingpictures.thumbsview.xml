@@ -107,7 +107,7 @@ This file should contain the list view
 				<description>Subtitle value</description>
 				<type>label</type>
 				<id>1</id>
-				<posX>38</posX>
+				<posX>390</posX>
 				<posY>685</posY>
 				<width>380</width>
 				<label>(#MovingPictures.SelectedMovie.score.localized)</label>
