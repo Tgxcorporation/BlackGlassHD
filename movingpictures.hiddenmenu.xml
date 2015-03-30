@@ -129,11 +129,7 @@
 				<description>Current Category</description>
 				<type>label</type>
 				<id>9916</id>
-				<font>font10</font>
-				<posX>45</posX>
-				<posY>1022</posY>
-				<wrapString> : : : </wrapString>
-				<width>510</width>
+
 				<label>Parental Controls Enabled</label>
 				<visible>control.isvisible(16)</visible>
 			</control>

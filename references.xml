@@ -915,15 +915,24 @@
     <style Name="LeftMenuHeader">
         <id>0</id>
         <posX>45</posX>
-        <posY>43</posY>
+        <posY>37</posY>
         <label>924</label>
         <width>499</width>
-        <font>font8</font>
+        <font>font10</font>
+        <wrapString> : : : </wrapString>
+    </style>
+    <style Name="LeftMenuFooter">
+        <id>0</id>
+        <font>font10</font>
+        <posX>45</posX>
+        <posY>1022</posY>
+        <wrapString> : : : </wrapString>
+        <width>510</width>
     </style>
     <style Name="LeftMenuTopLine">
         <id>0</id>
         <posX>0</posX>
-        <posY>-1</posY>
+        <posY>2</posY>
         <width>577</width>
         <height>79</height>
         <texture>bg_button_nofocus_top.png</texture>
@@ -931,7 +940,7 @@
     <style Name="LeftMenuBottomLine">
         <id>0</id>
         <posX>0</posX>
-        <posY>922</posY>
+        <posY>925</posY>
         <width>577</width>
         <height>79</height>
         <texture>bg_button_nofocus_top.png</texture>
@@ -956,7 +965,7 @@
         <description>button group</description>
         <layout>StackLayout(0, Vertical, true)</layout>
         <posX>0</posX>
-        <posY>78</posY>
+        <posY>81</posY>
     </style>
     <!--COMMON WINDOW-->
     <style Name="WindowTitle">
