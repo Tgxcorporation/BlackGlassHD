@@ -27,26 +27,23 @@
 			<font>font28</font>
 			<textcolor>#ColorAlternate</textcolor>
 		</control> -->
-		<control>
+		<control Style="LeftMenuHeader">
 			<description>Heading text label</description>
 			<type>label</type>
 			<id>4</id>
-			<posX>713</posX>
-			<posY>49</posY>
+			<posX>710</posX>
 			<label>181</label>
-			<font>font24</font>
 			<width>1060</width>
-			<textcolor>#ColorMain</textcolor>
 			<animation effect="fade" time="500" reversible="false">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Exit button</description>
 			<type>button</type>
 			<id>2</id>
-			<posX>1800</posX>
-			<posY>62</posY>
-			<width>50</width>
-			<height>50</height>
+			<posX>1857</posX>
+			<posY>28</posY>
+			<width>45</width>
+			<height>45</height>
 			<textureFocus>topbar_exit_focus.png</textureFocus>
 			<textureNoFocus>topbar_exit_nofocus.png</textureNoFocus>
 			<label>-</label>
@@ -57,17 +54,30 @@
 			<dimColor>#ColorAlternate</dimColor>
 			<animation effect="fade" time="500" reversible="false">WindowOpen</animation>
 		</control>
-		<control>
+		<control Style="LeftMenuTopLine">
 			<type>image</type>
-			<id>0</id>
 			<posX>665</posX>
-			<posY>71</posY>
 			<width>1255</width>
-			<height>79</height>
-			<texture>bg_facade_line_nofocus_top.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
 			<animation effect="fade" time="500" reversible="false">WindowOpen</animation>
 		</control>
+        <control Style="LeftMenuTopLine">
+            <type>image</type>
+            <posX>665</posX>
+            <width>1255</width>
+            <animation effect="fade" time="500" reversible="false">WindowOpen</animation>
+        </control>
+        <control Style="LeftMenuBottomLine">
+            <type>image</type>
+            <posX>665</posX>
+            <width>1255</width>
+            <animation effect="fade" time="500" reversible="false">WindowOpen</animation>
+        </control>
+        <control Style="LeftMenuBottomLine">
+            <type>image</type>
+            <posX>665</posX>
+            <width>1255</width>
+            <animation effect="fade" time="500" reversible="false">WindowOpen</animation>
+        </control>
 		<control>
 			<type>group</type>
 			<description>group element</description>
@@ -76,34 +86,22 @@
 				<type>listcontrol</type>
 				<id>3</id>
 				<posX>665</posX>
-				<posY>150</posY>
+				<posY>81</posY>
 				<width>1255</width>
 				<height>900</height>
 				<onleft>2</onleft>
 				<onright>2</onright>
-				<spinPosX>1770</spinPosX>
-				<spinPosY>982</spinPosY>
-				<textYOff>11</textYOff>
-				<textXOff>-30</textXOff>
+				<spinPosX>1810</spinPosX>
+				<spinPosY>1015</spinPosY>
+				<textXOff>-37</textXOff>
 				<textXOff2>1117</textXOff2>
 				<PinIconXOff>1234</PinIconXOff>
 				<PinIconYOff>19</PinIconYOff>
 				<IconXOff>1135</IconXOff>
 				<IconYOff>12</IconYOff>
-				<itemWidth>72</itemWidth>
-				<itemHeight>55</itemHeight>
-				<font>font18</font>
-				<font2>font18</font2>
-				<font3>font18</font3>
-				<textureHeight>79</textureHeight>
-				<textureFocus>bg_facade_line_focus.png</textureFocus>
-				<textureNoFocus>bg_facade_line_nofocus.png</textureNoFocus>
-				<spaceBetweenItems>0</spaceBetweenItems>
 				<remoteColor>#ColorOffline</remoteColor>
 				<playedColor>ff77ccff</playedColor>
 				<downloadColor>ff707070</downloadColor>
-				<textYOff2>11</textYOff2>
-				<textYOff3>11</textYOff3>
 				<animation effect="fade" time="500" reversible="false">WindowOpen</animation>
 			</control>
 		</control>
