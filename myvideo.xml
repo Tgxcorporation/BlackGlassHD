@@ -3,7 +3,9 @@
 <window>
 	<id>6</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:3</define>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+    <define>#header.label:3</define>
+	<define>#header.subLabel:134</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_my videos.png</define>
 	<define>#header.fanart:</define>
@@ -27,7 +29,7 @@
 			</control>
             <control Style="WindowSubTitle">
                 <type>fadelabel</type>
-                <label>#header.label</label>
+                <label>#header.subLabel</label>
             </control>
 			<control Style="FanartDisplayAnimation">
 				<type>image</type>

@@ -134,44 +134,8 @@
 				<posY>1022</posY>
 				<wrapString> : : : </wrapString>
 				<width>510</width>
-				<label>#MovingPictures.CurrentNode.name</label>
-				<visible>!control.isvisible(16)+!control.isvisible(17)</visible>
-			</control>
-			<control>
-				<description>Current Category / Filter</description>
-				<type>label</type>
-				<id>9917</id>
-				<font>font10</font>
-				<posX>45</posX>
-				<posY>1022</posY>
-				<wrapString> : : : </wrapString>
-				<width>510</width>
-				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
-				<visible>!control.isvisible(16)+control.isvisible(17)</visible>
-			</control>
-			<control>
-				<description>Current Category</description>
-				<type>label</type>
-				<id>9918</id>
-				<font>font10</font>
-				<posX>45</posX>
-				<posY>1022</posY>
-				<wrapString> : : : </wrapString>
-				<width>510</width>
-				<label>#MovingPictures.CurrentNode.name</label>
-				<visible>control.isvisible(16)+!control.isvisible(17)</visible>
-			</control>
-			<control>
-				<description>Current Category / Filter</description>
-				<type>label</type>
-				<id>9919</id>
-				<font>font10</font>
-				<posX>45</posX>
-				<posY>1022</posY>
-				<wrapString> : : : </wrapString>
-				<width>510</width>
-				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
-				<visible>control.isvisible(16)+control.isvisible(17)</visible>
+				<label>Parental Controls Enabled</label>
+				<visible>control.isvisible(16)</visible>
 			</control>
 		</control>
 	</controls>

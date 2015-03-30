@@ -13,53 +13,38 @@
 			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.isvisible(51)+!control.hasfocus(505050)">conditional</animation>
 			<visible>control.isvisible(51)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-			<control>
-				<type>fadelabel</type>
-				<width>1275</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>15</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
-			</control>
-			<control>
-				<description>Date</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>63</posY>
-				<label>#date</label>
-				<align>right</align>
-				<font>font11</font>
-				<visible>!plugin.isenabled(World Weather)</visible>
-				<textcolor>aaffffff</textcolor>
-			</control>
-			<control>
-				<description>Date</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>63</posY>
-				<label>#WorldWeather.TodayTemperature     #date</label>
-				<align>right</align>
-				<font>font11</font>
-				<visible>plugin.isenabled(World Weather)</visible>
-				<textcolor>aaffffff</textcolor>
-			</control>
-			<control>
-				<description>Time</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>22</posY>
-				<label>#time</label>
-				<align>right</align>
-				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
-			</control>
+            <control Style="WindowTitle">
+                <type>fadelabel</type>
+                <label>#header.label</label>
+            </control>
+            <control Style="WindowSubTitle">
+                <type>fadelabel</type>
+                <label>#(L(100000))</label>
+            </control>
+            <control Style="WindowTitle">
+                <description>Time</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#time</label>
+                <align>right</align>
+            </control>
+            <control Style="WindowSubTitle">
+                <description>Date</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#date</label>
+                <align>right</align>
+                <visible>!plugin.isenabled(World Weather)</visible>
+            </control>
+            <control Style="WindowSubTitle">
+                <description>Date</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#WorldWeather.TodayTemperature     #date</label>
+                <align>right</align>
+                <visible>plugin.isenabled(World Weather)</visible>
+            </control>
+
 			<control>
 				<description>Default Image</description>
 				<type>image</type>
@@ -97,53 +82,37 @@
 			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.isvisible(51)+!control.hasfocus(505050)">conditional</animation>
 			<visible>control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-			<control>
-				<type>fadelabel</type>
-				<width>1275</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>15</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
-			</control>
-			<control>
-				<description>Date</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>63</posY>
-				<label>#date</label>
-				<align>right</align>
-				<font>font11</font>
-				<visible>!plugin.isenabled(World Weather)</visible>
-				<textcolor>aaffffff</textcolor>
-			</control>
-			<control>
-				<description>Date</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>63</posY>
-				<label>#WorldWeather.TodayTemperature     #date</label>
-				<align>right</align>
-				<font>font11</font>
-				<visible>plugin.isenabled(World Weather)</visible>
-				<textcolor>aaffffff</textcolor>
-			</control>
-			<control>
-				<description>Time</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>22</posY>
-				<label>#time</label>
-				<align>right</align>
-				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
-			</control>
+            <control Style="WindowTitle">
+                <type>fadelabel</type>
+                <label>#header.label</label>
+            </control>
+            <control Style="WindowSubTitle">
+                <type>fadelabel</type>
+                <label>#(iif(eq(#MovingPictures.Filter.Name,' '),'#MovingPictures.CurrentNode.name','#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name'))</label>
+            </control>
+            <control Style="WindowTitle">
+                <description>Time</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#time</label>
+                <align>right</align>
+            </control>
+            <control Style="WindowSubTitle">
+                <description>Date</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#date</label>
+                <align>right</align>
+                <visible>!plugin.isenabled(World Weather)</visible>
+            </control>
+            <control Style="WindowSubTitle">
+                <description>Date</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#WorldWeather.TodayTemperature     #date</label>
+                <align>right</align>
+                <visible>plugin.isenabled(World Weather)</visible>
+            </control>
 		</control>
 		<!-- DETAILS -->
 		<control>
@@ -154,53 +123,37 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(6)+[!control.isvisible(50)]+!control.hasfocus(505060)+!control.hasfocus(90001)">conditional</animation>
 			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-			<control>
-				<type>fadelabel</type>
-				<width>1275</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>15</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
-			</control>
-			<control>
-				<description>Date</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>63</posY>
-				<label>#date</label>
-				<align>right</align>
-				<font>font11</font>
-				<visible>!plugin.isenabled(World Weather)</visible>
-				<textcolor>aaffffff</textcolor>
-			</control>
-			<control>
-				<description>Date</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>63</posY>
-				<label>#WorldWeather.TodayTemperature     #date</label>
-				<align>right</align>
-				<font>font11</font>
-				<visible>plugin.isenabled(World Weather)</visible>
-				<textcolor>aaffffff</textcolor>
-			</control>
-			<control>
-				<description>Time</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>22</posY>
-				<label>#time</label>
-				<align>right</align>
-				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
-			</control>
+            <control Style="WindowTitle">
+                <type>fadelabel</type>
+                <label>#header.label</label>
+            </control>
+            <control Style="WindowSubTitle">
+                <type>fadelabel</type>
+                <label>#(L(1020))</label>
+            </control>
+            <control Style="WindowTitle">
+                <description>Time</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#time</label>
+                <align>right</align>
+            </control>
+            <control Style="WindowSubTitle">
+                <description>Date</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#date</label>
+                <align>right</align>
+                <visible>!plugin.isenabled(World Weather)</visible>
+            </control>
+            <control Style="WindowSubTitle">
+                <description>Date</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#WorldWeather.TodayTemperature     #date</label>
+                <align>right</align>
+                <visible>plugin.isenabled(World Weather)</visible>
+            </control>
 		</control>
 	</controls>
 </window>

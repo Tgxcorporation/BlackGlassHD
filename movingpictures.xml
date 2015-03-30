@@ -5,6 +5,7 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
     <define>#header.label:#MovingPictures.Settings.HomeScreenName</define>
+    <define>#header.subLabel:#MovingPictures.Settings.HomeScreenName</define>
 	<define>#header.background:hover_moving pictures.png</define>
 	<define>#header.fanart:#MovingPictures.SelectedMovie.title</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -35,48 +36,40 @@
 			<description>Visibile when filtering by watched flag. Only unwatched movies are listed.</description>
 			<type>label</type>
 			<id>8</id>
-			<posX>-112</posX>
-			<posY>-112</posY>
+			<posX>-3112</posX>
+			<posY>-3112</posY>
 			<width>0</width>
 		</control>
 		<control>
 			<description>Visibile when the currently selected movie has been watched</description>
 			<type>label</type>
 			<id>9</id>
-			<posX>-112</posX>
-			<posY>-112</posY>
+			<posX>-3112</posX>
+			<posY>-3112</posY>
 			<width>0</width>
 		</control>
 		<control>
 			<description>Visibile when filtering by remote control searching.</description>
 			<type>label</type>
 			<id>10</id>
-			<posX>-112</posX>
-			<posY>-112</posY>
+			<posX>-3112</posX>
+			<posY>-3112</posY>
 			<width>0</width>
 		</control>
-        <control>
-            <description>Visibile when Parental Controls are enabled</description>
-            <type>image</type>
-            <id>16</id>
-            <posX>-112</posX>
-            <posY>-112</posY>
-            <width>0</width>
-        </control>
         <control>
 			<description>Visibile when movies are filtered.</description>
 			<type>image</type>
 			<id>17</id>
-			<posX>-112</posX>
-			<posY>-112</posY>
+			<posX>-3112</posX>
+			<posY>-3112</posY>
 			<width>0</width>
 		</control>
 		<control>
 			<description>Visibile when movie playback has started</description>
 			<type>image</type>
 			<id>18</id>
-			<posX>-112</posX>
-			<posY>-112</posY>
+			<posX>-3112</posX>
+			<posY>-3112</posY>
 			<width>0</width>
 		</control>
 		<!--            :: BACKGROUNDS :: MOVIE BACKDROP :: OVERLAYS ::            -->
@@ -95,7 +88,7 @@
 			<animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="250" condition="window.isvisible(96742)">conditional</animation>
-			<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above 
+			<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above
 			   defines for conditional visibility if you dont want to use fan-art only specific views. -->
 		</control>
 		<control>
@@ -111,7 +104,7 @@
 			<animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="250" condition="window.isvisible(96742)">conditional</animation>
-			<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above 
+			<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above
 			   defines for conditional visibility if you dont want to use fan-art only specific views. -->
 		</control>
 		<import>common.window.overlay.xml</import>
