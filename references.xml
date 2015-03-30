@@ -769,21 +769,21 @@
 		<type>sortbutton</type>
 		<id>0</id>
 		<width>577</width>
-		<height>79</height>
+		<height>71</height>
 		<textXOff>45</textXOff>
-		<textYOff>13</textYOff>
-		<textureFocus>bg_button_focus.png</textureFocus>
-		<textureNoFocus>bg_button_nofocus.png</textureNoFocus>
+		<textYOff>17</textYOff>
+		<textureFocus>bg_button_focus_71.png</textureFocus>
+		<textureNoFocus>bg_button_nofocus_71.png</textureNoFocus>
 		<textureAscending>sortbutton_up_nofocus.png</textureAscending>
 		<textureAscendingFocused>sortbutton_up_focus.png</textureAscendingFocused>
 		<textureDescending>sortbutton_down_nofocus.png</textureDescending>
 		<textureDescendingFocused>sortbutton_down_focus.png</textureDescendingFocused>
 		<offsetSortButtonX>522</offsetSortButtonX>
 		<offsetSortButtonY>17</offsetSortButtonY>
-		<offsetSortButtonHeight>45</offsetSortButtonHeight>
-		<offsetSortButtonWidth>45</offsetSortButtonWidth>
+		<offsetSortButtonHeight>38</offsetSortButtonHeight>
+		<offsetSortButtonWidth>38</offsetSortButtonWidth>
 		<label>103</label>
-		<font>font18</font>
+		<font>font14</font>
 		<selectedColor>#ColorMain</selectedColor>
 		<textcolor>#ColorMain</textcolor>
 		<disabledcolor>#ColorDisabled</disabledcolor>
@@ -795,9 +795,9 @@
 		<id>0</id>
 		<mode>spinlist</mode>
 		<width>577</width>
-		<height>79</height>
+		<height>71</height>
 		<textXOff>45</textXOff>
-		<textYOff>12</textYOff>
+		<textYOff>17</textYOff>
 		<textureUp>spin_up_nofocus.png</textureUp>
 		<textureDown>spin_down_nofocus.png</textureDown>
 		<textureUpFocus>spin_up_focus.png</textureUpFocus>
@@ -815,14 +815,14 @@
 		<cycleItems>yes</cycleItems>
 		<dialogTitle/>
 		<dialogShowNumbers>no</dialogShowNumbers>
-		<font>font18</font>
+		<font>font14</font>
 		<textcolor>#ColorMain</textcolor>
 		<colordiffuse>#ColorMain</colordiffuse>
 		<disabledcolor>#ColorDisabled</disabledcolor>
 		<textcolorNoFocus>#ColorUnfocused</textcolorNoFocus>
 		<dimColor>ff000000</dimColor>
-		<textureFocus>bg_button_focus.png</textureFocus>
-		<textureNoFocus>bg_button_nofocus.png</textureNoFocus>
+		<textureFocus>bg_button_focus_71.png</textureFocus>
+		<textureNoFocus>bg_button_nofocus_71.png</textureNoFocus>
 	</control>
 
 
@@ -937,9 +937,9 @@
         <texture>bg_button_nofocus_top.png</texture>
     </style>
     <style Name="LeftMenuGroup">
-        <buttonX>150</buttonX>
+        <buttonX>0</buttonX>
         <buttonY>0</buttonY>
-        <buttonwidth>427</buttonwidth>
+        <buttonwidth>577</buttonwidth>
         <buttonheight>1080</buttonheight>
         <textureFocus>-</textureFocus>
         <textureNoFocus>-</textureNoFocus>
@@ -947,7 +947,16 @@
         <height>1080</height>
         <dimColor>#ColorMain</dimColor>
         <animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+        <animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
         <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+        <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+    </style>
+    <style Name="LeftMenuStack">
+        <description>button group</description>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>0</posX>
+        <posY>78</posY>
     </style>
 
 </controls>

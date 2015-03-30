@@ -6,7 +6,9 @@
 			<type>actiongroup</type>
 			<defaultcontrol>2</defaultcontrol>
 			<onexit>2</onexit>
-			<visible>control.isvisible(50)+!control.isvisible(51)</visible>
+            <buttonX>150</buttonX>
+            <buttonwidth>427</buttonwidth>
+            <visible>control.isvisible(50)+!control.isvisible(51)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
@@ -28,11 +30,8 @@
             <control Style="LeftMenuBottomLine">
                 <type>image</type>
             </control>
-			<control>
-				<type>group</type>
-				<layout>StackLayout(0, Vertical, true)</layout>
-				<posX>0</posX>
-				<posY>78</posY>
+            <control Style="LeftMenuStack">
+                <type>group</type>
 				<control>
 					<description>Cycle View</description>
 					<type>button</type>

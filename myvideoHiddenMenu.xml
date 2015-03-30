@@ -1,60 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
 	<controls>
-		<control>
+        <control Style="LeftMenuGroup">
 			<type>actiongroup</type>
-			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
 			<onexit>0</onexit>
-			<buttonX>0</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>577</buttonwidth>
-			<buttonheight>1080</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>637</width>
-			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
-			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>627</width>
-				<height>1080</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
-			</control>
-			<control>
-				<id>0</id>
-				<type>label</type>
-				<posX>45</posX>
-				<posY>52</posY>
-				<label>924</label>
-				<width>499</width>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>71</posY>
-				<width>577</width>
-				<height>79</height>
-				<texture>bg_button_nofocus_top.png</texture>
-			</control>
-			<control>
-				<description>button group</description>
+            <control Style="LeftMenuBackground">
+                <type>image</type>
+            </control>
+            <control Style="LeftMenuHeader">
+                <type>label</type>
+            </control>
+            <control Style="LeftMenuTopLine">
+                <type>image</type>
+            </control>
+            <control Style="LeftMenuTopLine">
+                <type>image</type>
+            </control>
+            <control Style="LeftMenuBottomLine">
+                <type>image</type>
+            </control>
+            <control Style="LeftMenuBottomLine">
+                <type>image</type>
+            </control>
+			<control Style="LeftMenuStack">
 				<type>group</type>
-				<posX>0</posX>
-				<posY>150</posY>
-				<layout>StackLayout(0, Vertical, true)</layout>
 				<control>
 					<description>View-As</description>
 					<type>menubutton</type>
@@ -155,10 +125,10 @@
 				<description>Content locked</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>0</posX>
-				<posY>1013</posY>
-				<width>45</width>
-				<height>45</height>
+                <posX>5</posX>
+                <posY>1018</posY>
+                <width>35</width>
+                <height>35</height>
 				<texture>lock2.png</texture>
 				<visible>string.equals(#MyVideos.PinLocked, True)+control.isvisible(5050)</visible>
 			</control>
@@ -167,9 +137,9 @@
 				<description>Last Online Update Value</description>
 				<label>#(L(1279)) #lastupdate</label>
 				<type>fadelabel</type>
-				<font>font11</font>
+				<font>font10</font>
 				<posX>45</posX>
-				<posY>1020</posY>
+				<posY>1022</posY>
 				<wrapString> : : : </wrapString>
 				<width>510</width>
 				<visible>control.isvisible(5050)</visible>
