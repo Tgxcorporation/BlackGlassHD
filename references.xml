@@ -212,16 +212,16 @@
 		<type>listcontrol</type>
 		<id>0</id>
 		<posX>735</posX>
-		<posY>150</posY>
+		<posY>152</posY>
 		<width>1185</width>
-		<height>870</height>
-		<textureFocus>bg_facade_line_focus.png</textureFocus>
-		<textureNoFocus>bg_facade_line_nofocus.png</textureNoFocus>
-		<textureHeight>79</textureHeight>
-		<image>emtpy.png</image>
-		<font>font16</font>
-		<font2>font16</font2>
-		<font3>font16</font3>
+		<height>923</height>
+		<textureFocus>bg_facade_line_focus_71.png</textureFocus>
+		<textureNoFocus>bg_facade_line_nofocus_71.png</textureNoFocus>
+		<textureHeight>71</textureHeight>
+		<image>empty.png</image>
+		<font>font14</font>
+		<font2>font14</font2>
+		<font3>font14</font3>
 		<shadedColor>#ColorMain</shadedColor>
 		<selectedColor>#ColorMain</selectedColor>
 		<selectedColor2>#ColorMain</selectedColor2>
@@ -252,15 +252,15 @@
 		<unfocusedAlpha>120</unfocusedAlpha>
 		<IconXOff>15</IconXOff>
 		<IconYOff>5</IconYOff>
-		<itemWidth>92</itemWidth>
-		<itemHeight>69</itemHeight>
+		<itemWidth>79</itemWidth>
+		<itemHeight>59</itemHeight>
 		<spaceBetweenItems>0</spaceBetweenItems>
 		<colordiffuse>#ColorMain</colordiffuse>
 		<scrollStartDelaySec>1</scrollStartDelaySec>
-		<spinWidth>51</spinWidth>
-		<spinHeight>60</spinHeight>
-		<spinPosX>1777</spinPosX>
-		<spinPosY>983</spinPosY>
+		<spinWidth>46</spinWidth>
+		<spinHeight>50</spinHeight>
+        <spinPosX>1810</spinPosX>
+        <spinPosY>1022</spinPosY>
 		<spinAlign>Right</spinAlign>
 		<spinColor>#ColorUnfocused</spinColor>
 		<textureUp>spin_up_nofocus.png</textureUp>
@@ -274,8 +274,8 @@
 		<scrollbarbg>vscrollbar_middle.png</scrollbarbg>
 		<scrollbartop>vscrollbar_left.png</scrollbartop>
 		<scrollbarbottom>vscrollbar_right.png</scrollbarbottom>
-		<scrollbarXOff>-14</scrollbarXOff>
-		<scrollbarwidth>18</scrollbarwidth>
+		<scrollbarXOff>-12</scrollbarXOff>
+		<scrollbarwidth>14</scrollbarwidth>
 	</control>
 	<control>
 		<description>default cover flow</description>

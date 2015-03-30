@@ -37,21 +37,32 @@
 				<type>image</type>
 				<id>0</id>
 				<posX>735</posX>
-				<posY>71</posY>
+				<posY>73</posY>
 				<width>1185</width>
 				<height>79</height>
 				<texture>bg_facade_line_nofocus_top.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
+				<colordiffuse>ffffffff</colordiffuse>
 				<visible>facadeview.list+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
 			</control>
+            <control Style="FanartDisplayAnimation">
+                <type>image</type>
+                <id>0</id>
+                <posX>735</posX>
+                <posY>925</posY>
+                <width>1185</width>
+                <height>79</height>
+                <texture>bg_facade_line_nofocus_top.png</texture>
+                <colordiffuse>ffffffff</colordiffuse>
+                <visible>facadeview.list+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+            </control>
 			<control Style="FanartDisplayAnimation">
 				<description>Itemcount Itemtype</description>
 				<type>label</type>
 				<id>0</id>
 				<posX>765</posX>
-				<posY>989</posY>
+				<posY>1025</posY>
 				<label>0 #(L(507))</label>
-				<font>font16</font>
+				<font>font14</font>
 				<textcolor>#ColorUnfocused</textcolor>
 				<visible>facadeview.list+control.isvisible(50)+string.equals(#itemcount,)</visible>
 			</control>
@@ -60,9 +71,9 @@
 				<type>label</type>
 				<id>0</id>
 				<posX>765</posX>
-				<posY>989</posY>
+				<posY>1025</posY>
 				<label>#itemcount #(L(507))</label>
-				<font>font16</font>
+				<font>font14</font>
 				<textcolor>#ColorUnfocused</textcolor>
 				<visible>facadeview.list+control.isvisible(50)+!string.equals(#itemcount,)</visible>
 			</control>
