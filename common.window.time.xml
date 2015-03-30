@@ -12,40 +12,28 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
-			<control>
+            <control Style="WindowTitle">
+                <description>Time</description>
+                <type>label</type>
+                <posX>1887</posX>
+                <label>#time</label>
+                <align>right</align>
+            </control>
+            <control Style="WindowSubTitle">
 				<description>Date</description>
 				<type>label</type>
-				<id>0</id>
 				<posX>1887</posX>
-				<posY>63</posY>
 				<label>#date</label>
 				<align>right</align>
-				<font>font11</font>
 				<visible>!plugin.isenabled(World Weather)</visible>
-				<textcolor>aaffffff</textcolor>
 			</control>
-			<control>
+			<control Style="WindowSubTitle">
 				<description>Date</description>
 				<type>label</type>
-				<id>0</id>
 				<posX>1887</posX>
-				<posY>63</posY>
 				<label>#WorldWeather.TodayTemperature     #date</label>
 				<align>right</align>
-				<font>font11</font>
 				<visible>plugin.isenabled(World Weather)</visible>
-				<textcolor>aaffffff</textcolor>
-			</control>
-			<control>
-				<description>Time</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1887</posX>
-				<posY>22</posY>
-				<label>#time</label>
-				<align>right</align>
-				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
 			</control>
 		</control>
 	</controls>

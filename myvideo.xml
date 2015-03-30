@@ -21,18 +21,14 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
-			<control>
+			<control Style="WindowTitle">
 				<type>fadelabel</type>
-				<width>1275</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>15</posY>
 				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
 			</control>
+            <control Style="WindowSubTitle">
+                <type>fadelabel</type>
+                <label>#header.label</label>
+            </control>
 			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<description>Current program channel</description>
