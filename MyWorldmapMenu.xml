@@ -19,7 +19,7 @@
         <width>627</width>
         <height>1080</height>
         <texture>bg_left.png</texture>
-        <colorDiffuse>#ColorMain</colorDiffuse>
+        <colorDiffuse>#MainColor</colorDiffuse>
       </control>
       <control>
         <type>label</type>
@@ -29,7 +29,7 @@
         <label>WorldMap</label>
         <font>font24</font>
         <align>left</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
       </control>
       <control>
         <type>image</type>

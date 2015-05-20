@@ -14,7 +14,7 @@
 			<width>1306</width>
 			<height>1080</height>
 			<texture>bg_right.png</texture>
-			<!-- <colorDiffuse>#ColorMain</colorDiffuse> -->
+			<!-- <colorDiffuse>#MainColor</colorDiffuse> -->
 		</control>
 		<!-- 		<control>
 			<description>GFX-Heading "menu" text label</description>
@@ -25,7 +25,7 @@
 			<width>426</width>
 			<label>102012</label>
 			<font>font28</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control> -->
 		<control Style="LeftMenuHeader">
 			<description>Heading text label</description>
@@ -51,7 +51,7 @@
 			<onright>3</onright>
 			<onup>3</onup>
 			<ondown>3</ondown>
-			<dimColor>#ColorAlternate</dimColor>
+			<dimColor>#AlternateColor</dimColor>
 			<animation effect="fade" time="500" reversible="false">WindowOpen</animation>
 		</control>
 		<control Style="LeftMenuTopLine">

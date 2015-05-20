@@ -12,7 +12,7 @@
 			<width>1920</width>
 			<height>1080</height>
 			<texture>black.png</texture>
-			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<colordiffuse>#ListNoFocusColor</colordiffuse>
 		</control>
 		<control>
 			<type>image</type>
@@ -42,7 +42,7 @@
 			<labelOffX>0</labelOffX>
 			<labelOffY>6</labelOffY>
 			<labelFont>font14</labelFont>
-			<labelColor>#ColorMain</labelColor>
+			<labelColor>#MainColor</labelColor>
 			<labelShadowAngle>0</labelShadowAngle>
 			<labelShadowDistance>0</labelShadowDistance>
 			<labelShadowColor>FF000000</labelShadowColor>
@@ -61,7 +61,7 @@
 			<inputTextOffY>27</inputTextOffY>
 			<inputTextFont>font18</inputTextFont>
 			<inputTextBoxTexture>bg_text_keyboard.png</inputTextBoxTexture>
-			<inputTextColor>#ColorMain</inputTextColor>
+			<inputTextColor>#MainColor</inputTextColor>
 			<inputTextShadowAngle>45</inputTextShadowAngle>
 			<inputTextShadowDistance>3</inputTextShadowDistance>
 			<inputTextShadowColor>FF000000</inputTextShadowColor>
@@ -72,12 +72,12 @@
 			<keyTextShadowColor>FF000000</keyTextShadowColor>
 			<keyTextureFocus>bg_button_keyboard_nofocus.png</keyTextureFocus>
 			<keyTextureNoFocus>bg_button_keyboard_focus.png</keyTextureNoFocus>
-			<keyHighlightColor>#ColorMain</keyHighlightColor>
+			<keyHighlightColor>#MainColor</keyHighlightColor>
 			<keyPressedColor>ff909090</keyPressedColor>
 			<keyDisabledColor>ff606060</keyDisabledColor>
-			<keyFontColor>#ColorAlternate</keyFontColor>
-			<keySelFontColor>#ColorMain</keySelFontColor>
-			<keyDisabledFontColor>#ColorUnfocused</keyDisabledFontColor>
+			<keyFontColor>#AlternateColor</keyFontColor>
+			<keySelFontColor>#MainColor</keySelFontColor>
+			<keyDisabledFontColor>#ListNoFocusColor</keyDisabledFontColor>
 		</control>
 	</controls>
 </window>

@@ -21,7 +21,7 @@
 			<label>#header.label</label>
 			<font>font28</font>
 			<align>left</align>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 		</control>
 		<import>common.window.time.stripped.xml</import>
 		<control>
@@ -41,7 +41,7 @@
 			<posY>193</posY>
 			<width>1863</width>
 			<height>528</height>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<texture>-</texture>
 		</control>
 		<control>
@@ -52,7 +52,7 @@
 			<posY>607</posY>
 			<font>font18</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
 			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
@@ -162,7 +162,7 @@
 			<width>165</width>
 			<height>27</height>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 		</control>
 		<control>
 			<description>template for program title light area</description>
@@ -192,7 +192,7 @@
 			<id>26</id>
 			<label>-</label>
 			<font>font16</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<posX>15</posX>
 			<posY>7</posY>
 		</control>
@@ -222,7 +222,7 @@
 			<posX>42</posX>
 			<posY>690</posY>
 			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>!control.hasfocus(100)</visible>
 			<animation effect="rotate" end="90" time="0" condition="!control.hasfocus(100)">conditional</animation>
 		</control>
@@ -233,7 +233,7 @@
 			<posX>42</posX>
 			<posY>690</posY>
 			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>control.hasfocus(100)</visible>
 			<animation effect="rotate" end="90" time="0" condition="control.hasfocus(100)">conditional</animation>
 		</control>
@@ -244,7 +244,7 @@
 			<posX>42</posX>
 			<posY>690</posY>
 			<label>972</label>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>!control.isvisible(100)+!control.isvisible(33)</visible>
 			<animation effect="rotate" end="90" time="0" condition="!control.isvisible(100)+!control.isvisible(33)">conditional</animation>
 		</control>
@@ -373,7 +373,7 @@
 			<posY>855</posY>
 			<align>left</align>
 			<font>font16</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<label>#Radio.Guide.Time      #Radio.Guide.Genre</label>
 		</control>
 		<control>
@@ -385,7 +385,7 @@
 			<width>900</width>
 			<font>font16</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<label>#Radio.Guide.Genre</label>
 		</control>
 		<control>
@@ -433,7 +433,7 @@
 			<width>1859</width>
 			<height>70</height>
 			<texture>bg_tvguide_header.png</texture>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 		</control>
 		<control>
 			<id>0</id>
@@ -443,7 +443,7 @@
 			<width>3</width>
 			<height>511</height>
 			<texture>bg_button_vertical.png</texture>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 		</control>
 		<control>
 			<id>0</id>
@@ -453,7 +453,7 @@
 			<width>3</width>
 			<height>511</height>
 			<texture>bg_button_vertical.png</texture>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 		</control>
 		<!-- NOT USED -->
 		<control>

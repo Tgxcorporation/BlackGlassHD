@@ -15,7 +15,7 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -29,7 +29,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Backdrop Overlay - ListView</description>
@@ -55,7 +55,7 @@
 		<!-- Trakt User -->
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150" delay="100">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">WindowOpen</animation>
@@ -79,7 +79,7 @@
 				<label>#Trakt.User.Username</label>
 				<font>font20</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1200</width>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
@@ -92,7 +92,7 @@
 				<label>#Trakt.User.FullName</label>
 				<font>font13</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<width>1185</width>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
@@ -139,7 +139,7 @@
 				<posY>292</posY>
 				<width>900</width>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.User.JoinDate,)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
 			</control>
@@ -152,7 +152,7 @@
 				<posY>352</posY>
 				<width>900</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.User.Gender,)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
 			</control>
@@ -165,7 +165,7 @@
 				<posY>412</posY>
 				<width>900</width>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.User.Location,)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
 			</control>
@@ -178,7 +178,7 @@
 				<posY>472</posY>
 				<width>900</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.User.Protected,)+!string.equals(#Trakt.View.Level,WatchedHistory)</visible>
 			</control>
@@ -228,7 +228,7 @@
 		<!-- Trakt Episodes -->
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150" delay="100">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">WindowOpen</animation>
@@ -252,7 +252,7 @@
 				<label>#Trakt.Episode.Title</label>
 				<font>font20</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1200</width>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Episode.Season,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
@@ -265,7 +265,7 @@
 				<label>#Trakt.Show.Title     #Trakt.Translation.Season.Label #Trakt.Episode.Season     #Trakt.Translation.Episode.Label #Trakt.Episode.Number</label>
 				<font>font13</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<width>1185</width>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Episode.Season,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
@@ -312,7 +312,7 @@
 				<posY>270</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Show.Year,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
 			</control>
@@ -324,7 +324,7 @@
 				<posY>318</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Show.Network,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
 			</control>
@@ -335,7 +335,7 @@
 				<posY>366</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Show.Airday,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
 			</control>
@@ -347,7 +347,7 @@
 				<posY>414</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Show.Certification,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
 			</control>
@@ -359,7 +359,7 @@
 				<posY>462</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Show.FirstAired,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
 			</control>
@@ -372,7 +372,7 @@
 				<width>720</width>
 				<font>font16</font>
 				<label>#Trakt.Episode.Ratings.Percentage%     #Trakt.Episode.Ratings.Votes #Trakt.Translation.Votes.Label</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!string.equals(#Trakt.Episode.Ratings.Percentage,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,episode)</visible>
 			</control>
 			<control>
@@ -421,7 +421,7 @@
 		<!-- Movies -->
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150" delay="100">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0" reversible="false">WindowOpen</animation>
@@ -445,7 +445,7 @@
 				<label>#Trakt.Movie.Title</label>
 				<font>font20</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1200</width>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Movie.Title,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
@@ -458,7 +458,7 @@
 				<label>#Trakt.Movie.Tagline</label>
 				<font>font13</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<width>1185</width>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Movie.Tagline,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
@@ -517,7 +517,7 @@
 				<posY>270</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Movie.Year,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
 			</control>
@@ -529,7 +529,7 @@
 				<posY>330</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Movie.Certification,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
 			</control>
@@ -540,7 +540,7 @@
 				<posY>390</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Movie.Runtime,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
 			</control>
@@ -552,7 +552,7 @@
 				<posY>450</posY>
 				<width>720</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!string.equals(#Trakt.Movie.Released,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
 			</control>
@@ -565,7 +565,7 @@
 				<width>720</width>
 				<font>font16</font>
 				<label>#Trakt.Movie.Ratings.Percentage%     #Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!string.equals(#Trakt.Movie.Ratings.Percentage,)+string.equals(#Trakt.View.Level,WatchedHistory)+string.equals(#Trakt.Selected.Type,movie)</visible>
 			</control>
 		</control>
@@ -577,7 +577,7 @@
 			<posY>570</posY>
 			<width>720</width>
 			<height>487</height>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<seperator>: : :</seperator>
 			<font>font16</font>
 			<label>#Trakt.Movie.Overview</label>
@@ -594,7 +594,7 @@
 			<posY>510</posY>
 			<width>720</width>
 			<height>307</height>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<seperator>: : :</seperator>
 			<font>font16</font>
 			<label>#Trakt.Movie.Overview</label>
@@ -633,14 +633,14 @@
 					<IconYOff>61</IconYOff>
 					<playedColor>#ColorPlayed</playedColor>
 					<!-- watched -->
-					<downloadColor>#ColorMain</downloadColor>
+					<downloadColor>#MainColor</downloadColor>
 					<!-- (normal) -->
 					<remoteColor>#ColorOffline</remoteColor>
 					<!-- file not present color -->
-					<textcolor>#ColorMain</textcolor>
+					<textcolor>#MainColor</textcolor>
 					<!-- not watched (normal) -->
-					<textcolor2>#ColorSub</textcolor2>
-					<textcolor3>#ColorSub</textcolor3>
+					<textcolor2>#SublistFocusColor</textcolor2>
+					<textcolor3>#SublistFocusColor</textcolor3>
 					<font2>font11</font2>
 					<font3>font11</font3>
 					<textureHeight>90</textureHeight>
@@ -655,7 +655,7 @@
 				<label>#Trakt.Items</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 		</control>
 	</controls>

@@ -15,7 +15,7 @@
 			<width>1920</width>
 			<height>1080</height>
 			<texture>black.png</texture>
-			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<colordiffuse>#ListNoFocusColor</colordiffuse>
 		</control>
 		<control>
 			<description>background</description>
@@ -34,7 +34,7 @@
 			<posX>540</posX>
 			<posY>340</posY>
 			<font>font24</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>#MediaTip.Headline</label>
 		</control>
 		<control>
@@ -69,7 +69,7 @@
 			<font>font14</font>
 			<label>#MediaTip.FileName (#MediaTip.FileSize), #MediaTip.Date</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 2</description>
@@ -81,7 +81,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionTrack #MediaTip.Track - #MediaTip.DescriptionTitle: #MediaTip.Title, #MediaTip.DescriptionAlbum: #MediaTip.Album</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 3</description>
@@ -93,7 +93,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionArtist: #MediaTip.Artist, #MediaTip.DescriptionYear: #MediaTip.Year</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 4</description>
@@ -105,7 +105,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionGenre: #MediaTip.Genre</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 5</description>
@@ -117,7 +117,7 @@
 			<font>font14</font>
 			<label>Audio: #MediaTip.AudioCodec, #MediaTip.AudioType, #MediaTip.AudioBitRate, #MediaTip.AudioSamplingRate</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<!-- *** MediaTip Music Cover *** -->
 		<control>
@@ -166,7 +166,7 @@
 			<font>font14</font>
 			<label>#MediaTip.FileName (#MediaTip.FileSize), #MediaTip.Date</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 2</description>
@@ -178,7 +178,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionTitle: #MediaTip.Title</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 3</description>
@@ -190,7 +190,7 @@
 			<font>font14</font>
 			<label>Audio: #MediaTip.AudioCodec, #MediaTip.AudioType, #MediaTip.AudioBitRate, #MediaTip.AudioSamplingRate</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 4</description>
@@ -202,7 +202,7 @@
 			<font>font14</font>
 			<label>Video: #MediaTip.VideoCodec, #MediaTip.VideoBitRate, #MediaTip.FrameRate, #MediaTip.Resolution</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 5</description>
@@ -214,7 +214,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionGeometry: #MediaTip.Geometry, #MediaTip.Dimension, #MediaTip.AspectRatio</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<!-- *** MediaTip Video Cover *** -->
 		<control>
@@ -251,7 +251,7 @@
 			<font>font14</font>
 			<label>#MediaTip.FileName (#MediaTip.FileSize), #MediaTip.Date</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 2</description>
@@ -263,7 +263,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionDimension: #MediaTip.Dimension, #MediaTip.DescriptionOrientation: #MediaTip.Orientation</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 3</description>
@@ -275,7 +275,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionCameraModel: #MediaTip.CameraModel, #MediaTip.CameraEquipment</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 4</description>
@@ -287,7 +287,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionFStop: #MediaTip.FStop, #MediaTip.DescriptionShutterSpeed: #MediaTip.ShutterSpeed, #MediaTip.DescriptionMeteringMode: #MediaTip.MeteringMode, #MediaTip.DescriptionFlashMode: #MediaTip.FlashMode</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 5</description>
@@ -299,7 +299,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionExposureTime: #MediaTip.ExposureTime, #MediaTip.DescriptionExposureCompensation: #MediaTip.ExposureCompensation</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<!-- *** MediaTip Picture Cover *** -->
 		<control>
@@ -348,7 +348,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DirectoryName (#MediaTip.Date)</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 2</description>
@@ -360,7 +360,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionDirectorySize: #MediaTip.DirectorySize</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 3</description>
@@ -372,7 +372,7 @@
 			<font>font14</font>
 			<label>#MediaTip.DescriptionDirectoryFileCount: #MediaTip.DirectoryFileCount</label>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 4</description>
@@ -383,7 +383,7 @@
 			<width>1290</width>
 			<font>font14</font>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 5</description>
@@ -394,7 +394,7 @@
 			<width>1290</width>
 			<font>font14</font>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<!-- *** MediaTip Directory Cover *** -->
 		<control>
@@ -442,7 +442,7 @@
 			<width>1290</width>
 			<font>font14</font>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<label>#MediaTip.Station</label>
 		</control>
 		<control>
@@ -454,7 +454,7 @@
 			<width>1290</width>
 			<font>font14</font>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<label>#MediaTip.Title</label>
 		</control>
 		<control>
@@ -466,7 +466,7 @@
 			<width>1290</width>
 			<font>font14</font>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 4</description>
@@ -477,7 +477,7 @@
 			<width>1290</width>
 			<font>font14</font>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<control>
 			<description>Line 5</description>
@@ -488,7 +488,7 @@
 			<width>1290</width>
 			<font>font14</font>
 			<wrapString> : : : </wrapString>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control>
 		<!-- *** MediaTip Radio Cover *** -->
 		<control>

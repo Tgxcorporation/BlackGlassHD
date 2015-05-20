@@ -12,7 +12,7 @@
 		<import>common.window.time.basic.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-289,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="-289,0" reversible="false">WindowClose</animation>
@@ -24,7 +24,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<type>label</type>
@@ -34,7 +34,7 @@
 				<label>Volume Control</label>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -92,7 +92,7 @@
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -130,7 +130,7 @@
 				<id>1</id>
 				<posX>780</posX>
 				<posY>180</posY>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#VolumeControl.ChannelCount Channel(s), Output Range between #VolumeControl.MinimumDecibel and #VolumeControl.MaximumDecibel</label>
 				<font>font11</font>
 			</control>

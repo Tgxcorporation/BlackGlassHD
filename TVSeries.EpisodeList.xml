@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150" delay="100">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="-750,0" reversible="false">WindowClose</animation>
@@ -28,7 +28,7 @@
 				<label>#TVSeries.Title</label>
 				<font>font20</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1200</width>
 				<wrapString> : : : </wrapString>
 				<visible>control.isvisible(1239)</visible>
@@ -41,7 +41,7 @@
 				<label>#TVSeries.Series.Pretty_Name     #TVSeries.Subtitle</label>
 				<font>font13</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<width>1185</width>
 				<wrapString> : : : </wrapString>
 				<visible>control.isvisible(1239)</visible>
@@ -118,7 +118,7 @@
 				<posY>265</posY>
 				<width>380</width>
 				<label>(#(string.format('{0:f1}', cflt(#TVSeries.Episode.Rating))))</label>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font14</font>
 				<visible>control.isvisible(1239)</visible>
 			</control>
@@ -130,7 +130,7 @@
 				<width>720</width>
 				<label>#TVSeries.Episode.FilesizeValue    #TVSeries.Episode.VideoinfoValue</label>
 				<font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>control.isvisible(1239)</visible>
 			</control>
@@ -152,7 +152,7 @@
 				<posY>420</posY>
 				<width>720</width>
 				<label>#TVSeries.Episode.WriterKey #TVSeries.Episode.WriterValue</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<font>font14</font>
 				<wrapString> : : : </wrapString>
 				<visible>control.isvisible(1239)</visible>
@@ -164,7 +164,7 @@
 				<posY>472</posY>
 				<width>720</width>
 				<label>#TVSeries.Episode.ActorsKey #TVSeries.Episode.ActorsValue</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<font>font14</font>
 				<visible>control.isvisible(1239)</visible>
 				<wrapString> : : : </wrapString>
@@ -177,7 +177,7 @@
 				<posY>525</posY>
 				<width>720</width>
 				<label>#TVSeries.Episode.GueststarKey #TVSeries.Episode.GueststarValue</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<font>font14</font>
 				<wrapString> : : : </wrapString>
 				<visible>control.isvisible(1239)</visible>

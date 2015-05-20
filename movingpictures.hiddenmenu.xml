@@ -125,11 +125,10 @@
 				<height>35</height>
 				<texture>lock2.png</texture>
 			</control>
-			<control>
+			<control Style="LeftMenuFooter">
 				<description>Current Category</description>
 				<type>label</type>
 				<id>9916</id>
-
 				<label>Parental Controls Enabled</label>
 				<visible>control.isvisible(16)</visible>
 			</control>

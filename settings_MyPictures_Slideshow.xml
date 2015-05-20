@@ -12,7 +12,7 @@
 		<import>common.window.time.basic.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -26,7 +26,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -45,7 +45,7 @@
 				<width>3</width>
 				<height>807</height>
 				<texture>bg_button_vertical.png</texture>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 			</control>
 
 			<control>
@@ -173,7 +173,7 @@
 				<posX>915</posX>
 				<posY>297</posY>
 				<label>224</label>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font14</font>
 			</control>
 			<control>
@@ -197,7 +197,7 @@
 				<posX>915</posX>
 				<posY>364</posY>
 				<label>225</label>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font14</font>
 			</control>
 			<control>
@@ -221,7 +221,7 @@
 				<posX>915</posX>
 				<posY>432</posY>
 				<label>13011</label>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font14</font>
 			</control>
 			<control>
@@ -341,4 +341,5 @@
 		</control>
 	</controls>
 </window>
-
+
+

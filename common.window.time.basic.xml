@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -41,7 +41,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 		</control>
 	</controls>

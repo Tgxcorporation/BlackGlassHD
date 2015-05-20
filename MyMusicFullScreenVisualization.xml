@@ -52,7 +52,7 @@ including the text (the alpha component of textcolor is ignored)
     <label>#Play.Current.Title</label>
     <font>font10</font>
     <bold>yes</bold>
-    <textcolor>#ColorMain</textcolor>
+    <textcolor>#MainColor</textcolor>
   </control>
   <control>
     <description>Label 2</description>
@@ -63,7 +63,7 @@ including the text (the alpha component of textcolor is ignored)
     <label>#Play.Current.Album</label>
     <font>font10</font>
     <bold>yes</bold>
-    <textcolor>#ColorMain</textcolor>
+    <textcolor>#MainColor</textcolor>
   </control>
   <control>
     <description>Label 3</description>
@@ -74,7 +74,7 @@ including the text (the alpha component of textcolor is ignored)
     <label>#Play.Current.Year</label>
     <bold>yes</bold>
     <font>font10</font>
-    <textcolor>#ColorMain</textcolor>
+    <textcolor>#MainColor</textcolor>
   </control>
   <control>
     <description>Label 4</description>
@@ -85,7 +85,7 @@ including the text (the alpha component of textcolor is ignored)
     <label>#Play.Current.Artist</label>
     <bold>yes</bold>
     <font>font10</font>
-    <textcolor>#ColorMain</textcolor>
+    <textcolor>#MainColor</textcolor>
   </control>
   <control>
     <description>Pause Icon</description>

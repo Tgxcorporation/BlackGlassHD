@@ -32,7 +32,7 @@
       <posY>289</posY>
       <label>-</label>
       <font>font13</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
     <control>
       <description>help information</description>
@@ -42,7 +42,7 @@
       <posY>327</posY>
       <label>-</label>
       <font>font11</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
     <control>
       <description>top left logo</description>

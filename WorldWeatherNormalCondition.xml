@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -38,7 +38,7 @@
 				<width>1125</width>
 				<font>font22</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.Location</label>
 			</control>
 			<control>
@@ -49,7 +49,7 @@
 				<posY>211</posY>
 				<label>#WorldWeather.Provider (#WorldWeather.TranslationCurrentCondition) + #WorldWeather.ForecastProvider (#WorldWeather.TranslationForecastCondition): #WorldWeather.RefreshDate #WorldWeather.RefreshTime</label>
 				<font>font13</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<align>left</align>
 				<width>1125</width>
 			</control>
@@ -73,7 +73,7 @@
 				<posY>292</posY>
 				<label>#WorldWeather.TranslationTemperature</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Current temp label</description>
@@ -84,7 +84,7 @@
 				<posY>292</posY>
 				<label>#WorldWeather.TodayTemperature</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>Current Condition static label</description>
@@ -95,7 +95,7 @@
 				<posY>337</posY>
 				<label>#WorldWeather.TranslationCondition</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Current Condition label</description>
@@ -106,7 +106,7 @@
 				<posY>337</posY>
 				<label>#WorldWeather.TodayCondition</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -118,7 +118,7 @@
 				<posY>382</posY>
 				<label>#WorldWeather.TranslationWind</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current wind label</description>
@@ -129,7 +129,7 @@
 				<posY>382</posY>
 				<label>#WorldWeather.TodayWindDirection - #WorldWeather.TodayWindSpeed</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>string.equals(#WorldWeather.TodayWindDirectionDegree, )</visible>
 			</control>
 			<control>
@@ -141,7 +141,7 @@
 				<posY>382</posY>
 				<label>#WorldWeather.TodayWindDirection (#WorldWeather.TodayWindDirectionDegree) - #WorldWeather.TodayWindSpeed</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayWindDirectionDegree, )</visible>
 			</control>
 			<control>
@@ -153,7 +153,7 @@
 				<posY>427</posY>
 				<label>#WorldWeather.TranslationHumidity</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current humidity label</description>
@@ -164,7 +164,7 @@
 				<posY>427</posY>
 				<label>#WorldWeather.TodayHumidity, #WorldWeather.TodayPressure  #WorldWeather.TodayBarometricPressure</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayPressure, )</visible>
 			</control>
 			<control>
@@ -176,7 +176,7 @@
 				<posY>427</posY>
 				<label>#WorldWeather.TodayHumidity</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>string.equals(#WorldWeather.TodayPressure, )</visible>
 			</control>
 			<control>
@@ -188,7 +188,7 @@
 				<posY>472</posY>
 				<label>#WorldWeather.TranslationSunrise</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>sun rise label</description>
@@ -199,7 +199,7 @@
 				<posY>472</posY>
 				<label>#WorldWeather.LocationSunriseTime</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>sun set static label</description>
@@ -210,7 +210,7 @@
 				<posY>517</posY>
 				<label>#WorldWeather.TranslationSunset</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>sun set label</description>
@@ -221,7 +221,7 @@
 				<posY>517</posY>
 				<label>#WorldWeather.LocationSunsetTime</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>current moonphase static label</description>
@@ -232,7 +232,7 @@
 				<posY>562</posY>
 				<label>#WorldWeather.TranslationMoonPhase</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current moonphase label</description>
@@ -243,7 +243,7 @@
 				<posY>562</posY>
 				<label>#WorldWeather.LocationMoonPhase</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>Current Dew static label</description>
@@ -254,7 +254,7 @@
 				<posY>607</posY>
 				<label>#WorldWeather.TranslationDewPoint</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayDewPoint, )</visible>
 			</control>
 			<control>
@@ -266,7 +266,7 @@
 				<posY>607</posY>
 				<label>#WorldWeather.TodayDewPoint</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayDewPoint, )</visible>
 			</control>
 			<control>
@@ -278,7 +278,7 @@
 				<posY>652</posY>
 				<label>#WorldWeather.TranslationPrecipitation</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayPrecipitation, )</visible>
 			</control>
 			<control>
@@ -290,7 +290,7 @@
 				<posY>652</posY>
 				<label>#WorldWeather.TodayPrecipitation</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayPrecipitation, )</visible>
 			</control>
 			<control>
@@ -302,7 +302,7 @@
 				<posY>697</posY>
 				<label>#WorldWeather.TranslationVisibility</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayVisibility, )</visible>
 			</control>
 			<control>
@@ -314,7 +314,7 @@
 				<posY>697</posY>
 				<label>#WorldWeather.TodayVisibility</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayVisibility, )+string.equals(#WorldWeather.TodayCloudCoverage, )</visible>
 			</control>
 			<control>
@@ -326,7 +326,7 @@
 				<posY>697</posY>
 				<label>#WorldWeather.TodayVisibility  (#WorldWeather.TodayCloudCoverage #WorldWeather.TranslationCloudCoverage)</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!string.equals(#WorldWeather.TodayVisibility, )+!string.equals(#WorldWeather.TodayCloudCoverage, )</visible>
 			</control>
 			<control>
@@ -369,7 +369,7 @@
 				<posY>157</posY>
 				<label>#WorldWeather.ForecastDay0Day</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>345</width>
 			</control>
 			<control>
@@ -379,7 +379,7 @@
 				<posX>1702</posX>
 				<posY>205</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay0High</label>
 			</control>
 			<control>
@@ -389,7 +389,7 @@
 				<posX>1552</posX>
 				<posY>205</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay0Low</label>
 			</control>
 			<control>
@@ -409,7 +409,7 @@
 				<posX>1552</posX>
 				<posY>244</posY>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.ForecastDay0Condition</label>
 				<width>345</width>
 				<wrapString> : : : </wrapString>
@@ -431,7 +431,7 @@
 				<posX>1552</posX>
 				<posY>345</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.ForecastDay1Day</label>
 				<width>345</width>
 			</control>
@@ -442,7 +442,7 @@
 				<posX>1702</posX>
 				<posY>393</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay1High</label>
 			</control>
 			<control>
@@ -452,7 +452,7 @@
 				<posX>1552</posX>
 				<posY>393</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay1Low</label>
 			</control>
 			<control>
@@ -472,7 +472,7 @@
 				<posX>1552</posX>
 				<posY>432</posY>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.ForecastDay1Condition</label>
 				<width>345</width>
 				<wrapString> : : : </wrapString>
@@ -494,7 +494,7 @@
 				<posX>1552</posX>
 				<posY>532</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.ForecastDay2Day</label>
 				<width>345</width>
 			</control>
@@ -505,7 +505,7 @@
 				<posX>1702</posX>
 				<posY>580</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay2High</label>
 			</control>
 			<control>
@@ -515,7 +515,7 @@
 				<posX>1552</posX>
 				<posY>580</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay2Low</label>
 			</control>
 			<control>
@@ -536,7 +536,7 @@
 				<posX>1552</posX>
 				<posY>619</posY>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.ForecastDay2Condition</label>
 				<width>345</width>
 				<wrapString> : : : </wrapString>
@@ -558,7 +558,7 @@
 				<posX>1552</posX>
 				<posY>720</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.ForecastDay3Day</label>
 				<width>345</width>
 			</control>
@@ -569,7 +569,7 @@
 				<posX>1702</posX>
 				<posY>768</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay3High</label>
 			</control>
 			<control>
@@ -579,7 +579,7 @@
 				<posX>1552</posX>
 				<posY>768</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay3Low</label>
 			</control>
 			<control>
@@ -600,7 +600,7 @@
 				<posX>1552</posX>
 				<posY>807</posY>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.ForecastDay3Condition</label>
 				<width>345</width>
 				<wrapString> : : : </wrapString>
@@ -621,7 +621,7 @@
 				<posX>1552</posX>
 				<posY>907</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.ForecastDay4Day</label>
 				<width>345</width>
 			</control>
@@ -632,7 +632,7 @@
 				<posX>1702</posX>
 				<posY>955</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay4High</label>
 			</control>
 			<control>
@@ -642,7 +642,7 @@
 				<posX>1552</posX>
 				<posY>955</posY>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#WorldWeather.ForecastDay4Low</label>
 			</control>
 			<control>
@@ -663,7 +663,7 @@
 				<posY>994</posY>
 				<label>#WorldWeather.ForecastDay4Condition</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>345</width>
 				<wrapString> : : : </wrapString>
 			</control>

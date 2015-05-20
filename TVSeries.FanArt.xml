@@ -26,7 +26,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -41,7 +41,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -61,7 +61,7 @@
 				<posY>105</posY>
 				<width>120</width>
 				<font>font10</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Disabled Value</description>
@@ -71,7 +71,7 @@
 				<posX>180</posX>
 				<posY>105</posY>
 				<font>font10</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>Default Label</description>
@@ -82,7 +82,7 @@
 				<posY>129</posY>
 				<width>120</width>
 				<font>font10</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Default Value</description>
@@ -92,7 +92,7 @@
 				<posX>180</posX>
 				<posY>129</posY>
 				<font>font10</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>Status</description>
@@ -192,7 +192,7 @@
 				<control Style="FanartDisplayAnimation">
 				<description>Filmstrip view</description>
 					<type>filmstrip</type>
-					<dimColor>#ColorAlternate</dimColor>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<ondown>505050</ondown>
 					<onup>2</onup>
@@ -263,7 +263,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -276,7 +276,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -287,7 +287,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

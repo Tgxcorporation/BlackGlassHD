@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -38,7 +38,7 @@
 				<width>1920</width>
 				<font>font22</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.Location</label>
 			</control>
 			<control>
@@ -49,7 +49,7 @@
 				<posY>231</posY>
 				<label>#WorldWeather.HourForecastProvider: #WorldWeather.RefreshDate #WorldWeather.RefreshTime</label>
 				<font>font13</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<align>center</align>
 				<width>1920</width>
 			</control>

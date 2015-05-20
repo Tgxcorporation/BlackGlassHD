@@ -13,7 +13,7 @@
     <import>common.window.overlay.xml</import>
     <control>
       <type>group</type>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <animation effect="fade" time="150">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -27,7 +27,7 @@
         <label>#header.label</label>
         <font>font28</font>
         <align>left</align>
-        <textcolor>#ColorUnfocused</textcolor>
+        <textcolor>#ListNoFocusColor</textcolor>
       </control>
       <control>
         <description>Date</description>
@@ -62,7 +62,7 @@
         <label>#time</label>
         <align>right</align>
         <font>font16</font>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
       </control>
       <control>
         <type>image</type>
@@ -104,7 +104,7 @@
         <width>630</width>
         <font>font20</font>
         <label>#Trakt.Lists.CurrentUser</label>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
       </control>
       <control>
         <description>Plot value</description>
@@ -116,7 +116,7 @@
         <height>531</height>
         <label>#Trakt.List.Description</label>
         <font>font16</font>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <seperator>: : :</seperator>
       </control>
     </control>

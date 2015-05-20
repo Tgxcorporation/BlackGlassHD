@@ -24,7 +24,7 @@
       <posY>52</posY>
       <width>765</width>
       <font>font24</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <align>LEFT</align>
       <label>Search for location</label>
     </control>
@@ -34,7 +34,7 @@
       <posX>4545</posX>
       <posY>52</posY>
       <font>font24</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <align>LEFT</align>
       <label>Search for location</label>
     </control>

@@ -12,7 +12,7 @@
 			<width>1920</width>
 			<height>1080</height>
 			<texture>black.png</texture>
-			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<colordiffuse>#ListNoFocusColor</colordiffuse>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -35,7 +35,7 @@
 			<posY>298</posY>
 			<width>960</width>
 			<label>Skype Contact Details</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font22</font>
 			<align>left</align>
 			<animation effect="fade" time="250">WindowClose</animation>
@@ -62,7 +62,7 @@
 			<label>Name: </label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -76,7 +76,7 @@
 			<label>#Skype.ContactInfos.Name</label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -90,7 +90,7 @@
 			<label>Birthdate: </label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -104,7 +104,7 @@
 			<label>#Skype.ContactInfos.Birthdate</label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -118,7 +118,7 @@
 			<label>Country: </label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -132,7 +132,7 @@
 			<label>#Skype.ContactInfos.Country</label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -146,7 +146,7 @@
 			<label>City: </label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -160,7 +160,7 @@
 			<label>#Skype.ContactInfos.City</label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -174,7 +174,7 @@
 			<label>Province: </label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -188,7 +188,7 @@
 			<label>#Skype.ContactInfos.Province</label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -202,7 +202,7 @@
 			<label>Gender: </label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -216,7 +216,7 @@
 			<label>#Skype.ContactInfos.Sex</label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -230,7 +230,7 @@
 			<label>Homepage: </label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -244,7 +244,7 @@
 			<label>#Skype.ContactInfos.HomePage</label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -258,7 +258,7 @@
 			<label>Status: </label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -284,7 +284,7 @@
 			<label>#Skype.ContactInfos.Status</label>
 			<font>font13</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>

@@ -11,7 +11,7 @@
 		<control>
 			<id>0</id>
 			<type>image</type>
-			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<colordiffuse>#ListNoFocusColor</colordiffuse>
 			<width>1920</width>
 			<height>1080</height>
 			<texture>black.png</texture>
@@ -33,7 +33,7 @@
 			<posY>105</posY>
 			<width>840</width>
 			<font>font22</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>LEFT</align>
 			<label>Call SkypeOut Number</label>
 		</control>
@@ -63,7 +63,7 @@
 			<posY>183</posY>
 			<width>841</width>
 			<font>font22</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<align>LEFT</align>
 			<label>#Skype.SkypeOut.Number</label>
 		</control>

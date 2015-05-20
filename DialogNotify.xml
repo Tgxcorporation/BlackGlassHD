@@ -33,7 +33,7 @@
 			<posY>811</posY>
 			<label>181</label>
 			<font>font20</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<width>697</width>
 		</control>
 

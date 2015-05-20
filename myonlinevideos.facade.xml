@@ -18,7 +18,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -52,7 +52,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>[facadeview.list]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]+string.equals(#itemcount,)</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
@@ -63,7 +63,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>[facadeview.list]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]+!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -71,7 +71,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -94,7 +94,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>facadeview.smallicons+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]+string.equals(#itemcount,)</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
@@ -105,7 +105,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>facadeview.smallicons+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]+!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -113,7 +113,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -136,7 +136,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>facadeview.largeicons+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]+string.equals(#itemcount,)</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
@@ -147,7 +147,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>facadeview.largeicons+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]+!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -156,7 +156,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>

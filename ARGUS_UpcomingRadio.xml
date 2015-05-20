@@ -12,7 +12,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -44,7 +44,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -55,7 +55,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -71,8 +71,8 @@
 				<textYOff3>97</textYOff3>
 				<textXOff2>1119</textXOff2>
 				<textXOff3>210</textXOff3>
-				<textcolor2>#ColorSub</textcolor2>
-				<textcolor3>#ColorSub</textcolor3>
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#SublistFocusColor</textcolor3>
 				<font>font20</font>
 				<PinIconXOff>1161</PinIconXOff>
 				<PinIconYOff>55</PinIconYOff>
@@ -93,7 +93,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Date</description>
@@ -128,7 +128,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -149,7 +149,7 @@
 				<width>525</width>
 				<font>font20</font>
 				<label>#Radio.Upcoming.Channel</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -157,7 +157,7 @@
 				<id>14</id>
 				<posX>45</posX>
 				<posY>262</posY>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#Radio.Upcoming.Time</label>
 			</control>
 			<control>
@@ -167,7 +167,7 @@
 				<posX>45</posX>
 				<posY>315</posY>
 				<width>555</width>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#Radio.Upcoming.Genre</label>
 			</control>
 			<control>
@@ -179,7 +179,7 @@
 				<width>555</width>
 				<height>682</height>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!player.hasmedia</visible>
 				<label>#Radio.Upcoming.Description</label>
 				<seperator>: : :</seperator>
@@ -199,7 +199,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(10)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(10)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -212,7 +212,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -223,7 +223,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

@@ -15,7 +15,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -31,7 +31,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -43,7 +43,7 @@
 				<label>3</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>string.equals(#view,)</visible>
 			</control>
 			<control>
@@ -79,7 +79,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control Style="FanartDisplayAnimation">
 				<type>image</type>
@@ -178,7 +178,7 @@
 				<label>734</label>
 				<font>font12</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>![control.isvisible(24)|control.isvisible(22)]</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
@@ -201,7 +201,7 @@
 				<posY>964</posY>
 				<label>427</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>![control.isvisible(24)|control.isvisible(22)]</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
@@ -214,7 +214,7 @@
 				<ondown>2</ondown>
 				<onleft>10</onleft>
 				<onright>24</onright>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<buddycontrolid>100</buddycontrolid>
 				<showrange>no</showrange>
 				<visible>![control.isvisible(24)|control.isvisible(22)]</visible>
@@ -249,7 +249,7 @@
 				<label>#title</label>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1110</width>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -280,7 +280,7 @@
 				<label>#strrating (#votes)</label>
 				<font>font13</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control Style="FanartDisplayAnimation">
 				<description>Genre txt</description>
@@ -301,7 +301,7 @@
 				<posY>360</posY>
 				<width>1110</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#year     #mpaarating     #videoruntime</label>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -313,7 +313,7 @@
 				<posY>420</posY>
 				<width>1110</width>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#(L(199)) #director</label>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -325,7 +325,7 @@
 				<posY>480</posY>
 				<width>1110</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#country     #studios</label>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -345,7 +345,7 @@
 				<posY>579</posY>
 				<width>1110</width>
 				<height>352</height>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<font>font16</font>
 				<seperator>: : :</seperator>
 				<label>#plot</label>
@@ -359,7 +359,7 @@
 				<width>1110</width>
 				<height>352</height>
 				<label>#userreview</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<font>font16</font>
 				<seperator>: : :</seperator>
 			</control>
@@ -371,7 +371,7 @@
 				<posY>565</posY>
 				<width>1110</width>
 				<height>507</height>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<font>font16</font>
 				<onleft>2</onleft>
 				<onright>2</onright>
@@ -524,7 +524,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>930</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(26)|control.hasfocus(97270)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(11899)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(26)|control.hasfocus(97270)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(11899)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -537,7 +537,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -548,7 +548,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>group</type>

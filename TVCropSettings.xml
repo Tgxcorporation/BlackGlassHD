@@ -13,7 +13,7 @@
 			<width>1920</width>
 			<height>1080</height>
 			<texture>black.png</texture>
-			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<colordiffuse>#ListNoFocusColor</colordiffuse>
 		</control>
 		<control>
 			<type>image</type>
@@ -32,7 +32,7 @@
 			<posY>310</posY>
 			<width>960</width>
 			<label>11000</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font22</font>
 			<align>left</align>
 		</control>
@@ -53,7 +53,7 @@
 			<posY>735</posY>
 			<width>69</width>
 			<font>font16</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 		</control>
 		<control>
 			<description>Crop label top</description>
@@ -63,7 +63,7 @@
 			<posY>462</posY>
 			<label>11001</label>
 			<font>font16</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<align>center</align>
 		</control>
 		<control>
@@ -76,7 +76,7 @@
 			<ondown>12</ondown>
 			<onleft>16</onleft>
 			<onright>20</onright>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>right</align>
 		</control>
 		<control>
@@ -87,7 +87,7 @@
 			<posY>657</posY>
 			<label>11002</label>
 			<font>font16</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<align>center</align>
 		</control>
 		<control>
@@ -100,7 +100,7 @@
 			<ondown>2</ondown>
 			<onleft>16</onleft>
 			<onright>20</onright>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>right</align>
 		</control>
 		<control>
@@ -111,7 +111,7 @@
 			<posY>559</posY>
 			<label>11003</label>
 			<font>font16</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<align>center</align>
 		</control>
 		<control>
@@ -124,7 +124,7 @@
 			<ondown>12</ondown>
 			<onleft>20</onleft>
 			<onright>20</onright>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>right</align>
 		</control>
 		<control>
@@ -135,7 +135,7 @@
 			<posY>559</posY>
 			<label>11004</label>
 			<font>font16</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<align>center</align>
 		</control>
 		<control>
@@ -148,7 +148,7 @@
 			<ondown>12</ondown>
 			<onleft>16</onleft>
 			<onright>16</onright>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>right</align>
 		</control>
 		<control>

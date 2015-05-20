@@ -14,7 +14,7 @@
 		<import>common.window.time.basic.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="Fade" time="150">WindowClose</animation>
 			<animation effect="Slide" reversible="FALSE" start="1350,0" time="200" tween="Circle">WindowOpen</animation>
 			<animation effect="Slide" end="1350,0" reversible="FALSE" time="200" tween="Circle">WindowClose</animation>
@@ -26,7 +26,7 @@
 				<posX>45</posX>
 				<posY>15</posY>
 				<font>font28</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<align>LEFT</align>
 				<label>#header.label</label>
 			</control>
@@ -47,7 +47,7 @@
 				<posY>142</posY>
 				<width>1200</width>
 				<font>font22</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -72,7 +72,7 @@
 				<posY>225</posY>
 				<width>1773</width>
 				<height>780</height>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<spinPosX>1665</spinPosX>
 				<spinPosY>960</spinPosY>
 				<font>font13</font>

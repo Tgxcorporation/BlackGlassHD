@@ -29,7 +29,7 @@
 			<posY>549</posY>
 			<width>1115</width>
 			<font>font22</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>#TV.View.title</label>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
@@ -53,7 +53,7 @@
 			<width>1115</width>
 			<height>48</height>
 			<font>font18</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -66,7 +66,7 @@
 			<align>left</align>
 			<font>font18</font>
 			<label>#TV.View.channel</label>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>!control.hastext(37)</visible>
 			<animation effect="fade" time="100">windowopen</animation>
 			<!-- <wrapString> : : : </wrapString> -->
@@ -92,7 +92,7 @@
 			<label>#TV.View.description</label>
 			<font>font16</font>
 			<seperator>: : :</seperator>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -144,7 +144,7 @@
 			<label>#TV.View.description</label>
 			<font>font16</font>
 			<seperator>: : :</seperator>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -157,7 +157,7 @@
 			<height>67</height>
 			<align>left</align>
 			<font>font22</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -169,7 +169,7 @@
 			<width>940</width>
 			<height>48</height>
 			<font>font18</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -259,7 +259,7 @@
 			<label>-</label>
 			<align>left</align>
 			<font>font10</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>no</visible>
 		</control>
 		<!-- <import>common.play.osd.xml</import> -->

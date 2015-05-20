@@ -11,7 +11,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -26,7 +26,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Date</description>
@@ -61,7 +61,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>Player Nr</description>
@@ -371,10 +371,10 @@
 				<enabled>false</enabled>
 				<textureFocus>-</textureFocus>
 				<textureNoFocus>-</textureNoFocus>
-				<textcolor>#ColorMain</textcolor>
-				<textcolorNoFocus>#ColorMain</textcolorNoFocus>
-				<disabledcolor>#ColorMain</disabledcolor>
-				<dimColor>#ColorMain</dimColor>
+				<textcolor>#MainColor</textcolor>
+				<textcolorNoFocus>#MainColor</textcolorNoFocus>
+				<disabledcolor>#MainColor</disabledcolor>
+				<dimColor>#MainColor</dimColor>
 			</control>
 			<control>
 				<id>0</id>
@@ -519,10 +519,10 @@
 				<enabled>false</enabled>
 				<textureFocus>-</textureFocus>
 				<textureNoFocus>-</textureNoFocus>
-				<textcolor>#ColorMain</textcolor>
-				<textcolorNoFocus>#ColorMain</textcolorNoFocus>
-				<disabledcolor>#ColorMain</disabledcolor>
-				<dimColor>#ColorMain</dimColor>
+				<textcolor>#MainColor</textcolor>
+				<textcolorNoFocus>#MainColor</textcolorNoFocus>
+				<disabledcolor>#MainColor</disabledcolor>
+				<dimColor>#MainColor</dimColor>
 			</control>
 			<control>
 				<description>Forecast</description>
@@ -539,10 +539,10 @@
 				<enabled>false</enabled>
 				<textureFocus>-</textureFocus>
 				<textureNoFocus>-</textureNoFocus>
-				<textcolor>#ColorAlternate</textcolor>
-				<textcolorNoFocus>#ColorAlternate</textcolorNoFocus>
-				<disabledcolor>#ColorAlternate</disabledcolor>
-				<dimColor>#ColorAlternate</dimColor>
+				<textcolor>#AlternateColor</textcolor>
+				<textcolorNoFocus>#AlternateColor</textcolorNoFocus>
+				<disabledcolor>#AlternateColor</disabledcolor>
+				<dimColor>#AlternateColor</dimColor>
 			</control>
 			<!-- *********************** Board labels *********************** -->
 			<control>
@@ -665,7 +665,7 @@
 				<label>#P607</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>608</description>
@@ -753,7 +753,7 @@
 				<label>#P615</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>616</description>
@@ -764,7 +764,7 @@
 				<label>#P616</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>621</description>
@@ -841,7 +841,7 @@
 				<label>#P627</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>628</description>
@@ -929,7 +929,7 @@
 				<label>#P635</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>636</description>
@@ -940,7 +940,7 @@
 				<label>#P636</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>641</description>
@@ -1017,7 +1017,7 @@
 				<label>#P647</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>648</description>
@@ -1105,7 +1105,7 @@
 				<label>#P655</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>656</description>
@@ -1116,7 +1116,7 @@
 				<label>#P656</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>661</description>
@@ -1193,7 +1193,7 @@
 				<label>#P667</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>668</description>
@@ -1281,7 +1281,7 @@
 				<label>#P675</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>676</description>
@@ -1292,7 +1292,7 @@
 				<label>#P676</label>
 				<font>font14</font>
 				<align>center</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 		</control>
 		<!-- MENU -->
@@ -1309,7 +1309,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(7)|control.hasfocus(8)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(7)|control.hasfocus(8)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -1322,7 +1322,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -1333,7 +1333,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

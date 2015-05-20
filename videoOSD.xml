@@ -29,7 +29,7 @@
 			<height>67</height>
 			<font>font24</font>
 			<label>#Play.Current.Title</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -51,7 +51,7 @@
 			<width>1050</width>
 			<font>font18</font>
 			<label>#Play.Current.Year     #Play.Current.Genre</label>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 			<!-- <wrapString> : : : </wrapString> -->
 		</control>
@@ -76,7 +76,7 @@
 			<label>#Play.Current.Plot</label>
 			<font>font16</font>
 			<seperator>: : :</seperator>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 

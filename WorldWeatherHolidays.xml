@@ -6,7 +6,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -40,7 +40,7 @@
 				<width>1920</width>
 				<font>font22</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#WorldWeather.TranslationHoliday/#WorldWeather.TranslationSeason</label>
 			</control>
 			<control>
@@ -51,7 +51,7 @@
 				<posY>255</posY>
 				<label>#WorldWeather.TranslationNewYear:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current NewYear label</description>
@@ -70,7 +70,7 @@
 				<posY>300</posY>
 				<label>#WorldWeather.TranslationEpiphany:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current Epiphany label</description>
@@ -89,7 +89,7 @@
 				<posY>345</posY>
 				<label>#WorldWeather.TranslationHolyThursday:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current HolyThursday label</description>
@@ -108,7 +108,7 @@
 				<posY>390</posY>
 				<label>#WorldWeather.TranslationGoodFriday:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current GoodFriday label</description>
@@ -127,7 +127,7 @@
 				<posY>435</posY>
 				<label>#WorldWeather.TranslationEasterSunday:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current EasterSunday label</description>
@@ -146,7 +146,7 @@
 				<posY>480</posY>
 				<label>#WorldWeather.TranslationAscensionDay:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current AscensionDay label</description>
@@ -165,7 +165,7 @@
 				<posY>525</posY>
 				<label>#WorldWeather.TranslationWhitSunday:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current WhitSunday label</description>
@@ -184,7 +184,7 @@
 				<posY>570</posY>
 				<label>#WorldWeather.TranslationCorpusChristi:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current CorpusChristi label</description>
@@ -203,7 +203,7 @@
 				<posY>615</posY>
 				<label>#WorldWeather.TranslationAssumptionDay:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current AssumptionDay label</description>
@@ -222,7 +222,7 @@
 				<posY>660</posY>
 				<label>#WorldWeather.TranslationReformationDay:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current ReformationDay label</description>
@@ -241,7 +241,7 @@
 				<posY>705</posY>
 				<label>#WorldWeather.TranslationAllSaintsDay:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current AllSaintsDay label</description>
@@ -260,7 +260,7 @@
 				<posY>795</posY>
 				<label>#WorldWeather.TranslationSpringSeason:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current SpringSeason label</description>
@@ -279,7 +279,7 @@
 				<posY>840</posY>
 				<label>#WorldWeather.TranslationSummerSeason:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current SummerSeason label</description>
@@ -298,7 +298,7 @@
 				<posY>885</posY>
 				<label>#WorldWeather.TranslationAutumnSeason:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current AutumnSeason label</description>
@@ -317,7 +317,7 @@
 				<posY>930</posY>
 				<label>#WorldWeather.TranslationWinterSeason:</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>current WinterSeason label</description>

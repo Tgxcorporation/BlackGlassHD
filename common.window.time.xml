@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>

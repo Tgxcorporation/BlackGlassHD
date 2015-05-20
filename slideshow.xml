@@ -23,7 +23,7 @@
       <label>-</label>
       <align>left</align>
       <font>font16</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
     <control>
       <description>row 2 label</description>
@@ -34,7 +34,7 @@
       <label>-</label>
       <align>left</align>
       <font>font16</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
     <control>
       <description>row 2 extra label</description>
@@ -45,7 +45,7 @@
       <label>-</label>
       <align>left</align>
       <font>font16</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
   </controls>
 </window>

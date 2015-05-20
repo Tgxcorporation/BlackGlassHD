@@ -5,7 +5,7 @@
     <control>
       <type>group</type>
       <visible>control.isvisible(53)</visible>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>

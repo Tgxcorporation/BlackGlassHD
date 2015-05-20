@@ -15,7 +15,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -30,7 +30,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Date</description>
@@ -65,7 +65,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control Style="FanartDisplayAnimation">
 				<type>image</type>
@@ -155,7 +155,7 @@
 			<height>25</height>
 			<label>435</label>
 			<font>font12</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 		</control> -->
 			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
@@ -167,7 +167,7 @@
 				<height>37</height>
 				<label>Track: #Play.Current.Track</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
@@ -191,7 +191,7 @@
 				<label>#Play.Current.Year</label>
 				<font>font12</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control Style="FanartDisplayAnimation">
 				<type>label</type>
@@ -311,7 +311,7 @@
 			<label>#currentplaytime</label>
 			<align>left</align>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>player.hasmedia</visible>
 			<shadowAngle>315</shadowAngle>
 			<shadowDistance>1</shadowDistance>
@@ -326,7 +326,7 @@
 			<label>#currentremaining</label>
 			<align>right</align>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>player.hasmedia</visible>
 			<shadowAngle>315</shadowAngle>
 			<shadowDistance>1</shadowDistance>
@@ -345,7 +345,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)|control.hasfocus(30)|control.hasfocus(31)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)|control.hasfocus(30)|control.hasfocus(31)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -358,7 +358,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -369,7 +369,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -452,7 +452,7 @@
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
@@ -466,7 +466,7 @@
 				<width>1197</width>
 				<height>967</height>
 				<texture>bg_facade.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 				<visible>control.isvisible(29)|control.isvisible(28)</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">

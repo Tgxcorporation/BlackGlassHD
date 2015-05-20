@@ -13,7 +13,7 @@
 
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -27,7 +27,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -68,7 +68,7 @@
 				<width>270</width>
 				<label>169</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Resolution label</description>
@@ -89,7 +89,7 @@
 				<width>270</width>
 				<label>300146</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Compositing label</description>
@@ -110,7 +110,7 @@
 				<width>270</width>
 				<label>300147</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Interpolation label</description>
@@ -131,7 +131,7 @@
 				<width>270</width>
 				<label>300148</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Smoothing label</description>
@@ -152,7 +152,7 @@
 				<width>270</width>
 				<label>300149</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Screen label</description>
@@ -181,7 +181,7 @@
 				<width>3</width>
 				<height>442</height>
 				<texture>bg_button_vertical.png</texture>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 			</control>
 			<!--Music-->
 			<control>
@@ -369,7 +369,7 @@
 				<width>375</width>
 				<label>450</label>
 				<font>font14</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Columns spincontrol</description>
@@ -392,7 +392,7 @@
 				<width>375</width>
 				<label>300160</label>
 				<font>font14</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Rows spincontrol</description>
@@ -411,4 +411,5 @@
 		</control>
 	</controls>
 </window>
-
+
+

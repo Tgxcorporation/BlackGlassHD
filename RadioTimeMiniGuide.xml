@@ -50,9 +50,9 @@
 				<font3>font18</font3>
 				<textvisible2>yes</textvisible2>
 				<textvisible3>yes</textvisible3>
-				<textcolor>#ColorSub</textcolor>
-				<textcolor2>#ColorSub</textcolor2>
-				<textcolor3>#ColorMain</textcolor3>
+				<textcolor>#SublistFocusColor</textcolor>
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#MainColor</textcolor3>
 				<remoteColor>#ColorPlayed</remoteColor>
 				<playedColor>#ColorPlayed</playedColor>
 				<onleft>36</onleft>
@@ -104,9 +104,9 @@
 				<font3>font18</font3>
 				<textvisible2>yes</textvisible2>
 				<textvisible3>yes</textvisible3>
-				<textcolor>#ColorSub</textcolor>
-				<textcolor2>#ColorSub</textcolor2>
-				<textcolor3>#ColorMain</textcolor3>
+				<textcolor>#SublistFocusColor</textcolor>
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#MainColor</textcolor3>
 				<remoteColor>#ColorPlayed</remoteColor>
 				<playedColor>#ColorPlayed</playedColor>
 				<onleft>36</onleft>
@@ -124,7 +124,7 @@
 			<posX>510</posX>
 			<posY>168</posY>
 			<width>900</width>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font28</font>
 			<align>center</align>
 		</control>
@@ -158,7 +158,7 @@
 			<posY>147</posY>
 			<label>#time</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>right</align>
 		</control>
 		<control>
@@ -182,7 +182,7 @@
 			<height>45</height>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
-			<dimColor>#ColorAlternate</dimColor>
+			<dimColor>#AlternateColor</dimColor>
 			<label>-</label>
 			<onleft>36</onleft>
 			<onright>34</onright>

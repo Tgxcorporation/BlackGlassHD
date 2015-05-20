@@ -11,7 +11,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -26,7 +26,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Date</description>
@@ -61,7 +61,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>BackGroundImage</description>
@@ -86,7 +86,7 @@
 				<posX>765</posX>
 				<posY>989</posY>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>#duration</label>
 				<onright>7</onright>
 				<onleft>7</onleft>
@@ -134,7 +134,7 @@
 		<control>
 			<description>action menu</description>
 			<type>actiongroup</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<width>627</width>
 			<height>1080</height>
 			<buttonX>0</buttonX>
@@ -157,7 +157,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -166,7 +166,7 @@
 				<posY>52</posY>
 				<width>499</width>
 				<font>font24</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<align>LEFT</align>
 				<label>2100</label>
 			</control>

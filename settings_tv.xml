@@ -23,7 +23,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(30)|control.hasfocus(27)|control.hasfocus(28)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(33)|control.hasfocus(35)|control.hasfocus(36)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(30)|control.hasfocus(27)|control.hasfocus(28)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(33)|control.hasfocus(35)|control.hasfocus(36)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -36,7 +36,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -47,7 +47,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -152,7 +152,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(40)|control.hasfocus(41)|control.hasfocus(42)|control.hasfocus(43)|control.hasfocus(97262)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(40)|control.hasfocus(41)|control.hasfocus(42)|control.hasfocus(43)|control.hasfocus(97262)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -165,7 +165,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -176,7 +176,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>

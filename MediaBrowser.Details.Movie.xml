@@ -83,7 +83,7 @@
 			<label>#MediaBrowser.Details.Name</label>
 			<font>font24</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<width>1125</width>
 			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)</visible>
@@ -119,7 +119,7 @@
 			<posY>250</posY>
 			<width>380</width>
 			<label>(#MediaBrowser.Details.CommunityRating.Localized)</label>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<font>font14</font>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
 		</control>
@@ -144,7 +144,7 @@
 			<posY>352</posY>
 			<width>1125</width>
 			<font>font18</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
 		</control>
@@ -157,7 +157,7 @@
 			<posY>412</posY>
 			<width>1125</width>
 			<font>font18</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
 		</control>
@@ -170,7 +170,7 @@
 			<posY>472</posY>
 			<width>1125</width>
 			<font>font15</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
 		</control>
@@ -183,7 +183,7 @@
 			<posY>528</posY>
 			<width>1125</width>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
 		</control>
@@ -197,7 +197,7 @@
 			<width>1125</width>
 			<height>337</height>
 			<font>font18</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<seperator>: : :</seperator>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+[!control.hasfocus(10001)+!control.hasfocus(10002)]</visible>
 		</control>
@@ -209,7 +209,7 @@
 			<posY>607</posY>
 			<width>1125</width>
 			<height>337</height>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font18</font>
 			<label>#MediaBrowser.Details.Overview</label>
 			<seperator>: : :</seperator>
@@ -226,7 +226,7 @@
 			<posY>247</posY>
 			<width>1125</width>
 			<height>660</height>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font18</font>
 			<label>#MediaBrowser.Details.Overview</label>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10001)</visible>
@@ -242,7 +242,7 @@
 			<width>350</width>
 			<label>Video Format</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -253,7 +253,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.MediaStreams.Video.0.Codec</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
@@ -266,7 +266,7 @@
 			<width>350</width>
 			<label>Aspect Ratio</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -277,7 +277,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.MediaStreams.Video.0.AspectRatio</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
@@ -290,7 +290,7 @@
 			<width>350</width>
 			<label>Resolution</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -301,7 +301,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.MediaStreams.Video.0.Width x #MediaBrowser.Details.MediaStreams.Video.0.Height</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
@@ -314,7 +314,7 @@
 			<width>350</width>
 			<label>Frame Rate</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -325,7 +325,7 @@
 			<width>800</width>
 			<label>#(math.round(cflt(#MediaBrowser.Details.MediaStreams.Video.0.AverageFrameRate.Localized),3)) fps</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
@@ -339,7 +339,7 @@
 			<width>350</width>
 			<label>Audio Format</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -350,7 +350,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.MediaStreams.Audio.0.Codec</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
@@ -363,7 +363,7 @@
 			<width>350</width>
 			<label>Audio Channels</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -374,7 +374,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.MediaStreams.Audio.0.Channels</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
@@ -388,7 +388,7 @@
 			<width>350</width>
 			<label>Date Added</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -399,7 +399,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.DateCreated.ShortDate #MediaBrowser.Details.DateCreated.TimeOfDay.Hours:#MediaBrowser.Details.DateCreated.TimeOfDay.Minutes</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 			<wrapString> ·· </wrapString>
 		</control>
@@ -412,7 +412,7 @@
 			<width>350</width>
 			<label>Media Type</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -423,7 +423,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.MediaType</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
@@ -436,7 +436,7 @@
 			<width>350</width>
 			<label>Watched Count</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -447,7 +447,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.UserData.PlayCount</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
@@ -461,7 +461,7 @@
 			<width>350</width>
 			<label>Path</label>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowserDetailsSlide">
@@ -472,7 +472,7 @@
 			<width>800</width>
 			<label>#MediaBrowser.Details.Path</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<wrapString> ·· </wrapString>
 			<visible>string.equals(#MediaBrowser.Details.Type,Movie)+Control.HasFocus(10002)</visible>
 		</control>

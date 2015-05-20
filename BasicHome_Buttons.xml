@@ -305,7 +305,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(10600)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(106)+!string.equals(#latestMediaHandler.movingpicture.latest3.title,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -339,7 +339,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(10601)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(106)+!string.equals(#latestMediaHandler.movingpicture.latest2.title,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -372,7 +372,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(10602)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(106)+!string.equals(#latestMediaHandler.movingpicture.latest1.title,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -447,7 +447,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(10700)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(TV)+control.hasfocus(107)+!string.equals(#latestMediaHandler.tvrecordings.latest1.title,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -522,7 +522,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(10800)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)+!string.equals(#latestMediaHandler.tvseries.latest3.episodeName,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -556,7 +556,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(10801)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)+!string.equals(#latestMediaHandler.tvseries.latest2.episodeName,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -589,7 +589,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(10802)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)+!string.equals(#latestMediaHandler.tvseries.latest1.episodeName,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -743,7 +743,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(11100)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(World Weather)+control.hasfocus(111)+!string.equals(#WorldWeather.ForecastDay0Condition,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -776,7 +776,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(11101)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(World Weather)+control.hasfocus(111)+!string.equals(#WorldWeather.TodayCondition,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -851,7 +851,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(11200)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Music)+control.hasfocus(112)+!string.equals(#latestMediaHandler.music.latest2.album,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -884,7 +884,7 @@
 			<align>center</align>
 			<font>font11</font>
 			<visible>control.isvisible(11201)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(Music)+control.hasfocus(112)+!string.equals(#latestMediaHandler.music.latest1.album,)</visible>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>

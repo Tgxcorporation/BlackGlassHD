@@ -41,7 +41,7 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -56,7 +56,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -149,7 +149,7 @@
 				<posX>45</posX>
 				<posY>690</posY>
 				<label>#game_genre</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<width>577</width>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -161,7 +161,7 @@
 				<posX>45</posX>
 				<posY>742</posY>
 				<label>#game_yearmade     #game_company</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<width>577</width>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -175,7 +175,7 @@
 				<width>577</width>
 				<height>244</height>
 				<label>#game_description</label>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<font>font13</font>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<seperator>: : :</seperator>
@@ -216,7 +216,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>facadeview.list+control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -251,7 +251,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -262,7 +262,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -271,7 +271,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -295,7 +295,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -306,7 +306,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -316,7 +316,7 @@
 
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -388,7 +388,7 @@
 						<description>Filmstrip view</description>
 						<type>filmstrip</type>
 						<id>50</id>
-						<dimColor>#ColorAlternate</dimColor>
+						<dimColor>#AlternateColor</dimColor>
 						<ondown>10</ondown>
 						<onup>10</onup>
 						<onleft>50</onleft>
@@ -426,8 +426,8 @@
 					<control>
 						<description>Cover Flow view</description>
 						<type>coverflow</type>
-						<colordiffuse>#ColorMain</colordiffuse>
-						<dimColor>#ColorAlternate</dimColor>
+						<colordiffuse>#MainColor</colordiffuse>
+						<dimColor>#AlternateColor</dimColor>
 						<id>50</id>
 						<posX>45</posX>
 						<posY>472</posY>
@@ -487,7 +487,7 @@
 										<width>150</width>
 										<label>#selecteditem</label>
 										<font>font13</font>
-										<textcolor>#ColorMain</textcolor>
+										<textcolor>#MainColor</textcolor>
 										<wrapString> : : : </wrapString>
 										<shadowAngle>45</shadowAngle>
 										<shadowDistance>2</shadowDistance>
@@ -531,7 +531,7 @@
 										<width>165</width>
 										<label>#game_genre</label>
 										<font>font11</font>
-										<textcolor>#ColorAlternate</textcolor>
+										<textcolor>#AlternateColor</textcolor>
 										<wrapString> : : : </wrapString>
 									</control>
 									<control>
@@ -542,7 +542,7 @@
 										<width>160</width>
 										<label>#game_yearmade</label>
 										<font>font11</font>
-										<textcolor>#ColorMain</textcolor>
+										<textcolor>#MainColor</textcolor>
 										<wrapString> : : : </wrapString>
 									</control>
 
@@ -555,7 +555,7 @@
 										<width>160</width>
 										<label>#game_company</label>
 										<font>font11</font>
-										<textcolor>#ColorAlternate</textcolor>
+										<textcolor>#AlternateColor</textcolor>
 										<wrapString> : : : </wrapString>
 									</control>
 
@@ -569,7 +569,7 @@
 										<label>#game_description</label>
 										<font>font9</font>
 										<lineSpacing>2</lineSpacing>
-										<textcolor>#ColorMain</textcolor>
+										<textcolor>#MainColor</textcolor>
 									</control>
 
 								</controls>
@@ -594,7 +594,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -607,7 +607,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -618,7 +618,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

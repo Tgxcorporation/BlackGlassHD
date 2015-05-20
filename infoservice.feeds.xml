@@ -12,7 +12,7 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -27,7 +27,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -36,7 +36,7 @@
 				<width>1422</width>
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<type>image</type>
@@ -61,8 +61,8 @@
 					<textYOff3>49</textYOff3>
 					<textXOff2>1155</textXOff2>
 					<textXOff3>210</textXOff3>
-					<textcolor2>#ColorSub</textcolor2>
-					<textcolor3>#ColorSub</textcolor3>
+					<textcolor2>#SublistFocusColor</textcolor2>
+					<textcolor3>#SublistFocusColor</textcolor3>
 					<!-- <font>font18</font> -->
 					<font2>font11</font2>
 					<font3>font11</font3>
@@ -126,7 +126,7 @@
 				<posY>645</posY>
 				<width>570</width>
 				<height>395</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<font>font16</font>
 				<label>#infoservice.feed.selected.description</label>
 				<visible>!player.hasmedia</visible>
@@ -142,7 +142,7 @@
 				<!-- <label>#infoservice.feed.itemcount #itemtype</label> -->
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 		</control>
 		<control>
@@ -158,7 +158,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -171,7 +171,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -182,7 +182,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -272,7 +272,7 @@
 				<posY>1020</posY>
 				<wrapString> : : : </wrapString>
 				<width>510</width>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#infoservice.feed.lastupdated.datetime</label>
 			</control>
 		</control>

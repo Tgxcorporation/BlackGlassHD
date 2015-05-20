@@ -19,7 +19,7 @@
 			<posY>780</posY>
 			<font>font11</font>
 			<width>1920</width>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>#fanarthandler.scraper.task #fanarthandler.scraper.percent.completed%</label>
 			<align>center</align>
 			<visible>control.isvisible(91919280)+plugin.isenabled(Fanart Handler)</visible>

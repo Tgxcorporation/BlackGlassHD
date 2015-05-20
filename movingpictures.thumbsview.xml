@@ -7,7 +7,7 @@ This file should contain the list view
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -111,7 +111,7 @@ This file should contain the list view
 				<posY>685</posY>
 				<width>380</width>
 				<label>(#MovingPictures.SelectedMovie.score.localized)</label>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font12</font>
 				<visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
 			</control>
@@ -135,7 +135,7 @@ This file should contain the list view
 				<posY>817</posY>
 				<width>630</width>
 				<label>#MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.genres</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
 			</control>
@@ -148,7 +148,7 @@ This file should contain the list view
 				<width>630</width>
 				<height>172</height>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#MovingPictures.SelectedMovie.summary</label>
 				<seperator>: : :</seperator>
 				<visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+ !player.hasmedia</visible>

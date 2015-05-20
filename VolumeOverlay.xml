@@ -35,7 +35,7 @@
             <height>36</height>
             <imageHeight>3</imageHeight>
             <texture>volume.states.png</texture>
-            <colordiffuse>#ColorMain</colordiffuse>
+            <colordiffuse>#MainColor</colordiffuse>
             <animation effect="fade" time="100">visiblechange</animation>
             <animation effect="fade" time="100">WindowOpen</animation>
         </control>

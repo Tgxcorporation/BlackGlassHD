@@ -18,7 +18,7 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -51,7 +51,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>0 #(L(507))</label>
 				<visible>string.equals(#itemcount,)+facadeview.list+[control.isvisible(50)]</visible>
 			</control>
@@ -62,7 +62,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>#itemcount #(L(507))</label>
 				<visible>!string.equals(#itemcount,)+facadeview.list+[control.isvisible(50)]</visible>
 			</control>
@@ -71,7 +71,7 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -94,7 +94,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>0 #(L(507))</label>
 				<visible>string.equals(#itemcount,)+[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
 			</control>
@@ -105,7 +105,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>#itemcount #(L(507))</label>
 				<visible>!string.equals(#itemcount,)+[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
 			</control>
@@ -114,7 +114,7 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -145,8 +145,8 @@
 					<textureFocus>bg_facade3_line_focus.png</textureFocus>
 					<textureNoFocus>bg_facade3_line_nofocus.png</textureNoFocus>
 					<textureHeight>88</textureHeight>
-					<textcolor2>#ColorSub</textcolor2>
-					<textcolor3>#ColorSub</textcolor3>
+					<textcolor2>#SublistFocusColor</textcolor2>
+					<textcolor3>#SublistFocusColor</textcolor3>
 				</control>
 				<control Style="FanartDisplayAnimation">
 					<description>Thumbnail Panel</description>
@@ -195,7 +195,7 @@
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
 					<id>50</id>
-					<dimColor>#ColorAlternate</dimColor>
+					<dimColor>#AlternateColor</dimColor>
 					<ondown>505050</ondown>
 					<onup>2</onup>
 					<onleft>50</onleft>
@@ -231,8 +231,8 @@
 				<control Style="FanartDisplayAnimation">
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
-					<colordiffuse>#ColorMain</colordiffuse>
-					<dimColor>#ColorAlternate</dimColor>
+					<colordiffuse>#MainColor</colordiffuse>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<posX>45</posX>
 					<posY>472</posY>
@@ -317,7 +317,7 @@
 									<width>225</width>
 									<label>#title</label>
 									<font>font13</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
 									<shadowDistance>2</shadowDistance>
@@ -362,7 +362,7 @@
 									<width>247</width>
 									<label>#genre</label>
 									<font>font11</font>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<visible>string.equals(#hideinfo, False)</visible>
 								</control>
@@ -374,7 +374,7 @@
 									<width>240</width>
 									<label>#year     #videoruntime     #mpaarating</label>
 									<font>font11</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<visible>string.equals(#hideinfo, False)</visible>
 								</control>
@@ -388,7 +388,7 @@
 									<width>240</width>
 									<label>#(L(199)) #director</label>
 									<font>font11</font>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<visible>string.equals(#hideinfo, False)</visible>
 								</control>
@@ -403,7 +403,7 @@
 									<label>#plot</label>
 									<font>font9</font>
 									<lineSpacing>2.4</lineSpacing>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<visible>string.equals(#hideinfo, False)</visible>
 								</control>
 

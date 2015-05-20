@@ -129,7 +129,7 @@
 			<posY>617</posY>
 			<font>font16</font>
 			<label>#Play.Current.Artist</label>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<id>5</id>
 		</control> -->
 		<control>
@@ -141,7 +141,7 @@
 			<label>#currentplaytime</label>
 			<align>left</align>
 			<font>font28</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<animation effect="fade" time="100">WindowOpen</animation>
 			<animation effect="fade" time="100">WindowClose</animation>
 		</control>

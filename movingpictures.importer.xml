@@ -44,7 +44,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -58,7 +58,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -80,7 +80,7 @@
 				<font>font22</font>
 				<width>1350</width>
 				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,ALL)</visible>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="100">Visible</animation>
 			</control>
 
@@ -94,7 +94,7 @@
 				<font>font22</font>
 				<width>1350</width>
 				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,PENDING)</visible>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="100">Visible</animation>
 			</control>
 			<control>
@@ -107,7 +107,7 @@
 				<font>font22</font>
 				<width>1350</width>
 				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,COMPLETED)</visible>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="100">Visible</animation>
 			</control>
 
@@ -150,8 +150,8 @@
 				<textureHeight>139</textureHeight>
 				<font2>font12</font2>
 				<font3>font12</font3>
-				<textcolor2>#ColorSub</textcolor2>
-				<textcolor3>#ColorSub</textcolor3>
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#SublistFocusColor</textcolor3>
 				<visible allowhiddenfocus="true">string.equals(#MovingPictures.Importer.ListMode.Flag,ALL)</visible>
 			</control>
 			<control>
@@ -182,8 +182,8 @@
 				<textureHeight>139</textureHeight>
 				<font2>font12</font2>
 				<font3>font12</font3>
-				<textcolor2>#ColorSub</textcolor2>
-				<textcolor3>#ColorSub</textcolor3>
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#SublistFocusColor</textcolor3>
 				<visible allowhiddenfocus="true">string.equals(#MovingPictures.Importer.ListMode.Flag,PENDING)</visible>
 			</control>
 			<control>
@@ -214,8 +214,8 @@
 				<textureHeight>139</textureHeight>
 				<font2>font12</font2>
 				<font3>font12</font3>
-				<textcolor2>#ColorSub</textcolor2>
-				<textcolor3>#ColorSub</textcolor3>
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#SublistFocusColor</textcolor3>
 				<visible allowhiddenfocus="true">string.equals(#MovingPictures.Importer.ListMode.Flag,COMPLETED)</visible>
 			</control>
 
@@ -308,4 +308,5 @@
 		</control>
 	</controls>
 </window>
-
+
+

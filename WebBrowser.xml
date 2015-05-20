@@ -21,7 +21,7 @@
       <label>#header.label</label>
       <font>font28</font>
       <align>left</align>
-      <textcolor>#ColorUnfocused</textcolor>
+      <textcolor>#ListNoFocusColor</textcolor>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
     </control>
@@ -74,7 +74,7 @@
       <label>#time</label>
       <align>right</align>
       <font>font14</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
     </control>
@@ -212,7 +212,7 @@
       <width>1920</width>
       <height>79</height>
       <texture>black.png</texture>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
     </control>
@@ -250,7 +250,7 @@
       <font>font12</font>
       <align>left</align>
       <width>1500</width>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
     </control>
@@ -263,7 +263,7 @@
       <label>#webbrowser.zoom%</label>
       <font>font12</font>
       <align>right</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <wrapString> : : : </wrapString>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
@@ -278,7 +278,7 @@
       <label>#webbrowser.link</label>
       <font>font12</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <wrapString> : : : </wrapString>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>

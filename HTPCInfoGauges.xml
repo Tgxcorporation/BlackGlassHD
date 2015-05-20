@@ -5,7 +5,7 @@
     <control>
       <type>group</type>
       <visible>control.isvisible(52)</visible>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
@@ -57,7 +57,7 @@
         <label>Usage</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
       </control>
       <control>
@@ -83,7 +83,7 @@
         <label>Processor(s)</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
       </control>
       <control>
@@ -110,7 +110,7 @@
         <label>Type</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
       </control>
       <control>
@@ -162,7 +162,7 @@
         <label>Usage</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
       </control>
       <control>
@@ -188,7 +188,7 @@
         <label>Pagefile Usage</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
       </control>
       <control>
@@ -214,7 +214,7 @@
         <label>Memory Size</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
       </control>
       <control>
@@ -305,7 +305,7 @@
         <label>Drive #HTPCInfo.Drive1Name</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
         <wrapString> : : : </wrapString>
       </control>
@@ -333,7 +333,7 @@
         <label>Drive #HTPCInfo.Drive2Name</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
         <wrapString> : : : </wrapString>
       </control>
@@ -361,7 +361,7 @@
         <label>Drive #HTPCInfo.Drive3Name</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
         <wrapString> : : : </wrapString>
       </control>
@@ -389,7 +389,7 @@
         <label>Drive #HTPCInfo.Drive4Name</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(52)</visible>
         <wrapString> : : : </wrapString>
       </control>

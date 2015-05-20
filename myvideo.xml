@@ -18,7 +18,7 @@
 		<import>common.facade.video.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -44,14 +44,13 @@
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
-				<description>fanart list</description>
 				<type>image</type>
 				<id>500</id>
 				<posX>61</posX>
 				<posY>121</posY>
 				<width>356</width>
 				<height>514</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<texture>#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<keepaspectratio>yes</keepaspectratio>
@@ -88,7 +87,7 @@
 				<posX>45</posX>
 				<posY>817</posY>
 				<label>#selecteditem2</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
@@ -115,7 +114,7 @@
 				<font>font16</font>
 				<height>67</height>
 				<label>#selecteditem2</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
 			</control>
 		</control>

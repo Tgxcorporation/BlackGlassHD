@@ -21,7 +21,7 @@
       <label>#header.label</label>
       <font>font28</font>
       <align>left</align>
-      <textcolor>#ColorUnfocused</textcolor>
+      <textcolor>#ListNoFocusColor</textcolor>
     </control>
     <control>
       <description>status</description>
@@ -32,7 +32,7 @@
       <label>-</label>
       <font>font16</font>
       <align>right</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
     </control>
@@ -55,8 +55,8 @@
       <textboxYpos>550</textboxYpos>
       <textboxWidth>900</textboxWidth>
       <textboxHeight>88</textboxHeight>
-      <textboxColor>#ColorMain</textboxColor>
-      <textboxBgColor>#ColorMain</textboxBgColor>
+      <textboxColor>#MainColor</textboxColor>
+      <textboxBgColor>#MainColor</textboxBgColor>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
     </control>

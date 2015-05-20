@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<description>group element</description>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
@@ -34,7 +34,7 @@
 				<font>font16</font>
 				<height>67</height>
 				<label>#TVSeries.Series.RuntimeMin     #TVSeries.Subtitle</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
 			</control>
 		</control>

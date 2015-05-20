@@ -35,7 +35,7 @@
       <width>1000</width>
       <height>89</height>
       <texture>osd_bg_top.png</texture>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
     </control> -->
@@ -62,7 +62,7 @@
       <label>-</label>
       <align>left</align>
       <font>dingbats</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>yes</visible>
       <animation effect="fade" time="250">visiblechange</animation>
     </control>
@@ -76,7 +76,7 @@
       <label>-</label>
       <align>left</align>
       <font>dingbats</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>yes</visible>
       <animation effect="fade" time="250">visiblechange</animation>
     </control>
@@ -90,7 +90,7 @@
       <label>-</label>
       <align>left</align>
       <font>dingbats</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>yes</visible>
       <animation effect="fade" time="250">visiblechange</animation>
     </control>
@@ -104,7 +104,7 @@
       <label>-</label>
       <align>left</align>
       <font>dingbats</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>yes</visible>
       <animation effect="fade" time="250">visiblechange</animation>
     </control>

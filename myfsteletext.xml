@@ -34,7 +34,7 @@
       <label>-</label>
       <align>left</align>
       <font>font16</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
   </controls>
 </window>

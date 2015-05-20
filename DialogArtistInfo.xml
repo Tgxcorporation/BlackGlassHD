@@ -15,7 +15,7 @@
 		<import>common.window.time.basic.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -29,7 +29,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Refresh</description>
@@ -138,7 +138,7 @@
 				<posY>142</posY>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1110</width>
 				<wrapString> : : : </wrapString>
 				<label>-</label>
@@ -151,7 +151,7 @@
 				<posY>247</posY>
 				<width>1110</width>
 				<label>-</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -162,7 +162,7 @@
 				<posY>300</posY>
 				<width>1110</width>
 				<label>-</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>Genres value</description>
@@ -172,7 +172,7 @@
 				<posY>352</posY>
 				<width>1110</width>
 				<label>-</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Tones value</description>
@@ -182,7 +182,7 @@
 				<posY>405</posY>
 				<width>1110</width>
 				<label>-</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -193,7 +193,7 @@
 				<posY>457</posY>
 				<width>1110</width>
 				<label>-</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -204,7 +204,7 @@
 				<posY>510</posY>
 				<width>1110</width>
 				<label>-</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -241,7 +241,7 @@
 			<posY>187</posY>
 			<label>-</label>
 			<font>font12</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 		</control>
 	</controls>
 </window>

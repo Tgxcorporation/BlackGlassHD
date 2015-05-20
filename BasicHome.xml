@@ -46,7 +46,7 @@
 			<label>#time</label>
 			<align>center</align>
 			<font>font24</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<shadowAngle>45</shadowAngle>
 			<shadowDistance>3</shadowDistance>
 			<shadowColor>FF000000</shadowColor>

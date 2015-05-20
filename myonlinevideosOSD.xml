@@ -29,7 +29,7 @@
 			<height>67</height>
 			<font>font22</font>
 			<label>#Play.Current.Title</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -52,7 +52,7 @@
 			<align>left</align>
 			<font>font18</font>
 			<label>#Play.Current.Year     #Play.Current.OnlineVideos.SiteName</label>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 			<!-- <wrapString> : : : </wrapString> -->
 		</control>
@@ -77,7 +77,7 @@
 			<label>#Play.Current.Plot</label>
 			<font>font16</font>
 			<seperator>: : :</seperator>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 

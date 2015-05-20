@@ -11,7 +11,7 @@
 			<label>-</label>
 			<align>center</align>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<shadowAngle>315</shadowAngle>
@@ -27,7 +27,7 @@
 			<label>-</label>
 			<align>center</align>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<shadowAngle>315</shadowAngle>
@@ -43,7 +43,7 @@
 			<label>-</label>
 			<align>center</align>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<shadowAngle>315</shadowAngle>

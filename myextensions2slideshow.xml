@@ -23,7 +23,7 @@
       <posX>186</posX>
       <posY>102</posY>
       <font>font16</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <align>LEFT</align>
       <label>-</label>
     </control>
@@ -34,7 +34,7 @@
       <posX>1599</posX>
       <posY>102</posY>
       <font>font16</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <align>LEFT</align>
       <label>-</label>
     </control>
@@ -45,7 +45,7 @@
       <posX>1200</posX>
       <posY>102</posY>
       <font>font16</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <align>LEFT</align>
       <label>-</label>
     </control>

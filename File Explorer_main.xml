@@ -13,7 +13,7 @@
     <import>common.window.time.basic.xml</import>
     <control>
       <type>group</type>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <animation effect="fade" time="150">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -27,7 +27,7 @@
         <label>#header.label</label>
         <font>font28</font>
         <align>left</align>
-        <textcolor>#ColorUnfocused</textcolor>
+        <textcolor>#ListNoFocusColor</textcolor>
       </control>
       <control>
         <type>image</type>
@@ -221,7 +221,7 @@
         <posY>930</posY>
         <font>font10</font>
         <align>left</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <width>660</width>
         <height>120</height>
         <spinPosX>-1000</spinPosX>
@@ -236,7 +236,7 @@
         <posY>930</posY>
         <font>font10</font>
         <align>left</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <width>660</width>
         <height>120</height>
         <spinPosX>-1000</spinPosX>
@@ -251,7 +251,7 @@
         <posY>135</posY>
         <label>#FileExplorer.Left.CurrentDir</label>
         <font>font16</font>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <width>870</width>
         <wrapString> : : : </wrapString>
       </control>
@@ -263,7 +263,7 @@
         <posY>135</posY>
         <label>#FileExplorer.Right.CurrentDir</label>
         <font>font16</font>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <width>870</width>
         <wrapString> : : : </wrapString>
       </control>

@@ -52,7 +52,7 @@
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -205,7 +205,7 @@
 		<!--            :: MAIN DETAILS ::            -->
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -258,7 +258,7 @@
 				<label>#MovingPictures.SelectedMovie.title</label>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1125</width>
 				<wrapString> : : : </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
@@ -291,7 +291,7 @@
 				<posY>250</posY>
 				<width>380</width>
 				<label>(#MovingPictures.SelectedMovie.score.localized)</label>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font14</font>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)</visible>
 			</control>
@@ -317,7 +317,7 @@
 				<posY>352</posY>
 				<width>1125</width>
 				<font>font18</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)</visible>
 			</control>
@@ -330,7 +330,7 @@
 				<posY>412</posY>
 				<width>1125</width>
 				<font>font18</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)</visible>
 			</control>
@@ -344,7 +344,7 @@
 				<width>1125</width>
 				<font>font16</font>
 				<height>105</height>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<seperator>: : :</seperator>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(90001)</visible>
 			</control>
@@ -356,7 +356,7 @@
 				<posY>607</posY>
 				<width>1125</width>
 				<height>337</height>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<font>font18</font>
 				<label>#MovingPictures.SelectedMovie.summary</label>
 				<seperator>: : :</seperator>
@@ -495,7 +495,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.VideoFormat.Label</label>
 				<font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -506,7 +506,7 @@
 				<width>800</width>
 				<label>#MovingPictures.LocalMedia.videocodec</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -519,7 +519,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.AspectRatio.Label</label>
 				<font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -530,7 +530,7 @@
 				<width>800</width>
 				<label>#MovingPictures.LocalMedia.videoaspectratio</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -543,7 +543,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.Resolution.Label</label>
 				<font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -554,7 +554,7 @@
 				<width>800</width>
 				<label>#MovingPictures.LocalMedia.videoresolution     #MovingPictures.LocalMedia.videowidthx#MovingPictures.LocalMedia.videoheight</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -567,7 +567,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.FrameRate.Label</label>
                 <font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -578,7 +578,7 @@
 				<width>800</width>
 				<label>#MovingPictures.LocalMedia.videoframerate fps</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -592,7 +592,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.AudioFormat.Label</label>
                 <font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -603,7 +603,7 @@
 				<width>800</width>
 				<label>#MovingPictures.LocalMedia.audiocodec</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -616,7 +616,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.AudioChannels.Label</label>
                 <font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -627,7 +627,7 @@
 				<width>800</width>
 				<label>#MovingPictures.LocalMedia.audiochannels</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -641,7 +641,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.DateAdded.Label</label>
 				<font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -652,7 +652,7 @@
 				<width>800</width>
                 <label>#MovingPictures.SelectedMovie.date_added.localized.short</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 				<wrapString> ·· </wrapString>
 			</control>
@@ -665,7 +665,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.MediaType.Label</label>
                 <font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -676,7 +676,7 @@
 				<width>800</width>
 				<label>#MovingPictures.LocalMedia.videoformat</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -689,7 +689,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.PlayCount.Label</label>
                 <font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -700,7 +700,7 @@
 				<width>800</width>
 				<label>#MovingPictures.UserMovieSettings.watched</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -714,7 +714,7 @@
 				<width>350</width>
                 <label>#MovingPictures.Translation.Source.Label</label>
                 <font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -725,7 +725,7 @@
 				<width>800</width>
 				<label>#MovingPictures.LocalMedia.fullpath</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> ·· </wrapString>
 				<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
 			</control>
@@ -738,7 +738,7 @@
                 <width>350</width>
                 <label>#MovingPictures.Translation.InfoUrl.Label</label>
                 <font>font14</font>
-                <textcolor>#ColorAlternate</textcolor>
+                <textcolor>#AlternateColor</textcolor>
                 <visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
             </control>
             <control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -749,7 +749,7 @@
                 <width>800</width>
                 <label>#MovingPictures.SelectedMovie.details_url</label>
                 <font>font14</font>
-                <textcolor>#ColorMain</textcolor>
+                <textcolor>#MainColor</textcolor>
                 <wrapString> ·· </wrapString>
                 <visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
             </control>
@@ -762,7 +762,7 @@
                 <width>350</width>
                 <label>Plot Keywords</label>
                 <font>font14</font>
-                <textcolor>#ColorAlternate</textcolor>
+                <textcolor>#AlternateColor</textcolor>
                 <visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
             </control>
             <control Style="FanartDisplayAnimationMovingPicturesDetails">
@@ -773,7 +773,7 @@
                 <width>800</width>
                 <label>#MovingPictures.SelectedMovie.plotkeywords</label>
                 <font>font14</font>
-                <textcolor>#ColorMain</textcolor>
+                <textcolor>#MainColor</textcolor>
                 <wrapString> ·· </wrapString>
                 <visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(90001)</visible>
             </control>

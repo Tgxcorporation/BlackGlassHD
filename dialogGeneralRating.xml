@@ -80,7 +80,7 @@
       <font>font13</font>
       <align>right</align>
       <width>300</width>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
   </controls>
 </window>

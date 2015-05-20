@@ -10,7 +10,7 @@
 			<width>1920</width>
 			<height>79</height>
 			<texture>black.png</texture>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<visible>plugin.isenabled(InfoService)+[string.equals(#infoservice.feed.enabled, true)|string.equals(#infoservice.twitter.enabled, true)]</visible>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -122,7 +122,7 @@
 			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(1111)+window.isvisible(35)</visible>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
@@ -138,7 +138,7 @@
 			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(1112)+window.isvisible(35)</visible>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>

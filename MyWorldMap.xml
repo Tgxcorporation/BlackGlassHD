@@ -28,7 +28,7 @@
       <label>Longitude</label>
       <font>font16</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
     <control>
       <description>Latitude</description>
@@ -39,7 +39,7 @@
       <label>Latitude</label>
       <font>font16</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
     <control>
       <description>MapType</description>
@@ -50,7 +50,7 @@
       <label>Map type</label>
       <font>font16</font>
       <align>right</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
     <control>
       <description>Zoom Mode</description>
@@ -61,7 +61,7 @@
       <label>Zoom Mode</label>
       <font>font16</font>
       <align>right</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
     </control>
     <control>
       <description>Progressbar Placeholder (gives skinners the chance to define the position of the progressbar)</description>

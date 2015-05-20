@@ -11,7 +11,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -26,7 +26,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Date</description>
@@ -61,7 +61,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -80,7 +80,7 @@
 				<posX>765</posX>
 				<posY>142</posY>
 				<font>font20</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>Power</label>
 			</control>
 			<control>
@@ -170,7 +170,7 @@
 				<id>0</id>
 				<posX>765</posX>
 				<posY>630</posY>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font12</font>
 				<label>Dim display timeout</label>
 			</control>
@@ -184,7 +184,7 @@
 				<ondown>35</ondown>
 				<font>font12</font>
 				<align>right</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -201,7 +201,7 @@
 				<id>0</id>
 				<posX>765</posX>
 				<posY>709</posY>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font12</font>
 				<label>Screensaver timeout</label>
 			</control>
@@ -215,7 +215,7 @@
 				<ondown>36</ondown>
 				<font>font12</font>
 				<align>right</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -232,7 +232,7 @@
 				<id>0</id>
 				<posX>765</posX>
 				<posY>789</posY>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font12</font>
 				<label>Turn off display timout</label>
 			</control>
@@ -246,7 +246,7 @@
 				<ondown>39</ondown>
 				<font>font12</font>
 				<align>right</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -263,7 +263,7 @@
 				<id>0</id>
 				<posX>765</posX>
 				<posY>868</posY>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font12</font>
 				<label>Default brightness level</label>
 			</control>
@@ -277,7 +277,7 @@
 				<ondown>40</ondown>
 				<font>font12</font>
 				<align>right</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -294,7 +294,7 @@
 				<id>0</id>
 				<posX>765</posX>
 				<posY>949</posY>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font12</font>
 				<label>Timeout brightness level</label>
 			</control>
@@ -308,7 +308,7 @@
 				<ondown>31</ondown>
 				<font>font12</font>
 				<align>right</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -327,7 +327,7 @@
 				<posX>1372</posX>
 				<posY>142</posY>
 				<font>font20</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>Screen Jump</label>
 			</control>
 			<control>
@@ -366,7 +366,7 @@
 				<posX>1372</posX>
 				<posY>310</posY>
 				<label>Screen Jump timeout</label>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font12</font>
 			</control>
 			<control>
@@ -379,7 +379,7 @@
 				<ondown>11</ondown>
 				<font>font12</font>
 				<align>right</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -398,7 +398,7 @@
 				<posX>1372</posX>
 				<posY>462</posY>
 				<font>font20</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>Speech Recognition</label>
 			</control>
 			<control>
@@ -451,7 +451,7 @@
 				<posX>1372</posX>
 				<posY>781</posY>
 				<font>font20</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>Resolution</label>
 			</control>
 			<control>
@@ -497,7 +497,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(5)|control.hasfocus(10)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(50)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(5)|control.hasfocus(10)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(50)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -510,7 +510,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -521,7 +521,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

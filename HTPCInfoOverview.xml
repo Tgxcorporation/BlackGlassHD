@@ -4,7 +4,7 @@
   <controls>
     <control>
       <type>group</type>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <visible>control.isvisible(50)</visible>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -51,7 +51,7 @@
         <posY>82</posY>
         <label>Machine Name:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -74,7 +74,7 @@
         <posY>112</posY>
         <label>Model:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -97,7 +97,7 @@
         <posY>142</posY>
         <label>BIOS:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -120,7 +120,7 @@
         <posY>172</posY>
         <label>Processor:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -143,7 +143,7 @@
         <posY>202</posY>
         <label>User Name:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -189,7 +189,7 @@
         <posY>300</posY>
         <label>Version:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -235,7 +235,7 @@
         <posY>397</posY>
         <label>Uptime:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -258,7 +258,7 @@
         <posY>427</posY>
         <label>CPU Usage:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -281,7 +281,7 @@
         <posY>457</posY>
         <label>Memory Usage:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -304,7 +304,7 @@
         <posY>487</posY>
         <label>Disk Usage:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -374,7 +374,7 @@
         <posY>645</posY>
         <label>Temperature:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -398,7 +398,7 @@
         <posY>675</posY>
         <label>Fan:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -422,7 +422,7 @@
         <posY>705</posY>
         <label>Voltage:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -469,7 +469,7 @@
         <posY>802</posY>
         <label>Domain/Workgroup:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -492,7 +492,7 @@
         <posY>832</posY>
         <label>Internal/External IP:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -515,7 +515,7 @@
         <posY>862</posY>
         <label>Traffic:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -561,7 +561,7 @@
         <posY>960</posY>
         <label>Type:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -584,7 +584,7 @@
         <posY>990</posY>
         <label>Signal Quality:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>
@@ -607,7 +607,7 @@
         <posY>1020</posY>
         <label>Signal Level:</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(50)</visible>
       </control>
       <control>

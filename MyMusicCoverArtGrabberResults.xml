@@ -118,7 +118,7 @@
 			<posY>120</posY>
 			<width>1200</width>
 			<font>font18</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<align>CENTER</align>
 			<label>-</label>
 		</control>
@@ -130,7 +130,7 @@
 			<posY>60</posY>
 			<width>1200</width>
 			<font>font22</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>CENTER</align>
 			<label>-</label>
 		</control>
@@ -141,7 +141,7 @@
 			<posX>660</posX>
 			<posY>300</posY>
 			<font>font16</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>-</label>
 		</control>
 		<control>
@@ -151,7 +151,7 @@
 			<posX>535</posX>
 			<posY>262</posY>
 			<font>font18</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>4516</label>
 		</control>
 		<control>
@@ -169,9 +169,9 @@
 				<posY>234</posY>
 				<width>1312</width>
 				<height>720</height>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<subtype>album</subtype>
-				<selectedColor2>#ColorAlternate</selectedColor2>
+				<selectedColor2>#AlternateColor</selectedColor2>
 				<font2>font12</font2>
 				<textXOff2>1092</textXOff2>
 				<font>font12</font>
@@ -182,8 +182,8 @@
 				<itemWidth>120</itemWidth>
 				<IconXOff>15</IconXOff>
 				<IconYOff>15</IconYOff>
-				<textcolor2>#ColorSub</textcolor2> 
-				<textcolor3>#ColorSub</textcolor3> 
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#SublistFocusColor</textcolor3>
 				<textYOff2>112</textYOff2>
 				<spinPosX>1620</spinPosX>
 				<spinPosY>945</spinPosY>

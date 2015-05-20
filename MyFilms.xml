@@ -69,7 +69,7 @@
 		<import>myFilms.Facade.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -85,7 +85,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Global Filter Icons group</description>
@@ -93,14 +93,14 @@
 				<posX>232</posX>
 				<posY>42</posY>
 				<layout>StackLayout(5,Horizontal,true)</layout>
-				<dimColor>#ColorMain</dimColor>
+				<dimColor>#MainColor</dimColor>
 				<control>
 					<type>image</type>
 					<description>UnWatched Global Filter Icon</description>
 					<id>0</id>
 					<width>36</width>
 					<keepaspectratio>yes</keepaspectratio>
-					<colordiffuse>#ColorUnfocused</colordiffuse>
+					<colordiffuse>#ListNoFocusColor</colordiffuse>
 					<texture>MyFilms\unwatched.png</texture>
 					<visible>string.contains(#myfilms.globalfilter.unwatched,True)</visible>
 				</control>
@@ -110,7 +110,7 @@
 					<id>0</id>
 					<width>36</width>
 					<keepaspectratio>yes</keepaspectratio>
-					<colordiffuse>#ColorUnfocused</colordiffuse>
+					<colordiffuse>#ListNoFocusColor</colordiffuse>
 					<texture>MyFilms\online.png</texture>
 					<visible>string.contains(#myfilms.globalfilter.isonline,True)</visible>
 				</control>
@@ -120,7 +120,7 @@
 					<id>0</id>
 					<width>36</width>
 					<keepaspectratio>yes</keepaspectratio>
-					<colordiffuse>#ColorUnfocused</colordiffuse>
+					<colordiffuse>#ListNoFocusColor</colordiffuse>
 					<texture>MyFilms\trailer.png</texture>
 					<visible>string.contains(#myfilms.globalfilter.trailersonly,True)</visible>
 				</control>
@@ -130,7 +130,7 @@
 					<id>0</id>
 					<width>36</width>
 					<keepaspectratio>yes</keepaspectratio>
-					<colordiffuse>#ColorUnfocused</colordiffuse>
+					<colordiffuse>#ListNoFocusColor</colordiffuse>
 					<texture>MyFilms\rating.png</texture>
 					<visible>string.contains(#myfilms.globalfilter.minrating,True)</visible>
 				</control>
@@ -452,7 +452,7 @@
 				<posY>790</posY>
 				<width>1125</width>
 				<label>#myfilms.db.category.value</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>facadeview.list+!control.isvisible(34)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -464,7 +464,7 @@
 				<posY>838</posY>
 				<width>1125</width>
 				<label>#myfilms.db.year.value     #myfilms.db.country.value     #myfilms.db.length.value #myfilms.db.length.unit</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!player.hasmedia+facadeview.list+!control.isvisible(34)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" condition="player.hasmedia">visible</animation>
 				<animation effect="fade" time="250" condition="!player.hasmedia">visiblechange</animation>
@@ -479,7 +479,7 @@
 				<width>1200</width>
 				<height>112</height>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#myfilms.db.description.value</label>
 				<visible>!player.hasmedia+facadeview.list+!control.isvisible(34)</visible>
 				<seperator>: : :</seperator>
@@ -508,7 +508,7 @@
 				<posY>790</posY>
 				<width>630</width>
 				<label>#myfilms.db.category.value</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.largeicons]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -520,7 +520,7 @@
 				<posY>838</posY>
 				<width>630</width>
 				<label>#myfilms.db.year.value     #myfilms.db.country.value     #myfilms.db.length.value #myfilms.db.length.unit</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" condition="player.hasmedia">visible</animation>
 				<animation effect="fade" time="250" condition="!player.hasmedia">visiblechange</animation>
@@ -535,7 +535,7 @@
 				<width>630</width>
 				<height>112</height>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#myfilms.db.description.value</label>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]</visible>
 				<seperator>: : :</seperator>
@@ -599,7 +599,7 @@
 				<posY>1003</posY>
 				<width>630</width>
 				<label>#myfilms.db.length.value #myfilms.db.length.unit</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<align>right</align>
 				<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -618,7 +618,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -631,7 +631,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -642,7 +642,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

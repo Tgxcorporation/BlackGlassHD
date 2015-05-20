@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -81,7 +81,7 @@
 				<posY>685</posY>
 				<width>380</width>
 				<label>(#(string.format('{0:f1}', cflt(#TVSeries.Series.Rating))))</label>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<font>font12</font>
 				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
 			</control>
@@ -105,7 +105,7 @@
 				<posY>817</posY>
 				<width>1200</width>
 				<label>#TVSeries.Series.RuntimeMin     #TVSeries.Subtitle</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
@@ -116,7 +116,7 @@
 				<posY>877</posY>
 				<width>1200</width>
 				<height>172</height>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<font>font14</font>
 				<label>#TVSeries.Series.Summary</label>
 				<visible>!player.hasmedia+[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>

@@ -14,7 +14,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
@@ -176,7 +176,7 @@
 				<posY>808</posY>
 				<wrapString> : : : </wrapString>
 				<width>375</width>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#MediaBrowser.Translation.Client.Label #MediaBrowser.Version.String</label>
 			</control>
 			<control>
@@ -188,7 +188,7 @@
 				<posY>838</posY>
 				<wrapString> : : : </wrapString>
 				<width>375</width>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#MediaBrowser.Translation.Server.Label #MediaBrowser.System.Version</label>
 			</control>
 

@@ -13,7 +13,7 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
 			<control>
@@ -51,7 +51,7 @@
 				<id>26</id>
 				<label>-</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>template for program title darkarea </description>
@@ -62,7 +62,7 @@
 				<id>27</id>
 				<label>-</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 		</control>
 		<control>
@@ -73,7 +73,7 @@
 			<width>627</width>
 			<height>1080</height>
 			<texture>bg_left.png</texture>
-			<colorDiffuse>#ColorMain</colorDiffuse>
+			<colorDiffuse>#MainColor</colorDiffuse>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -85,7 +85,7 @@
 			<label>#header.label</label>
 			<font>font24</font>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -147,8 +147,8 @@
 				<posX>159</posX>
 				<posY>372</posY>
 				<label>593</label>
-				<textcolor>#ColorMain</textcolor>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<textcolor>#MainColor</textcolor>
+				<colordiffuse>#MainColor</colordiffuse>
 				<onup>504</onup>
 				<ondown>506</ondown>
 				<onright>505</onright>

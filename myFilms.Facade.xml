@@ -18,7 +18,7 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>facadeview.list+[control.isvisible(50)]</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -52,7 +52,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>0 #(L(507))</label>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
@@ -63,7 +63,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>#itemcount #(L(507))</label>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
@@ -74,7 +74,7 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -98,7 +98,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>0 #(L(507))</label>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
@@ -109,7 +109,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>#itemcount #(L(507))</label>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
@@ -122,7 +122,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -201,7 +201,7 @@
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
 					<id>50</id>
-					<dimColor>#ColorAlternate</dimColor>
+					<dimColor>#AlternateColor</dimColor>
 					<ondown>2</ondown>
 					<onup>2</onup>
 					<onleft>50</onleft>
@@ -239,8 +239,8 @@
 				<control>
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
-					<colordiffuse>#ColorMain</colordiffuse>
-					<dimColor>#ColorAlternate</dimColor>
+					<colordiffuse>#MainColor</colordiffuse>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<posX>45</posX>
 					<posY>472</posY>
@@ -326,7 +326,7 @@
 									<width>225</width>
 									<label>#myfilms.user.mastertitle.value</label>
 									<font>font13</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
 									<shadowDistance>2</shadowDistance>
@@ -370,7 +370,7 @@
 									<width>247</width>
 									<label>#myfilms.db.category.value</label>
 									<font>font11</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 									</control>
 								<control>
@@ -381,7 +381,7 @@
 									<width>240</width>
 									<label>#myfilms.db.year.value     #myfilms.db.length.value #myfilms.db.length.unit</label>
 									<font>font11</font>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								
@@ -394,7 +394,7 @@
 									<width>240</width>
 									<label>Dir. by #myfilms.db.director.value</label>
 									<font>font11</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -407,7 +407,7 @@
 									<font>font10</font>
 									<lineSpacing>2</lineSpacing>
 									<align>left</align>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 								</control>
 								
 								<control>
@@ -420,7 +420,7 @@
 									<label>#myfilms.db.description.value</label>
 									<font>font9</font>
 									<lineSpacing>2</lineSpacing>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 								</control>
 								
 							</controls>

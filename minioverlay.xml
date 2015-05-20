@@ -42,7 +42,7 @@
 			<width>300</width>
 			<height>31</height>
 			<texture>osd_progress_background2.png</texture>
-			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<colordiffuse>#ListNoFocusColor</colordiffuse>
 			<visible>player.hasmedia+control.isvisible(3337)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<animation effect="fade" time="100">WindowOpen</animation>
@@ -161,7 +161,7 @@
 			<label>#currentplaytime</label>
 			<align>left</align>
 			<font>font22</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>player.hasmedia+control.isvisible(3337)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<animation effect="fade" time="100">WindowOpen</animation>
@@ -250,7 +250,7 @@
 			<width>303</width>
 			<height>31</height>
 			<texture>osd_progress_background2.png</texture>
-			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<colordiffuse>#ListNoFocusColor</colordiffuse>
 			<visible>player.hasmedia+!control.isvisible(3337)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<animation effect="fade" time="100">WindowOpen</animation>
@@ -355,7 +355,7 @@
 			<label>#currentplaytime</label>
 			<align>left</align>
 			<font>font22</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>player.hasmedia+!control.isvisible(3337)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<animation effect="fade" time="100">WindowOpen</animation>

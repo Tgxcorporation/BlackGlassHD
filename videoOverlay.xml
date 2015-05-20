@@ -74,7 +74,7 @@
 			<label>#currentplaytime</label>
 			<align>left</align>
 			<font>font28</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>!string.equals(#currentplaytime,)</visible>
 			<animation effect="fade" time="100">WindowOpen</animation>
 			<animation effect="fade" time="100">WindowClose</animation>

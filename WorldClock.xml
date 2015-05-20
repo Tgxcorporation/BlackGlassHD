@@ -14,7 +14,7 @@
     <import>common.window.time.xml</import>
     <control>
       <type>group</type>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <animation effect="fade" time="150">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -28,7 +28,7 @@
         <label>#header.label</label>
         <font>font28</font>
         <align>left</align>
-        <textcolor>#ColorUnfocused</textcolor>
+        <textcolor>#ListNoFocusColor</textcolor>
       </control>
       <!-- *** Main Clock Frame *** -->
       <control>
@@ -91,7 +91,7 @@
         <posX>960</posX>
         <posY>517</posY>
         <align>center</align>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <label>#WorldClock.MainClockDateTime</label>
         <font>font12</font>
         <animation effect="fade" time="250">visiblechange</animation>
@@ -201,7 +201,7 @@
         <align>center</align>
         <label>#WorldClock.AdditionalClock1DateTime</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <animation effect="fade" time="250">visiblechange</animation>
       </control>
       <control>
@@ -278,7 +278,7 @@
         <align>center</align>
         <label>#WorldClock.AdditionalClock2DateTime</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <animation effect="fade" time="250">visiblechange</animation>
       </control>
       <control>
@@ -355,7 +355,7 @@
         <align>center</align>
         <label>#WorldClock.AdditionalClock3DateTime</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <animation effect="fade" time="250">visiblechange</animation>
       </control>
       <control>
@@ -432,7 +432,7 @@
         <align>center</align>
         <label>#WorldClock.AdditionalClock4DateTime</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <animation effect="fade" time="250">visiblechange</animation>
       </control>
       <control>
@@ -507,7 +507,7 @@
         <align>center</align>
         <label>#WorldClock.AdditionalClock5DateTime</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <animation effect="fade" time="250">visiblechange</animation>
       </control>
       <control>
@@ -582,7 +582,7 @@
         <align>center</align>
         <label>#WorldClock.AdditionalClock6DateTime</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <animation effect="fade" time="250">visiblechange</animation>
       </control>
       <control>

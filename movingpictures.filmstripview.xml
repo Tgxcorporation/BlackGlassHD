@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<description>group element</description>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
@@ -34,7 +34,7 @@
 				<font>font16</font>
 				<height>67</height>
 				<label>#MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.genres</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
 			</control>
 		</control>

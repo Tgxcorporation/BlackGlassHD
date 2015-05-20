@@ -5,7 +5,7 @@
     <control>
       <type>group</type>
       <visible>control.isvisible(51)</visible>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
@@ -51,7 +51,7 @@
         <posY>82</posY>
         <label>Graphic (#HTPCInfo.DisplayDeviceCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -75,7 +75,7 @@
         <posY>112</posY>
         <label>TV (#HTPCInfo.TVDeviceCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -123,7 +123,7 @@
         <posY>202</posY>
         <label>Keyboard (#HTPCInfo.KeyboardDeviceCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -147,7 +147,7 @@
         <posY>232</posY>
         <label>Pointing (#HTPCInfo.PointingDeviceCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -171,7 +171,7 @@
         <posY>262</posY>
         <label>Sound (#HTPCInfo.SoundDeviceCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -207,7 +207,7 @@
         <posY>322</posY>
         <label>Network (#HTPCInfo.NetworkDeviceCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -243,7 +243,7 @@
         <posY>382</posY>
         <label>Disk Drives (#HTPCInfo.DriveCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -303,7 +303,7 @@
         <posY>502</posY>
         <label>Optical Drives (#HTPCInfo.OpticalDriveCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -361,7 +361,7 @@
         <posY>630</posY>
         <label>Clients (#HTPCInfo.TVClientCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>
@@ -419,7 +419,7 @@
         <posY>757</posY>
         <label>Codecs (#HTPCInfo.CodecCount):</label>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.isvisible(51)</visible>
       </control>
       <control>

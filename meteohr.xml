@@ -17,7 +17,7 @@
       <width>627</width>
       <height>1080</height>
       <texture>bg_left.png</texture>
-      <colorDiffuse>#ColorMain</colorDiffuse>
+      <colorDiffuse>#MainColor</colorDiffuse>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
     </control>
@@ -29,7 +29,7 @@
       <label>#header.label</label>
       <font>font24</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <animation effect="fade" time="250">WindowClose</animation>
       <animation effect="fade" time="250">WindowOpen</animation>
     </control>
@@ -87,7 +87,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -118,7 +118,7 @@
       <label>-</label>
       <font>font16</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -134,7 +134,7 @@
       <label>-</label>
       <font>font16</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -150,7 +150,7 @@
       <label>-</label>
       <font>font16</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -166,7 +166,7 @@
       <label>-</label>
       <font>font16</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -182,7 +182,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>control.isvisible(3)|control.isvisible(21)</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -211,7 +211,7 @@
       <posY>255</posY>
       <width>525</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -230,7 +230,7 @@
       <label>Prognoza za Zagreb - danas</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>960</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -260,7 +260,7 @@
       <label>Prognoza za Zagreb - sutra</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>960</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -289,7 +289,7 @@
       <posY>255</posY>
       <width>1170</width>
       <height>330</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -306,7 +306,7 @@
       <posY>717</posY>
       <width>1170</width>
       <height>330</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -325,7 +325,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -356,7 +356,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>control.isvisible(300)</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -371,7 +371,7 @@
       <label>Min</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -386,7 +386,7 @@
       <label>Max</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -401,7 +401,7 @@
       <label>Vjetar</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -415,7 +415,7 @@
       <posY>348</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -429,7 +429,7 @@
       <posY>423</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -443,7 +443,7 @@
       <posY>558</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -457,7 +457,7 @@
       <posY>633</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -471,7 +471,7 @@
       <posY>783</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -485,7 +485,7 @@
       <posY>858</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -499,7 +499,7 @@
       <posY>333</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -526,7 +526,7 @@
       <posY>333</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -540,7 +540,7 @@
       <posY>333</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -567,7 +567,7 @@
       <posY>408</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -594,7 +594,7 @@
       <posY>408</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -608,7 +608,7 @@
       <posY>408</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -635,7 +635,7 @@
       <posY>483</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -662,7 +662,7 @@
       <posY>483</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -676,7 +676,7 @@
       <posY>483</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -703,7 +703,7 @@
       <posY>558</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -730,7 +730,7 @@
       <posY>558</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -744,7 +744,7 @@
       <posY>558</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -771,7 +771,7 @@
       <posY>633</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -798,7 +798,7 @@
       <posY>633</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -812,7 +812,7 @@
       <posY>633</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -839,7 +839,7 @@
       <posY>708</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -866,7 +866,7 @@
       <posY>708</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -880,7 +880,7 @@
       <posY>708</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -907,7 +907,7 @@
       <posY>783</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -934,7 +934,7 @@
       <posY>783</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -948,7 +948,7 @@
       <posY>783</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -975,7 +975,7 @@
       <posY>858</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1002,7 +1002,7 @@
       <posY>858</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1016,7 +1016,7 @@
       <posY>858</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1043,7 +1043,7 @@
       <posY>933</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1070,7 +1070,7 @@
       <posY>933</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1084,7 +1084,7 @@
       <posY>933</posY>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1113,7 +1113,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -1144,7 +1144,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>control.isvisible(700)</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1159,7 +1159,7 @@
       <label>Min</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1174,7 +1174,7 @@
       <label>Max</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1189,7 +1189,7 @@
       <label>Vjetar</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1219,7 +1219,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1235,7 +1235,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1263,7 +1263,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1278,7 +1278,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1321,7 +1321,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1337,7 +1337,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1365,7 +1365,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1380,7 +1380,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1423,7 +1423,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1439,7 +1439,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1467,7 +1467,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1482,7 +1482,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1525,7 +1525,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1541,7 +1541,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1569,7 +1569,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1584,7 +1584,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1627,7 +1627,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1643,7 +1643,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1671,7 +1671,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1686,7 +1686,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1729,7 +1729,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1745,7 +1745,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1773,7 +1773,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1788,7 +1788,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1831,7 +1831,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1847,7 +1847,7 @@
       <width>345</width>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1875,7 +1875,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1890,7 +1890,7 @@
       <label>-</label>
       <font>font16</font>
       <align>center</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
       <animation effect="fade" time="250">WindowClose</animation>
@@ -1919,7 +1919,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -1934,7 +1934,7 @@
       <posY>255</posY>
       <width>525</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -1952,7 +1952,7 @@
       <posY>255</posY>
       <width>112</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -1970,7 +1970,7 @@
       <posY>255</posY>
       <width>112</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -1988,7 +1988,7 @@
       <posY>255</posY>
       <width>112</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -2006,7 +2006,7 @@
       <posY>255</posY>
       <width>112</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -2024,7 +2024,7 @@
       <posY>255</posY>
       <width>112</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -2042,7 +2042,7 @@
       <posY>255</posY>
       <width>112</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -2062,7 +2062,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -2077,7 +2077,7 @@
       <posY>255</posY>
       <width>525</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -2095,7 +2095,7 @@
       <posY>255</posY>
       <width>375</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -2113,7 +2113,7 @@
       <posY>255</posY>
       <width>375</width>
       <height>795</height>
-      <colordiffuse>#ColorMain</colordiffuse>
+      <colordiffuse>#MainColor</colordiffuse>
       <font>font16</font>
       <label>-</label>
       <visible>no</visible>
@@ -2133,7 +2133,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -2164,7 +2164,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -2195,7 +2195,7 @@
       <label>-</label>
       <font>font22</font>
       <align>left</align>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <width>1170</width>
       <visible>no</visible>
       <animation effect="fade" time="250">visiblechange</animation>

@@ -68,7 +68,7 @@
 			<posY>685</posY>
 			<width>380</width>
 			<label>(#MediaBrowser.Selected.CommunityRating.Localized)</label>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<font>font12</font>
 			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+!string.equals(#MediaBrowser.Selected.CommunityRating.Localized,)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
 		</control>
@@ -94,7 +94,7 @@
 			<posY>817</posY>
 			<width>1200</width>
 			<label>#(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<wrapString> : : : </wrapString>
 			<visible>facadeview.list+control.isvisible(50)+!string.equals(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized,0)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
 		</control>
@@ -107,7 +107,7 @@
 			<width>1200</width>
 			<height>172</height>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>#MediaBrowser.Selected.Overview</label>
 			<visible>facadeview.list+control.isvisible(50)+!player.hasmedia+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
 			<seperator>: : :</seperator>
@@ -134,7 +134,7 @@
 			<posY>817</posY>
 			<width>630</width>
 			<label>#(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<wrapString> : : : </wrapString>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
 		</control>
@@ -147,7 +147,7 @@
 			<width>630</width>
 			<height>172</height>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>#MediaBrowser.Selected.Overview</label>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+!player.hasmedia+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
 			<seperator>: : :</seperator>
@@ -178,7 +178,7 @@
 			<font>font16</font>
 			<height>67</height>
 			<label>#(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
 		</control>
 

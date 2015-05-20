@@ -17,7 +17,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -31,7 +31,7 @@
 				<label>Title</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Date</description>
@@ -66,7 +66,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control Style="FanartDisplayAnimation">
 				<type>image</type>
@@ -169,7 +169,7 @@
 				<height>37</height>
 				<label>#Play.Current.Track</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -182,7 +182,7 @@
 				<label>#Play.Current.Year</label>
 				<font>font12</font>
 				<align>right</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -194,7 +194,7 @@
 				<label>209</label>
 				<font>font10</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>player.hasmedia+control.hastext(121)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -220,7 +220,7 @@
 				<width>397</width>
 				<label>#Play.Next.Artist</label>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<font>font12</font>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -426,7 +426,7 @@
 				<label>#currentplaytime</label>
 				<align>left</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>player.hasmedia</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -439,7 +439,7 @@
 				<label>#currentremaining</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>player.hasmedia</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -451,7 +451,7 @@
 				<posY>150</posY>
 				<label>No media playing</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -461,7 +461,7 @@
 				<posX>765</posX>
 				<posY>52</posY>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -471,11 +471,11 @@
 				<width>1110</width>
 				<posX>765</posX>
 				<posY>150</posY>
-				<colordiffuse>#ColorAlternate</colordiffuse>
+				<colordiffuse>#AlternateColor</colordiffuse>
 				<label>line 0</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
-				<disabledcolor>#ColorMain</disabledcolor>
+				<textcolor>#AlternateColor</textcolor>
+				<disabledcolor>#MainColor</disabledcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -486,8 +486,8 @@
 				<posY>150</posY>
 				<label>line 0</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
-				<disabledcolor>#ColorMain</disabledcolor>
+				<textcolor>#MainColor</textcolor>
+				<disabledcolor>#MainColor</disabledcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -498,7 +498,7 @@
 				<posY>214</posY>
 				<label>line 1</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -509,7 +509,7 @@
 				<posY>214</posY>
 				<label>line 1</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -520,7 +520,7 @@
 				<posY>279</posY>
 				<label>line 2</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -531,7 +531,7 @@
 				<posY>279</posY>
 				<label>line 2</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -542,7 +542,7 @@
 				<posY>343</posY>
 				<label>line 3</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -553,7 +553,7 @@
 				<posY>343</posY>
 				<label>line 3</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -564,7 +564,7 @@
 				<posY>408</posY>
 				<label>line 4</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -575,7 +575,7 @@
 				<posY>408</posY>
 				<label>line 4</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -586,7 +586,7 @@
 				<posY>472</posY>
 				<label>line 5</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -597,7 +597,7 @@
 				<posY>472</posY>
 				<label>line 5</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -608,7 +608,7 @@
 				<posY>537</posY>
 				<label>line 6</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -619,7 +619,7 @@
 				<posY>537</posY>
 				<label>line 6</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -630,7 +630,7 @@
 				<posY>601</posY>
 				<label>line 7</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -641,7 +641,7 @@
 				<posY>601</posY>
 				<label>line 7</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -652,7 +652,7 @@
 				<posY>666</posY>
 				<label>line 8</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -663,7 +663,7 @@
 				<posY>666</posY>
 				<label>line 8</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -674,7 +674,7 @@
 				<posY>730</posY>
 				<label>line 9</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -685,7 +685,7 @@
 				<posY>730</posY>
 				<label>line 9</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -696,7 +696,7 @@
 				<posY>795</posY>
 				<label>line 10</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -707,7 +707,7 @@
 				<posY>795</posY>
 				<label>line 10</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -718,7 +718,7 @@
 				<posY>859</posY>
 				<label>line 11</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -729,7 +729,7 @@
 				<posY>859</posY>
 				<label>line 11</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -740,7 +740,7 @@
 				<posY>922</posY>
 				<label>line 12</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -751,7 +751,7 @@
 				<posY>922</posY>
 				<label>line 12</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -762,8 +762,8 @@
 				<posY>150</posY>
 				<label>line 0</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
-				<disabledcolor>#ColorMain</disabledcolor>
+				<textcolor>#AlternateColor</textcolor>
+				<disabledcolor>#MainColor</disabledcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -772,11 +772,11 @@
 				<width>1110</width>
 				<posX>765</posX>
 				<posY>150</posY>
-				<colordiffuse>#ColorAlternate</colordiffuse>
+				<colordiffuse>#AlternateColor</colordiffuse>
 				<label>line 0</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
-				<disabledcolor>#ColorMain</disabledcolor>
+				<textcolor>#MainColor</textcolor>
+				<disabledcolor>#MainColor</disabledcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -787,7 +787,7 @@
 				<posY>214</posY>
 				<label>line 1</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -798,7 +798,7 @@
 				<posY>214</posY>
 				<label>line 1</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -809,7 +809,7 @@
 				<posY>279</posY>
 				<label>line 2</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -820,7 +820,7 @@
 				<posY>279</posY>
 				<label>line 2</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -831,7 +831,7 @@
 				<posY>343</posY>
 				<label>line 3</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -842,7 +842,7 @@
 				<posY>343</posY>
 				<label>line 3</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -853,7 +853,7 @@
 				<posY>408</posY>
 				<label>line 4</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -864,7 +864,7 @@
 				<posY>408</posY>
 				<label>line 4</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -875,7 +875,7 @@
 				<posY>472</posY>
 				<label>line 5</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -886,7 +886,7 @@
 				<posY>472</posY>
 				<label>line 5</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -897,7 +897,7 @@
 				<posY>537</posY>
 				<label>line 6</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -908,7 +908,7 @@
 				<posY>537</posY>
 				<label>line 6</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -919,7 +919,7 @@
 				<posY>601</posY>
 				<label>line 7</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -930,7 +930,7 @@
 				<posY>601</posY>
 				<label>line 7</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -941,7 +941,7 @@
 				<posY>666</posY>
 				<label>line 8</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -952,7 +952,7 @@
 				<posY>666</posY>
 				<label>line 8</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -963,7 +963,7 @@
 				<posY>730</posY>
 				<label>line 9</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -974,7 +974,7 @@
 				<posY>730</posY>
 				<label>line 9</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -985,7 +985,7 @@
 				<posY>795</posY>
 				<label>line 10</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -996,7 +996,7 @@
 				<posY>795</posY>
 				<label>line 10</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -1007,7 +1007,7 @@
 				<posY>859</posY>
 				<label>line 11</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -1018,7 +1018,7 @@
 				<posY>859</posY>
 				<label>line 11</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -1029,7 +1029,7 @@
 				<posY>922</posY>
 				<label>line 12</label>
 				<font>font12</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -1040,7 +1040,7 @@
 				<posY>922</posY>
 				<label>line 12</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>label</type>
@@ -1051,7 +1051,7 @@
 				<posY>153</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1063,7 +1063,7 @@
 				<posY>217</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1075,7 +1075,7 @@
 				<posY>282</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1087,7 +1087,7 @@
 				<posY>346</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1099,7 +1099,7 @@
 				<posY>411</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1111,7 +1111,7 @@
 				<posY>475</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1123,7 +1123,7 @@
 				<posY>540</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1135,7 +1135,7 @@
 				<posY>604</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1147,7 +1147,7 @@
 				<posY>669</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1159,7 +1159,7 @@
 				<posY>733</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1171,7 +1171,7 @@
 				<posY>798</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1183,7 +1183,7 @@
 				<posY>862</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1195,7 +1195,7 @@
 				<posY>927</posY>
 				<label>(xx:xx:xx)</label>
 				<font>font11</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1231,7 +1231,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(1956)|control.hasfocus(1957)|control.hasfocus(1958)|control.hasfocus(1959)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(1956)|control.hasfocus(1957)|control.hasfocus(1958)|control.hasfocus(1959)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -1244,7 +1244,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -1255,7 +1255,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

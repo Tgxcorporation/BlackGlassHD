@@ -9,7 +9,7 @@
 		-->
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>Control.isvisible(102)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -26,7 +26,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Date</description>
@@ -61,7 +61,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>Media tags</description>
@@ -105,12 +105,12 @@
 				<label>#itemcount</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>group element</description>
 				<type>group</type>
-				<dimColor>#ColorMain</dimColor>
+				<dimColor>#MainColor</dimColor>
 				<control>
 					<description>listcontrol</description>
 					<type>listcontrol</type>
@@ -132,7 +132,7 @@
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -220,7 +220,7 @@
 				<font>font16</font>
 				<label>#SubCentral.Search.Source.Text</label>
 				<wrapString> : : : </wrapString>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>Control.isvisible(102)</visible>
 				<animation effect="fade" time="250">visible</animation>
 			</control>
@@ -259,7 +259,7 @@
 				<font>font16</font>
 				<wrapString> : : : </wrapString>
 				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,IMDb)</visible>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<animation effect="fade" time="250">visible</animation>
 			</control>
 			<control>
@@ -270,7 +270,7 @@
 				<posY>915</posY>
 				<width>630</width>
 				<height>135</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<font>font14</font>
 				<label>#SubCentral.Search.Files.AllNames</label>
 				<seperator>: : :</seperator>
@@ -291,7 +291,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>[control.isvisible(102)+!control.hasfocus(50)]</visible>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)]|control.hasfocus(505050)">conditional</animation>
@@ -305,7 +305,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<!--<control>
 				<type>image</type>
@@ -314,7 +314,7 @@
 				<width>418</width>
 				<height>720</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 				<visible>!control.hasfocus(50)+!control.hasfocus(912)</visible>
 			</control>-->
 			<control>
@@ -326,7 +326,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

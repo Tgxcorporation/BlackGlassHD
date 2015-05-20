@@ -12,7 +12,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -27,7 +27,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>Date</description>
@@ -62,7 +62,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>details background</description>
@@ -91,7 +91,7 @@
 				<label>-</label>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1110</width>
 				<!-- <wrapString> : : : </wrapString> -->
 			</control>
@@ -104,7 +104,7 @@
 				<width>1110</width>
 				<label>13000</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Manufacturer</description>
@@ -115,7 +115,7 @@
 				<width>1110</width>
 				<label>13001</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Rating</description>
@@ -126,7 +126,7 @@
 				<width>1110</width>
 				<label>173</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Genre</description>
@@ -137,7 +137,7 @@
 				<width>1110</width>
 				<label>174</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>System value</description>
@@ -148,7 +148,7 @@
 				<width>825</width>
 				<label>-</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -160,7 +160,7 @@
 				<width>825</width>
 				<label>-</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -172,7 +172,7 @@
 				<width>825</width>
 				<label>-</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -184,7 +184,7 @@
 				<width>825</width>
 				<label>-</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -265,7 +265,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="![control.hasfocus(50)|control.hasfocus(4)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="[control.hasfocus(50)|control.hasfocus(4)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -278,7 +278,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -289,7 +289,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -368,7 +368,7 @@
 			<height>679</height>
 			<texture>-</texture>
 			<colorkey>FFFF00FF</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<keepaspectratio>yes</keepaspectratio>
 		</control>
 	</controls>

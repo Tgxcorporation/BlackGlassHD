@@ -35,7 +35,7 @@
 			<label>#time</label>
 			<align>right</align>
 			<font>font16</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 		</control>
 	</controls>
 </window>

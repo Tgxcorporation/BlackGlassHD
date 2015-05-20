@@ -29,7 +29,7 @@
 			<posY>569</posY>
 			<align>left</align>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>#TV.View.start</label>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
@@ -43,7 +43,7 @@
 			<font>font22</font>
 			<height>55</height>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 
@@ -55,7 +55,7 @@
 			<posX>1420</posX>
 			<posY>549</posY>
 			<font>font24</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>right</align>
 			<label>-</label>
 			<animation effect="Fade" time="100">WindowOpen</animation>
@@ -79,7 +79,7 @@
 			<posX>310</posX>
 			<posY>637</posY>
 			<font>font14</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<label>#TV.View.stop</label>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
@@ -93,7 +93,7 @@
 			<label>-</label>
 			<align>left</align>
 			<font>font18</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 
@@ -118,7 +118,7 @@
 			<label>#TV.View.description</label>
 			<font>font16</font>
 			<seperator>: : :</seperator>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 
@@ -166,7 +166,7 @@
 			<width>64</width>
 			<height>64</height>
 			<texture>rec.png</texture>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 
@@ -185,7 +185,7 @@
 			<width>750</width>
 			<height>55</height>
 			<font>font18</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -196,7 +196,7 @@
 			<posX>2237</posX>
 			<posY>474</posY>
 			<font>font22</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<label>-</label>
 		</control>
 	</controls>

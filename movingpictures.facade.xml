@@ -7,7 +7,7 @@
 			<description>group element</description>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<control>
 				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
@@ -73,7 +73,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<control Style="FanartDisplayAnimationMovingPictures">
 				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
@@ -132,8 +132,8 @@
 					<textYOff3>49</textYOff3>
 					<IconXOff>1947</IconXOff>
 					<IconYOff>61</IconYOff>
-					<textcolor2>#ColorSub</textcolor2>
-					<textcolor3>#ColorSub</textcolor3>
+					<textcolor2>#SublistFocusColor</textcolor2>
+					<textcolor3>#SublistFocusColor</textcolor3>
 					<font2>font11</font2>
 					<font3>font11</font3>
 					<posX>1345</posX>
@@ -232,8 +232,8 @@
 				<control Style="FanartDisplayAnimationMovingPictures">
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
-					<colordiffuse>#ColorMain</colordiffuse>
-					<dimColor>#ColorAlternate</dimColor>
+					<colordiffuse>#MainColor</colordiffuse>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<posX>45</posX>
 					<posY>472</posY>
@@ -318,7 +318,7 @@
 									<width>225</width>
 									<label>#MovingPictures.SelectedMovie.title</label>
 									<font>font13</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
 									<shadowDistance>2</shadowDistance>
@@ -362,7 +362,7 @@
 									<width>247</width>
 									<label>#MovingPictures.SelectedMovie.genres</label>
 									<font>font11</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -373,7 +373,7 @@
 									<width>240</width>
 									<label>#MovingPictures.SelectedMovie.year     #MovingPictures.SelectedMovie.runtime.localized.short     #MovingPictures.SelectedMovie.certification</label>
 									<font>font11</font>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								
@@ -386,7 +386,7 @@
 									<width>240</width>
 									<label>Dir. by #MovingPictures.SelectedMovie.directors</label>
 									<font>font11</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -399,7 +399,7 @@
 									<font>font10</font>
 									<lineSpacing>2</lineSpacing>
 									<align>left</align>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 								</control>
 								
 								<control>
@@ -412,7 +412,7 @@
 									<label>#MovingPictures.SelectedMovie.summary</label>
 									<font>font9</font>
 									<lineSpacing>2</lineSpacing>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 								</control>
 								
 							</controls>
@@ -429,7 +429,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
 				<visible>facadeview.list+control.isvisible(50)</visible>
 			</control>
@@ -442,7 +442,7 @@
 				<label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>facadeview.smallicons+control.isvisible(50)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPictures">
@@ -454,7 +454,7 @@
 				<label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>facadeview.largeicons+control.isvisible(50)</visible>
 			</control>
 

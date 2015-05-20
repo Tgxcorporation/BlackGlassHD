@@ -13,7 +13,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="!player.hasmedia">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false" condition="!player.hasmedia">WindowClose</animation>
@@ -51,7 +51,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -63,7 +63,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>REAL Current program title</description>
@@ -74,7 +74,7 @@
 				<width>540</width>
 				<font>font22</font>
 				<label>#TV.View.title</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -87,7 +87,7 @@
 				<font>font22</font>
 				<label>#TV.View.channel</label>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -98,7 +98,7 @@
 				<posY>252</posY>
 				<width>540</width>
 				<label>#TV.View.start - #TV.View.stop</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -108,7 +108,7 @@
 				<posX>45</posX>
 				<posY>307</posY>
 				<label>#TV.Search.Genre</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Description1</description>
@@ -120,7 +120,7 @@
 				<height>664</height>
 				<label>#TV.View.description</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<seperator>: : :</seperator>
 			</control>
 			<control>
@@ -158,14 +158,14 @@
 				<posY>132</posY>
 				<width>1183</width>
 				<height>697</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<texture>TVCase.png</texture>
 				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
 				<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			</control>
 			<control>
 				<type>group</type>
-				<dimColor>#ColorMain</dimColor>
+				<dimColor>#MainColor</dimColor>
 				<visible>!player.hasmedia</visible>
 				<animation effect="fade" time="250" delay="0">visiblechange</animation>
 				<control>
@@ -195,7 +195,7 @@
 					<width>540</width>
 					<label>#TV.View.start</label>
 					<font>font14</font>
-					<textcolor>#ColorMain</textcolor>
+					<textcolor>#MainColor</textcolor>
 					<shadowAngle>315</shadowAngle>
 					<shadowDistance>1</shadowDistance>
 					<shadowColor>FF000000</shadowColor>
@@ -210,7 +210,7 @@
 					<label>#TV.View.stop</label>
 					<font>font14</font>
 					<align>right</align>
-					<textcolor>#ColorMain</textcolor>
+					<textcolor>#MainColor</textcolor>
 					<shadowAngle>315</shadowAngle>
 					<shadowDistance>1</shadowDistance>
 					<shadowColor>FF000000</shadowColor>
@@ -245,7 +245,7 @@
 					<width>1089</width>
 					<label>#TV.View.title</label>
 					<font>font14</font>
-					<textcolor>#ColorMain</textcolor>
+					<textcolor>#MainColor</textcolor>
 					<shadowAngle>45</shadowAngle>
 					<shadowDistance>1</shadowDistance>
 					<shadowColor>FF000000</shadowColor>
@@ -265,7 +265,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -278,7 +278,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -289,7 +289,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

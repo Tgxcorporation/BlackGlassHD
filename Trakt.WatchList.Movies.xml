@@ -16,7 +16,7 @@
 		<import>common.facade.video.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -31,7 +31,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -54,7 +54,7 @@
 				<posY>121</posY>
 				<width>356</width>
 				<height>514</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<texture>#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<keepaspectratio>no</keepaspectratio>
@@ -95,7 +95,7 @@
 				<wrapString> : : : </wrapString>
 				<posX>45</posX>
 				<posY>750</posY>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<font>font13</font>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -121,7 +121,7 @@
 				<posY>825</posY>
 				<width>630</width>
 				<label>#Trakt.Movie.Year     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!string.equals(#Trakt.Movie.Runtime,)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -137,7 +137,7 @@
 				<height>186</height>
 				<label>#Trakt.Movie.Overview</label>
 				<font>font12</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + !player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -171,7 +171,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -184,7 +184,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -195,7 +195,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

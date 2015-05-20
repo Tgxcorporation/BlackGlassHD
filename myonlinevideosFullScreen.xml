@@ -33,7 +33,7 @@
 			<posY>7</posY>
 			<font>font14</font>
 			<label>#Play.Current.Title</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>left</align>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
@@ -50,7 +50,7 @@
 			<id>99911</id>
 			<label>#time</label>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>right</align>
 			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
@@ -134,7 +134,7 @@
 			<label>#play.progressbar.currentplaytime</label>
 			<align>left</align>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<shadowAngle>315</shadowAngle>
@@ -150,7 +150,7 @@
 			<label>#play.progressbar.currentremaining</label>
 			<align>right</align>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<shadowAngle>315</shadowAngle>
@@ -169,7 +169,7 @@
 			<visible>window.ispauseosdvisible+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video_paused.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -183,7 +183,7 @@
 			<visible>player.forwarding2x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video+2x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -197,7 +197,7 @@
 			<visible>player.forwarding4x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video+4x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -211,7 +211,7 @@
 			<visible>player.forwarding8x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video+8x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -225,7 +225,7 @@
 			<visible>player.forwarding16x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video+16x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -239,7 +239,7 @@
 			<visible>player.forwarding32x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video+32x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -253,7 +253,7 @@
 			<visible>player.rewinding2x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video-2x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -267,7 +267,7 @@
 			<visible>player.rewinding4x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video-4x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -281,7 +281,7 @@
 			<visible>player.rewinding8x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video-8x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -295,7 +295,7 @@
 			<visible>player.rewinding16x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video-16x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -309,7 +309,7 @@
 			<visible>player.rewinding32x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<texture>video-32x.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 
@@ -326,7 +326,7 @@
 			<width>192</width>
 			<texture>video.action.forbidden.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<visible>no</visible>
 			<animation effect="fade" time="150">visiblechange</animation>
 		</control>

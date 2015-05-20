@@ -15,7 +15,7 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -30,7 +30,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -49,7 +49,7 @@
 				<posY>120</posY>
 				<font>font12</font>
 				<width>600</width>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#mvCentral.TotalArtists / #mvCentral.TotalVideos</label>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -89,7 +89,7 @@
 				<posY>94</posY>
 				<width>520</width>
 				<height>520</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<texture>CDCase.png</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#mvCentral.ArtistView,true)|string.equals(#mvCentral.GenreView,true)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -118,7 +118,7 @@
 				<posY>735</posY>
 				<width>577</width>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#mvCentral.ArtistTags</label>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -173,7 +173,7 @@
 				<posY>94</posY>
 				<width>520</width>
 				<height>520</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<texture>CDCase.png</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#mvCentral.AlbumView,true)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -201,7 +201,7 @@
 				<posX>45</posX>
 				<posY>742</posY>
 				<width>585</width>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<align>left</align>
 				<label>#mvCentral.Translation.Tracks.Label #mvCentral.TracksForAlbum     #mvCentral.Translation.TotalRuntime.Label #mvCentral.AlbumTracksRuntime</label>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#mvCentral.AlbumView,true)</visible>
@@ -259,7 +259,7 @@
 				<posY>94</posY>
 				<width>576</width>
 				<height>445</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<texture>PictureCase.png</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#mvCentral.TrackView,true)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -362,7 +362,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>facadeview.list+control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -397,7 +397,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -408,7 +408,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -417,7 +417,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -441,7 +441,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -452,7 +452,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -461,7 +461,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -532,7 +532,7 @@
 				<control>
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
-					<dimColor>#ColorAlternate</dimColor>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<ondown>505050</ondown>
 					<onup>2</onup>
@@ -570,9 +570,9 @@
 				<control>
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
-					<colordiffuse>#ColorMain</colordiffuse>
-					<colordiffuse>#ColorMain</colordiffuse>
-					<dimColor>#ColorAlternate</dimColor>
+					<colordiffuse>#MainColor</colordiffuse>
+					<colordiffuse>#MainColor</colordiffuse>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<posX>30</posX>
 					<posY>563</posY>
@@ -640,7 +640,7 @@
 									<width>315</width>
 									<label>#selecteditem</label>
 									<font>font16</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
 									<shadowDistance>2</shadowDistance>
@@ -666,7 +666,7 @@
 									<label>#mvCentral.ArtistTags</label>
 									<visible>string.equals(#mvCentral.ArtistView, true)</visible>
 									<font>font11</font>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								
@@ -678,7 +678,7 @@
 									<width>315</width>
 									<label>#mvCentral.Translation.Tracks.Label #mvCentral.TracksForAlbum     #mvCentral.Translation.TotalRuntime.Label #mvCentral.AlbumTracksRuntime</label>
 									<visible>string.equals(#mvCentral.AlbumView, true)</visible><font>font11</font>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								
@@ -819,7 +819,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -832,7 +832,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -843,7 +843,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

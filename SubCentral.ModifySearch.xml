@@ -12,7 +12,7 @@
 			<label>#header.label</label>
 			<font>font28</font>
 			<align>left</align>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>Control.isvisible(103)</visible>
 			<animation effect="Fade" time="250">visiblechange</animation>
 		</control>
@@ -335,7 +335,7 @@
 			<description>Media Files</description>
 			<type>textboxscrollup</type>
 			<visible>Control.isvisible(103)</visible>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<posX>270</posX>
 			<posY>600</posY>
 			<width>1372</width>

@@ -13,7 +13,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -46,7 +46,7 @@
 				<onright>10</onright>
 				<onup>10</onup>
 				<ondown>10</ondown>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>group element</description>
@@ -69,7 +69,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -80,13 +80,13 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -124,7 +124,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -136,7 +136,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<description>REAL Current program title</description>
@@ -147,7 +147,7 @@
 				<width>540</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -172,7 +172,7 @@
 				<font>font22</font>
 				<label>#Radio.Search.Channel</label>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Current program time</description>
@@ -181,7 +181,7 @@
 				<posX>45</posX>
 				<posY>252</posY>
 				<label>#Radio.Search.Time</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<description>genre</description>
@@ -190,7 +190,7 @@
 				<posX>45</posX>
 				<posY>307</posY>
 				<label>#Radio.Search.Genre</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Description1</description>
@@ -202,7 +202,7 @@
 				<height>489</height>
 				<label>#Radio.Search.Description</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="-600,0">visible</animation>
@@ -217,7 +217,7 @@
 				<height>678</height>
 				<label>#Radio.Search.Description</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="-600,0">visible</animation>
@@ -236,7 +236,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="![control.hasfocus(10)|control.hasfocus(11)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="[control.hasfocus(10)|control.hasfocus(11)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -249,7 +249,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -260,7 +260,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -329,7 +329,7 @@
 			<height>127</height>
 			<label>#Radio.Search.Description</label>
 			<font>font13</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 		</control>
 		<control>
 			<description>DUMMY Number of Files Label</description>
@@ -339,7 +339,7 @@
 			<posY>805</posY>
 			<label>#itemcount #(L(507))</label>
 			<align>left</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 		</control>
 		<control>
 			<description>DUMMY Current program title</description>
@@ -350,7 +350,7 @@
 			<width>570</width>
 			<font>font22</font>
 			<label>#TV.Search.Title</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 		</control>
 	</controls>
 </window>

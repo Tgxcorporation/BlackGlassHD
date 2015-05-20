@@ -20,7 +20,7 @@
 			<label>#header.label</label>
 			<font>font28</font>
 			<align>left</align>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 		</control>
 		<control>
 			<type>image</type>
@@ -39,7 +39,7 @@
 			<posY>105</posY>
 			<width>840</width>
 			<label>#header.label</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font22</font>
 			<align>left</align>
 		</control>
@@ -59,7 +59,7 @@
 			<posY>195</posY>
 			<width>907</width>
 			<height>132</height>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font14</font>
 			<label>#(L(1911))</label>
 		</control>

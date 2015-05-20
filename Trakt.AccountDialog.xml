@@ -10,7 +10,7 @@
 			<width>1920</width>
 			<height>1080</height>
 			<texture>black.png</texture>
-			<colordiffuse>#ColorUnfocused</colordiffuse>
+			<colordiffuse>#ListNoFocusColor</colordiffuse>
 			<visible>string.equals(#Trakt.Settings.Account.Dialog.Visible,true)</visible>
 		</control>
 		<control>
@@ -41,7 +41,7 @@
 			<posX>780</posX>
 			<posY>310</posY>
 			<width>960</width>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font22</font>
 			<align>left</align>
 			<visible>string.equals(#Trakt.Settings.Account.Dialog.Visible,true)</visible>
@@ -74,8 +74,8 @@
 			<textalign>left</textalign>
 			<height>61</height>
 			<width>555</width>
-			<textcolor>#ColorMain</textcolor>
-			<textcolorNoFocus>#ColorAlternate</textcolorNoFocus>
+			<textcolor>#MainColor</textcolor>
+			<textcolorNoFocus>#AlternateColor</textcolorNoFocus>
 			<textureFocus>bg_button_text_focus.png</textureFocus>
 			<textureNoFocus>bg_button_text_nofocus.png</textureNoFocus>
 			<visible>string.equals(#Trakt.Settings.Account.Dialog.Visible,true)</visible>
@@ -108,8 +108,8 @@
 			<textalign>left</textalign>
 			<height>61</height>
 			<width>555</width>
-			<textcolor>#ColorMain</textcolor>
-			<textcolorNoFocus>#ColorAlternate</textcolorNoFocus>
+			<textcolor>#MainColor</textcolor>
+			<textcolorNoFocus>#AlternateColor</textcolorNoFocus>
 			<textureFocus>bg_button_text_focus.png</textureFocus>
 			<textureNoFocus>bg_button_text_nofocus.png</textureNoFocus>
 			<visible>string.equals(#Trakt.Settings.Account.Dialog.Visible,true)</visible>
@@ -143,8 +143,8 @@
 			<textalign>left</textalign>
 			<height>61</height>
 			<width>555</width>
-			<textcolor>#ColorMain</textcolor>
-			<textcolorNoFocus>#ColorAlternate</textcolorNoFocus>
+			<textcolor>#MainColor</textcolor>
+			<textcolorNoFocus>#AlternateColor</textcolorNoFocus>
 			<textureFocus>bg_button_text_focus.png</textureFocus>
 			<textureNoFocus>bg_button_text_nofocus.png</textureNoFocus>
 			<visible>string.equals(#Trakt.Settings.Account.Dialog.Visible,true)+string.equals(#Trakt.Settings.Account.Dialog.NewUser,true)</visible>
@@ -207,7 +207,7 @@
 			<posX>780</posX>
 			<posY>660</posY>
 			<font>font12</font>
-			<textcolor>#ColorAlternate</textcolor>
+			<textcolor>#AlternateColor</textcolor>
 			<visible>string.equals(#Trakt.Settings.Account.Dialog.Visible,true)</visible>
 		</control>
 	</controls>

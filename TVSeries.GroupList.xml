@@ -4,7 +4,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -19,7 +19,7 @@
 				<height>918</height>
 				<font>font16</font>
 				<seperator>: : :</seperator>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#TVSeries.Description</label>
 				<visible>control.isvisible(1240)+facadeview.list</visible>
 			</control>
@@ -33,7 +33,7 @@
 				<height>918</height>
 				<font>font16</font>
 				<seperator>: : :</seperator>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#TVSeries.Description</label>
 				<visible>control.isvisible(1240)+facadeview.smallicons</visible>
 			</control>

@@ -4,7 +4,7 @@
   <controls>
     <control>
       <type>group</type>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <visible>control.isvisible(53)</visible>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -57,7 +57,7 @@
         <label>Usage</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.IsVisible(53)</visible>
       </control>
       <control>
@@ -83,7 +83,7 @@
         <label>Processor</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.IsVisible(53)</visible>
       </control>
       <control>
@@ -108,7 +108,7 @@
         <label>Graphic Card</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.IsVisible(53)</visible>
       </control>
       <control>
@@ -132,7 +132,7 @@
         <label>Uptime</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.IsVisible(53)</visible>
       </control>
       <control>
@@ -156,7 +156,7 @@
         <label>Energy Consumption</label>
         <align>right</align>
         <font>font10</font>
-        <textcolor>#ColorAlternate</textcolor>
+        <textcolor>#AlternateColor</textcolor>
         <visible>control.IsVisible(53)</visible>
       </control>
       <control>

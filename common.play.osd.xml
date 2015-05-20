@@ -96,7 +96,7 @@
 			<align>center</align>
 			<width>1806</width>
 			<label>Subtitles Settings</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>control.isvisible(800)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -108,7 +108,7 @@
 			<posY>690</posY>
 			<label>303</label>
 			<font>font13</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -121,7 +121,7 @@
 			<label>303</label>
 			<visible>control.hasfocus(800)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font13</font>
 		</control>
 		<control>
@@ -225,7 +225,7 @@
 			<align>center</align>
 			<width>1806</width>
 			<label>Audio Settings</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>control.isvisible(500)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -237,7 +237,7 @@
 			<posY>690</posY>
 			<label>297</label>
 			<font>font13</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -250,7 +250,7 @@
 			<label>297</label>
 			<visible>control.hasfocus(500)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font13</font>
 		</control>
 		<control>
@@ -279,7 +279,7 @@
 			<posY>825</posY>
 			<label>Volume Level</label>
 			<font>font13</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>control.isvisible(500)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -291,7 +291,7 @@
 			<posY>825</posY>
 			<label>Volume Level</label>
 			<font>font13</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>control.hasfocus(400)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -359,7 +359,7 @@
 			<align>center</align>
 			<width>1806</width>
 			<label>Video Settings</label>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>control.isvisible(700)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -371,7 +371,7 @@
 			<posY>690</posY>
 			<label>8033</label>
 			<font>font13</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -384,7 +384,7 @@
 			<label>8033</label>
 			<visible>control.hasfocus(700)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font13</font>
 		</control>
 		<control>
@@ -413,7 +413,7 @@
 			<posY>825</posY>
 			<label>466</label>
 			<font>font13</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -426,7 +426,7 @@
 			<label>466</label>
 			<visible>control.hasfocus(706)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font13</font>
 		</control>
 		<control>
@@ -455,7 +455,7 @@
 			<posY>690</posY>
 			<label>464</label>
 			<font>font13</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -468,7 +468,7 @@
 			<label>464</label>
 			<visible>control.hasfocus(704)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font13</font>
 		</control>
 		<control>
@@ -497,7 +497,7 @@
 			<posY>825</posY>
 			<label>465</label>
 			<font>font13</font>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<visible>no</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
@@ -510,7 +510,7 @@
 			<label>465</label>
 			<visible>control.hasfocus(705)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font13</font>
 		</control>
 		<control>
@@ -595,7 +595,7 @@
 			<MarkWidth>37</MarkWidth>
 			<MarkHeight>37</MarkHeight>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<onup>703</onup>
 			<ondown>708</ondown>
 			<onleft>700</onleft>
@@ -614,7 +614,7 @@
 			<MarkWidth>37</MarkWidth>
 			<MarkHeight>37</MarkHeight>
 			<font>font14</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<onup>707</onup>
 			<ondown>700</ondown>
 			<onleft>700</onleft>
@@ -697,8 +697,8 @@
 			<textureNoFocus>button_green_nofocus_165x32.png</textureNoFocus>
 			<label>294</label>
 			<font>font13</font>
-			<textcolor>#ColorMain</textcolor>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<textcolor>#MainColor</textcolor>
+			<colordiffuse>#MainColor</colordiffuse>
 			<onleft>600</onleft>
 			<onright>602</onright>
 			<onup>600</onup>
@@ -718,8 +718,8 @@
 			<textureNoFocus>button_green_nofocus_165x32.png</textureNoFocus>
 			<label>296</label>
 			<font>font13</font>
-			<textcolor>#ColorMain</textcolor>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<textcolor>#MainColor</textcolor>
+			<colordiffuse>#MainColor</colordiffuse>
 			<onleft>600</onleft>
 			<onright>601</onright>
 			<onup>600</onup>

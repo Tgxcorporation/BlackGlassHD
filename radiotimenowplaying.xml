@@ -15,7 +15,7 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -29,7 +29,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<id>112</id>
@@ -74,7 +74,7 @@
 				<posY>645</posY>
 				<width>900</width>
 				<font>font14</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#RadioTime.Play.Slogan</label>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -111,7 +111,7 @@
 				<width>900</width>
 				<height>45</height>
 				<font>font14</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>#RadioTime.Play.Language</label>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -123,7 +123,7 @@
 				<posY>900</posY>
 				<width>900</width>
 				<font>font22</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#Play.Current.Artist</label>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -135,7 +135,7 @@
 				<posY>960</posY>
 				<width>900</width>
 				<font>font18</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#Play.Current.Title</label>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -183,7 +183,7 @@
 			<label>#currentplaytime</label>
 			<align>left</align>
 			<font>font16</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>player.hasmedia</visible>
 			<shadowAngle>315</shadowAngle>
 			<shadowDistance>1</shadowDistance>
@@ -197,7 +197,7 @@
 			<posY>1030</posY>
 			<align>right</align>
 			<font>font16</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>player.hasmedia</visible>
 			<label>#duration</label>
 			<shadowAngle>315</shadowAngle>
@@ -212,7 +212,7 @@
 			<width>1197</width>
 			<height>967</height>
 			<texture>bg_facade.png</texture>
-			<colorDiffuse>#ColorMain</colorDiffuse>
+			<colorDiffuse>#MainColor</colorDiffuse>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
 		</control>

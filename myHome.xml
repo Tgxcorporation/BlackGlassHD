@@ -18,8 +18,8 @@
 			<posX>0</posX>
 			<posY>860</posY>
 			<width>1920</width>
-			<textcolor>#ColorMain</textcolor>
-			<textColorNoFocus>#ColorUnfocused</textColorNoFocus>
+			<textcolor>#MainColor</textcolor>
+			<textColorNoFocus>#ListNoFocusColor</textColorNoFocus>
 			<dimColor>ffffffff</dimColor>
 			<buttonTextXOff>0</buttonTextXOff>
 			<buttonTextYOff>0</buttonTextYOff>
@@ -115,7 +115,7 @@
 			<label>#time</label>
 			<align>right</align>
 			<font>font16</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<animation effect="fade" time="250">WindowOpen</animation>
 			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
@@ -142,7 +142,7 @@
 			<label>#header.label</label>
 			<font>font28</font>
 			<align>left</align>
-			<textcolor>#ColorUnfocused</textcolor>
+			<textcolor>#ListNoFocusColor</textcolor>
 			<animation effect="fade" time="250">WindowOpen</animation>
 			<animation effect="fade" time="250">WindowClose</animation>
 		</control>

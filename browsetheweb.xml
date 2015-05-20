@@ -27,7 +27,7 @@
 			<width>1920</width>
 			<height>79</height>
 			<texture>black.png</texture>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 		</control>
 		<control>
 			<type>image</type>
@@ -56,7 +56,7 @@
 			<label>#(L(126)) | #btWeb.status</label>
 			<font>font12</font>
 			<width>1500</width>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<height>61</height>
 			<visible>string.equals(#btWeb.statusvisible, true)</visible>
 		</control>
@@ -69,7 +69,7 @@
 			<label>#btWeb.linkid</label>
 			<font>font12</font>
 			<align>right</align>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<visible>string.equals(#btWeb.statusvisible, true)</visible>
 		</control>
 	</controls>

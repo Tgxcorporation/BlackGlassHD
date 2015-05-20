@@ -13,7 +13,7 @@
 
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -27,7 +27,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -55,7 +55,7 @@
 				<width>3</width>
 				<height>861</height>
 				<texture>bg_button_vertical.png</texture>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 			</control>
 			<control>
 				<type>image</type>
@@ -440,7 +440,7 @@
 
 				<animation effect="slide" time="70" start="1200,0">WindowOpen</animation>
 				<animation effect="slide" time="70" end="1200,0">WindowClose</animation>
-				<dimColor>0x#ColorMain</dimColor>
+				<dimColor>0x#MainColor</dimColor>
 				<control>
 					<description>Current config static</description>
 					<type>label</type>
@@ -456,10 +456,11 @@
 					<posX>768</posX>
 					<posY>880</posY>
 					<label>15,30,60,300</label>
-					<textcolor>#ColorAlternate</textcolor>
+					<textcolor>#AlternateColor</textcolor>
 				</control>
 			</control>
 		</control>
 	</controls>
 </window>
-
+
+

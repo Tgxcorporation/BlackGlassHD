@@ -24,7 +24,7 @@
 			<label>#OnlineVideos.buffered%</label>
 			<align>center</align>
 			<width>150</width>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font10</font>
 			<visible>string.equals(#OnlineVideos.IsBuffering, true) + !player.hasmedia</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -37,7 +37,7 @@
 		<!-- *** left part *** -->
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -52,7 +52,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>![String.Equals(#OnlineVideos.state,details)]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
@@ -164,7 +164,7 @@
 				<posY>675</posY>
 				<width>630</width>
 				<label>#(switch(eq(#OnlineVideos.length,''),'#OnlineVideos.aired',neq(#OnlineVideos.length,''),'#OnlineVideos.length     #OnlineVideos.aired'))</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
@@ -175,10 +175,10 @@
 				<posY>725</posY>
 				<width>532</width>
 				<height>303</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<font>font16</font>
 				<label>#OnlineVideos.desc</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]+!player.hasmedia</visible>
 				<seperator>: : :</seperator>
 			</control>
@@ -197,7 +197,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!String.Equals(#OnlineVideos.state,details)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!String.Equals(#OnlineVideos.state,details)+!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>

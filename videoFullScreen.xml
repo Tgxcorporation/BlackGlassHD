@@ -23,7 +23,7 @@
 			<width>192</width>
 			<texture>video.action.forbidden.png</texture>
 			<colorkey>0</colorkey>
-			<colordiffuse>#ColorMain</colordiffuse>
+			<colordiffuse>#MainColor</colordiffuse>
 			<visible>no</visible>
 			<animation effect="fade" time="150">visiblechange</animation>
 		</control>

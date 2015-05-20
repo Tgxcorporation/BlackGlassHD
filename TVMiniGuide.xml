@@ -53,9 +53,9 @@
 				<font3>font18</font3>
 				<textvisible2>yes</textvisible2>
 				<textvisible3>yes</textvisible3>
-				<textcolor>#ColorSub</textcolor>
-				<textcolor2>#ColorSub</textcolor2>
-				<textcolor3>#ColorMain</textcolor3>
+				<textcolor>#SublistFocusColor</textcolor>
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#MainColor</textcolor3>
 				<remoteColor>ff77ccff</remoteColor>
 				<playedColor>ff77ccff</playedColor>
 				<onleft>36</onleft>
@@ -109,9 +109,9 @@
 				<font3>font18</font3>
 				<textvisible2>yes</textvisible2>
 				<textvisible3>yes</textvisible3>
-				<textcolor>#ColorSub</textcolor>
-				<textcolor2>#ColorSub</textcolor2>
-				<textcolor3>#ColorMain</textcolor3>
+				<textcolor>#SublistFocusColor</textcolor>
+				<textcolor2>#SublistFocusColor</textcolor2>
+				<textcolor3>#MainColor</textcolor3>
 				<remoteColor>ff77ccff</remoteColor>
 				<playedColor>ff77ccff</playedColor>
 				<onleft>36</onleft>
@@ -150,7 +150,7 @@
 			<posX>3405</posX>
 			<posY>547</posY>
 			<width>900</width>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<font>font24</font>
 			<align>left</align>
 		</control>

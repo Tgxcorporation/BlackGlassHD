@@ -14,7 +14,7 @@
     <import>common.window.time.basic.xml</import>
     <control>
       <type>group</type>
-      <dimColor>#ColorMain</dimColor>
+      <dimColor>#MainColor</dimColor>
       <animation effect="fade" time="150">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -28,7 +28,7 @@
         <label>#header.label</label>
         <font>font28</font>
         <align>left</align>
-        <textcolor>#ColorUnfocused</textcolor>
+        <textcolor>#ListNoFocusColor</textcolor>
       </control>
       <control>
         <description>Background list middle</description>
@@ -60,7 +60,7 @@
         <posY>195</posY>
         <font>font18</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -71,7 +71,7 @@
         <posY>240</posY>
         <font>font18</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -82,7 +82,7 @@
         <posY>315</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -104,7 +104,7 @@
         <posY>367</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -126,7 +126,7 @@
         <posY>420</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -148,7 +148,7 @@
         <posY>472</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -170,7 +170,7 @@
         <posY>525</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -192,7 +192,7 @@
         <posY>577</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -214,7 +214,7 @@
         <posY>630</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -236,7 +236,7 @@
         <posY>682</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -258,7 +258,7 @@
         <posY>735</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -280,7 +280,7 @@
         <posY>787</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -302,7 +302,7 @@
         <posY>840</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -324,7 +324,7 @@
         <posY>892</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -346,7 +346,7 @@
         <posY>945</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -369,7 +369,7 @@
         <label>kupovni</label>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -381,7 +381,7 @@
         <label>srednji</label>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -393,7 +393,7 @@
         <label>prodajni</label>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -404,7 +404,7 @@
         <posY>337</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -415,7 +415,7 @@
         <posY>337</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -426,7 +426,7 @@
         <posY>337</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -437,7 +437,7 @@
         <posY>337</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -459,7 +459,7 @@
         <posY>390</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -470,7 +470,7 @@
         <posY>390</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -481,7 +481,7 @@
         <posY>390</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -492,7 +492,7 @@
         <posY>390</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -514,7 +514,7 @@
         <posY>442</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -525,7 +525,7 @@
         <posY>442</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -536,7 +536,7 @@
         <posY>442</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -547,7 +547,7 @@
         <posY>442</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -569,7 +569,7 @@
         <posY>495</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -580,7 +580,7 @@
         <posY>495</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -591,7 +591,7 @@
         <posY>495</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -602,7 +602,7 @@
         <posY>495</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -624,7 +624,7 @@
         <posY>547</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -635,7 +635,7 @@
         <posY>547</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -646,7 +646,7 @@
         <posY>547</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -657,7 +657,7 @@
         <posY>547</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -679,7 +679,7 @@
         <posY>600</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -690,7 +690,7 @@
         <posY>600</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -701,7 +701,7 @@
         <posY>600</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -712,7 +712,7 @@
         <posY>600</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -734,7 +734,7 @@
         <posY>652</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -745,7 +745,7 @@
         <posY>652</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -756,7 +756,7 @@
         <posY>652</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -767,7 +767,7 @@
         <posY>652</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -789,7 +789,7 @@
         <posY>705</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -800,7 +800,7 @@
         <posY>705</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -811,7 +811,7 @@
         <posY>705</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -822,7 +822,7 @@
         <posY>705</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -844,7 +844,7 @@
         <posY>757</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -855,7 +855,7 @@
         <posY>757</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -866,7 +866,7 @@
         <posY>757</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -877,7 +877,7 @@
         <posY>757</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -899,7 +899,7 @@
         <posY>810</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -910,7 +910,7 @@
         <posY>810</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -921,7 +921,7 @@
         <posY>810</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -932,7 +932,7 @@
         <posY>810</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -954,7 +954,7 @@
         <posY>862</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -965,7 +965,7 @@
         <posY>862</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -976,7 +976,7 @@
         <posY>862</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -987,7 +987,7 @@
         <posY>862</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -1009,7 +1009,7 @@
         <posY>915</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -1020,7 +1020,7 @@
         <posY>915</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -1031,7 +1031,7 @@
         <posY>915</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -1042,7 +1042,7 @@
         <posY>915</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -1064,7 +1064,7 @@
         <posY>967</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -1075,7 +1075,7 @@
         <posY>967</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -1086,7 +1086,7 @@
         <posY>967</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>
@@ -1097,7 +1097,7 @@
         <posY>967</posY>
         <font>font16</font>
         <align>center</align>
-        <textcolor>#ColorMain</textcolor>
+        <textcolor>#MainColor</textcolor>
         <visible>no</visible>
       </control>
       <control>

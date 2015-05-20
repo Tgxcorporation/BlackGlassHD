@@ -12,7 +12,7 @@
 		<import>common.window.time.basic.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-290,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="-290,0" reversible="false">WindowClose</animation>
@@ -24,7 +24,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -34,7 +34,7 @@
 				<label>#header.label</label>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>487</width>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -124,4 +124,5 @@
 		</control>
 	</controls>
 </window>
-
+
+

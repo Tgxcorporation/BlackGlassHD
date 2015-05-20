@@ -9,7 +9,7 @@
 		-->
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>Control.isvisible(101)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -48,7 +48,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -60,7 +60,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -87,7 +87,7 @@
 				<posY>142</posY>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1125</width>
 				<label>#header.label</label>
 				<wrapString> : : : </wrapString>
@@ -101,7 +101,7 @@
 				<height>780</height>
 				<label>#SubCentral.About</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<onup>912</onup>
 				<ondown>912</ondown>
 				<onleft>912</onleft>

@@ -5,7 +5,7 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -61,7 +61,7 @@
 				<width>1920</width>
 				<font>font22</font>
 				<align>center</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>1</label>
 				<visible>![facadeview.filmstrip|facadeview.coverflow]+!string.equals(#WorldWeather.ImageView,Flat)</visible>
 			</control>
@@ -74,7 +74,7 @@
 				<width>1125</width>
 				<font>font22</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>1</label>
 				<visible>string.equals(#WorldWeather.ImageView,Flat)</visible>
 			</control>

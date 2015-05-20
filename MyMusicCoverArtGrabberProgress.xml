@@ -119,7 +119,7 @@
 			<posY>157</posY>
 			<width>1200</width>
 			<font>font22</font>
-			<textcolor>#ColorMain</textcolor>
+			<textcolor>#MainColor</textcolor>
 			<align>CENTER</align>
 			<label>-</label>
 		</control>

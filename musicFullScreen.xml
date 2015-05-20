@@ -21,7 +21,7 @@ the visualization window itself.  See MyMusicFullScreenVisualization.xml visuali
       <label>-</label>
       <align>left</align>
       <font>font12</font>
-      <textcolor>#ColorMain</textcolor>
+      <textcolor>#MainColor</textcolor>
       <visible>no</visible>
     </control>
   </controls>

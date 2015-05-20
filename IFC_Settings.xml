@@ -12,7 +12,7 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -26,7 +26,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -47,7 +47,7 @@
 				<ondown>7</ondown>
 				<posX>1395</posX>
 				<posY>619</posY>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<digits>2</digits>
 				<spintype>INT</spintype>
 				<showrange>NO</showrange>
@@ -63,7 +63,7 @@
 				<ondown>8</ondown>
 				<posX>1395</posX>
 				<posY>687</posY>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<digits>2</digits>
 				<spintype>INT</spintype>
 				<showrange>NO</showrange>
@@ -76,7 +76,7 @@
 				<posX>450</posX>
 				<posY>607</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>Single Black Bar Height</label>
 			</control>
 			<control>
@@ -86,7 +86,7 @@
 				<posX>450</posX>
 				<posY>675</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>Double Black Bar Height</label>
 			</control>
 			<control>
@@ -122,7 +122,7 @@
 				<posX>450</posX>
 				<posY>540</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>Stabilizer</label>
 			</control>
 			<control>
@@ -132,7 +132,7 @@
 				<posX>450</posX>
 				<posY>472</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>Max Brightness Threshold</label>
 			</control>
 			<control>
@@ -142,7 +142,7 @@
 				<posX>450</posX>
 				<posY>405</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>Min Brightness Threshold</label>
 			</control>
 			<control>
@@ -152,7 +152,7 @@
 				<posX>450</posX>
 				<posY>337</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>Detection Counter</label>
 			</control>
 			<control>
@@ -162,7 +162,7 @@
 				<posX>450</posX>
 				<posY>270</posY>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>Scan Interval</label>
 			</control>
 			<control>
@@ -175,7 +175,7 @@
 				<ondown>2</ondown>
 				<posX>1395</posX>
 				<posY>282</posY>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<digits>2</digits>
 				<spintype>INT</spintype>
 				<showrange>NO</showrange>
@@ -191,7 +191,7 @@
 				<ondown>3</ondown>
 				<posX>1395</posX>
 				<posY>349</posY>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<digits>2</digits>
 				<spintype>INT</spintype>
 				<showrange>NO</showrange>
@@ -207,7 +207,7 @@
 				<ondown>4</ondown>
 				<posX>1395</posX>
 				<posY>417</posY>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<digits>2</digits>
 				<spintype>INT</spintype>
 				<showrange>NO</showrange>
@@ -223,7 +223,7 @@
 				<ondown>5</ondown>
 				<posX>1395</posX>
 				<posY>484</posY>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<digits>2</digits>
 				<spintype>INT</spintype>
 				<showrange>NO</showrange>
@@ -239,7 +239,7 @@
 				<ondown>6</ondown>
 				<posX>1395</posX>
 				<posY>552</posY>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<digits>2</digits>
 				<spintype>INT</spintype>
 				<showrange>NO</showrange>

@@ -49,7 +49,7 @@
 		<import>common.window.overlay.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -87,12 +87,12 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -107,7 +107,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>!control.isvisible(24)</visible>
 			</control>
 			<control>
@@ -183,7 +183,7 @@
 				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<label>#itemcount #(L(507))</label>
 				<visible>facadeview.list+!control.isvisible(24)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -267,7 +267,7 @@
 				<posY>790</posY>
 				<width>1200</width>
 				<label>#st_genre     #st_rating min</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>facadeview.list+!control.isvisible(24)+!control.isvisible(47)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -280,7 +280,7 @@
 				<posY>838</posY>
 				<width>1200</width>
 				<label>#st_releasedate     #st_runtime min</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>facadeview.list+!player.hasmedia+!control.isvisible(24)+!control.isvisible(47)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -294,7 +294,7 @@
 				<width>1200</width>
 				<height>162</height>
 				<font>font13</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#st_plot</label>
 				<visible>facadeview.list+!player.hasmedia+!control.isvisible(24)+!control.isvisible(47)+!control.hastext(46)</visible>
 				<seperator>: : :</seperator>
@@ -349,7 +349,7 @@
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -432,7 +432,7 @@
 				<posY>790</posY>
 				<width>600</width>
 				<label>#st_genre     #st_rating</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)+!control.isvisible(47)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -445,7 +445,7 @@
 				<posY>838</posY>
 				<width>600</width>
 				<label>#st_releasedate     #st_runtime min</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+!player.hasmedia+!control.isvisible(24)+!control.isvisible(47)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -459,7 +459,7 @@
 				<width>600</width>
 				<height>162</height>
 				<font>font13</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#st_plot</label>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+!player.hasmedia+!control.isvisible(24)+!control.isvisible(47)+!control.hastext(46)</visible>
 				<seperator>: : :</seperator>
@@ -509,7 +509,7 @@
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>control.isvisible(24)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
@@ -525,7 +525,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<type>label</type>
@@ -536,7 +536,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -551,7 +551,7 @@
 				<type>group</type>
 				<posX>0</posX>
 				<posY>150</posY>
-				<dimColor>#ColorMain</dimColor>
+				<dimColor>#MainColor</dimColor>
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<control>
 					<type>button</type>
@@ -597,7 +597,7 @@
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
@@ -631,7 +631,7 @@
 				<label>#st_title</label>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<width>1125</width>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -694,7 +694,7 @@
 				<posY>307</posY>
 				<width>705</width>
 				<label>#st_genre</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<font>font16</font>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -707,7 +707,7 @@
 				<posY>367</posY>
 				<width>720</width>
 				<font>font18</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -717,7 +717,7 @@
 				<posX>1170</posX>
 				<posY>427</posY>
 				<label>#st_releasedate</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<font>font18</font>
 				<width>720</width>
 				<wrapString> : : : </wrapString>
@@ -729,7 +729,7 @@
 				<posX>1170</posX>
 				<posY>487</posY>
 				<label>Directed by #st_director</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<font>font18</font>
 				<width>720</width>
 				<wrapString> : : : </wrapString>
@@ -743,7 +743,7 @@
 				<width>720</width>
 				<label>#st_starring</label>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<seperator>: : :</seperator>
 				<height>105</height>
 			</control>
@@ -921,7 +921,7 @@
 				<control>
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
-					<dimColor>#ColorAlternate</dimColor>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<ondown>2</ondown>
 					<onup>2</onup>
@@ -958,8 +958,8 @@
 				<control>
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
-					<colordiffuse>#ColorMain</colordiffuse>
-					<dimColor>#ColorAlternate</dimColor>
+					<colordiffuse>#MainColor</colordiffuse>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<posX>45</posX>
 					<posY>472</posY>
@@ -1018,7 +1018,7 @@
 									<width>225</width>
 									<label>#selecteditem</label>
 									<font>font13</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
 									<shadowDistance>2</shadowDistance>
@@ -1062,7 +1062,7 @@
 									<width>247</width>
 									<label>#st_genre</label>
 									<font>font11</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -1073,7 +1073,7 @@
 									<width>240</width>
 									<label>#st_runtime min     #st_rating</label>
 									<font>font11</font>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								
@@ -1086,7 +1086,7 @@
 									<width>240</width>
 									<label>Dir. by #st_director</label>
 									<font>font11</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -1099,7 +1099,7 @@
 									<font>font10</font>
 									<lineSpacing>2</lineSpacing>
 									<align>left</align>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 								</control>
 								
 								<control>
@@ -1112,7 +1112,7 @@
 									<label>#st_plot</label>
 									<font>font9</font>
 									<lineSpacing>2</lineSpacing>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 								</control>
 								
 													
@@ -1187,7 +1187,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<visible>!control.isvisible(24)+!control.hasfocus(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.isvisible(24)+!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![!control.isvisible(24)+!control.hasfocus(50)]|control.hasfocus(505050)">conditional</animation>
@@ -1201,7 +1201,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -1212,7 +1212,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

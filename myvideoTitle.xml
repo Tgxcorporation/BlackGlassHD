@@ -16,7 +16,7 @@
 		<import>myvideoTitle.facade.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -31,7 +31,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<!-- <control>
 				<type>fadelabel</type>
@@ -64,7 +64,7 @@
 				<posY>121</posY>
 				<width>356</width>
 				<height>514</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<texture>#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)</visible>
 				<keepaspectratio>yes</keepaspectratio>
@@ -150,7 +150,7 @@
 				<label>#strrating</label>
 				<font>font12</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
 			</control>
 			<!-- <control Style="FanartDisplayAnimation">
@@ -245,7 +245,7 @@
 				<posX>45</posX>
 				<posY>817</posY>
 				<width>1200</width>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#videoruntime     #genre</label>
 				<visible>facadeview.list+string.equals(#hideinfo, False)</visible>
 				<wrapString> : : : </wrapString>
@@ -259,7 +259,7 @@
 				<width>1200</width>
 				<height>172</height>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#plot</label>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideinfo, False)</visible>
 				<seperator>: : :</seperator>
@@ -284,7 +284,7 @@
 				<posX>45</posX>
 				<posY>817</posY>
 				<width>630</width>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<label>#videoruntime     #genre</label>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, False)</visible>
 				<wrapString> : : : </wrapString>
@@ -298,7 +298,7 @@
 				<width>630</width>
 				<height>172</height>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<label>#plot</label>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, False)</visible>
 				<seperator>: : :</seperator>
@@ -324,7 +324,7 @@
 				<posY>121</posY>
 				<width>356</width>
 				<height>514</height>
-				<colordiffuse>#ColorMain</colordiffuse>
+				<colordiffuse>#MainColor</colordiffuse>
 				<texture>#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)</visible>
 				<keepaspectratio>yes</keepaspectratio>
@@ -363,7 +363,7 @@
 				<width>1125</width>
 				<label>#Actor.DateOfBirth     #Actor.PlaceOfBirth</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideActorinfo, False)</visible>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -376,7 +376,7 @@
 				<width>1125</width>
 				<label>#Actor.DateOfDeath     #Actor.PlaceOfDeath</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideActorinfo, False)</visible>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -390,7 +390,7 @@
 				<height>225</height>
 				<label>#groupmovielist</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideinfo, true)+string.equals(#hideActorinfo, False)</visible>
 			</control>
 			<!-- ACTORS thumbs -->
@@ -415,7 +415,7 @@
 				<width>600</width>
 				<label>#Actor.DateOfBirth     #Actor.PlaceOfBirth</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideActorinfo, False)</visible>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -428,7 +428,7 @@
 				<width>600</width>
 				<label>#Actor.DateOfDeath     #Actor.PlaceOfDeath</label>
 				<font>font16</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideActorinfo, False)</visible>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -442,7 +442,7 @@
 				<height>225</height>
 				<label>#groupmovielist</label>
 				<font>font14</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)+string.equals(#hideActorinfo, False)</visible>
 			</control>
 			<!-- FILMSTRIP / COVERFLOW -->
@@ -470,7 +470,7 @@
 				<font>font16</font>
 				<height>67</height>
 				<label>#videoruntime     #genre</label>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
 			</control>
 			<!-- <control Style="FanartDisplayAnimation">

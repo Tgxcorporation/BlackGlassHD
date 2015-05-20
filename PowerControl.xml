@@ -12,7 +12,7 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -50,7 +50,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -116,7 +116,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 			</control>
 			<!-- *** Action *** -->
 			<control>
@@ -158,7 +158,7 @@
 				<posY>205</posY>
 				<label>#PowerControl.NetworkDevice0IPAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>MAC Address Value</description>
@@ -168,7 +168,7 @@
 				<posY>205</posY>
 				<label>#PowerControl.NetworkDevice0MACAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Shutdown button</description>
@@ -283,7 +283,7 @@
 				<posY>370</posY>
 				<label>#PowerControl.NetworkDevice1IPAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>MAC Address Value</description>
@@ -293,7 +293,7 @@
 				<posY>370</posY>
 				<label>#PowerControl.NetworkDevice1MACAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Shutdown button</description>
@@ -408,7 +408,7 @@
 				<posY>535</posY>
 				<label>#PowerControl.NetworkDevice2IPAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>MAC Address Value</description>
@@ -418,7 +418,7 @@
 				<posY>535</posY>
 				<label>#PowerControl.NetworkDevice2MACAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Shutdown button</description>
@@ -533,7 +533,7 @@
 				<posY>700</posY>
 				<label>#PowerControl.NetworkDevice3IPAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>MAC Address Value</description>
@@ -543,7 +543,7 @@
 				<posY>700</posY>
 				<label>#PowerControl.NetworkDevice3MACAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Shutdown button</description>
@@ -658,7 +658,7 @@
 				<posY>865</posY>
 				<label>#PowerControl.NetworkDevice4IPAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>MAC Address Value</description>
@@ -668,7 +668,7 @@
 				<posY>865</posY>
 				<label>#PowerControl.NetworkDevice4MACAddress</label>
 				<font>font13</font>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#AlternateColor</textcolor>
 			</control>
 			<control>
 				<description>Shutdown button</description>
@@ -769,7 +769,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(4)]+!control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(4)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
@@ -782,7 +782,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>#ColorMain</colorDiffuse>
+				<colorDiffuse>#MainColor</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -793,7 +793,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#MainColor</textcolor>
 			</control>
 			<control>
 				<type>image</type>

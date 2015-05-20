@@ -18,7 +18,7 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<dimColor>#ColorMain</dimColor>
+			<dimColor>#MainColor</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -92,11 +92,11 @@
 					<!-- Text -->
 					<font>font16</font>
 					<selectedColor>00ffffff</selectedColor>
-					<textcolor>#ColorMain</textcolor>
-					<colordiffuse>#ColorMain</colordiffuse>
+					<textcolor>#MainColor</textcolor>
+					<colordiffuse>#MainColor</colordiffuse>
 					<remoteColor>FF868686</remoteColor>
 					<!-- watched color -->
-					<downloadColor>#ColorMain</downloadColor>
+					<downloadColor>#MainColor</downloadColor>
 					<!-- not watched color (normal) -->
 					<textcolor>FFC14E4A</textcolor>
 					<!-- local file not present color -->
@@ -128,7 +128,7 @@
 					<spinPosX>1777</spinPosX>
 					<spinPosY>983</spinPosY>
 					<spinAlign>Right</spinAlign>
-					<spinColor>#ColorUnfocused</spinColor>
+					<spinColor>#ListNoFocusColor</spinColor>
 					<spinCanFocus>no</spinCanFocus>
 					<visible>control.isvisible(50)</visible>
 					<scrollbarXOff>200</scrollbarXOff>
@@ -190,14 +190,14 @@
 					<IconYOff>61</IconYOff>
 					<playedColor>#ColorPlayed</playedColor>
 					<!-- watched -->
-					<downloadColor>#ColorMain</downloadColor>
+					<downloadColor>#MainColor</downloadColor>
 					<!-- (normal) -->
 					<remoteColor>#ColorOffline</remoteColor>
 					<!-- file not present color -->
-					<textcolor>#ColorMain</textcolor>
+					<textcolor>#MainColor</textcolor>
 					<!-- not watched (normal) -->
-					<textcolor2>#ColorSub</textcolor2>
-					<textcolor3>#ColorSub</textcolor3>
+					<textcolor2>#SublistFocusColor</textcolor2>
+					<textcolor3>#SublistFocusColor</textcolor3>
 					<font2>font11</font2>
 					<font3>font11</font3>
 					<textureFocus>bg_facade3_line_focus.png</textureFocus>
@@ -208,8 +208,8 @@
 				<control Style="FanartDisplayAnimation">
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
-					<colordiffuse>#ColorMain</colordiffuse>
-					<dimColor>#ColorAlternate</dimColor>
+					<colordiffuse>#MainColor</colordiffuse>
+					<dimColor>#AlternateColor</dimColor>
 					<id>50</id>
 					<posX>45</posX>
 					<posY>472</posY>
@@ -267,7 +267,7 @@
 									<width>225</width>
 									<label>#TVSeries.Title</label>
 									<font>font13</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
 									<shadowDistance>2</shadowDistance>
@@ -308,7 +308,7 @@
 									<width>247</width>
 									<label>#TVSeries.Subtitle</label>
 									<font>font11</font>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -319,7 +319,7 @@
 									<width>247</width>
 									<label>#TVSeries.Series.RuntimeMin</label>
 									<font>font11</font>
-									<textcolor>#ColorAlternate</textcolor>
+									<textcolor>#AlternateColor</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -332,7 +332,7 @@
 									<label>#TVSeries.Series.Summary</label>
 									<font>font9</font>
 									<lineSpacing>2</lineSpacing>
-									<textcolor>#ColorMain</textcolor>
+									<textcolor>#MainColor</textcolor>
 								</control>
 							</controls>
 							]]>
@@ -351,7 +351,7 @@
 				<label>#TVSeries.FilteredEpisodeCount #TVSeries.Translation.Episodes.Label</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>control.isvisible(1239)+[facadeview.largeicons|facadeview.list]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
@@ -363,7 +363,7 @@
 				<label>#TVSeries.Series.EpisodeCount #TVSeries.Translation.Episodes.Label</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
@@ -375,7 +375,7 @@
 				<label>#TVSeries.SeriesCount #TVSeries.Translation.Series_Plural.Label</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
@@ -386,7 +386,7 @@
 				<posX>1372</posX>
 				<posY>989</posY>
 				<font>font16</font>
-				<textcolor>#ColorUnfocused</textcolor>
+				<textcolor>#ListNoFocusColor</textcolor>
 				<visible>control.isvisible(1240)</visible>
 			</control>
 		</control>
